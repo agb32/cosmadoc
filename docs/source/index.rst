@@ -8,7 +8,7 @@ For generic information about COSMA please see `COSMA
 COSMA HPC system.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`access` the system.
+how to :ref:`access` the system or create an :ref:`account`.
 
 .. note::
 
