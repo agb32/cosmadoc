@@ -7,7 +7,7 @@ COSMA has 7 login servers:
 * COSMA8: login8a, login8b
 
 
-To connect to COSMA, you will need to generate a [SSH key pair](account.html#generating-a-ssh-key),
+To connect to COSMA, you will need to generate a [SSH key pair](account.rst#generating-a-ssh-key),
 and upload the public part to SAFE. You should protect your ssh key
 with a good passphrase. In addition to this, you will also need to
 know your COSMA password, which should obviously be different from
