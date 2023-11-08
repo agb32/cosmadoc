@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+Read the docs COSMA repository
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This repo contains user documentation for the COSMA HPC facility.
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+https://cosma.readthedocs.io/en/latest
