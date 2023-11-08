@@ -1,17 +1,18 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to the COSMA support documentation!
+===========================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Welcome to the **The COSmology MAchine** (COSMA) support pages
+
+For generic information about COSMA please see `COSMA
+<https://www.dur.ac.uk/cosma>`_ which provides an *overview* of the
+COSMA HPC system.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+how to :ref:`access` the system.
 
 .. note::
 
-   This project is under active development.
+   These pages are under active development.
 
 Contents
 --------
