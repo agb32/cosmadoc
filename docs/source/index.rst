@@ -21,4 +21,7 @@ Contents
 
    usage
    account
+   ssh
+   modules
+   slurm
    api
