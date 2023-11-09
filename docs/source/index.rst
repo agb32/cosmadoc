@@ -24,4 +24,5 @@ Contents
    ssh
    modules
    slurm
+   x2go
    api
