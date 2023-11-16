@@ -25,4 +25,5 @@ Contents
    modules
    slurm
    x2go
+   citizenship
    api
