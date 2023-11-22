@@ -26,4 +26,5 @@ Contents
    slurm
    x2go
    citizenship
+   faq
    api
