@@ -23,6 +23,7 @@ Contents
    account
    ssh
    modules
+   spack
    slurm
    x2go
    citizenship

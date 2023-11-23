@@ -7,7 +7,7 @@ can be loaded and unloaded during shell startup (i.e. in
 interactive shell session. Loading a module simply changes environment
 variables.
 
-An experimental Spack install is also available.
+An experimental [Spack install](/spack.md) is also available.
 
 Common module commands include:
 
