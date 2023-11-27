@@ -18,9 +18,9 @@ Example submission script examples can be found in the ```/cosma/home/sample-use
 
 Read more:
 
-* ```man slrum```, ```man sbatch```, etc. [online version] (https://slurm.schedmd.com/man_index.html).
-* [cheatsheet] (https://slurm.schedmd.com/pdfs/summary.pdf)
-* [Rosetta stone of batch systems] (https://slurm.schedmd.com/rosetta.pdf) (for users coming from other systems, such as LSF)
+* ```man slrum```, ```man sbatch```, etc. [online version](https://slurm.schedmd.com/man_index.html).
+* [cheatsheet](https://slurm.schedmd.com/pdfs/summary.pdf)
+* [Rosetta stone of batch systems](https://slurm.schedmd.com/rosetta.pdf) (for users coming from other systems, such as LSF)
 
 Jobs, except for those in the *-princes family of queues are limited to a maximum runtime of 72 hours. If your job will take significantly less than this, then it is recommended to insert the expected runtime, as this may enable the job to be scheduled earlier.
 
