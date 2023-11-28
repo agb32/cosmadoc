@@ -24,6 +24,7 @@ Contents
    ssh
    modules
    slurm
+   system
    x2go
    citizenship
    api
