@@ -25,6 +25,7 @@ Contents
    modules
    spack
    slurm
+   system
    x2go
    citizenship
    faq
