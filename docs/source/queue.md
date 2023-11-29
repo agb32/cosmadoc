@@ -2,7 +2,7 @@
 
 COSMA8 queues: cosma8, cosma8-prince, cosma8-pauper, cosma8-serial, cosma8-shm, cosma8-shm2
 
-Access to the DiRAC COSMA8 system is only for DiRAC projects with a time allocation on this system. Each COSMA8 compute node has 128 cores and 1TB RAM. If you request fewer than 128 cores for a job using the cosma8-serial queue, you will not be granted exclusive access to a node, and therefore may share a node with other jobs. Unless you specify a memory in your SLURM script (e.g. #SBATCH --mem=1T), then you will be given a fraction of 1TB equal to the number of cores you request/128. If you do not wish to share a node, use the "#SBATCH --exclusive" flag. The cosma8-shm queue provides access to two large 4TB nodes, each with 128 cores.
+Access to the DiRAC COSMA8 system is only for DiRAC projects with a time allocation on this system. Each COSMA8 compute node has 128 cores and 1TB RAM. If you request fewer than 128 cores for a job using the cosma8-serial queue, you will not be granted exclusive access to a node, and therefore may share a node with other jobs. Unless you specify a memory in your SLURM script (e.g. ```bash #SBATCH --mem=1T```), then you will be given a fraction of 1TB equal to the number of cores you request/128. If you do not wish to share a node, use the "#SBATCH --exclusive" flag. The cosma8-shm queue provides access to two large 4TB nodes, each with 128 cores.
 
 The cosma8-prince queue requires special access permission, will give an elevated priority and allow jobs to run for 30 days.
 
@@ -26,7 +26,7 @@ cosma8-shm2 contains:
 * ga005: 64 cores, 1TB RAM, 2x AMD MI200 GPU
 * ga006: 64 cores, 1TB RAM, 2x AMD MI200 GPU
 
-Should you wish to submit to a particular node, or exclude a partiular node (e.g. to ensure that you have access to a particular type of GPU), you can use the #SBATCH --exclude=ga004 directive within your batch script (which in this case would exclude ga004, thus ensuring you have access to a node with 2x AMD MI200 GPUs. Or #SBATCH --nodelist=ga004 (which in this case would submit to only the ga004 node).
+Should you wish to submit to a particular node, or exclude a partiular node (e.g. to ensure that you have access to a particular type of GPU), you can use the ```bash #SBATCH --exclude=ga004``` directive within your batch script (which in this case would exclude ga004, thus ensuring you have access to a node with 2x AMD MI200 GPUs. Or #SBATCH --nodelist=ga004 (which in this case would submit to only the ga004 node).
 
 ## COSMA7 queues: cosma7, cosma7-pauper and cosma7-prince
 
@@ -53,7 +53,7 @@ COSMA6 was retired in April 2023 after 11 years of service.
 
 Access to the Durham COSMA5 machine is provided using the six queues cosma, cosma-pauper, cosma-prince, cordelia, cosma-analyse and cosma-bench. The first three queues share all the 302 compute nodes dispatching jobs according to the different priorities that the queues have assigned. All the queues are configured so that job exclusive access to nodes is enforced. This means that no jobs share a compute node.
 
-The cordelia queue should be used for single core jobs, and will share computational resources on a single node with other jobs. This allows efficient use of the cluster. When using the cordelia queue, please specify the maximum memory your job will require, e.g.: #SBATCH --mem=10G will reserve 10GB for you, and allow the other cores to use the rest.
+The cordelia queue should be used for single core jobs, and will share computational resources on a single node with other jobs. This allows efficient use of the cluster. When using the cordelia queue, please specify the maximum memory your job will require, e.g.: ```bash #SBATCH --mem=10G``` will reserve 10GB for you, and allow the other cores to use the rest.
 
 The cosma-analyse queue is for data analysis purposes. The cosma-bench queue is for benchmarking.
 
