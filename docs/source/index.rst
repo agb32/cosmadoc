@@ -24,6 +24,7 @@ Contents
    ssh
    modules
    slurm
+   queue
    system
    x2go
    citizenship
