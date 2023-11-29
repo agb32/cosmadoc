@@ -25,6 +25,7 @@ Contents
    modules
    spack
    slurm
+   queue
    system
    x2go
    citizenship
