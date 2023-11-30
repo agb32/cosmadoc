@@ -27,6 +27,7 @@ Contents
    slurm
    queue
    system
+   jupyter
    x2go
    citizenship
    faq
