@@ -27,6 +27,13 @@ Contents
    queue
    system
    jupyter
+   gitlab
+   lustre
+   issues
+   data
+   archive
+   links
+   presentations
    x2go
    citizenship
    api
