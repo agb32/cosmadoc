@@ -2,40 +2,38 @@
 
 Permanent links hosting COSMA data or outputs include:
 
-## Download area
+## Download Area
 
-[https://virgodb.dur.ac.uk/downloads/]
+[Downloads](https://virgodb.dur.ac.uk/downloads/)
 
-## Shell galaxies
+## Shell Galaxies
 
-[https://virgo.dur.ac.uk/shell-galaxies/]
+[Shell Galaxies](https://virgo.dur.ac.uk/shell-galaxies/)
 
-## new HOD
+## New HOD
 
-[https://virgo.dur.ac.uk/public/bl267/new_HOD.tar.gz]
+[New Hod](https://virgo.dur.ac.uk/public/bl267/new_HOD.tar.gz)
 
 ## Eagle Snapshots
 
-[http://dataweb.cosma.dur.ac.uk:8080/eagle-snapshots/]
+[Eagle Snapshots](http://dataweb.cosma.dur.ac.uk:8080/eagle-snapshots/)
 
 ## Eagle Database
 
-[http://virgodb.dur.ac.uk:8080/Eagle/]
+[Eagle Database](http://virgodb.dur.ac.uk:8080/Eagle/)
 
 ## Millennium Database
 
-[https://virgodb.cosma.dur.ac.uk:8443/Millennium/]
+[Millennium Database](https://virgodb.cosma.dur.ac.uk:8443/Millennium/)
 
-[https://virgodb.dur.ac.uk:8443/Millennium/]
+[Millennium Database](https://virgodb.dur.ac.uk:8443/Millennium/)
 
-## Galaxy catalogues
+## Galaxy Catalogues
 
-[http://galaxy-catalogue.dur.ac.uk/]
+[Galaxy Catalogues](http://galaxy-catalogue.dur.ac.uk/)
 
-and [https://galaxy-catalogue.dur.ac.uk/]
+[Galaxy Catalogues](https://virgodb.dur.ac.uk/)
 
-and [https://virgodb.dur.ac.uk/]
+## NUBG Repository
 
-## NUBG repository
-
-[https://virgodb.cosma.dur.ac.uk/public/dc-elbe1/nubg_repository/]
+[NUBG Repository](https://virgodb.cosma.dur.ac.uk/public/dc-elbe1/nubg_repository/)
