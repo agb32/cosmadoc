@@ -30,6 +30,9 @@ Contents
    gitlab
    lustre
    issues
+   mpi
+   gpu
+   rockport
    data
    archive
    links
