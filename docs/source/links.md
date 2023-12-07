@@ -32,7 +32,7 @@ Permanent links hosting COSMA data or outputs include:
 
 [Galaxy Catalogues](http://galaxy-catalogue.dur.ac.uk/)
 
-and [Galaxy Catalogues](https://virgodb.dur.ac.uk/)
+[Galaxy Catalogues](https://virgodb.dur.ac.uk/)
 
 ## NUBG Repository
 
