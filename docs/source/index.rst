@@ -33,10 +33,12 @@ Contents
    mpi
    gpu
    rockport
+   virgo
    data
    archive
    links
    presentations
    x2go
+   cosma8
    citizenship
    api
