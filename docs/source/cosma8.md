@@ -127,7 +127,7 @@ The mvapich module can sometimes offer improved performance. However, in some ca
 
 ### Tuning information
 
-[Options for compiling on AMD systems](./files/AMDCompileOptionsr.pdf)
+[Options for compiling on AMD systems](./files/AMDCompileOptions.pdf)
 
 [Tuning for AMD systems](./files/AMDTuning.pdf)
 
