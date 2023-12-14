@@ -44,3 +44,4 @@ Contents
    citizenship
    faq
    api
+   hardwarelab
