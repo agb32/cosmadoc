@@ -42,3 +42,5 @@ Contents
    cosma8
    citizenship
    api
+   acknowledgements
+   contact
