@@ -77,5 +77,5 @@ Windows 10 and 11 include the ssh-keygen utility, so keys can be
 generated as [here](/files/COSMAWindows10sshDocumentation.pdf).  However, if not using WSL, a tool such as Putty
 will be required.
 
- image:: images/sshwin.png
+ .. image:: images/sshwin.png
        :width: 600
