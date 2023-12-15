@@ -11,13 +11,13 @@ To access these pages you'll need your COSMA username and password (or a self-ge
 
 To analyse usage of a node running a current job, you can use Performance Co-Pilot.
 
-# Performance Co-Pilot (Using Performance Co-Pilot (PCP) on COSMA)
+## Performance Co-Pilot 
 
 Performance Co-Pilot (PCP) is a system for monitoring the status of computers, and is installed on the compute nodes of COSMA. Some of the information that it monitors (so called metrics) is available for remote access, so you can use it to check things like the load and memory use of any node, without any need for special privilege (logging into compute nodes is not allowed, unless you are a member of the developers group).
 
 There are a lot of commands that PCP offers, somewhat overwhelming at first glance (and documentation is usually focused on system configuration), so we just offer a somewhat arbitrary number of hopefully useful commands to get started.
 
-## Machine Overview 
+### Machine Overview 
 
 To get an overview of memory and cpu usage on a compute node, use the command pmstat with the -h option to query:
 
@@ -60,7 +60,7 @@ You can get the 1min, 5min and 15min loads using the pcp dstat sub-commands:
 
 dstat also has options to report cpu and memory use as well. See the pcp-dstat man page.
 
-## Detailed Memory Use
+### Detailed Memory Use
 
 The memory profile of the whole machine is important when understanding if your code is making optimal use of the memory. There are various commands that report memory use, but a good one is:
 
@@ -73,7 +73,7 @@ The memory profile of the whole machine is important when understanding if your 
 
 This is a clone of the output from the sar -r command, and reports much of the node memory information from the /proc/meminfo file. The pmrep command, like pcp dstat has a large number of possible reports, these defined in the file /etc/pcp/pmrep/pmrep.conf
 
-## NUMA Blance
+### NUMA Blance
 
 A well behaved batch job will distribute itself over the all the cores and sockets of the machine. A classic issue is sharing a single core with more than one pinned thread, so checking that both the CPUs and cores are loaded as expected can be a good idea. The socket balance can be seen using:
 
@@ -92,7 +92,7 @@ The activity per core can be seen using:
 
 the output can be very long (256 lines for COSMA8), but looking closely you can see which CPUs are active. If you have pinning enabled these should remain fixed.
 
-## Infiniband Use
+### Infiniband Use
 
 The only IO of interest on a typical node is how much traffic is being generated on the infiniband fabric, there are potentially a lot of metrics that can be reported about this, but the command:
 
@@ -100,7 +100,7 @@ The only IO of interest on a typical node is how much traffic is being generated
 
 will report the total megabytes per second averaged over 3 seconds.
 
-## Visualization
+### Visualization
 
 The metrics that can be reported from a node can be seen using the command:
 
@@ -118,7 +118,7 @@ But at the time of writing pmchart has a problem when it resizes or samples quic
 
 The CPU value defines a view which are some predefined plots. Other useful views are Memory and Overview, but if using Overview increase the vertical size to 1000. On COSMA the infiniband read and write rates are also available in the IB view.
 
-## Final Words
+### Final Words
 
 As was noted at the beginning, and if you have looked at the output of pminfo, PCP will allow you to monitor a lot of details of the compute nodes, but there are some limitations. The metrics that make reports at the process level require privilege that is not available using remote access, so if you try them they will fail (a shame as pcp atop, would be very nice, like a remote top command). All metrics are available locally, just leave the -h part out.
 

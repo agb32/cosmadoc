@@ -1,4 +1,4 @@
-# Graphical Access: x2go, X11 and VNC
+# Graphical Access
 
 ## Graphical Desktops
 
