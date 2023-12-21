@@ -180,7 +180,7 @@ setup, which are not interesting. Times are reported in milliseconds.
 
 ####  EAGLE_25 96 cores 1 process:
 
-
+```
          mean        stddev      min       max
          -----------------------------------------
    ICC:  3209.22   | 2168.15   | 870.84  | 12251.2
@@ -189,12 +189,13 @@ setup, which are not interesting. Times are reported in milliseconds.
          -----------------------------------------
    AOCC: 3511.63   | 2454.58   | 811.71  | 13785.8
          -----------------------------------------
+```
 
 So ICX is just as fast as ICC and AOCC is not far behind.
 
 ####  EAGLE_50 192 cores 8 MPI ranks:
 
-
+```
          mean        stddev      min       max
          -------------------------------------------
    ICC:  4843.86   | 13019.70  | 109.81  | 123071.7
@@ -203,6 +204,7 @@ So ICX is just as fast as ICC and AOCC is not far behind.
          -------------------------------------------
    AOCC: 4945.92   | 14141.21  | 102.59  | 136537.5
          -------------------------------------------
+```
 
 So with the correct application of optimizations ICX can be faster than ICC,
 which is welcome news and AOCC is on a par with ICC. I repeated these runs a
@@ -216,11 +218,11 @@ Updates have been made to the SWIFT configure system to capture all the
 changes needed to automatically apply these flags, as well as changes needed
 for more general support for Genoa and Bergamo:
 
-   https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1823
-   https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1830
-   https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1805
-   https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1804
-   https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1802
-   https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1737
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1823]
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1830]
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1805]
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1804]
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1802]
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1737]
 
 Note this does require that the compilation is done on the target architecture.
