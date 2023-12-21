@@ -218,11 +218,11 @@ Updates have been made to the SWIFT configure system to capture all the
 changes needed to automatically apply these flags, as well as changes needed
 for more general support for Genoa and Bergamo:
 
--   (https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1823)
--   (https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1830)
--   (https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1805)
--   (https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1804)
--   (https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1802)
--   (https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1737)
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1823](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1823)
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1830](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1830)
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1805](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1805)
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1804](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1804)
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1802](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1802)
+-   [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1737](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/-/merge_requests/1737)
 
 Note this does require that the compilation is done on the target architecture.
