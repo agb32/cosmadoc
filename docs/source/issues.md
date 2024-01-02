@@ -191,13 +191,13 @@ COSMA7 or software modules.
 In early May we used the newly available openmpi/20190429 module along side
 gnu_comp/7.3.0.<http://7.3.0.> This particular combination worked. Based on
 the previous failure results we believe the issue we had with the OpenMPI
-library was related to https://github.com/open-mpi/ompi/issues/4686 and was
-solved with https://github.com/open-mpi/ompi/pull/4767 which was not
+library was related to [https://github.com/open-mpi/ompi/issues/4686](https://github.com/open-mpi/ompi/issues/4686) and was
+solved with [https://github.com/open-mpi/ompi/pull/4767](https://github.com/open-mpi/ompi/pull/4767) which was not
 available in any of the OpenMPI modules previously available for COSMA7.
 
 ## covid-sim
 
-The UCL Pandemic modelling tool used for modelling COVID-19. This is available from https://github.com/mrc-ide/covid-sim/
+The UCL Pandemic modelling tool used for modelling COVID-19. This is available from [https://github.com/mrc-ide/covid-sim/](https://github.com/mrc-ide/covid-sim/)
 
 Installation: you will need a compiler module, the cmake module and python3.
 
