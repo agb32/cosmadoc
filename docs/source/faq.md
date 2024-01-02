@@ -1,8 +1,6 @@
 # Frequently Asked Questions
 
-Here is a list of frequently asked, or otherwise useful questions. If you have a question you'd like to see here, please let us know. For COSMA8-specific questions, please see the COSMA8 FAQ LINK
-
-
+Here is a list of frequently asked, or otherwise useful questions. If you have a question you'd like to see here, please let us know. For COSMA8-specific questions, please see the [COSMA8 FAQ](cosma8.md#cosma8-faq)
 
 
 ## How do I best formulate my questions to the support staff?
@@ -19,7 +17,7 @@ Any STFC theory community member, or any ICC collaborator. To request DiRAC fund
 
 ## What should I do to get an account?
 
-Follow these instructions. LINK
+Follow these instructions [here](account.rst).
 
 ## Can my external collaborator get an account too?
 
@@ -35,7 +33,7 @@ VNC is not recommended for security reasons. However, x2go offers a faster graph
 
 ## What are the main differences between cosma5, cosma7 and cosma8?
 
-Please see here. LINK
+Please see [here](https://www.dur.ac.uk/icc/cosma/facilities/).
 
 ## Why is there a cosma5, 7 and 8, but no cosma6?
 
@@ -49,9 +47,9 @@ If you are not part of a DiRAC project, you should use COSMA5. You will need to 
 
 ## How do I copy (large) files to/from cosma?
 
-Please see here.  LINK
+Please see [here](data.md)
 
-We have a Globus Online endpoint, cosma#data. Please create an account, and use this. LINK
+We have a [Globus Online](https://www.globus.org) endpoint, cosma#data. Please create an account, and use this. 
 
 For intermediate sized files, you can always use scp or rsync.
 
@@ -91,7 +89,7 @@ Use the "modules available" command to see available modules. These are the same
 
 ## What are the recommended modules for running Gadget? Arepo?
 
-Please see the codes section of the site for specific code details.  LINK
+Please see the codes section of the site for specific code [details](issues.md)
 
 ## How do I adapt the Makefile to be consistent with these modules?
 
@@ -107,11 +105,11 @@ It is recommended to speak to cosma-support@durham.ac.uk first, so that we are a
 
 ## How do I write the submission script?
 
-Follow these instructions. LINK
+Follow these [instructions](slurm.md)
 
 ## What are the main commands to interact with a batch job?
 
-See here. LINK
+See [here](slurm.md)
 
 ## How do I make sure my job runs on full nodes?
 
@@ -131,7 +129,7 @@ COSMA8 has ~67,080 cores.
 
 The SLURM job submission system has a fair scheduler, based on how many jobs you have previously submitted, how busy the queues are, and how large your job is. If you specify a job with a shorter run-time, it is more likely to be scheduled more quickly to fill in space.
 
-For job control, please see here. LINK
+For job control, please see [here](slurm.md)
 
 ## Where should I put the data? Is that backed-up?
 
