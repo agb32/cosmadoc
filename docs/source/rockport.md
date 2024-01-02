@@ -58,7 +58,7 @@ Rockport recommend some other settings for RDMA transports:
 
 ## Storage
 
-The Rockport partition does not currently have dedicated (fabric-native) storage. Rather, the /cosma7, /cosma6 etc storage are routed through 4 dedicated nodes. This results in a slight reduction in performance. Therefore, when benchmarking codes, please don't include any time to read or write to storage.
+The Rockport partition does not currently have dedicated (fabric-native) storage. Rather, the /cosma7, /cosma8 etc storage are routed through 4 dedicated nodes. This results in a slight reduction in performance. Therefore, when benchmarking codes, please don't include any time to read or write to storage.
 
 Not all storage systems are mounted on the Rockport partition - please check before use. e.g. /cosma6 is not currently mounted.
 

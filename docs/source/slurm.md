@@ -24,7 +24,7 @@ Read more:
 
 Jobs, except for those in the *-princes family of queues are limited to a maximum runtime of 72 hours. If your job will take significantly less than this, then it is recommended to insert the expected runtime, as this may enable the job to be scheduled earlier.
 
-Some hints and tips for using SLURM can be found [here](LINK).
+Some hints and tips for using SLURM can be found [here](slurm.md#slurm-hints-and-tips).
 
 ## X11 forwarding for debugging
 
@@ -40,7 +40,7 @@ For direct compute access, you can use srun, e.g.:
 
 `srun -p cosma7 -A dpXXX -n 1 -t 1:00:00 --pty /bin/bash`
 
-[Performance co-pilot] (LINK) will also allow you to analyse running jobs.
+[Performance co-pilot](system.md#performance-co-pilot) will also allow you to analyse running jobs.
 
 Should you need direct ssh access to a node running your jobs, this may be possible - please contact cosma-support.
 
@@ -144,4 +144,42 @@ The cosma7-shm queue can also be used for large memory requirements. These are s
 
 To use DDT with slurm, the following instructions can be followed:
 
-https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma
+[https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma)
+
+### SLURM hints and tips
+
+To use fewer than all cores in a node, with a multiple node job, use something like:
+
+(e.g. for cosma6, requiring 256 MPI tasks (but 512 cores), on 32 nodes, so 8 MPI ranks per node - cosma6 has 16 cores per node)
+
+> #SBATCH --ntasks=256
+> #SBATCH --cpus-per-task=2
+
+
+#### Batch Queue priorities
+
+The priority of pending jobs in a queue is determined by a number of factors. These include:
+
+1. How successful the user has previously been at getting time (which is a factor that decays over time)
+
+2. Group fair-share: this can be raised for small groups/projects
+
+It is possible to change the priority of you jobs:
+
+scontrol update job JOBNUMBER nice=100 (which will lower its priority)
+
+#### Queue information
+
+The showq command can be used to obtain useful information about the queues (in addition to squeue and sinfo). For example:
+
+showq -q cosma7 -l -f -o
+
+The c7jobload command will give the load (i.e. CPU demand) of a job. Use -h to see options.
+
+sinfo -s will give a suscinct overview of the partitions.
+
+The sstat (for running jobs) and sacct (for completed jobs) provide information about the jobs. For example, at the end of your batch script, if you use:
+
+sstat --jobs=${SLURM_JOBID}.batch --format=jobid,maxrss,ntasks
+
+it will print information about memory used.
