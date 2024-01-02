@@ -40,7 +40,7 @@ For direct compute access, you can use srun, e.g.:
 
 `srun -p cosma7 -A dpXXX -n 1 -t 1:00:00 --pty /bin/bash`
 
-[Performance co-pilot] (LINK) will also allow you to analyse running jobs.
+[Performance co-pilot](system.md#performance-co-pilot) will also allow you to analyse running jobs.
 
 Should you need direct ssh access to a node running your jobs, this may be possible - please contact cosma-support.
 
