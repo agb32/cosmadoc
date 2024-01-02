@@ -1,8 +1,12 @@
-# Known code issues
+# Code-specific information
 
-See the below for known issues related to certain codes. These may give compilation hints, execution hints, etc.
+See the below for known hints and issues related to certain codes. These may give compilation hints, execution hints, etc.
 
 It should be noted that highly optimised code compiled on COSMA7 may not run on COSMA5 since these CPU architectures are older, and have a reduced instruction set, or on COSMA8, which does not support AVX512 instructions.. Therefore, if you need code to run on COSMA5, and are suffering from "illegal instructions", please try recompiling on COSMA5. Likewise, to run code on COSMA8, please compile on a COSMA8 login node.
+
+## SWIFT
+
+A specific page for [SWIFT](swift.md) exists.
 
 ## GADGET3
 
@@ -253,60 +257,6 @@ To launch paraview, use:
     module load paraview/...
 
     paraview --mesa
-
-## SWIFT
-
-It is possible to use gcc 9.3, 10.2 or 11.1 with openmpi/4.1.1 or mvapich_mpi/2.3.7 on cosma8.
-
-The current recommendation is the Intel Compiler and OpenMPI:
-
-``module load intel_comp/2021.3.0 compiler``
-
-`module load openmpi/4.1.1`
-
-`module load ucx/1.10.1`
-
-`module load fftw/3.3.9epyc parallel_hdf5/1.12.0 parmetis/4.0.3-64bit gsl/2.5`
-
-On COSMA8 with 4 ranks per node, the following sould be used when launching an mpirun for SWIFT:
-
-    -np 4 --map-by socket:PE=32
-
-For a similiar effect with mvapich the following is required:
-
-`export MV2_CPU_BINDING_POLICY=hybrid`
-
-`export MV2_HYBRID_BINDING_POLICY=linear`
-
-`export OMP_NUM_THREADS=32`
-
-but note that the current module does not yet support mpirun.
-
-`MV2_ENABLE_AFFINITY=0` is required.
-
-With gcc 11.1 the dependencies for swift are also available:
-
-`module purge`
-
-`module load gnu_comp/11.1.0`
-
-`module load openmpi/4.1.1` # OR `module load mvapich2_mpi/2.3.6`
-
-`module load parallel_hdf5/1.12.0 parmetis/4.0.3`
-
-`module load gsl/2.4 fftw/3.3.9epyc`
-
-With openmpi the default binding of processes to cores seems to be wrong for SWIFT. The '--bind-to none' flag is required to use all of the cpus.
-
-With mvapich, `export MV2_ENABLE_AFFINITY=0` is required to use all of the cpus.
-
-### SWIFT with the Intel icx compiler
-
-Yannick has put together a report on [compiling SWIFT with the icx compiler](https://www.dur.ac.uk/resources/icc/cosma/SWIFT_ICX.pdf) (instead of icc, which is deprecated).
-
-### Resources
-
-* [SWIFT ICX compiler](https://www.dur.ac.uk/resources/icc/cosma/SWIFT_ICX.pdf) (last modified: 14 June 2023)
 
 ## GADGET4
 

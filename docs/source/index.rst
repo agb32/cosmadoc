@@ -23,6 +23,7 @@ Contents
    account
    ssh
    modules
+   spack
    slurm
    queue
    system
@@ -41,6 +42,7 @@ Contents
    x2go
    cosma8
    citizenship
+   faq
    api
    acknowledgements
    contact

@@ -3,8 +3,8 @@
 # -- Project information
 
 project = 'cosma'
-copyright = '2023, Alastair'
-author = 'Alastair'
+copyright = '2023, COSMA'
+author = 'cosma-support'
 
 release = '0.1'
 version = '0.1.0'
