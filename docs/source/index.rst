@@ -6,8 +6,7 @@ Welcome to the **The COSmology MAchine** (COSMA) support pages
 For generic information about COSMA please see :doc:`cosma` section
 which provides an *overview* of the COSMA HPC system.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`access` the system or :doc:`account`.
+Check out the :doc:`account` section to get started!
 
 .. note::
 
@@ -27,7 +26,6 @@ Contents
 
    cosma
    dirac
-   usage
    account
    ssh
    modules
