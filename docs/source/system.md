@@ -5,7 +5,7 @@ project has gone over budget for the current quarter. If your project has run ou
 you will find that your jobs are demoted to the pauper queue when run. These pages also show who is using all the disk space etc. 
 These pages are at:
 
-* https://virgodb.cosma.dur.ac.uk/usage/index.php
+* [https://virgodb.cosma.dur.ac.uk/usage/index.php](https://virgodb.cosma.dur.ac.uk/usage/index.php)
 
 To access these pages you'll need your COSMA username and password (or a self-generated token).
 

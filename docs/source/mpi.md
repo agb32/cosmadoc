@@ -1,6 +1,6 @@
 # MPI Hints
 
-This page gathers together various hints for using MPI on COSMA. See also the [known code issues](issues.md) page for code-specific hints.
+This page gathers together various hints for using MPI on COSMA. See also the [Code-specific information](issues.md) page for code-specific hints.
 
 Standard module combinations are:
 
