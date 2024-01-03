@@ -26,7 +26,7 @@ All systems use a global slurm batch system. Submission to any queue (cosma, cos
 
 COSMA5 is no longer a DiRAC facility. Therefore, DiRAC users should use COSMA7 or 8 as appropriate for their project.
 
-# Scheduled downtime
+## Scheduled downtime
 
 COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is much shorter. These are typically during the first full weeks of February, June and October (every 4 months).
 
