@@ -10,13 +10,11 @@ Check out the :doc:`usage` section for further information, including
 how to :ref:`access` the system or :doc:`account`.
 
 .. Downtimes::
-	COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of Februacy, June and October (every 4 months). Current scheduled periods are:
 
-	5-9th February 2024
-
-	3-7th June 2024
-
-	7-11th October 2024
+   COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of Februacy, June and October (every 4 months). Current scheduled periods are:
+- 5-9th February 2024
+- 3-7th June 2024
+- 7-11th October 2024
 
 .. note::
 
