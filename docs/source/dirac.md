@@ -51,3 +51,7 @@ knowledge transfer and industrial partnership projects. The continued
 pooling of complementary expertise will ensure that the UK remains one
 of the world-leaders of theoretical modeling in particle physics,
 astronomy and cosmology.
+
+## Training
+
+DiRAC offer plenty of [training](https://dirac.ac.uk/training/) opportunities, including [basic skills training](https://dirac.ac.uk/hpc-skills-training/).
