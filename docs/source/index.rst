@@ -25,6 +25,8 @@ Contents
 
 .. toctree::
 
+   cosma
+   dirac
    usage
    account
    ssh
