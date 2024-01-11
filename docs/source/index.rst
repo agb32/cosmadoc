@@ -50,5 +50,7 @@ Contents
    citizenship
    faq
    api
+   projectdata
+   environmental
    acknowledgements
    contact
