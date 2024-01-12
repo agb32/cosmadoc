@@ -72,7 +72,7 @@ In addition to the hardware limits the queues have the following limits and prio
 | cosma-bench      | Normal            | 24 hours                | 16               | 
 | cosma-analyse    | Normal            | 23 hours, 20 minutes(!) | 144              | 
 
-The three queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [Durham utilities](LINK) descriptions for how to make use of back-filling.
+The three queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [FAQ](faq) descriptions for how to make use of back-filling.
 
 cosma queues are exclusive (except cordelia), meaning no matter how many cores you request per node you will have exclusive use of that node. Your allocation will be reduced assuming that you were using all the cores.
 
