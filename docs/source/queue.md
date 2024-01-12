@@ -45,7 +45,7 @@ In addition to the hardware limits the queues have the following limits and prio
 | -pauper	   | Low               | 24 hours              | unlimited        | 
 | -prince    | Highest           | 30 days               | 4096             | 
 
-The pauper and prince variations of the queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [Durham utilities](LINK) descriptions for how to make use of back-filling.
+The pauper and prince variations of the queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [Durham utilities](https://www.cosma.dur.ac.uk/cosma-utils.php) descriptions for how to make use of back-filling.
 
 ## COSMA6 queues: cosma6, cosma6-pauper and cosma6-prince
 
