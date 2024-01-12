@@ -1,0 +1,96 @@
+Present:
+Alastair, Tom, Richard, Stephen, Ben, Peter, Edo, Abouzied
+
+ *  PAX plan for phase 1b
+     +  So we keep all of particle methods under one umbrella.  It seems the best option.
+     +  Keeping SPH as a community by having a clear structure is important. This would mean that we can stay focussed on SPH.
+     +  Lattice Boltzmann methods do not get split between proposals. We will let them sort out their own community.
+ *  Outline for the work packages. (As a base line, assume 2 PDRA/RSE 100% for 3 years)
+     +  We discussed options for where we are heading - what is the end product.
+     +  It seems implausible that we could implement all the DualSPHysics feature in a SWIFT ++
+         o  Better if we are combining everything and using SWIFT and DualSPHysics to learn lessons.
+         o  The proposal needs to appeal to computer science, as these seem to dominate the review.
+         o  We need a strong highlight on the separation of concerns.
+     +  It is really important that we aim to provide a base on which people can build, adding their own components.
+         o  A particular issue is to identify how we use libraries. For example, how would we deal with a non-fluid structure that
+            crosses domains. How do we do this within the task formalism?
+     +  RGB will draft some ideas following the discussion.
+ *  Updates
+     +  Abouzied
+         o  Should bvery promising results from the GPU execution of tasks. The task execution is much quicker on the GPU, but we
+            currently spend 4x longer because of steps to malloc and transfer data at start of task and transfer data back at the end.
+         o  It should be possible to malloc only once instead of per task
+         o  It should be possible to hide communications
+         o  We spent some time discussing task sizes and how we might need to adjust these to GPU capability.
+     +  Peter D
+         o  Showed a comparison of different MPI routines. 
+         o  We get significant gains on smaller steps using recent OpenMPI. This is now faster than latest intel MPI.
+         o  The gains seems to come from the UCX communication layer.
+     +  Parallel in time
+         o  Dave is moving to a new job sadly. We need to make sure we can keep in contact with the parallel-in-time community as this
+            would be important for multi-dt applications
+
+
+STFC are keen to join up working groups.
+
+So will put together a particles at exascale group (pax).
+
+A sph package within this.
+
+Don't end up splitting Lattice Boltzmann groups.
+
+2 PDRAs for 3 years.  A lot of effort to push forward.
+
+Now working on what doing within these work packages.
+
+Possibility of switching to openMP as the task engine.  Tobias has
+route to influence the OMP standard.
+
+Use of MPI tasks.  Might be other things that are burried that are
+inconsistent with OMP tasking.
+
+A lot of engineering features in dualsphysics.  Would need to copy
+that across to swift to make it viable.
+
+Ben - reservations - trying to extend the engineering code to exascale
+is beyond this project.
+
+Richard - not every feature, but something that sounds feasible and
+plausible.
+
+Ben - how to deal with objects which aren't fluid but existing across
+many tasks and subdomains?  This would be a major development -
+ambitious but not stupid.
+
+Richard - redraft WP2, take out full feature implementation.  Tick the
+community box, and be plausible.
+
+Stephen - FSI could be repurposed for astrophysics.  A hook into the
+coupling project.
+
+Try not to be too focused on capabilities existing in dualsphysics.
+Now one big monolithic solution.  Could it be partitioned with
+separation of concerns.
+
+Astro code in swift not fit for this purpose.  More about creating an
+engineering and astro sph code.
+
+Fundamental question - bias towards computer scientists.  Taking
+capability from existing gpu code and adding to task based code -
+wording is crucial.  Merging and melding the two.
+
+Need to make it easy for people to implement their stuff in the code.
+
+Abouzied update
+===============
+
+Implemented all main compute intensive loops in gpu.
+
+GPU runs are a bit slow, 4x slower than cpu.  malloc and memcpy seems
+to be dominant.
+
+Peter
+=====
+
+Retesting MPI - openmpi is now the fastest, though intel2018 is still
+most stable. 

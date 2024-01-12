@@ -1,0 +1,58 @@
+Apols - Stephen, Peter.
+
+
+- PAX plan for phase 1b
+        - track record
+        - Outline for the work packages
+                - What am I missing?
+    - Updates
+        - Peter D
+        - Abouzied
+    - what next for Parallel in time
+    
+
+Update - Abouzied - realigning the structs to make more efficient for
+GPUs.  Pointer chasing more problematic for GPUs.
+Small speedup shown, but much potential because the kernels themselves
+are very fast, on a low-ish-end GPU.
+
+Finding regular patterns should be part of the bid.
+
+Fusing these kernels - do we know which other DSL projects have been
+funded.
+
+What to do in phase 1B:
+2 FTEs for 3 years (6 total).
+
+Start from engineering position and build up what is needed.
+
+Task engines - quick sched, work with openMP.  But many things we need
+to include.  Execute tasks on CPU and GPU.
+
+DSL idea of graphs.
+
+OneAPI - specify task graphs and have it generate.
+
+Task execution work package
+
+Abstraction work package - Matthieu surprisingly positive.
+
+Domain specific language - are there applications that work in real
+life?  The fireDrake project with Pheonix would be an example.  Write
+down a PDE, press a button and get a solution.  Wonderfully flexible
+but may only solve a toy problem.  
+
+Networking hardware.
+
+GPU v CPU balance
+
+Co-design
+
+Affecting standards (ieee etc).
+
+Communications - following on from Peter.  Optimised data exchange.
+
+Code coupling project - need to leave the door open for this.
+
+Project titles.  ExaPart, PAX, Part-Ex ExPeDiTe.
+

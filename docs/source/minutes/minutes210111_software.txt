@@ -1,0 +1,64 @@
+Present: Alastair, David Acreman, Richard Bower, Benedict, Rogers,
+Peter Draper, Tobias Weinzierl, Tom De Vuyst, Jonathan Frawley,
+Stephen Longshaw, George Fourtakas, Abouzied Nasar.
+
+- Actions
+Action: email around working group meetings that are known about.
+Action: Richard Set up coordination between working groups
+- haven't found a way to do this yet.
+Action: Richard Swift training day in January
+ - sponsor the next sph-sig meeting and make it exascale ambition.
+ Get Carlos to talk on astrophys side, someone from eng side, and
+ possibly someone from met office.  Next level of ambition.  From eng
+ perspective, could try eng companies.  Benedict can approach some of
+ their sponsors.  Where would we like to be in 5-10 years time.  Scope
+ out what we would imagine being able to do on an excalibur-like
+ system.  Someone to give an overview of hardware likely to come
+ online.  Perhaps Simon McIntosh Smith.  Mid-late Feb.  Possibly 24th.
+ Offer to hold the training sessions after the talks, but get people
+ to express interest in advance.  Longshaw mail list to be used.
+Tom and Ben to talk to industry contacts.  Stephen to send something
+to Lee Lapworth at Rolls Royce. 
+
+Action: AGB prompt Olly Perks at Arm.
+Action: AGB to set up NDA with networking company.
+
+ - General updates
+New PoC with networking company.
+
+ - Contracts (Richard)
+All should have received Katie's email about the contracts.  Waiting
+to hear from Hertfordshire.  And Leiden.  And LJMU.  Sent just before Christmas.  
+Commercial partners - need to hear from arm.  AGB to prompt Olly
+Perks.  Katie pushing for 15th Jan.
+
+ - Hydro weak-scaling (Edo)
+ - RDMA updates (Peter)
+Runs about as fast as MPI.  Struggling to understand what has gone
+wrong.  All enhancements in place, but still somewhat slower than expected.
+Some possibilities, problem is probably in swift.
+Suggestion - add a global dependency on all the timing tasks.  
+ - GPU update (Abouzied)
+Nothing to update.
+
+ - Individual workpackage update [all]
+David - hoping to have a student working on this for a masters
+project, but he has got a job instead.  So need to get back to doing
+stuff.  Blended delivery of a module this term, so will have to delay
+until later.  Thing to look at is caching of mpi call, grav-only calc,
+cache bits of the tree.  Fast running particles don't do the long
+range calc.  Helps for gravity but not hydro.
+Richard - Rudigar Pakemore has solved asynchronous timesteps.  But not
+for hydro.  Can do this in arepo, but not exact.  Need to be able to
+write down the hamiltonian of the system.  
+Dave - different ways of thinking about this.  eg split into linear
+and non-linear operator.
+
+- Training (Tobias?)
+Starting perf anal workshop - >60 people signed up.
+Jonathan leading swift in this.  
+
+- Outreach (?)
+Action - Content for website -
+
+ - Others/AOB?

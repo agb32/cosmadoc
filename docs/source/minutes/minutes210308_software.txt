@@ -1,0 +1,55 @@
+
+  - Actions
+Action: email around working group meetings that are known about.
+Action: AGB Chase progress network company NDAs
+        David - Done
+        Benedict - awaiting on company
+        Tom - still waiting - Hertfordshire side.
+	Richard - agenda and timings for EPSRC visit.
+Action: All - think up panel questions for the speakers.
+
+  - General updates
+Phase 1B - application in May.  
+- EPSRC virtual visit (Richard)
+Need to make a good impression in this meeting - need to be asking about phase 1B.  Phase 1A funding used for set of PoC programmes - and phase 1B is to put this together.  This would be for 3 years, with significant uplift in funding.  Get point across about difference between mesh and meshless.  
+1hr50 meeting - try to fit this in 1 hour, and then ask questions.  
+
+- COSMOS visulisation project (Richard)
+Dave Acreman has a student that could be used for this - discussion
+with Paul Shellard later this week.
+Insitu visualisation - supervising 3rd year UG student who may do
+interesting project on this next year.  Currently looking at RTX ray
+tracing with Vulcan.  So, can offer a student who is potentially
+interested in this.
+Paraview may already do this.  Not great at SPH. Multiple plugings for
+ray tracing - including Osprey which Intel are pushing.  
+
+
+- Cross cutting proposal (Tobias)
+Submitted on Friday.  But was over budget. So reduced this and
+resubmitted.  
+
+  - Contracts (Richard)
+Waiting for Leiden to review document and get back, then all done.
+
+  - Hydro weak-scaling (Edo)
+Redid some points on plot, but no change, so must be down to the
+code.  Need to see if some timesteps are outliers.  If not, may look
+more into metis.
+Not particularly due to load imbalance.
+
+  - RDMA updates (Peter)
+Working on the problem to try to work out what was wrong, and now
+probably have the correct solution.
+MPI tag inflation issue.  
+
+  - GPU update (Abouzied)
+Was threading over cells rather than particles, now doing it over
+particles.  Threading over cells is worse.  Looking at only allocating
+enough for particular job.  Async memory alloc/free - allows memory
+limitation to be expanded.  
+
+  - Individual workpackage update [all]
+  - Training (Tobias?)
+  - Outreach (?)
+  - Others/AOB?

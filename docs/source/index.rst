@@ -50,7 +50,11 @@ Contents
    cosma8
    citizenship
    faq
+   news
    projectdata
    environmental
+   industry
+   dell
+   excalibur
    acknowledgements
    contact

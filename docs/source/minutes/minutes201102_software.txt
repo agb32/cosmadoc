@@ -1,0 +1,86 @@
+Present: AGB, DA, PWD, RGB, BR, EA, GF, JF, SL, MS, SK, TW, TdV
+Alastair Basden, David Acreman, Peter Draper, Richard Bower, Benedict
+Rogers, Edo Altamura, George Fourtakas, Jonathan Frawley, Stephen
+Longshaw, Matthieu Schaller, Scott Kay, Tobias Weinzierl, Tom De Vuyst
+
+
+- General updates
+Manchester interviewing internal candidate next week.  So hopefully
+will attend in 2 weeks time.
+
+ - Contracts (Richard)
+
+Contacted Katie, all academic partners have indicated they're happy
+with the legal agreement.  Issue is not heard back from the industry
+partners.  Will send around a revised agreement that will go directly
+to legal people.  Main goal is to get response from industry
+partners.  If this fails, will try to get 2 agreements, one academic, and one
+industry which may never arrive.  Should all be doable, and hopefully
+sorted within a month or so.
+Action: Alastair to try to nudge commercial partners.
+Action: Richard to speak to Katie just before next meeting.
+
+- Gadget4 timestepping update (DA)
+PPT Presentation.
+Elimination of asymmetric operators
+Options - cache particle info to reduce comms at all timesteps.  Use
+G4 style hierarchical time integration to reduce comms within global
+time step, alternative time stepping scheme which is parallel in the method.
+
+- Hydro weak-scaling (Edo)
+Working on 3D tests.  Tiling 2d init conds in layers with mean
+inter-particle separation. Form a cube with tiled init conds.  Initial
+velocities don't have a component in the same layer.  Most
+importantly, allows testing of 3d kernel for sph.
+
+Putting on proposal for subgrid modes for swift and agn feedback
+
+Driven turbulence tests.  May never succeed with this for sph, but
+setting it up would be good.
+
+Weird behaviour over mpi - need to work on this.
+
+- RDMA updates (Peter)
+Not much to report.  Made attempt to adapt some methods for swift.
+Went back to mpi 1-sided stuff, but not yet working in swift, may not
+be obtainable.
+
+- Individual workpackage update [all]
+Tobias - implemented particle management with trees, multitasked it,
+bug in nvidia and intel c++ implementation.  Try to find out whether
+pthreads whether set certain barriers whether the task can swap in
+other tasks.  Deadlocks.  Hopefully something written down before
+Christmas.  Intel have stopped development of TBB.  Because new c++
+standard offers tasking.  Should use the c++ features, and rely on the
+language.  Got some docker snapshots about what blocks.  Similar with
+openMP too.  Engagement.
+
+- Training (Tobias?)
+Organisation - epsrc proposal for training need gap on rse side in hpc
+context.  Understanding how codes work not just using performance
+profiling tools.  EU Popcorn profiling.  
+
+- Outreach (?)
+Bug reports to intel/nvidia.
+
+Other groups - excalibur working groups - meant to get together to
+share common issues.  Stephen contacting Garth.
+
+Richard will look at setting up a meeting in January for a
+cross-excalibur meeting.
+
+Gen-X group meeting on 25th Nov.
+
+Excalibur working group email list would be good and a web page.
+
+Action points: email around working group meetings that are known
+about.
+
+2 sets of seminars.  sph virtual open meeting 25th nov.  quick round
+table.
+
+spheric seminars.   monthly global seminars.
+
+- Others/AOB?
+AGB: Shared sph talk details with ICC.
+DiRAC call.

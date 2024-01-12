@@ -1,0 +1,63 @@
+Present: Alastair Basden, David Acreman, Ben Rogers, Tom De Vuyst,
+Stephen Longshaw, Edo Altamura, Marion Weinrielrl, Peter Draper,
+Matthieu Schaller
+
+  - General updates
+Situation with the contract - Richard spoke about an official
+extension.
+AGB: Chase Katie/Matthieu - email Richard to chase this - needs
+signing by Leiden.
+
+Tobias: Extension request pending.
+
+  - New hardware call (Alastair)
+What would we look for?
+Extension of Gen-Z
+Power-10 Inception
+Possibly FPGA. 
+
+  - Performance analysis (Tobias)
+Gap in RSE training.  What we would like to have here.  Happy to host
+series of performance analysis workshops in Durham.  A new thing/skill
+gap/knowledge gap is how raw performance data is mapped onto
+algorithms.  So, aim to do some performance analysis workshops, and
+organise a workshop about how to map onto algorithms, and how this
+should inform development of codes.
+
+  - Hydro weak-scaling (Edo)
+Swift openMPI tests on cosma6.
+To try on cosma7 and cosma8.
+Will try testing a 3d model on the AMD chips.
+Will try using vtune.
+
+  - RDMA updates (Peter)
+Some dev from Intel fixing the mpi implementation, using ucx as a
+backend.  Have been playing around with this to see whether it works -
+it does up to a certain level, and there are tuning parameters related
+to the fabric which can help.  Seems to be a bit faster than the
+previous libfabric-based version.  Seems to be an adjunct rather than
+a replacement of libfabric.  Can now start recommending 2020-update2.
+Probably some parameters to stick into the module file, esp for
+cosma6.
+Problems of jitter in the MPI backend still remain.
+
+RDMA tests - allowing too much work to be done by CPUs, so perhaps not a fair
+test, now working on only using 2 cores.  Seems to be about as fast as
+MPI, slower than the full 16 thread version.  This points to
+contention within the library.
+
+To investigate - lock-free version of the library.
+
+Contention becomes more a problem with more cores.
+
+  - Individual workpackage update [all]
+No progress here.
+
+  - Others/AOB?
+Stephen - multiphysics/coupling codes - links between different
+excalibur projects.
+Dave - Isambard - hardware update starting today, doubling arm nodes
+and installing fujitsu afx64 nodes.
+
+No meeting in 2 weeks - email updates only.  Full meeting in 4 weeks.
+

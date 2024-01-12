@@ -1,0 +1,69 @@
+Present: Ali, George, Tobias, Ben, Abouzied, Stephen, Tom, Peter.
+
+Interview for phase 1B last week - went reasonably well.
+
+Stephen+Ben joined one of the many adhoc panic meetings.  Scott
+Woodley, Phil Hasnip, sat panicking because Richard wasn't there.
+
+Phil had some good questions, but didn't know about the communities.
+Stephen gave info.  Scott was looking for impactful way of use of
+SPH.  Astro, struggling with story of galaxy formation.  Concentrate
+on planetary collision type stuff.
+
+Focused in on tsunami modelling.  Shear size of it.
+
+Sounds like real thing went okay.
+
+Updates:
+Abouzied - Bundle tasks into 1 big task.  Hopefully speed up gpu side
+of executing.  Array of structs containing array of structs.  Trying
+to keep it similar to the c code.
+
+Max speedup is x4 for 384 core GPU.
+
+Change things around by bundling to speed up: A double pointer array,
+giving data for task 1, task 2, etc.  This works.
+
+Copies a bundle of particle data (e.g part1,(1 to n) to part10,(1 to
+n).
+
+This should fill up GPU, lower memcpy latency, GPU closer to being
+fully occupied.
+
+If results copied to global GPU memory, new approach much slower.
+
+But if not copied to GPU global memory, now ~50x speedup.
+
+New approach faster for kernel execution and memcopy from host.
+
+But copying from register to global memory is slower.  GPU is doing
+more pointer chasing.
+
+Now need to work things around, to write to more contiguous data.  
+
+Particle sorting might be needed to reduce access time.
+
+
+
+Better GPU - 
+AMD GPU port.
+
+
+Peter: revisiting SWIFT with RDMA.  Have been running some larger sims
+with new physics, and slow downs seen in task graphs.  So working
+through RDMA code, and importing the new stuff.
+
+Not sure what is going on with MPI.  Not working yet.
+
+This is the Flamingoes stuff.  MPI performance is so poor they are
+considering not running it at times.
+
+Loads of new physics exchanging even more particles than before over
+MPI.  Until know what's happening, can't progress much further.
+
+Stephen: CIUK conference - Simon Mcintosh Smith keynote.  In person
+event.  Key people from excalibur from epsrc are going to be there.
+Excalibur panel session.
+
+Alastair and Tobias going.
+

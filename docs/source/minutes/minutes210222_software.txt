@@ -1,0 +1,66 @@
+Present: AB, David Acreman, Benedict Rogers, Tobias, Abouzied, Scott,
+Edo, Richard, Stephen, Tom,
+
+Actions:
+Action: email around working group meetings that are known about.
+Action: AGB Progress network company NDAs
+	David - Done
+	Benedict - awaiting on company
+	Tom - still waiting - Hertfordshire side.
+Action: All - think up panel questions for the speakers.
+
+Closed:
+Action: Content for outreach website - Pablo
+Action: Richard/Stephen - email to advertise workshop
+
+  - General updates
+Workshop - Stephen will to the introducings in the morning.
+Ben will introduce 2 speakers in the afternoon, Stephen will
+introduce Ben.  Ben to be a cohost.
+A few questions at the end of each talk - might overrun into the
+discussion session.  Panel to have a few questions ready.
+
+- Cross cutting proposal (Tobias)
+Plan to hand in 1 proposal on tasking.  Training element.  Propose to
+switch dev cycle, work towards data driven code design - finger print
+of code first, small simulator.  Whether could run in theory.
+Investigate what tasking doesn't provide, and future tasking
+generations.  Would like to share tasks bewteen mpi rings
+automatically.  GPU and accelerator compilation.  Redundant
+calculations.  Deadline is end next week.
+Need to discuss how to collaborate with other themes.  Load balancing
+inbetween mpi ranks.
+
+Parallel-in-time proposal - need to be careful with deliverables -
+funding is done by delivering deliverables beaurocratically.  Some
+mathematical bridges to other use cases.  
+
+EPSRC cross-cutting stuff is imminent.
+
+Request to provide reviews by researchfish - Richard has put in a
+template.  
+
+- Contracts (Richard)
+Leiden have now signed, will be sending off later.
+
+  - Hydro weak-scaling (Edo)
+Investigating network noise.
+
+  - RDMA updates (Peter)
+Data correctness of previous solution- not doing all the tasks it
+should be doing.  So missing tasks.  Hydro doesn't work because of
+various checks, because the data wasn't there.  Some of the gains may
+still be there though.
+Need to try avoiding memory movement - and look more at shared memory
+models.
+
+
+  - GPU update (Abouzied)
+  Will be trying looking over particles not cells.
+  Stephen - any scope for a nested version, over the cells, then
+  internally over the particles.
+  Will look at nesting kernel calls.
+  - Individual workpackage update [all]
+  - Training (Tobias?)
+  - Outreach (?)
+  - Others/AOB?

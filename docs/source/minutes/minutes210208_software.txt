@@ -1,0 +1,98 @@
+Present: Alastair, David Acreman, Richard Bower, Benedict, Rogers,
+Peter Draper, Tobias Weinzierl, Tom De Vuyst, Jonathan Frawley,
+Stephen Longshaw, George Fourtakas, Abouzied Nasar, Matthieu Schaller, Scott
+Kay, Edo Altamura.
+
+Action: email around working group meetings that are known about.
+Action: Content for outreach website
+Action: Progress company NDAs
+Action: AGB to chase company.  
+
+Completed actions:
+Action: Richard Set up coordination between working groups - paused for now
+Action: Richard Swift training day in February - workshop in Feb/Marc
+Action: Ali contact Olly Perks at ARM - Done
+Action: Ali setup NDA with networking company - Done
+
+
+- General updates
+Tobias - involved with task-based Met Office call.  And Exeter.
+
+Discussion about future exascale ambition for particle hydrodynamics
+workshop.
+Arup - coastal erosion.
+Airbus - too busy.
+EDF - Damian Vielo base person to contact.  But likely to be too busy.
+Action - Richard/Stephen - send out email to advertise (event bright
+and sph-sig), and mention that if others want to give a short talk, to
+let us know.
+Date: 25th Feb.
+Shorten talks to 20 mins, make it 2 hours long, time for chat at end.
+Make it a series, and have a bit longer to set up the next one.
+Stephen to give a talk about SLOAD project next time.
+Next one to be 2 months time.
+
+- Excalibur funding call
+Tobias bid for the tasking call.  
+Dave - talked about link between parallel-in-time and tasking calls.
+Link is the test cases.  Having a think about how might to this
+mathematically, seems to fit with call ask, development in one area
+and how this fits in other areas.
+
+EPSRC call not yet released.  This cross cutting themes will be
+released on 16th Feb (approx).  Won't be overlap with Met Office.  Refined to 3
+page summary.  
+
+- Contracts (Richard)
+Ongoing.
+
+- Hydro weak-scaling (Edo)
+Weak scaling tests done on COSMA7.  Much larger this time.  100-356 nodes.
+Two variants - Intel MPI and OpenMPI.
+Scaling looks good from 2000 cores upwards.  But we don't know below
+this.
+IntelMPI 2018 successful, but OpenMPI not so successful - some jobs hung.
+With 256^3 per tile, also looks good, scales poorly initially, but
+then improves.
+128^3 uses 0.8% memory.
+256^3 uses 5% memory.
+One additional thing tried but failed was to increase particle number
+further. 100Bn but didn't have enough time.
+All of cosma7 should allow 500Bn particles.
+
+- RDMA updates (Peter)
+
+Last time talking about RDMA changes - trying to work out what was
+going on - turns out to be explainable - problem with the Physics,
+rather than the implementation.  Single core memory bandwidth limit is
+being reached.  Separated out send and receive tasks, and use 8x more
+tasks, which gives a ~3x speed up.  This mainly helps steps without
+much physics going on.  Good side is that a similar change to the
+existing swift code also sees similar gains.
+SWIFT Richard plot - many time steps, amount of work v time taken per
+step.  Fastest step is approx 50ms when there is very little to do
+using the RDMA code, and 100ms when using MPI.  Less scatter in the
+RDMA version too.  Need to decide how to do this properly now, as
+existing method is a bit of a hack.  
+
+- GPU update (Abouzied)
+
+OO code to optimise cell interaction on GPU.
+Each object has N particles, nested objects.  Each cell has heighbour
+objects which also contian the particles.  Some memory duplication,
+but should run more smoothly.  Getting about 100x speed up (without
+coms) or 35x with comms.  But looking to develop async version, which
+should give the 100x.
+On a low power Quadro.  
+
+
+- Individual workpackage update [all]
+
+
+
+- Training (Tobias?)
+- Outreach (?)
+
+Website needs setting up.
+
+- Others/AOB?

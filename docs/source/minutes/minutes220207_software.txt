@@ -1,0 +1,14 @@
+Attending: BDR, SL, GF, AN, PD
+
+Actions:
+BDR to ask Alastair about ownership of meetings while RGB is out of action
+BDR to ask AB if PAX-HPC is aware of RGB status?
+BDR/SL/AB Check with people not attending.
+
+Updates:
+AN: Fellowship writing
+PD: explained the apparent gap in the task schedule shown in the previous meeting (was not a bug, but due to code changes from
+others creating independent tasks).  Current waiting scheme needs some tuning (with recvs happening a long way into timestep).
+
+BDR: SPHERIC Abstract in writing, to be shared later this week.
+

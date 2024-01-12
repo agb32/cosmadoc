@@ -12,6 +12,17 @@ We are taking some steps, within our control, to help mitigate this. You will fi
 - Installation of ~£1m [solar panels](environmental.md#solar-panels) to offset COSMA's electricity usage.
 - Encouraging users to move to more efficient codes and workloads.
 
+## Publications
+
+Here is a list of collected publications that we have discovered.
+
+[https://www.nature.com/articles/s41550-020-1208-y](https://www.nature.com/articles/s41550-020-1208-y])
+
+[https://thenextweb.com/news/python-progamming-language-energy-analysis](https://thenextweb.com/news/python-progamming-language-energy-analysis)
+
+[https://green-algorithms.org/](https://green-algorithms.org/)
+
+
 ## Solar Panels
 
 In 2023, we installed approximately £1m of solar panel infrastructure on the site hosting the data centre, to provide power for COSMA, helping to offset CO2, in conjuncation with Durham University Estates and Facilities.

@@ -1,0 +1,61 @@
+Present:
+AGB, Tobias, George, Richard, Abouzied, Jonathan, Peter, Edo,
+Benedict.
+
+
+
+
+- Actions
+Action: Alastair to try to nudge commercial partners.
+          - katie has done this.
+Action: Richard to speak to Katie just before next meeting.
+          - commercial partners haven't yet responded.  Nudged again,
+	  no response, so sending a personalised message.  They are
+	  getting no money.  So, trying to set up a 2-tier
+	  collaboration agreement, with an academic version and a
+	  light weight industrial version.  This has gone to head of
+	  Durham Legal office.  Our agreement will pay Manchester
+	  etc.  Newcastle already takes this approach.  
+Action: email around working group meetings that are known about.
+	Stephen - tried to prompt, but no response.
+Action: Richard will look at setting up a meeting in January for a cross-excalibur meeting.
+
+Action: Report back on STFC meeting from 19th Nov.
+Action: Richard to look at the cross-cutting funding.
+
+  - General updates
+
+STFC meeting on Thursday - AGB putting some slides together.
+  Peter, Edo and Jonathan will also attend.  Report back next session.
+Introductions.
+Mini-apps discussion - sph missing from the US set.  So aim to put sph
+  into a miniapp.  Perhaps these should be called proof of concepts.
+
+Define the high prio use cases for the next round.
+
+  - Contracts (Richard)
+  - Hydro weak-scaling (Edo)
+K-H instability plots.  In 3d.  Tiling cubes for weak scaling.
+Problem with odd-sized cubes, seem to be using the last node whole,
+rather then half a socket.  Doesn't seem to make sense - PWD will take
+a look.
+
+  - RDMA updates (Peter)
+Trying to get swift running with single-sided MPI.  Runs with SHM
+comms, but deadlocks with fabric.
+Sends always synchronous, receives always async. But can have problems
+with deadlocks.  Currently only 1-1. not yet many-many.
+
+
+
+  - Individual workpackage update [all]
+  - Training (Tobias?)
+  - Outreach (?)
+  - Others/AOB?
+STFC meeting this week.
+
+Cross cutting funding - need to take action by 4th Dec, funding
+programmes starting in the new year.  
+
+We should probably do something about this.  Richard to take a look.
+Need to be clear about whether Excalibur or met office.  
