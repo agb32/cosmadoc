@@ -1,0 +1,35 @@
+
+
+
+Excalibur notes 12 April.
+
+Phase 1b application. Call announced mid may. Deadline w/c 27th Sept.  (so after the cross-cutting results are announced).
+
+Cross-cutting calls we’re supporting/involved in:
+
+Met office call:
+- Task parallelism (Tobias)
+- Parallel in time (Dave)
+
+UKRI
+- Code coupling (Ben/Stephen)
+- Graphics (Dave)
+- Future paradigms (Rgb/Dirac)
+- Quantum computing for HPC (Rgb)
+
+Contract. 
+
+NDA
+
+Abouzied. Tasks on the GPU. We discussed the best strategy. Abouzied is talking to Matthieu to see how best to do this.
+Moving to openCL rather than Cuda if possible.
+
+Edo. Plots of timesteps - need to figure out a way to compensate for the length of the run.
+
+ Draper. Single core band width not used well at times, so this can be sped up by parallelising. However, this shows that
+the ultimate performance is still limited by the amount of data being sent. Could we avoid sending complete particles - this
+is challenging because it makes it difficult to programme new tasks - since the task need to determine what data is
+exchanged. An issue of separation of concerns. Key point is that this is not a limitation in the longer steps - its an issue
+that arises from using multi-dt and having fewer particles per step. Peter’s going to now focus on whether this can be
+improved by exploring the fabric design.
+

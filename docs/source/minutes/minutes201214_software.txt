@@ -1,0 +1,75 @@
+Present: ALastair Basden, Tobias Weinzierl, Abouzied Nasar, Edo
+Altamura, David Acreman, Richard Bower, George Fourtakas, Benedict
+Rogers, Matthieu Schaller, Tom De Vuyst, 
+
+Action: Richard to speak to Katie just before next meeting.
+ - Katie has had responses from Vendors, we are putting +++ pressure on legal to finalise the document.  
+Action: all  email around working group meetings that are known about.
+Action: Richard will look at setting up a meeting in January for a cross-excalibur meeting.
+Action: Richard to set up MPPHEA workshop in Feb - see below.
+Action: Richard Set up coordination between working groups
+Action: Richard Swift training day in January
+Action: Alastair - website/minutes https://www.dur.ac.uk/icc/cosma/excalibur/mpphea/
+
+General updates
+===============
+
+Minutes to be sent round first, and then placed on website if no
+protests.  Care required for NDA stuff.  Allow us to show that we're
+progressing and doing stuff.
+
+Working group meeting - way to tick a box.  Lot of training materials
+prepared for Dualsphysics, so would be relatively easy to do this.
+
+Stephen - some are doing quite impressive workshops - effectively
+seminars.  Giving a talk about 3rd one in Jan.  Get quite high profile
+industry speakers.
+
+Training workshop around the 2 pieces of software we're focusing on.
+Good to do a workshop that isn't application focused.
+
+Richard - can we claim sph-sig working group is part of this?  Yes.
+
+We should organise a workshop/training meeting (with the aim of
+gaining participants across excalibur and from the wider SPH-sig). We
+came up with an outline plan. Part of the meeting will feature an
+interactive introduction to Dualsphysics and SWIFT.  This will use
+materials that we already have, and be designed Webpage of We will add
+“keynote” talks from high profile people talking about requirements
+for Exascale systems (Carlos for astro?). A slot for hardware vendors
+to talk as well. RGB to flesh out skeleton plan. We will aim to hold
+this early Feb.  A sph-sig special virtual seminar hosted by the
+MPPHEA working group.
+
+
+Durham team won the CIUK cluster competition, led by Tobias.  The
+whole UK team will be consolidated to go to ISC.  Organising workshops there.
+
+Tobias: Performance workshop series: teams enter with their code, learn about
+a tool and then use tool prior to the next meeting where they report
+their experience. Involves tool developers. We really should enter
+team(s) for SWIFT/DualSPhysics. The issue is to identify how to put
+time into it. Discuss with teams offline to identify people, possible
+post-grad students.  One workshop per month, perf tool developers on
+board.  Richard to twist arms off-line.  Grad students perhaps.
+
+- Contracts (Richard)
+Some companies have got back to ask what we want.
+
+- Hydro weak-scaling (Edo)
+Edo: weak scaling. Some encouraging results: it is important to keep in mind acceptable levels of scaling. Results depend on resolution, and show a step when MPI becomes involved. Next step is to add further points with more threads, and to understand where the additional time is going. eg., is it just in the writing of snapshots?
+
+- RDMA updates (Peter)
+Peter: RDMA. Peter created a working demonstration within SWIFT. Results of this soon.
+
+- GPU updates (Abouzied)
+Abouzied: GPU. Abouzied demonstrated that its possible to run multiple streams, hiding the data transfer. We discussed the very encouraging results. The key will be to now include boundary layers in the data transfer, and to understand how to integrate this into the GPU architecture. We discussed the likely optimal GPU cell size.
+
+- Individual workpackage update [all]
+- Training (Tobias?)
+- Outreach (?)
+- Others/AOB?
+  - minutes on website
+
+Date of next meeting: 11 January.
+

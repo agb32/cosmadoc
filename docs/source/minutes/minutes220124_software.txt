@@ -1,0 +1,63 @@
+Present: Ali, Abouzied, Stephen, George, Tobias, Peter, Ben.
+
+Stephen, George, Ben chatting about PAX work packages - how relates to
+cross cutting code project.  Code coupling part doesn't happen until
+end of year 2, meant to be stfc, manc, durham, 9 months. Howver stfc
+don't get any money.  Unclear what manc, durham going to be doing in
+this part of the project.  Also seems to be out of place in terms of
+overall project development.  and doesn't work well in terms of the
+code coupling project.  But ccp don't have any funds for coupling
+sph.  Not explicit that these funds exist.
+
+Would like to bring forward in the project, a spare 3 months.  9
+months allocated to it in pax hpc.  In gantt chart, task 3.8, only 6
+months fitted in, so a 3 month spare.
+
+Make it useful for pax hpc and ccp.
+
+Possibly move this forward by a year.  There is a practical bit of
+work that can be done straight away.
+
+A real usacase for having a hetrogeneous project.
+
+A coupled framework that weve already developed combined with
+dualsphysics.
+
+In pax hpc, 9 months, split 3 months stfc dur manc.
+
+At the moment have a working coupling between Pheonix FEA and
+openFoam.  Done this using one of the couplig libraries mentioned in
+the ccp.  And coupled sphflow to another commercial fea solver.  A way
+of usefully coupling.  A software dev problem.
+
+How do we make this interact well given dualsphysics is a single gpu
+code.
+
+Writing a donor library, then interfacing it.
+
+Revisit this decision every 2 weeks, wait for Richard to return, or
+make a decision.  Could be done late 2022, or early 2023.
+
+
+
+Updates
+Abouzied
+
+Mostly working on fellowship proposal.
+
+Peter
+
+Still working on business of working out what the tasks are getting up
+to and why not running at certain times.
+
+Nice plots.
+
+
+Ben, Richard and Matthieu - paper attached to this project giving
+general info - finally published online in ieee journal.  Really
+giving some publicity to the project.  Should we also announce this
+project to an abstract in the spheric workshops.  Next one in June.
+Abstracts due 11th Feb.
+
+Ben to lead on doing this.
+

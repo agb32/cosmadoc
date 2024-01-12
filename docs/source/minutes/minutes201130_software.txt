@@ -1,0 +1,93 @@
+Present: Alastair, Richard, Abouzied, George, David, Tobias, Edo,
+Peter, Jonathan, Benedict.
+
+- Actions
+Action: Richard to speak to Katie just before next meeting.
+Action: email around working group meetings that are known about.
+Action: Richard will look at setting up a meeting in January for a cross-excalibur meeting.
+Action: Richard Set up coordination between working groups
+Action: Richard Swift training day in January
+Action: Alastair - website/minutes
+
+
+  - General updates
+SP... call which should be bid for.  Tobias has submitted this.  task
+based parallelism as a cross cutting thing.  But doing it by
+interviewing PIs.
+
+Gen-X meeting a week ago.  Tried to do interactive whiteboard.  This
+worked surprisingly well.  Virtual postit notes.  Anonymous.  Content
+takeaway: particular community, much not relevant to everybody.  Can
+you use 1 big exascale simulation?  Mileage varies with this.
+Different communities will look at this at different levels.
+
+Swift does a lot of parameter variation and fitting.
+
+Parallel-in-time could be a solution for strong scaling.
+
+Is exascale a training exercise for petascale, rather like knl was?
+
+Possibility of using excalibur money to support sph-sig, workshops.
+
+What do we pick as a particular topic?  Parallel in time stuff, task
+based parallelism.  Need something badged as part of the project, but
+wants to be something people want to do.
+
+Makes sense to leave some of the dissemination until later.  Signal to
+some of the right groups that we will do something.
+
+Need to coordinate between the working groups.  Compile what people
+are planning.  Invite working group leaders, to give 5 minute
+presentation at a 1 hour session.  About how to run cross cutting
+themes, and what workshops are you putting on.
+
+Or look at a website to host this info?
+
+Richard to do this for next time.
+
+Do we want to look at an astrophysics related theme?  Swift training
+day.  January.  Richard to look at doing this.
+
+Alastair to look at a website for hosting minutes.
+
+
+
+
+  - Contracts (Richard)
+2 responses from commercial partners, feeding in comments into the
+document.  Stuff is progressing.  
+
+  - Hydro weak-scaling (Edo)
+Weak scaling update improved.  Now allocating 28 ranks in slurm, but
+using 27 of them.
+
+Need to crank up number of nodes, rather than ranks.
+
+Exact weak scaling test should be run without metis.
+
+Could go up to 7x7x7 on cosma7. 
+
+  - RDMA updates (Peter)
+Some progress implementing one sided mpi in swift.  Single exchanges.
+Runs a bit slowly.  Trying to use windowed mpi.  Works for 2 nodes,
+but not more.  About as fast for 2 nodes as normal mpi.  Should then
+be easy to plug in rdma rather than mpi.  Talking between nodes,
+tearing down and up could become a bottleneck. 
+
+  - Abouzied update:
+Getting to grips with the code, compiling etc, getting ideas of how to
+use dualsphysics with swift.
+
+Initially focussing on getting gpu kernels to work with swift.
+
+Then move on to async comms with cuda.
+
+Start with the hydro part?
+
+Compile in minimal sph setup.  Run a cubic box with nothing in it and
+see where the different parts are being called.
+
+  - Individual workpackage update [all]
+  - Training (Tobias?)
+  - Outreach (?)
+  - Others/AOB?

@@ -1,0 +1,70 @@
+Alastair, Tobias, Stephen, Richard, Matthieu, David, George, Peter,
+Ben, Tom, Scott, Edo.
+
+- Actions
+Action: email around working group meetings that are known about.
+Action: Richard to discuss with Andy Turner about microbenchmarks.
+Action: Richard to chase Katie about response to ARM.
+Action: Ali - investigate extreme scaling workshop on dirac facilities, similar to german systems a few years ago.
+Action: Richard - talk to Jeremy about how to proceed for phase 1a.
+Action: Ben - contact Sylvain.
+Action: Richard - talk to Scott about possibilities of linking up.
+Action: Richard - talk to Simon about whether interested.
+
+  - General updates
+CiSE article sent off (Richard, Matthieu, Ben).
+
+  - Phase 1b application (Richard)
+Hoping to work with molecular dynamics group - they are mostly talking about available codes, but don't develop software - this is done separately, possibly commercially.  More interested in standards and APIs.
+Tobias and Richard talked to AEA to convince about task-based programming.  But they weren't interested.  This would rock the boat and mess things up.  Already moving forward from F77 to F90 - this was enough of an advance.
+Need alternative to go into phase 1B and see what they say.
+Richard will talk to Jeremy for some advice.
+
+Could try linking with turbulence people - would they be interested in task-based parallelism?  Also MHD that might be of interest to them.  Do they already have much investment in development of other codes that don't want to consider task-based?
+
+Ben to contact Sylvain.
+
+Simon Macintosh-Smith may be worth investigating, but we don't want to get into DSLs.  But ultimate way of doing separation of concerns.  Writing a layer under the DSL with an API.
+
+  - Proposals funding update
+      - Tobias, task parallelism (successful)
+      - Dave - time parallelism) (successful, KO meeting has started)
+      - Code coupling (Ben/Stephen led by Garth Wells) (requested responses to reviewer, a bit haphazard.  One 9.5, one 8, one black, non-technical)
+      - Graphics (Dave) (pending, project description written, waiting for a student to choose this project.)
+      - Future paradigms (RGB/DiRAC) (pending)
+      - Quantum computing (RGB) (pending, interview tomorrow)
+  - Contracts (Richard)
+  - Hydro weak-scaling (Edo)
+Repeating scaling tests on cosma8, looking at 2,4,8 ranks per node, 256^3 particles per tile.
+Scaling 4 magnitudes in number of cores, still seeing very good performance.
+Will look at how 2,4,8 compare with each other.
+Running 1.4x faster per core than cosma7.
+Can get 1Bn particles per node, much more than cosma7.
+
+  - RDMA updates (Peter, not this week)
+Nothing to add about the RDMA.
+Parts of development decoupling memcopies from send/receive being put into the main code, and reducing the message sizes.
+Can now trace local copies from buffer to buffer, so clearer picture of where slowdown comes from.
+Numa awareness.  Ideal 1 rank per node to minimise overheads.  Doesn't do will with numa regions.  Some work on progressing this.  Ideal would be to launch a task on the core where the data is, but hard.
+Good speedup in test runs but not so good in practise.
+
+
+- GPU update (Abouzied)
+Trying to sort out cuda code to launch within swift - struggle to sort out compiling using autotools with cuda.  Set up some code to send/recv from GPU, so this blockage is now sorted out.  Will start working on setting up some sph density code and compare with swift.
+A lot of this was very cuda specific - so might be hard to port to opencl.
+Will do this later - test out what we have now.
+
+  - Individual workpackage update [all]
+
+  - Training (Tobias)
+Next monthly workshop on Thursday.
+German computing centre organised extreme scaling workshop many years ago - 1 week, get whole system for test runs.  Is there some room to organise a workshop - select number of groups who can run on 5k cores or more, access to system, get a few mpi people over, help with tuning mpi, run over night.
+Could be benchmarking group, could be hardware group, etc.
+
+  - Outreach (?)
+
+
+  - Others/AOB?
+PhD funding from Dell - to work on AMD technologies.  
+
+Next meeting: 5th July.

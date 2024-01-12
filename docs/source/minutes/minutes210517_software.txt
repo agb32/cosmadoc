@@ -1,0 +1,114 @@
+Alastair, Tobias, Stephen, Richard, Matthieu, David, George, Peter,
+Ben, Tom, Scott, Edo.
+
+- Actions
+    Action: email around working group meetings that are known about.
+    Action: Richard to chase Katie about response to ARM.
+    
+      - General updates
+Matthieu - ARM - unless there is a feeling that next machines will be
+ARM, wait and see.
+
+        - CiSE article (Richard)
+Special edition of Computing in Science and Engineering (CiSE).
+Invited to submit an article.  Helps us, something to refer to and
+point people to.  Special issue on the ExCALIBUR project.  Input from
+Peter and Abouzied.  Tobias to put in something about separation of
+concerns.  
+
+
+        - June 8th workshop (Richard)
+A workshop to compare progress between groups.  See whether working
+groups could combine phase B proposals.  Can't be shifted.  Brief
+status summary, 1 slide. Intended for teams to meet and contribute in
+breakouts. 9:30-1pm.  Spheric is also on.  Matthieu can join for a
+bit.  Can't see how a useful phase B proposal could be combined with
+another working group.
+
+
+        - challenge problem (May 28th) (Richard)
+Meant to set a challenge problem / microbenchmarking app, which can be
+used to benchmark the exascale systems.
+Similar to the swift benchmarking repo with reframe etc.  Can use
+this.
+Concentrate on weak scaling.
+GPU port not ready.
+For challenge 2, put some eng resource into GPU time, or something
+more abstract.  Difficulty is identifying a correct case for this.
+Ben/George to think about what can be suggested.
+Are they happy with coupling?  Some physics on GPU, some on CPU.
+A problem we can do today on largest computers, how can we scale this.
+Richard to ask Andy Turner about extending Edo work.  A real
+calculation or something
+
+EPSRC fund high end consortia, funding computational projects.  Is a
+whole community on turbulence and turbulent reacting flows.  This
+could be a way of linking into existing activity.  Significant link
+between outputs from excalibur and these HECs.
+
+If looking for a reason for a generic case around turbulence, could
+link back to this.  Mesoscale workgroup could also be useful here.
+
+Can put in a challenge-2 problem along these lines.
+
+
+
+      - Training (Tobias?)
+http://www.peano-framework.org/index.php/workshops/2021-performance-analysis-workshop-from-analysis-to-insight/
+This Thursday is all about correctness tools - tool demos and
+presentations about MUST.  Assesses correctness of MPI codes.  Archer
+tool checks for threading errors.  Also tool about memory access
+correctness.
+
+Will help with scaling.
+
+       - Cross cutting proposals (met office)
+           - Tobias, task parallelism
+Learnt that big has been successful, together with Hartree.  Start
+date 1st June.	Another series of workshops.  Work on tools that allow
+tracking of parallelisation character.  Proposing to introduce pragmas
+or an API to generate abstract footprint and a simulator.  Second
+pillar of the grant will push people to a data-driven
+paralllelisation approach.  3rd pillar looks are features
+in task-based which are missing.  e.g. interaction of
+taskbased and distributed parallelism.  Temporary moving
+of tasks to nodes.  Starts 1st June, for 3 years.  Looks at task
+inefficiency patterns. 0.3 FTE for 3 years.  Hartree 0.2 FTE for 3 years.
+
+           - Dave - time parallelism)
+Includes weather/climate and fusion.  Community building and outreach
+for time parallelism.  KO 1st June.  Identify opportunities for
+Knowledge Exchange.  Trying out different time-parallel algorithms.
+
+           - Code coupling (Ben/Stephen)
+PI response for 1st stage due this week, ongoing.
+
+	    - Graphics (Dave)
+Student project.  Released to students this week.
+
+	   - Future paradigms (RGB/DiRAC)
+Should be hearing.
+
+           - Quantum computing (RGB)
+Should be hearing.	   
+
+      - GPU update (Abouzied)
+Good progress implementing loops.  On leave this week.  
+
+      - RDMA/MPI updates (Peter)
+Playing around with reducing data sent across fabric.  Version of
+swift that only exchanges parts of gravity particles that it
+needs to.  Probably going faster than it used to.  Some overheads of
+moving data around the machine.  Seeing 10-20% improvement for some
+steps where particles had already been transferred.
+Will re-run everything.
+
+      - Hydro weak-scaling (Edo)
+Repeating some of the weak scaling.  Thinking about geometry.
+Gizmo paper driven turbulence test.  How to set up initial conditions
+from this.  Driven turbulence - need code to drive in Fourier space.
+
+      - other workpackage update [all]
+      - Others/AOB?
+
+Next meeting: 12pm, 1st June (Tuesday)

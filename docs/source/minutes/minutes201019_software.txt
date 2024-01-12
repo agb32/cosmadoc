@@ -1,0 +1,106 @@
+201019
+
+present:
+tom (TV), david (DA), george (GF), ben (BR), peter (PWD), richard
+(RGB), matthieu (MS), edo (EA), scott (SK), alastair (AGB), Stephen
+(SL), Tobias (TW).
+
+Contracts:
+
+Matthieu waiting for paper from Katie Daniels.
+Ben waiting - recruitment on temporary account code.  Waiting for
+offer letter.  Needs a signed contract.  Waiting on Katie to get the
+contract to sign.
+Same for Tom at Hertfordshire.
+Action - agb to chase Katie.
+
+Ben : Manchester delayed PDRA recruitment.  Financail hit due to lack
+of students.  Most of research adminstration team took voluntary
+redundancy.
+
+Hydro weak scaling:  Edo
+Not much to say - combination of deadlines, cosma shutdown etc. Next
+step - non mpi swift with K-H, need to extend to mpi. And extend to
+3D.
+RB: How many steps need to do?
+EA: Max 1000 steps.
+
+RDMA updates - PWD
+Can make things go fast, but not realistic.  Trying to take it back to
+basic and make it fast - i.e. with 2 threads per ranks.  Initially was
+much slower than standard MPI.  Now goes about as fast.  Uses shared
+memory to dispatch back and forward.  16 ranks on cosma7.
+Only 1 side is async - the receive side.
+
+RGB: Were Intel interested?
+PWD: Recent Intel breakthrough in hackathon.  UCX reintegrated with
+2020-update2.  This gives an improvement. Though can still fail.
+
+MS: Not faster, but runs.
+
+PWD: Havent' yet looked at the lockless version of intel2020.
+Improvements in my RDMA code can assert that there is no blocking.
+
+
+Any other updates?  No.
+
+RGB: How do we integrate PWD work to use the blueField?
+PWD: Not sure.
+TW: Use BF to outsource node balancing decisions to the network.  So
+the BFs don't interfere with the core business but provide guidance.
+PWD: Exactly.  Don't do lots of reduction stuff anyway.
+TW: Shame that Mellanox have put emphasis on reductions, but we don't
+do much of this.
+Let BF take part of one job and core business stays on host.
+Also split the task graph, programme heterogeneous hardware so that
+tasks already reside on the right part of hardware.
+
+RGB: Is this integratable with RDMA?
+TW: Launch tasks with MPI - which then have a secondary way of
+communicating with tasks around - e.g. rdma.
+
+MS: Haven't done any useful work around them really.
+
+PWD: See them as MPI GPUs.
+
+GPU discussion
+SL: Is cuda the right decision?  Might make sense to write the self
+contained kernels.
+
+da: OpemMP4 offloading capability - portable, but not quite as good as
+cuda.
+SL: openmp4 was 5-6x slower.  Compiler support.
+TW: OpenACC couldn't work with host parallelism - seemed to be 1
+thread only on host.
+
+MS: Simple case application with pragmas for offloading and for
+bluefield case.  See what is viable.
+RGB: This is what we want.
+
+SL: Benchmarking project - cross-group platform.  When he does know
+what happens next, wants to focus on code coupling.  Coordinate with
+the other working groups.
+
+Individual package updates:
+DA: Out of time integration stuff - hoping to get a masters student - start
+running swift on isambard, see how gets on with this.
+MS: Gadget-4 paper published, mostly focused on gravity.  Detailed
+section on out of time section - solved for gravity.  Structure of
+hamiltonian simpler. Evolve system at different rates, some particles
+get integrated 4x as fast while other stuff happening for the slower
+particles.
+Also discussed MPI - MPI-only code.  Face same issue as PWD - lots of
+small messages are a problem.  Gather these into larger messages.
+
+
+
+AOB:
+MS - started benchmarking on cosma8.  Works out of the box, but not as
+fast as it could.  One of these is the construction of the tree.  This
+is done in parallel and scales very badly.  This is shuffling
+particles in memory.  32 cores are 2x faster than cosma7, but full 128
+cores are 2x slower.
+
+SL: OpenMP - dual phyisics - implemented in cuda and openmp.  2 code
+bases.  As a code base, useful to test.
+

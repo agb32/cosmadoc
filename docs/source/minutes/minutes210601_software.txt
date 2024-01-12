@@ -1,0 +1,30 @@
+From RGB
+- benchmarks.  RGB submitted two bench mark proposals. Challenge 1 essentially continues the Dirac bench marking exercise
+(does not use GPU code). Challenge 2 is focussed on showing that a uniform box with a bit of turbulence can be integrated on
+a GPU.  The suggestion that we offer to do a version of this on ARM+Nvidia .. RGB will discuss with Andy Turner.  Hopefully
+the effort to do this comes from Andy Turner’s working group. 
+- contracts. The legal dept have finally sorted out how they will deal with commercial partners. This is being handled by
+Rachael Matthews, who has contacted partners to assure them of progress soon. We discussed what we might expect to gain from
+the interaction with the partners.
+- CiSE paper. Matthieu and I are writing an article for the Computing in Science and Engineering magazine. This will be high
+level and light touch. We will not include too much about current progress, rather focussing on the challenges and
+describing the project. We discussed some pictures that we could use.
+- June 8th meeting. 9.30-12.30.  Please let me know if you are able to attend (even if in part). We discussed how we might
+handle the meeting, being realistic about the chances of Phase 1b success if we “go it alone”. Possibilities are to work
+with the molecular dynamics community since the numerical methods are similar. A better approach might be to focus on the
+underlying task, GPU and asynchronous communication technologies.
+
+Quick update from others.
+Edo - we briefly discussed how we might move forward on scaling tests. 
+
+Abouzied - explained some of the compilation issues. If these are fixed then he’s optimistic about being able to have a
+demonstration program that makes use of the GPU fairly soon.
+
+Peter - is exacerbated with getting reproducible runs so that he can compare the gains down to different communication
+strategies reliably. We discussed why the task frame work made this inherently difficult. 
+
+Next meeting 21st. RGB is away on the 14th … moving the meeting a week later would let us focus on the outcome of the
+cross-working group discussion.
+
+
+

@@ -1,0 +1,155 @@
+Present: Alastair, David Acreman, Richard Bower, Benedict, Rogers,
+Peter Draper, Tobias Weinzierl, Tom De Vuyst, Jonathan Frawley,
+Stephen Longshaw, George Fourtakas, Abouzied Nasar, Matthieu Schaller, Scott
+Kay, Edo Altamura.
+
+Action: email around working group meetings that are known about.
+Action: Richard Set up coordination between working groups
+Action: Richard Swift training day in February - workshop in Feb/Marc
+Action: Ali contact Olly Perks at ARM - Done
+Action: Ali setup NDA with networking company - Done
+
+- General updates
+=================
+
+Swift traing day now a workshop in Feb/March.
+Stephen in touch with rolls royce/asimov project. Keen to get in
+touch.
+Simon Makintosh Smith talking about Excalibur hardware, and what we're
+likely to have.
+Need more industry speakers, have space for 4.
+
+Ben contacted motor sport company, provisionally yes, but don't want
+to give away trade secrets.
+
+Ben contacted national nuclear lab - keen to attend, but not sure
+about whether will talk.
+
+Tom - spoken to ESI - all sorts of simulation software.  And will
+speak to someone in JLR.
+
+Carlos to talk on astrophys side.
+
+Stephen to contact EDF.  And Airbus.
+
+Technical partners - probably not.
+
+Want to get date tied down, but needs clarification from speakers
+first. 
+
+  - Contracts (Richard)
+Required desperately.  Just need Leiden now.  Set up something
+separate with NVIDIA.  
+
+  - Excalibur funding call
+Call from Met Office.  Cross cutting proposals have partly gone into
+this, but with some changes.  Groups already doing this with some
+success - probably referring to us.  Doesn't really reflect what we
+do.  Surprised - old fashioned, should be additional level of task
+based parallelism.  Seemed more along the lines of coupling different
+tasks.
+
+Call for disruptive tech.  Parallelism is more than coupling codes.
+Possibly not what they're expecting.
+
+More detail will be released by EPSRC in early February.
+
+Met Office running this like a tender.  Scope is 1 or more of the high
+prio use cases.  Want applied to specific thing but with ref to other
+areas.  e.g. swift already does, but could be applied to met office.
+
+5th March deadline.  Tobias to lead.
+
+Dave to set up a call with Beth at the Met Office (Richard, Tobias,
+David).
+
+Separate proposals, SPH working group = 1 proposal.  Gemma will also
+put in a parallel in-time proposal.  Approaching from opposite end.
+Look at the task graph, take expensive parts out.  Talk to Beth about
+this.  
+
+  - Hydro weak-scaling (Edo)
+Investigating possibility of doing large weak scaling tests.  Made
+initial conditions.  Some runs are large, several hundred nodes.
+
+Options either a reservation, or wait until after downtime, and have
+it launch then.  Run once with intel mpi and once with openmpi.  
+
+  - RDMA updates (Peter)
+Still working on it.  Code about as fast as MPI.  Digging into why not
+seeing improvements.  Seems to hit theoretical limits.  But might be
+some workarounds.  Seems to be memory bandwidth to a single core at
+the moment.  
+
+- GPU update (Abouzied)
+Understanding swift.  How to use quickshed.  Split gpu tasks into
+streams, to overlay data transfer and computation.  Discussion of how
+to partition into GPU
+
+
+  - Individual workpackage update [all]
+  - Training (Tobias?)
+  - Outreach (?)
+  - Others/AOB?
+
+
+- Actions
+Action: email around working group meetings that are known about.
+Action: Richard Set up coordination between working groups
+- haven't found a way to do this yet.
+Action: Richard Swift training day in January
+ - sponsor the next sph-sig meeting and make it exascale ambition.
+ Get Carlos to talk on astrophys side, someone from eng side, and
+ possibly someone from met office.  Next level of ambition.  From eng
+ perspective, could try eng companies.  Benedict can approach some of
+ their sponsors.  Where would we like to be in 5-10 years time.  Scope
+ out what we would imagine being able to do on an excalibur-like
+ system.  Someone to give an overview of hardware likely to come
+ online.  Perhaps Simon McIntosh Smith.  Mid-late Feb.  Possibly 24th.
+ Offer to hold the training sessions after the talks, but get people
+ to express interest in advance.  Longshaw mail list to be used.
+Tom and Ben to talk to industry contacts.  Stephen to send something
+to Lee Lapworth at Rolls Royce. 
+
+Action: AGB prompt Olly Perks at Arm.
+Action: AGB to set up NDA with networking company.
+
+ - General updates
+New PoC with networking company.
+
+ - Contracts (Richard)
+All should have received Katie's email about the contracts.  Waiting
+to hear from Hertfordshire.  And Leiden.  And LJMU.  Sent just before Christmas.  
+Commercial partners - need to hear from arm.  AGB to prompt Olly
+Perks.  Katie pushing for 15th Jan.
+
+ - Hydro weak-scaling (Edo)
+ - RDMA updates (Peter)
+Runs about as fast as MPI.  Struggling to understand what has gone
+wrong.  All enhancements in place, but still somewhat slower than expected.
+Some possibilities, problem is probably in swift.
+Suggestion - add a global dependency on all the timing tasks.  
+ - GPU update (Abouzied)
+Nothing to update.
+
+ - Individual workpackage update [all]
+David - hoping to have a student working on this for a masters
+project, but he has got a job instead.  So need to get back to doing
+stuff.  Blended delivery of a module this term, so will have to delay
+until later.  Thing to look at is caching of mpi call, grav-only calc,
+cache bits of the tree.  Fast running particles don't do the long
+range calc.  Helps for gravity but not hydro.
+Richard - Rudigar Pakemore has solved asynchronous timesteps.  But not
+for hydro.  Can do this in arepo, but not exact.  Need to be able to
+write down the hamiltonian of the system.  
+Dave - different ways of thinking about this.  eg split into linear
+and non-linear operator.
+
+- Training (Tobias?)
+Starting perf anal workshop - >60 people signed up.
+Jonathan leading swift in this.  
+
+- Outreach (?)
+Action - Content for website -
+
+ - Others/AOB?
