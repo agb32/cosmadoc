@@ -25,6 +25,7 @@ Contents
 .. toctree::
 
    cosma
+   facilities
    dirac
    account
    ssh
@@ -49,7 +50,6 @@ Contents
    cosma8
    citizenship
    faq
-   api
    projectdata
    environmental
    acknowledgements

@@ -10,7 +10,7 @@ COSMA5 is a Durham system for ICC users and collaborators.
 
 COSMA7 and COSMA8 are the current DiRAC facilities hosted by Durham (COSMA6 was retired in April 2023). COSMA7 was introduced as the DiRAC-2.5x system in May 2018, and expanded by DiRAC-2.5y in January 2019, and as DiRAC-2.5z in April 2019. COSMA8 became operational in October 2020 as the DiRAC-3 prototype system, and was available for a number of months before integration with the full DiRAC-3 system began in April 2021. The full (phase-1) COSMA8 system became operational in September 2021. The COSMA8 phase-2 extension will become operational in July 2023.
 
-The DINE LINK experimental system is also part of COSMA.
+The [DINE](facilities.md#dine) experimental system is also part of COSMA.
 
 DiRAC is the UK's integrated supercomputing facility for theoretical modelling and HPC-based research in particle physics, astronomy and cosmology. For more information about DiRAC please visit the [DiRAC web pages](https://www.dirac.ac.uk).
 
