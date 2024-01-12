@@ -28,9 +28,11 @@ cosma8-shm2 contains:
 
 Should you wish to submit to a particular node, or exclude a partiular node (e.g. to ensure that you have access to a particular type of GPU), you can use the ```bash #SBATCH --exclude=ga004``` directive within your batch script (which in this case would exclude ga004, thus ensuring you have access to a node with 2x AMD MI200 GPUs. Or #SBATCH --nodelist=ga004 (which in this case would submit to only the ga004 node).
 
-## COSMA7 queues: cosma7, cosma7-pauper and cosma7-prince
+## COSMA7 queues: cosma7, cosma7-rp, -pauper and -prince
 
-Access to the DiRAC COSMA7 machine is provided using the three queues cosma7, cosma7-pauper and cosma7-prince. These three queues share all the 452 compute nodes dispatching jobs according to the different priorities that the queues have assigned. All the queues are configured so that job exclusive access to nodes is enforced. This means that no jobs share a compute node. Therefore, if you only need a single core, your project allocation will still be charged for using 28 cores.
+Access to the DiRAC COSMA7 machine is provided using the two queues cosma7 and cosma7-rp (and their increased or reduced priority versions, cosma7-pauper, cosma7-prince, cosma7-rp-pauper and cosma7-rp-prince). These two queues provide access to half of COSMA7, with 224 nodes in each.  cosma7 uses a 100Gbit/s InfiniBand fabric, while cosma7-rp uses a 100Gbit/s Rockport Ethernet fabric (6D torus topology).
+
+All the queues are configured so that job exclusive access to nodes is enforced. This means that no jobs share a compute node. Therefore, if you only need a single core, your project allocation will still be charged for using 28 cores.
 
 The main use of these queues is for DiRAC projects that have been assigned time at Durham and the mix of jobs expected to match its capabilities are MPI/OpenMP/Hybrid jobs using up to 28 cores per node with a maximum memory of 512GB per node. If any jobs can run using fewer resources than a single node then they should be packaged into a batch job with appropriate internal process control to scale up to this level.
 
@@ -39,11 +41,11 @@ In addition to the hardware limits the queues have the following limits and prio
 
 | Name             | Priority          | Maximum run time	   | Maximum cores    |  
 | ---------------- | ----------------- | ----------------------| ---------------- | 
-| cosma7           | Normal            | 72 hours              | unlimited        | 
-| cosma7-pauper	   | Low               | 24 hours              | unlimited        | 
-| cosma7-prince    | Highest           | 30 days               | 4096             | 
+| cosma7 and cosma7-rp           | Normal            | 72 hours              | unlimited        | 
+| -pauper	   | Low               | 24 hours              | unlimited        | 
+| -prince    | Highest           | 30 days               | 4096             | 
 
-The three queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [Durham utilities](LINK) descriptions for how to make use of back-filling.
+The pauper and prince variations of the queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [Durham utilities](LINK) descriptions for how to make use of back-filling.
 
 ## COSMA6 queues: cosma6, cosma6-pauper and cosma6-prince
 
