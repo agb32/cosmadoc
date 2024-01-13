@@ -1,6 +1,6 @@
 # COSMA Facilities
 
-![COSMA7](images/cosma7.png)
+![COSMA7](images/cosma7.jpg)
 
 
 COSMA is comprised of:
@@ -119,7 +119,7 @@ DINE has been funded by DiRAC, ExCALIBUR, the Department of Computer Science and
 
 ### Using DINE
 
-Please see [DINE]() notes for information about using DINE.
+Please see [DINE](facilities.md#dine-notes) notes for information about using DINE.
 
 #### DINE notes
 
