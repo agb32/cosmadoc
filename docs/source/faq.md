@@ -13,7 +13,7 @@ For technical problems, please email cosma-support@durham.ac.uk. If we cannot so
 
 ## Who can get an account on cosma?
 
-Any STFC theory community member, or any ICC collaborator. To request DiRAC funded time, either submit to the standard call for proposals, or submit a seedcorn application. See the DiRAC website for further details. For non-DiRAC time, speak to your collaborator at Durham, CC-ing cosma-support@durham.ac.uk.
+Any STFC theory community member, or any ICC collaborator. To request DiRAC funded time, either submit to the standard call for proposals, or submit a seedcorn application. See the [DiRAC](https://dirac.ac.uk) website for further details. For non-DiRAC time, speak to your collaborator at Durham, CC-ing cosma-support@durham.ac.uk.
 
 ## What should I do to get an account?
 
@@ -21,19 +21,19 @@ Follow these instructions [here](account.rst).
 
 ## Can my external collaborator get an account too?
 
-Yes, provided that they are a collaborator with the ICC
+Yes, provided that they are a collaborator with the ICC.
 
-## How do I log in to cosma
+## How do I log in to COSMA?
 
-Follow these instructions LINK. This will work both from within and outside Durham University.
+Follow [these instructions](ssh.md). This will work both from within and outside Durham University.
 
-## Can I use vnc? Where should I run the server?
+## Can I use VNC? Where should I run the server?
 
-VNC is not recommended for security reasons. However, x2go offers a faster graphical interface.
+VNC is not recommended for security reasons. However, [x2go](x2go.md) offers a faster graphical interface.
 
 ## What are the main differences between cosma5, cosma7 and cosma8?
 
-Please see [here](https://www.dur.ac.uk/icc/cosma/facilities/).
+Please see [here](facilities.md).
 
 ## Why is there a cosma5, 7 and 8, but no cosma6?
 
@@ -81,9 +81,9 @@ This is not currently possible, though if you are in Durham, you can email a PDF
 
 ## What are these “modules”?
 
-Modules are used to setup your work environment, changing your environment variables (e.g. PATH, etc) depending on what your requirements are.
+[Modules](modules.md) are used to setup your work environment, changing your environment variables (e.g. PATH, etc) depending on what your requirements are.
 
-## Which modules should I load? Are these different on the different cosma’s? How do I find which modules are available?
+## Which modules should I load? Are these different on the different Cosma’s? How do I find which modules are available?
 
 Use the "modules available" command to see available modules. These are the same for each COSMA system, and if optimised versions exist for particular architectures, these may be loaded automatically.
 
@@ -147,7 +147,7 @@ If initial conditions are small and only used by a small number of nodes at a ti
 
 ## How do I run an embarrassingly parallel job?
 
-Investigate using SLURM arrays or use the parallel_tasks code (make a copy from ```/cosma/home/sample-user/parallel_tasks```.
+Investigate using SLURM arrays or use the parallel_tasks code make a copy from ```/cosma/home/sample-user/parallel_tasks```.
 
 ## Can I log-on to a compute node? Should I?
 
@@ -184,6 +184,7 @@ The mad06 system has 1TB RAM.
 Standard visualisation tools are available. If you need an answer to this question, please ask us to put more details here. Several GPU servers are also available.
 
 ## I am developing a code and need to profile and debug it
+
 What are the debugging tools?
 
 allinear, gdb, perf, etc are all installed.
@@ -215,8 +216,7 @@ If you are getting locale errors when compiling or running code, check your LANG
 Compilers do not always handle locales very well. If this works remember to do this everytime you login, or add it to your ```.bash_profile```.
 
 
-
-## Does mounting cosma via sshfs on your local machine hog any cosma resources?
+## Does mounting cosma via sshfs on your local machine hog any Cosma resources?
 
 If you begin moving large files about, you may notice poor performance.
 
