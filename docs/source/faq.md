@@ -249,3 +249,32 @@ Finally, if you are still not able to write, check that the group you are writin
 
 To change the group that you are writing as, if a sticky bit is set, either remove the sticky bit (chmod g-s /path/to/directory) or re-group the directory (chown USER:NEWGROUP /path/to/directory). If a sticky bit is not set, and your default group is over quota, so you wish to write as a different group, you can use the "newgrp" command: "newgrp GROUP". This will change your group to that specified (which should be in the list given by the "id" command), for the current terminal. Therefore, you will need to do this again if you log in again. You will also need to put it into your Slurm batch scripts. Alternatively, if you believe that your default group is wrong, and wish it to be changed, please contact cosma-support.
 
+## Using the snap file systems (/snap7, /snap8)
+
+These file systems are typically used for rapid checkpointing, and have fast read-write bandwidths.
+
+Please bear in mind that this is temporary storage, is cleared
+periodically, and has no redundancy - if a disk dies, you will lose
+data.  So don't put anything here you can't afford to lose.
+
+Basically, best use comes down to how you want to use the storage, and the
+striping across the file system.
+
+Assuming you have many processes which each want to write 1 file
+simultaneously, then the things to bear in mind:
+There are 192 OSTs (disks).
+So spreading the write load across these as best possible is a good idea.
+
+If you are writing >96 files, then set the striping of the parent
+directory to 1 (lfs setstripe -c 1 /path/to/dir)
+and then all files written here will be written to a single file.
+
+If you want to optimse further, you can specify each file to be written to
+a specific OST in advance (lfs setstripe -c 1 -i INDEX /path/to/file)
+where INDEX is the
+index of that specific file.  This effectively "touches" the file (creates
+a 0-byte stub), which when you then write to, will be written to the
+selected OST.
+
+If you are writing less than 96 files, there may be advantages in setting
+the stripe count to 2 or more, depending on file size.
