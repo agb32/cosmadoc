@@ -36,7 +36,7 @@ Please contact cosma-support if you wish to access this.
 
 This is available to any of the UK community.
 
-# ExCALIBUR software projects at Durham
+## ExCALIBUR software projects at Durham
 
 There are several ExCALIBUR software projects (finished and ongoing) at Durham, investigating Exascale software techniques to allow codes to run effectively on Exascale systems. These are:
 
@@ -48,7 +48,7 @@ There are several ExCALIBUR software projects (finished and ongoing) at Durham, 
 
 4. [Quantum Enhanced and Verified Exascale Computing (QEVEC)](https://excalibur.ac.uk/projects/qevec/)
 
-## MPPHEA
+### MPPHEA
 
 Massively Parallel Particle Hydrodynamics for Engineering and Astrophysics
 
@@ -92,7 +92,7 @@ Dave Acreman (Exeter)
 
 Matthieu Schaller (Leiden)
 
-### Workgroup meeting minutes
+#### Workgroup meeting minutes
 
 Unedited meeting minutes
 
@@ -120,10 +120,10 @@ __Resources__
 - [MPPHEA minutes 220207](minutes/minutes220207_software.txt) (last modified: 9 February 2022)
 
 
-# ExCALIBUR Training
+## ExCALIBUR Training
 
 A [code performance workshop series](https://tobiasweinzierl.webspace.durham.ac.uk/software/peano/workshops/2021-performance-analysis-workshop-from-analysis-to-insight/) (7 monthly workshops) was run in 2021, and we are looking at repeating this in the future.
 
-# ExCALIBUR Cross-cutting research
+## ExCALIBUR Cross-cutting research
 
 The Quantum Enhanced and Verified Exascale Computing (QEVEC) project has been funded as part of the ExCALIBUR cross-cutting research call.

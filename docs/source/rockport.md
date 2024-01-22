@@ -62,7 +62,7 @@ The Rockport partition does not currently have dedicated (fabric-native) storage
 
 Not all storage systems are mounted on the Rockport partition - please check before use. e.g. /cosma6 is not currently mounted.
 
-# Benchmarking
+## Benchmarking
 
 We are very interested to see how the Rockport partition compares (performance-wise) with the cosma7 partition. Therefore, if you are able to do any tests or code comparisons, please let us know, and pass on any results that you get.
 

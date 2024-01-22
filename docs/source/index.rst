@@ -44,6 +44,7 @@ Contents
    virgo
    data
    archive
+   movies
    links
    presentations
    x2go
