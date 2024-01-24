@@ -56,7 +56,7 @@ Contents
    x2go
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    :caption: RUNNING JOBS
 
    slurm
@@ -66,7 +66,7 @@ Contents
    data
    
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 5
    :caption: GETTING HELP
    
    faq
@@ -77,7 +77,7 @@ Contents
    archive 
    
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 6
    :caption: ADDITIONAL RESOURCES
 
    news
