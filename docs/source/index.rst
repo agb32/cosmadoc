@@ -23,39 +23,66 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
+   :caption: ABOUT
 
    cosma
    facilities
    dirac
+   rockport
+   virgo
+   dell
+   excalibur
+   cosma8
+
+.. toctree::
+   :maxdepth: 2
+   :caption: GETTING STARTED
+
    account
    ssh
+   citizenship
+
+.. toctree::
+   :maxdepth: 3
+   :caption: SOFTWARE
+
    modules
    spack
+   gitlab
+   jupyter
+   mpi
+   lustre
+   x2go
+
+.. toctree::
+   :maxdepth: 4
+   :caption: RUNNING JOBS
+
    slurm
    queue
    system
-   jupyter
-   gitlab
-   lustre
-   issues
-   mpi
    gpu
-   rockport
-   virgo
    data
-   archive
-   movies
-   links
-   presentations
-   x2go
-   cosma8
-   citizenship
+   
+.. toctree::
+   :maxdepth: 5
+   :caption: GETTING HELP
+   
    faq
+   issues
+   presentations
+   links
+   movies
+   archive 
+   
+.. toctree::
+   :maxdepth: 6
+   :caption: ADDITIONAL RESOURCES
+
    news
    projectdata
    environmental
    industry
-   dell
-   excalibur
    acknowledgements
    contact
