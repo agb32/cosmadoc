@@ -87,7 +87,7 @@ Contents
    nvidiagpu
    composable
    quantum
-   
+   storagelab
    
 .. toctree::
    :maxdepth: 6
