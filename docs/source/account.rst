@@ -11,7 +11,7 @@ COSMA5), please select project hpcicc. Once this form has been
 submitted, you will then have to wait for COSMA staff to create your
 account. You will be notified by email.
 
-Detailed instructions are available [here](account.rst#)
+Detailed instructions are available below.
 
 You will need an ssh key.
 
@@ -74,7 +74,7 @@ SSH on Windows
 ^^^^^^^^^^^^^^
 
 Windows 10 and 11 include the ssh-keygen utility, so keys can be
-generated as [here](/files/COSMAWindows10sshDocumentation.pdf).  However, if not using WSL, a tool such as Putty
+generated as [here](files/COSMAWindows10sshDocumentation.pdf).  However, if not using WSL, a tool such as Putty
 will be required.
 
  .. image:: images/sshwin.png
@@ -87,13 +87,13 @@ Accessing Cosma
 First, you need a SAFE account,
 
 - (Service Administration From EPCC)
-- (Used for all DiRAC facilities) See [https://cosma.readthedocs.io/en/latest/index.html](https://cosma.readthedocs.io/en/latest/index.html)
+- Used for all DiRAC facilities.
 - In summary: 
-  - [https://safe.epcc.ed.ac.uk/dirac/](https://safe.epcc.ed.ac.uk/dirac/)
+  - `https://safe.epcc.ed.ac.uk/dirac/ <https://safe.epcc.ed.ac.uk/dirac/>`_
   - Create an account (institutional email, not personal email)
   - Upload an ssh key
   - Select your project
-    e.g. hpcicc or dp004 (ask your supervisor)
+    e.g. hpcicc or dpXXX (ask your supervisor)
   - Select COSMA (not COSMOS)
   - Wait...
 
