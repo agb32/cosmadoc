@@ -29,8 +29,6 @@ Contents
    cosma
    facilities
    dirac
-   rockport
-   virgo
    dell
    excalibur
    cosma8
@@ -43,6 +41,17 @@ Contents
    ssh
    citizenship
 
+.. toctree::
+   :maxdepth: 5
+   :caption: GETTING HELP
+   
+   faq
+   rockport
+   virgo
+   issues
+   presentations
+   archive 
+   
 .. toctree::
    :maxdepth: 3
    :caption: SOFTWARE
@@ -64,17 +73,21 @@ Contents
    system
    gpu
    data
-   
+
 .. toctree::
-   :maxdepth: 5
-   :caption: GETTING HELP
-   
-   faq
-   issues
-   presentations
-   links
-   movies
-   archive 
+   :maxdepth: 4
+   :caption: HARDWARE LAB
+
+   hardwarelab  
+   rockportlab
+   bluefield
+   dine
+   cpucomputelab
+   amdgpu
+   nvidiagpu
+   composable
+   quantum
+   storagelab
    
 .. toctree::
    :maxdepth: 6
@@ -83,6 +96,8 @@ Contents
    news
    projectdata
    environmental
+   links
+   movies
    industry
    acknowledgements
    contact

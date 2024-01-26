@@ -1,7 +1,8 @@
-# Getting an account
+Getting an account
+==================
 
-To get a new COSMA account, you need to apply via the [DiRAC SAFE
-system](https://safe.epcc.ed.ac.uk/dirac/)
+To get a new COSMA account, you need to apply via the `DiRAC SAFE
+system <https://safe.epcc.ed.ac.uk/dirac/>`_
 
 When creating your account, it is essential that you upload an ssh
 key. You should also select the project to which you will belong. This
@@ -10,11 +11,14 @@ COSMA5), please select project hpcicc. Once this form has been
 submitted, you will then have to wait for COSMA staff to create your
 account. You will be notified by email.
 
-Detailed instructions are available below.
+Detailed instructions are available [here](account.rst#)
 
 You will need an ssh key.
 
-## Generating a SSH key
+.. _sshkey:
+
+Generating a SSH key
+--------------------
 
 Authentication requires an SSH key pair. A key pair has two parts:
 
@@ -26,7 +30,11 @@ use the public key to generate a "challenge", an encrypted
 message. Only the private key can decode this. Your computer then
 sends the correct response to COSMA, and access is then granted.
 
+On Linux, or a Mac, to generate a key pair, you can use:
+
 ``ssh-keygen -t ed25519 -C "unique name to identify this key."`` (e.g. ``-C cosmaKey``)
+
+If that fails (probably you have an old ssh client), you can try:
 
 ``ssh-keygen -t rsa -b 4096``
 
@@ -56,56 +64,72 @@ e.g. mira.dur.ac.uk, hamilton.dur.ac.uk, github, etc, provided the
 private part remains on your system.  Take great care with the private
 part. 
 
-## SSH from Android
+SSH from Android
+^^^^^^^^^^^^^^^^
 
 On Android, use e.g. JuiceSSH. You will need to generate a key pair on
 the app.
 
-## SSH on Windows
+SSH on Windows
+^^^^^^^^^^^^^^
 
 Windows 10 and 11 include the ssh-keygen utility, so keys can be
-generated as [here](files/COSMAWindows10sshDocumentation.pdf).  However, if not using WSL, a tool such as Putty
+generated as [here](/files/COSMAWindows10sshDocumentation.pdf).  However, if not using WSL, a tool such as Putty
 will be required.
 
-![SSH Windows](images/sshwin.png)
+ .. image:: images/sshwin.png
+       :width: 600
 
-## Accessing Cosma
+
+Accessing Cosma
+^^^^^^^^^^^^^^
 
 First, you need a SAFE account,
 
 - (Service Administration From EPCC)
-- Used for all DiRAC facilities.
+- (Used for all DiRAC facilities) See [https://cosma.readthedocs.io/en/latest/index.html](https://cosma.readthedocs.io/en/latest/index.html)
 - In summary: 
   - [https://safe.epcc.ed.ac.uk/dirac/](https://safe.epcc.ed.ac.uk/dirac/)
   - Create an account (institutional email, not personal email)
   - Upload an ssh key
   - Select your project
-    e.g. hpcicc or dpXXX (ask your supervisor)
+    e.g. hpcicc or dp004 (ask your supervisor)
   - Select COSMA (not COSMOS)
   - Wait...
 
-![Creating an Account](images/account1.png)
+ .. image:: images/account1.png
+       :width: 600
 
-![Creating an Account](images/account2.png)
+ .. image:: images/account2.png
+       :width: 600
 
-![Creating an Account](images/account3.png)
+ .. image:: images/account3.png
+       :width: 600
 
-![Creating an Account](images/account4.png)
+ .. image:: images/account4.png
+       :width: 600
 
-![Creating an Account](images/account5.png)
+ .. image:: images/account5.png
+       :width: 600
 
-![Creating an Account](images/account6.png)
+ .. image:: images/account6.png
+       :width: 600
 
-![Creating an Account](images/account7.png)
+ .. image:: images/account7.png
+       :width: 600
 
-![Creating an Account](images/account8.png)
+ .. image:: images/account8.png
+       :width: 600
 
-![Creating an Account](images/account9.png)
+ .. image:: images/account9.png
+       :width: 600
 
-![Creating an Account](images/account10.png)
+ .. image:: images/account10.png
+       :width: 600
 
   - While the account is first authorised...
   - And then created...
   - Finally, you will receive an email!
 
-![Creating an Account](images/account11.png)
+.. image:: images/account11.png
+       :width: 600
