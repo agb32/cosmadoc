@@ -295,7 +295,7 @@ Students will also be given access and hence benefit from working with cutting-e
 
 We are willing to give collaborators and external scientists access to the system as well to allow them to prototype novel algorithms and write new software using smart network devices.
 
-To get access, please follow [these instructions](account.rst) to apply for an account, signing up to project do009, and then send a message to cosma-support@durham.ac.uk mentioning your interest in BlueField.
+To get access, please follow [these instructions](account.md) to apply for an account, signing up to project do009, and then send a message to cosma-support@durham.ac.uk mentioning your interest in BlueField.
 
 COSMA8 login nodes should be used for compiling code (also AMD Rome processors). Where native ARM access is required, please create a Slurm job to run on the partition (bluefield1), and then ssh directly to the local BlueField card.
 
