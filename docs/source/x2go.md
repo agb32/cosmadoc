@@ -18,7 +18,7 @@ Host: Choose a cosma login node (e.g. login5a.cosma.dur.ac.uk)
 
 Login: Your cosma user name
 
-Use your ssh key for ssh connection: Select your private ssh kay.
+Use your ssh key for ssh connection: Select your private ssh key.
 
 Session type: Select Xfce. You may need to untick the "Try auto login" box, but if it works with it ticked, that is probably more convenient.
 
