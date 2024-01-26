@@ -17,7 +17,7 @@ Any STFC theory community member, or any ICC collaborator. To request DiRAC fund
 
 ## What should I do to get an account?
 
-Follow these instructions [here](account.rst).
+Follow these instructions [here](account.md).
 
 ## Can my external collaborator get an account too?
 
