@@ -4,7 +4,7 @@ Access to the data produced by projects using COSMA
 
 ## Flamingo
 
-To access data produced by the FLAMINGO project please create a [SAFE](https://safe.epcc.ed.ac.uk/dirac/) account ([instructions](account.rst)), and sign up to project do012.
+To access data produced by the FLAMINGO project please create a [SAFE](https://safe.epcc.ed.ac.uk/dirac/) account ([instructions](account.md)), and sign up to project do012.
 
 Once access has been granted, you can access COSMA, and submit SLURM jobs to the flamingo partition.
 
