@@ -16,11 +16,13 @@ Permanent links hosting COSMA data or outputs include:
 
 ## Eagle Snapshots
 
-[Eagle Snapshots](http://dataweb.cosma.dur.ac.uk:8080/eagle-snapshots/)
+[Eagle Snapshots](http://dataweb.cosma.dur.ac.uk:8443/eagle-snapshots/)
 
 ## Eagle Database
 
-[Eagle Database](http://virgodb.dur.ac.uk:8080/Eagle/)
+[Eagle Database](http://virgodb.dur.ac.uk:8443/Eagle/)
+
+[Eagle Database](http://virgodb.cosma.dur.ac.uk:8443/Eagle/)
 
 ## Millennium Database
 
