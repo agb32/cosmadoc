@@ -262,12 +262,13 @@ striping across the file system.
 
 Assuming you have many processes which each want to write 1 file
 simultaneously, then the things to bear in mind:
-There are 192 OSTs (disks).
+There are 192 OSTs (disks) on /snap8 and 160 OSTs on /snap7.
 So spreading the write load across these as best possible is a good idea.
 
-If you are writing >96 files, then set the striping of the parent
-directory to 1 (lfs setstripe -c 1 /path/to/dir)
-and then all files written here will be written to a single file.
+If you are writing >96 files (80 files for /snap7), then set the
+striping of the parent directory to 1 (lfs setstripe -c 1
+/path/to/dir) and then all files written here will be written to a
+single file.
 
 If you want to optimse further, you can specify each file to be written to
 a specific OST in advance (lfs setstripe -c 1 -i INDEX /path/to/file)
@@ -276,5 +277,10 @@ index of that specific file.  This effectively "touches" the file (creates
 a 0-byte stub), which when you then write to, will be written to the
 selected OST.
 
-If you are writing less than 96 files, there may be advantages in setting
-the stripe count to 2 or more, depending on file size.
+If you are writing fewer than 96 files (80 files on /snap7), there may
+be advantages in setting the stripe count to 2 or more, depending on
+file size (e.g lfs setstripe -c 2 /path/to/dir/or/file).
+
+To check the number of OSTs, you can use e.g.:
+```lfs df /snap7 | grep OST | wc -l```
+Occasionally, particular OSTs are not writable (e.g. nearly full).  You can use the checkOSTs.sh script to check these (module load cosma first).  Run this command from within a directory on the file system in question, and it will print any OSTs to avoid (or just the total number of OSTs if all are writable).
