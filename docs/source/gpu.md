@@ -22,3 +22,6 @@ You can use the ```--include``` or ```--exclude``` SLURM parameters within your 
 
 For nodes not assigned to queues (login8b, gn001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
+To use some of these GPUs, you will need to be in the "video" group (use the ```id``` command to check which groups you are in).  If you are not in it, but need to be, please ask.
+
+To check that you have the correct permissions to submit to a partition, you can use the ```scontrol show partition=PARTITION_NAME``` command to see which groups are allow to submit to that partition.
