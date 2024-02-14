@@ -20,7 +20,7 @@ Movies related to COSMA and the work of the ICC
 
 [https://spectralogic.com/resources/case-studies/durham-university/](https://spectralogic.com/resources/case-studies/durham-university/) (2019)
 
-[https://www.dur.ac.uk/resources/icc/cosma/dell_durham_storage_case_study.pdf](https://spectralogic.com/resources/case-studies/durham-university/) (2019)
+[Dell-Durham storage case study](files/dell_durham_storage_case_study.pdf) (2019)
 
 [https://www.amd.com/en/case-studies/durham-university](https://www.amd.com/en/case-studies/durham-university ) (2021)
 

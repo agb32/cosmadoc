@@ -48,7 +48,7 @@ With mvapich, `export MV2_ENABLE_AFFINITY=0` is required to use all of the cpus.
 
 ### SWIFT with the Intel icx compiler
 
-Yannick has put together a report on [compiling SWIFT with the icx compiler](https://www.dur.ac.uk/resources/icc/cosma/SWIFT_ICX.pdf) (instead of icc, which is deprecated).
+Yannick has put together a report on [compiling SWIFT with the icx compiler](files/SWIFT_ICX.pdf) (instead of icc, which is deprecated).
 
 
 ## SWIFT: compiler comparison on AMD Genoa (Peter Draper, Dec 2023)
