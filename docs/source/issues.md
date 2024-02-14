@@ -301,3 +301,12 @@ To get Cosmos++ working well on COSMA8, the following parameters were used:
     module load gsl
     module load python/3.6.5
     export LD_LIBRARY_PATH=/cosma/local/gcc/11.1.0/lib64:$LD_LIBRARY_PATH
+
+## Arepo
+
+- Getting memory errors when using Arepo, and issues such as ```ERR 12 Cannot allocate memory on device mlx5_9```
+ - Try using more nodes.
+ - Try monitoring memory usage: ```pmrep -h m8001 :sar-r``` (for e.g. node m8001)
+ - Try capturing memory usage as part of the job by putting a line in your job script such as ```pmrep :sar-r > sar-r.log &```
+ - Make sure that MPI is aware if you are using a large number of processes, e.g. (for Intel MPI) ```export I_MPI_LARGE_SCALE_THRESHOLD=1024```
+ - Check process limits are as expected by reporting the output of ```ulimit -a``` (locked memory and stack size should be unlimited).
