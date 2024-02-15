@@ -28,6 +28,8 @@ A C API also exists, so that striping can be performed programmatically. However
 
 The Lustre file systems also allow progressive striping (striping larger files more, automatically). This is easy to set up, but please refer to Lustre documentation for more details.
 
+It should be noted that there is a maximum size of less than 4GB when setting the stripe size (i.e. -S 4G won't work), and that striping too wide can lead to problems (e.g. -c -1 is not a good idea on /snap8).
+
 ## Redundancy
 
 The /snap7 and /snap8 file systems have no built in redundancy, and so if a disk fails, data will be lost. However, it is possible to set up RAID-1 (mirroring) for data protection on a per-directory or a file-by-file basis. The lfs mirror command can be used to do this. For example, to mirror a directory to 2 disks:
