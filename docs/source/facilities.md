@@ -12,7 +12,7 @@ COSMA is comprised of:
 
 COSMA also includes a number of other facilities including:
 
-- the DINE BlueField cluster
+- the DINE clusters
 - the Cosmological Database
 - GPU systems
 - Other facilities
@@ -110,7 +110,7 @@ Paul Walker
 
 ## DINE
 
-The Durham Intelligent NIC Environment (DINE) supercomputer is a small 24-node development cluster equipped with NVIDIA BlueField-2 Data Processing Units (DPUs) using a non-blocking HDR200 fabric. These DPUs enable direct access to remote memory to improve the performance of massively parallel codes, in preparation for future exascale systems, and will provide researchers with a test-bed facility development of new and novel computing paradigms.
+The Durham Interconnected Novel Environment (DINE) supercomputer is a small 24-node development cluster equipped with NVIDIA BlueField-2 Data Processing Units (DPUs) using a non-blocking HDR200 fabric. These DPUs enable direct access to remote memory to improve the performance of massively parallel codes, in preparation for future exascale systems, and will provide researchers with a test-bed facility development of new and novel computing paradigms.
 
 The cost of data movement - both runtime and energy - is predicted to be one major showstopper on our road to exascale. As computers driving data centres, supercomputers and machine learning farms become faster, their interconnects, i.e. communication devices, grow into a limiting factor; even worse, they also face the omnipresent unreliability that will arise. One way to improve them is to make them smart – to make them learn how to route data flows, how to meet security constraints, or even to deploy computations into the network. Smart network devices can take ownership of the data movement, bring data into the right format before it is delivered, care about security and resiliency, and so forth.
 
@@ -270,7 +270,7 @@ If you compile with -xHost, you may get:
 
 ### The system
 
-The Durham Intelligent NIC Environment (DINE) supercomputing facility is hosted alongside by COSMA, and is used by Computer Science researchers, DiRAC researchers and international collaborators.
+The Durham Interconnected Novel Environment (DINE) supercomputing facility is hosted alongside by COSMA, and is used by Computer Science researchers, DiRAC researchers and international collaborators.
 
 
 A key feature of DINE is the NVIDIA [BlueField](https://www.nvidia.com/en-us/networking/products/data-processing-unit/) smart NIC cards which provide a programmable network offload capability, allowing network functions to be accelerated, and freeing up compute cores for other tasks.
@@ -357,6 +357,12 @@ Let us know if you want to be added.
 ### Acknowledgement
 
 This work has used Durham University's DINE cluster. DINE has been purchased through Durham University’s Research Capital Equipment Fund 19_20 Allocation, led by the Department of Computer Science. It is installed in collaboration and as addendum to DiRAC@Durham facility managed by the Institute for Computational Cosmology on behalf of the STFC DiRAC HPC Facility ([www.dirac.ac.uk](www.dirac.ac.uk)). DiRAC equipment was funded by BEIS capital funding via STFC capital grants ST/P002293/1, ST/R002371/1 and ST/S002502/1, Durham University and STFC operations grant ST/R000832/1. DiRAC is part of the National e-Infrastructure.
+
+## DINE-2
+
+Installed in 2024, DINE-2 is a composable cluster with 8 nodes, 8 GPUs that can be composed to them, and is based on a CerIO composable fabric.
+
+To submit to the DINE-2 system, use the dine2 SLURM partition
 
 ## The Cosmological Database
 
