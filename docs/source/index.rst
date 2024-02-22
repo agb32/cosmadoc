@@ -60,6 +60,7 @@ Contents
    spack
    gitlab
    jupyter
+   python
    mpi
    lustre
    x2go
