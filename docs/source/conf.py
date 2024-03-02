@@ -32,6 +32,7 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 html_logo = 'images/logo.png'
+html_favicon = 'images/logocosmablack.ico'
 html_theme_options = {
     'logo_only': True
 }
