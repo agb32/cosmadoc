@@ -138,7 +138,7 @@ ControlMaster auto
 ControlPersist yes
 ```
 
-to your .ssh/config file.
+to your .ssh/config file, and create the .ssh/controlmasters directory.
 
 Any new connection will then use the first conneciton.
 
