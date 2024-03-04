@@ -126,6 +126,22 @@ will be equivalent to
 
 To learn about more advanced options, please refer to the manual: `man 5 ssh_config`.
 
+## Reusing SSH connections
+
+To avoid entering passwords too many times, you can multiplex your ssh connection.
+
+To do this, you need to add something like:
+
+```
+ControlPath ~/.ssh/controlmasters/%r@%h:%p
+ControlMaster auto
+ControlPersist yes
+```
+
+to your .ssh/config file.
+
+Any new connection will then use the first conneciton.
+
 ## Disk Usage
 
 Your home quota is usually 10 GB. The contents of your `$HOME` are
