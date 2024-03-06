@@ -1,6 +1,6 @@
 # Rockport lab
 
-The Rockport cluster is a 224 node production cluster equipped with a 100G 6D torus low latency Ethernet fabric.
+The [Rockport](https://www.cerio.io) cluster is a 224 node production cluster equipped with a 100G 6D torus low latency Ethernet fabric.
 
 [Usage instructions](rockport.md) are available.
 
