@@ -30,7 +30,7 @@ If using OpenMPI, use `mpirun $RP_OPENMPI_ARGS` ...
 
 The recommended MPI libraries to use are (as of June 2022):
 
-Intel 2018: `module load intel_comp/2018``
+Intel 2018: `module load intel_comp/2018`
 
 Intel 2022: `module load intel_comp/2022.1.2 compiler mpi` (and you should probably also `module load ucx` as this has been demonstrated to give significantly improved performance)
 
