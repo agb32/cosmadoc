@@ -16,7 +16,7 @@ This provides a web interface and an object store to facilitate data sharing.
 
 ## DAOS
 
-A DAOS file system has been developed using NVMe servers
+A [DAOS file system](daos.md) has been developed using NVMe servers.  This is currently only accessible on DINE.
 
 ## Ceph
 
