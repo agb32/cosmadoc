@@ -6,11 +6,29 @@ It is an experimental file system, only accessible on the DINE system.
 
 # DAOS USER instructions
 
-
-
 DAOS access: Currently you will not be able to access the DAOS file system from any of the normal login nodes.
 
-DAOS is only available on the bluefield node b101-b114, and b116. To use daos consider b116 as a login node, so ssh to b116 then you should be able to access your DAOS filesystem, and its associated data before and after you run your jobs. 
+DAOS is only available on the bluefield nodes b101-b114, and b116. To use daos consider b116 as a login node, so ssh to b116 then you should be able to access your DAOS filesystem, and its associated data before and after you run your jobs.
+
+## A note about caching
+
+DAOS is an object store with a POSIX overlay.  As a result, it can see some unintuitive behaviour when used on multiple nodes.  However, provided you are aware of this, it should work well.
+
+To avoid these effects (and probably hurt performance), you can use `--disable-caching` and/or `--disable-wb-cache` arguments when mounting.  However, if you don't need to do this (depending on how you are using it), then probably best not to.  It is currently unclear what the effective differences between these are.
+
+Without disabling caching, the following scenarios can arise.  A file written on one node, and then viewed on another node will be fine.  However, the second node will cache the file, so that further viewings will not see any updates from the first node.
+
+If many nodes are writing to a file, it is best to disable caching.  This is not generally recommended however.  Better to use one file per node, as traditional HPC codes do.
+
+Of key consideration here are the slurm logs which capture the print statements from the codes.  These may not have all information if caching is not disabled.
+
+If you are using DAOS to store code, then you should note that if you do not disable caching, other nodes will not see any updates to code, recompilations etc, unless the file system is unmounted and remounted.
+
+## Object file operations
+
+If you append to a file (e.g. `echo test >> file.txt`) then our current understanding is that this will create a new file, overwriting the contents of the old, rather than adding bytes onto the end of the existing.  This therefore results in poorer performance, particularly if the file is large (since it has to be fully rewritten).  Therefore, it is best to avoid appending, and rather keep a file descriptor open within your code.
+
+## Setup instructions
 
 1. Before you use the DAOS system: Access to the DAOS filesystem is via a DAOS pool. Pools can only be created or amended by a sysadmin. Currently the only pool that exists is called DAOS8 and is 47TP in size, and is accessible for anyone who is part of the durham group. If you are part of that group then please have a go, otherwise contact the sysadmin team and we can add you to the DAOS8 pool.
 
@@ -37,7 +55,7 @@ This shows the new container PiData, and another container that was used during 
 
 ```
 mkdir PiData
-dfuse -m ./PiData --pool DAOS8 --cont PiData
+dfuse -m ./PiData --pool DAOS8 --cont PiData [--disable-caching] [--disable-wb-cache]
 ```
 
 In this case I named the container and the directory the same, but you can call them different names.
@@ -101,7 +119,7 @@ fusermount3 -u ${mountPoint}
 
 If you run this script then the output file will show that it ran successfully and show the date and host name. Great it works, but if you try to view this locally mounted container you will not see the update.
 
-7. Seeing your data: To ensure you see the updated date you need to unmount and then mount the container.
+7. Seeing your data: To ensure you see the updated date you need to unmount and then mount the container, if you did not previously mount it with caching disabled.
 
 ```
 fusermount3 -u ./PiData
