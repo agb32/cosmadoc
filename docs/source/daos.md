@@ -1,6 +1,6 @@
 # The DAOS file system
 
-The DAOS file system is based on 4 nodes each with 8x NVMe drives, and a total capaciy of around 48TB.
+The DAOS file system is based on 4 nodes each with 8x NVMe drives, and a total capacity of around 48TB.
 
 It is an experimental file system, only accessible on the DINE system.
 
