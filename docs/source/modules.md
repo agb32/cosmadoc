@@ -18,6 +18,8 @@ Common module commands include:
 *    ```module purge```: unloads all currently loaded modules
 *    ```module av```: lists all available modules
 *    ```module av XYZ```: lists all available version of the XYZ module
+*    ```module save NAME```: saves the current module state to a name of your choice
+*    ```module restore NAME```: restores a module state previously saved (using files in ~/.module)
 
 While loading some modules, their dependencies must be loaded as well. For instance, loading fftw module requires at least one compiler module (such as gnu_comp or intel_comp) to be loaded.
 
@@ -25,3 +27,5 @@ For more information, type man module or go to the [project website](http://modu
 
 If you are unsure what a good combination of modules is for a specific
 software tool, please ask cosma-support, or view the code pages.
+
+The `module save` and `restore` commands are good ways of quickly swapping between favourite module environments.
