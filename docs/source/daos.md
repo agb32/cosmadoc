@@ -37,7 +37,9 @@ So we are going to create a container called “PiData”, and this container wi
 
 `daos cont create DAOS8 --label PiData --type POSIX --properties rf:1`
 
-You will be informed that the container was created. 
+You will be informed that the container was created.
+
+If you have errors doing this, it may be due to environment modules that you have loaded.  Try a `module purge`, or (in the case of some Intel modules which don't unload cleanly), remove them from your `.bashrc` (or wherever), log in again, and retry.
 
 3. Confirm container creation:If you would like to confirm this, then you can list all the containers that exist in the DAOS8 pool.
 
