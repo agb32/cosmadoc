@@ -1,5 +1,13 @@
 # COSMA News
 
+4/4/24: New VAST storage system available on DINE as /dine
+
+3/4/24: Default python module version changed to 3.6.5
+
+3/4/24: COSMA back after unexpected Building Management System outage
+
+3/4/24: We may start using news again!
+
 27/2/23: This news feed is now no longer used!
 
 9/2/22: COSMA back in production
