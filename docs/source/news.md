@@ -6,7 +6,9 @@
 
 3/4/24: COSMA back after unexpected Building Management System outage
 
-3/4/24: We may start using news again!
+2/4/24: We may start using news again!
+
+28/3/24: VAST storage system installed
 
 27/2/23: This news feed is now no longer used!
 
