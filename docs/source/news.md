@@ -10,6 +10,8 @@
 
 28/3/24: VAST storage system installed
 
+27/3/24: New Cerio composable system cabled up
+
 27/2/23: This news feed is now no longer used!
 
 9/2/22: COSMA back in production
