@@ -1,5 +1,7 @@
 # COSMA News
 
+5/2/24: [COSMA6 reused in Argentina](https://ccad.unc.edu.ar/2024/04/05/ccad-le-da-una-segunda-vida-a-cosma6/)
+
 4/4/24: New VAST storage system available on DINE as /dine
 
 3/4/24: Default python module version changed to 3.6.5
