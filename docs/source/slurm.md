@@ -140,6 +140,32 @@ Cordelia is a shared queue, so multiple users run jobs simultaneously on these n
 
 The cosma7-shm queue can also be used for large memory requirements. These are single nodes, though not exclusive (i.e. multiple user jobs can run simultaneously).
 
+### Using non-uniform resources per node in a single job (heterogenous jobs)
+
+Slurm allows requesting multiple node configurations in one batch submission:
+
+    #SBATCH -A project
+    #SBATCH --time=72:00:00
+    
+    #SBATCH -p cosma8
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+
+    #SBATCH hetjob
+
+    #SBATCH -p cosma8
+    #SBATCH --nodes=2
+    #SBATCH --tasks-per-node=8
+
+This example requests one node where one task will run and two additional nodes where a total of 16 tasks will run. Using `sbatch` is often impractical for a heterogenous job, however, because `mpirun` does not understand this kind of resource allocation. MPI jobs can instead be started with `srun`, for example:
+
+    salloc -A project --time=72:00:00 -p cosma8 --nodes=3
+    srun --nodes=1 --tasks-per-node=1 ./server : --nodes=2 --tasks-per-node=8 ./client
+
+This example has the same distribution of tasks as the batch script just above. It starts a server task alone on the first node and then 16 client tasks on the other two nodes. All of the tasks will exist in the same `MPI_COMM_WORLD`.
+
+OpenMPI supports heterogenous jobs, but to use this the MPI installation must be linked against a process management interface (PMI) library. A clear error message seems to be produced when this is missing. Intel MPI implementations seem to work to some extent provided that the environment variable `export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so` is set, but it's not clear that heterogenous jobs are fully supported and there seems to be some limitations (such as mixing nodes with exactly 1 and >1 tasks causing a crash) in some cases. Further documentation and examples can be found at [https://slurm.schedmd.com/heterogeneous_jobs.html](https://slurm.schedmd.com/heterogeneous_jobs.html).
+
 ### Using DDT without direct compute node access
 
 To use DDT with slurm, the following instructions can be followed:
