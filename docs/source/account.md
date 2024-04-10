@@ -69,4 +69,4 @@ part.
 
 You will also require a password (in addition to the ssh key passphrase) to log in to COSMA.  This will be provided in your welcome email, and you will be asked to reset it the first time you ssh in.  Note, this means that you will need to enter the temporary password twice (once to log in, and once to being the passwprd reset process), and then enter a new password of your choice twice.  It needs to be at least 10 characters long and contain 3 character classes (lower case, upper case, numeric, special).
 
-If you don't like to enter your password too many tines, you can [set up a ssh control tunnel](ssh.md#reusing-ssh-connections).
+If you don't like to enter your password too many times, you can [set up a ssh control tunnel](ssh.md#reusing-ssh-connections).
