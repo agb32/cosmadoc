@@ -61,3 +61,21 @@ If you are using the /snap file systems for restart/checkpoint files, please ens
 ## Rsync
 
 If you are rsync-ing data from elsewhere onto the Lustre file system, and have files >1GB in size, the rsyncLustre module should be used. This is a patched version of rsync which will automatically stripe all files >1GB in size.
+
+# Quotas
+
+Quotas on the Lustre file system can be found using
+
+```
+lfs quota -u USERNAME -h /FILESYSTEM
+e.g.
+lfs quota -u dc-cosma -h /cosma8
+```
+
+Or (with the `cosma` module loaded), using the `quota` command (which will show you your quota on all attached file systems).
+
+The quota of your project can be found using
+
+```
+lfs quota -g GROUP -h /FILESYSTEM
+```

@@ -284,3 +284,15 @@ file size (e.g lfs setstripe -c 2 /path/to/dir/or/file).
 To check the number of OSTs, you can use e.g.:
 ```lfs df /snap7 | grep OST | wc -l```
 Occasionally, particular OSTs are not writable (e.g. nearly full).  You can use the checkOSTs.sh script to check these (module load cosma first).  Run this command from within a directory on the file system in question, and it will print any OSTs to avoid (or just the total number of OSTs if all are writable).
+
+## I am a PI - how do I use my time?
+
+You may need to sign up to join your own project on SAFE (particularly if you are a new PI and are already a member of other projects).  You also need to specify within your Slurm batch scripts that your time should be allocated to your project.
+
+## As a PI, how do I manage storage allocations?
+
+As a PI, you are responsible for managing the allocation of storage to users.  Each user assigned to your project will get a default quota (typically 10TB).  By default, we assume that if a user requires more quota, you will give implicit approval, and therefore, their quota can be increased by emailing COSMA support.  However, if you would like more control (some large projects do this), then we can ask users to get approval for quota extensions from you.
+
+The sum of the space used by users should not be greater than the total allocation assigned to your project.
+
+See the [Lustre](lustre.md#quotas) page for information about how to get your current quota.
