@@ -40,7 +40,7 @@ COSMA5 is comprised of two generations of server:
 
 The nodes are connected via Mellanox FDR10 Infiniband switches in a 2:1 blocking configuration. Access is enabled through three login/development servers, two for the old system each with 512GB of memory (login5a, login5b), and one for the new system with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
 
-The new COSMA5 nodes were funded by a Durham University carbon reduction fund, and a donation from Dell and AMD.
+The new COSMA5 nodes were funded by a Durham University carbon reduction fund, and a donation from Dell and AMD, replacing 48 old nodes in 2024.
 
 The new COSMA5 nodes are not exclusive: Codes share the nodes with other jobs running simultaneously, unless explicitly requesting the number of cores contained by each node (256).  
 
