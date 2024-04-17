@@ -32,9 +32,17 @@ Users have access to /cosma/home/PROJECT/USERNAME, and one or more of /cosmaN/da
 
 ## COSMA5
 
-COSMA5 has approximately 300 compute nodes, each with 128GB RAM and 16 cores (2x Intel Xeon CPU E5-2670 0 @ 2.60GHz). These have a Sandy Bridge architecture.
+COSMA5 is comprised of two generations of server:
+ - The original COSMA5 system dating from 2012 has approximately 160 compute nodes remaining, each with 128GB RAM and 16 cores (2x Intel Xeon CPU E5-2670 0 @ 2.60GHz). These have a Sandy Bridge architecture.
+   - Please submit to the `cosma` queue to use these nodes.
+ - The new COSMA5 system dating from 2024 has 3 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD Bergamo processors).  These have a Zen-4 (Genoa) architechture.
+   - Please submit to the `cosma5` queue to use these nodes.
 
-The nodes are connected via Mellanox FDR10 Infiniband switches in a 2:1 blocking configuration. Access is enabled through two login/development servers each with 512GB of memory. Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
+The nodes are connected via Mellanox FDR10 Infiniband switches in a 2:1 blocking configuration. Access is enabled through three login/development servers, two for the old system each with 512GB of memory (login5a, login5b), and one for the new system with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
+
+The new COSMA5 nodes were funded by a Durham University carbon reduction fund, and a donation from Dell and AMD.
+
+The new COSMA5 nodes are not exclusive: Codes share the nodes with other jobs running simultaneously, unless explicitly requesting the number of cores contained by each node (256).  
 
 ## COSMA6
 

@@ -51,32 +51,34 @@ The pauper and prince variations of the queues share the same resources so the o
 
 COSMA6 was retired in April 2023 after 11 years of service.
 
-## COSMA5 queues: cosma, cosma-pauper and cosma-prince, cordelia, cosma-analyse, cosma-bench
+## COSMA5 queues: cosma5, cosma, cosma-pauper and cosma-prince, cordelia, cosma-analyse, cosma-bench
 
-Access to the Durham COSMA5 machine is provided using the six queues cosma, cosma-pauper, cosma-prince, cordelia, cosma-analyse and cosma-bench. The first three queues share all the 302 compute nodes dispatching jobs according to the different priorities that the queues have assigned. All the queues are configured so that job exclusive access to nodes is enforced. This means that no jobs share a compute node.
+Access to the Durham COSMA5 machine is provided using the five queues cosma5, cosma, cosma-pauper, cosma-prince and cordelia. The cosma5 queue is comprised of the new (2024) COSMA5 nodes, a total of 3 nodes each with 256 cores and 1.5TB RAM.  The next three queues share all the approx 160 compute nodes dispatching jobs according to the different priorities that the queues have assigned. All the queues except for cosma5 and cordelia are configured so that job exclusive access to nodes is enforced. This means that no jobs share a compute node, except for the cosma5 and cordelia queues.
 
 The cordelia queue should be used for single core jobs, and will share computational resources on a single node with other jobs. This allows efficient use of the cluster. When using the cordelia queue, please specify the maximum memory your job will require, e.g.: ```bash #SBATCH --mem=10G``` will reserve 10GB for you, and allow the other cores to use the rest.
 
-The cosma-analyse queue is for data analysis purposes. The cosma-bench queue is for benchmarking.
+Likewise, when using the cosma5 queue, it is a good idea to specify your memory requirement, otherwise you will be given a default allocation of 6GB per requested core.
 
-The main use of these queues is for Durham projects that have been assigned time at Durham and the mix of jobs expected to match its capabilities are MPI/OpenMP/Hybrid jobs using up to 16 cores per node with a maximum memory of 126GB per node. Note that the nodes in COSMA5 are disk-less so this represents a hard memory limit and exceeding this will cause your job to fail. If any jobs can run using fewer resources than a single node then they should be either submitted to the cordelia queue or packaged into a batch job with appropriate internal process control to scale up to this level.
+The main use of these queues is for Durham projects that have been assigned time at Durham and the mix of jobs expected to match its capabilities are MPI/OpenMP/Hybrid jobs using up to either 256 cores per node (cosma5 queue) or 16 cores per node (older cosma queues) with a maximum memory of either 1.5TB per node (cosm5 queue) or 126GB per node (older cosma queues). Note that the old nodes in COSMA5 are diskless so this represents a hard memory limit and exceeding this will cause your job to fail. If any jobs can run using fewer resources than a single node then they should be either submitted to the cordelia queue or packaged into a batch job with appropriate internal process control to scale up to this level.
 
 In addition to the hardware limits the queues have the following limits and priorities:
 
-| Name             | Priority          | Maximum run time	     | Maximum cores    |  
-| ---------------- | ----------------- | ------------------------| ---------------- | 
-| cosma            | Normal            | 72 hours                | unlimited        | 
-| cosma-pauper	   | Low               | 24 hours                | unlimited        | 
-| cosma-prince     | Highest           | 30 days                 | 4096             | 
-| cordelia         | Normal            | 30 days                 | 16               | 
-| cosma-bench      | Normal            | 24 hours                | 16               | 
-| cosma-analyse    | Normal            | 23 hours, 20 minutes(!) | 144              | 
+| Name             | Priority          | Maximum run time        | Maximum cores    | Cores per node | nodes |  
+| ---------------- | ----------------- | ------------------------| ---------------- | ---------------| ------|
+| cosma5           | Normal            | 72 hours                | unlimited        | 256            | 3     |
+| cosma            | Normal            | 72 hours                | unlimited        | 16             | ~160  |
+| cosma-pauper	   | Low               | 24 hours                | unlimited        | 16             | ~160  |
+| cosma-prince     | Highest           | 30 days                 | 4096             | 16             | ~160  |
+| cordelia         | Normal            | 30 days                 | 16               | 16             | ~14   |
 
-The three queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [FAQ](faq) descriptions for how to make use of back-filling.
 
-cosma queues are exclusive (except cordelia), meaning no matter how many cores you request per node you will have exclusive use of that node. Your allocation will be reduced assuming that you were using all the cores.
+The older queues share the same resources so the order that jobs run are decided on a number of factors. Higher priority jobs will run first, and in fact jobs in higher priority queues will always run before lower priority jobs, however, it may not superficially seem like that as jobs from lower priority queues may run as back-fills (this is allowed when a lower priority job will complete before the resources needed for a higher one will become available, so setting a run-time limit for your job may get it completed more quickly). See the [FAQ](faq) descriptions for how to make use of back-filling.
 
-The cosma and cosma-pauper queues are available to all users, the -prince queue can only be accessed by special arrangement.
+The number of nodes is approximate as due to the age of these servers (2012), nodes regularly die.  Originally, COSMA5 had around 320 nodes.
+
+cosma queues are exclusive (except cosma5 and cordelia), meaning no matter how many cores you request per node you will have exclusive use of that node. Your allocation will be reduced assuming that you were using all the cores.
+
+The cosma5, cosma and cosma-pauper queues are available to all users, the -prince queue can only be accessed by special arrangement.
 
 The quarterly allocation can can be found out in the [COSMA usage pages](https://virgodb.cosma.dur.ac.uk/usage/login.php), you'll need your COSMA username, and password or token (generated using the cusagetoken command) to see these.
 
