@@ -22,7 +22,7 @@ Storage includes:
 - /cosma5 - 2.4PB
 - /cosma6 - 2.5PB (to be retired in Autumn 2023)
 - /cosma7 - 3.1PB
-- /cosma8 - 5.3PB
+- /cosma8 - 16PB
 - /snap7 - 440TB for fast temporary storage (e.g. checkpointing)
 - /snap8 - 1.2PB for fast temporary storage (e.g. checkpointing)
 - /cosma/home - 37TB for user homespace (10GB quota)
@@ -68,23 +68,22 @@ Access is enabled through three login/development servers each with 1.5TB of mem
 
 ## COSMA8
 
-The COSMA8 prototype system entered service in October 2020. It was then extended in early 2021, to become the initial COSMA8 installation. This is undergoing science commissioning until October 2021, when it will enter full service. It is the first COSMA system to reach Petascale, with 1.37PF achieved on the HPL benchmark (RMax), and a 1.9PF peak performance. Each node has 4.2 TFLOP HPL performance.
+The COSMA8 prototype system entered service in October 2020. It was then extended in early 2021, to become the initial COSMA8 installation. A phase-2 extension was then installed in 2023, entering service in October 2023 with 528 nodes.  It is the first COSMA system to reach Petascale, with ~2PF on the HPL benchmark (RMax), and a ~3PF peak performance. Each node has at least 4.2 TFLOP HPL performance.
 
 It is currently comprised of:
 
-- 360 compute nodes with 1 TB RAM and dual 64-core AMD EPYC 7H12 water-cooled processors at 2.6GHz
-  - To be upgraded with an additional 168 nodes with dual Milan 7763 processors at 2.45GHz
+- 528 compute nodes with 1 TB RAM and dual 64-core AMD EPYC water-cooled processors
+  - Of which, 360 compute nodes are Rome 7H12 processors at 2.6GHz
+  - and 168 nodes are Milan 7763 processors at 2.45GHz
 - 2 login nodes with 2 TB RAM and dual 32-core AMD EPYC 7542 processors at 2.9GHz
 - 2 fat nodes with 4 TB RAM and dual 64-core AMD EPYC 7702 processors at 2.2GHz
-- 1 AMD GPU nodes with 6 MI50 GPUs (32GB), 1TB RAM, dual 16-core AMD EPYC 7282 processors at 2.8GHz
+- 1 AMD GPU node with 6 MI50 GPUs (32GB), 1TB RAM, dual 16-core AMD EPYC 7282 processors at 2.8GHz
 - 1 AMD Milan node with a MI100 GPU, 1TB RAM, dual 64-core AMD EPYC Milan 7713 processors at 2GHz
 - 2 AMD Milan nodes with 2x MI200 GPUs each, 1TB RAM, dual 64-core processors
 - 1 NVIDIA GPU node with 10 V100 GPUs (32GB), 768GB RAM, dual Intel Xeon Gold 5218 processors at 2.3GHz
 - 2 console nodes with a single 16-core AMD EPYC 7302 processor at 3GHz and 256GB RAM
 
 The interconnect is Mellanox HDR, 200GBit/s, with a non-blocking fat tree topology.
-
-The full initial COSMA8 system is due to enter service in October 2021.
 
 Information about using COSMA8 can be found [here](cosma8.md).
 

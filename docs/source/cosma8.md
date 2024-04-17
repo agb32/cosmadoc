@@ -4,7 +4,7 @@
 
 COSMA8 has 2 login nodes, accessed via login8.cosma.dur.ac.uk
 
-COSMA8 has 360 compute nodes, each of which have 1TB RAM and 128 cores (2x AMD 7H12 processors)
+COSMA8 has 528 compute nodes, each of which have 1TB RAM and 128 cores (360 are 2x AMD 7H12 processors and 168 are 2x AMD 7763 processors)
 
 There are 2 high RAM (4TB) fat nodes, which should be accessed via the cosma8-shm queue.
 
@@ -15,6 +15,10 @@ There are 4 relevant SLURM queues:
 __cosma8__: provides exclusive access to nodes, shared with cosma8-serial
 
 __cosma8-serial__: provides non-exclusive access to nodes. Use this if you want less than 128 cores (and remember to specify your memory requirement too)
+
+__cosma8-rome__: A subset of cosma8, 360 nodes with Rome processors
+
+__cosma8-milan__: A subset of cosma8, 168 nodes with Milan processors
 
 __cosma8-shm__: access to the mad04 and mad05 servers, with 4TB RAM. These is also non-exclusive, so may be shared with other users if you don't require all 128 cores or all 4TB RAM.
 
@@ -137,13 +141,13 @@ A number of GPU servers are accessible - please ask if you are unsure how to use
 
 gn001: 10x NVIDIA V100 GPUs
 
-ga003: 6x AMD MI50 GPUs
+ga003: 6x AMD MI50 GPUs (now retired)
 
 ga004: 1x AMD MI100 GPU, 2x 64 core AMD Milan processors.
 
 ga005, ga006: 2x AMD MI200 GPUs, 2x 32 core 7513 EPYC processors
 
-login8b, mad04, mad05: Between 0-3 NVIDIA A100 GPUs (reconfigurable/moveable as required, please ask if you have a particular setup you wish for)
+login8b, mad04, mad05, mad06: Between 0-3 NVIDIA A100 GPUs (reconfigurable/moveable as required, please ask if you have a particular setup you wish for)
 
 ### SWIFT
 
