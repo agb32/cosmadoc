@@ -33,7 +33,7 @@ Contents
    cosma
    facilities
    dirac
-   dell
+   centreofexcellence
    excalibur
    cosma8
 
