@@ -10,7 +10,7 @@ Check out the :doc:`account` section to get started!
 
 -- warning::
 
-  Status: Good
+   Status: Good
 
 .. note::
 
