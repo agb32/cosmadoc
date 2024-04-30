@@ -76,8 +76,14 @@ If you are receiving permission denied when trying to access COSMA, it
 could be:
 
 1. You need to specify your ssh key, e.g. `ssh -i /path/to/ssh/key user@login*.cosma.dur.ac.uk`
-2. You need to update your ssh key on [SAFE](https://safe.epcc.ed.ac.uk/dirac)
+2. You need to update your ssh key on [SAFE](https://safe.epcc.ed.ac.uk/dirac) (and then wait for cosma-support to accept the new key)
 3. You have forgotten your sshkey passphrase or your COSMA password.
+4. The permissions on your key, or directory containing it are wrong.
+5. You have forgotten your COSMA password (different from your ssh passphrase).  You can reset this on [SAFE](https://safe.epcc.ed.ac.uk/dirac) (and then wait for cosma-support to accept the password reset request)
+6. You are using a banned key type upload a new one to [SAFE](https://safe.epcc.ed.ac.uk/dirac)
+7. You have entered your password wrongly too many times and have been temporarily banned (typically 15 minutes)
+
+If you need to generate a new ssh key, there is some info [here](sshkey.md).
 
 For other reasons, please contact cosma-support.
 
