@@ -39,8 +39,9 @@ the app.
 ## SSH on Windows
 
 Windows 10 and 11 include the ssh-keygen utility, so keys can be
-generated as [here](files/COSMAWindows10sshDocumentation.pdf).  However, if not sing Windows Subsystem for Linux (WSL), a tool such as Putty
-will be required.
+generated as [here](files/COSMAWindows10sshDocumentation.pdf).
+However, if not using Windows Subsystem for Linux (WSL), a tool such
+as Putty will be required.
 
 
 

@@ -44,6 +44,16 @@ For direct compute access, you can use srun, e.g.:
 
 Should you need direct ssh access to a node running your jobs, this may be possible - please contact cosma-support.
 
+## Reservations
+
+It is possible to request a SLURM reservation for jobs that will require around 40% or more of the cluster simultaneously.  A reservation sets aside the requested number of nodes for a set period of time for exclusive use, allowing large jobs to restart efficiently, without having to join the back of a queue and wait for a large number of nodes to drain.  This improves cluster efficiency.
+
+A reservation request needs to be authorised by the Service Management Board, and 1 month notice should be given if possible.  The request should detail how many nodes are required (we will add a few more in case of node failures), for how long, a brief description of the science, and why the reservation is required.
+
+It should be noted that your project will be charged for the entire reservation, not just for the time you use.  Therefore it is essential to make sure that you maintain a queue of jobs in the reservation queue.
+
+Once you have been given a reservation, you can use the `scontrol show reservation` command to view the reservation, and submit jobs to it using the `#SBATCH --reservation=RESERVATION NAME` flag in your submission script.
+
 ## Example scripts
 
 ### Large job over many nodes
