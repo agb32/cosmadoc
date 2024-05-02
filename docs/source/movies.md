@@ -40,6 +40,10 @@ Movies related to COSMA and the work of the ICC
 
 [https://www.theregister.com/2022/12/06/durham_uni_and_dell_cosma8/](https://www.theregister.com/2022/12/06/durham_uni_and_dell_cosma8/)
 
+[https://insidehpc.com/2024/05/durham-university-cosmologists-dirac-and-dell-improve-hpc-energy-efficiency-without-sacrificing-performance](https://insidehpc.com/2024/05/durham-university-cosmologists-dirac-and-dell-improve-hpc-energy-efficiency-without-sacrificing-performance) (2024)
+
+
+
 ## News
 
 [https://www.hpcwire.com/2022/05/24/durham-university-to-test-rockport-networks-on-cosma7-supercomputer/](https://www.hpcwire.com/2022/05/24/durham-university-to-test-rockport-networks-on-cosma7-supercomputer/)
@@ -57,6 +61,8 @@ Movies related to COSMA and the work of the ICC
 [https://www.businesswire.com/news/home/20220524005070/en/Durham-University-Selects-Rockport-Switchless-Network-for-COSMA7-Exascale-Workload-Modeling-Breakthrough-Performance-and-Resource-Utilization](https://www.businesswire.com/news/home/20220524005070/en/Durham-University-Selects-Rockport-Switchless-Network-for-COSMA7-Exascale-Workload-Modeling-Breakthrough-Performance-and-Resource-Utilization)
 
 [https://www.itpro.co.uk/data-insights/big-data/369538/big-data-nasa-james-webb-space-telescope](https://www.itpro.co.uk/data-insights/big-data/369538/big-data-nasa-james-webb-space-telescope)
+
+
 
 ## Resources
 
