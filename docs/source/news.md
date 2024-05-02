@@ -1,5 +1,7 @@
 # COSMA News
 
+1/5/24: cosma8-cerio nodes made available for test access
+
 16/4/24: New AMD Bergamo nodes introduced for COSMA5, plus new login5c
 
 5/4/24: [COSMA6 reused in Argentina](https://ccad.unc.edu.ar/2024/04/05/ccad-le-da-una-segunda-vida-a-cosma6/)
