@@ -8,4 +8,4 @@ A Liqid system installed in 2021 has 4 nodes (including a login node) to which b
 
 ## CerIO system
 
-A CerIO system installed in 2024 has 8 nodes which share 8 GPUs, allowing servers with up to 8 GPUs to be configured.
+A [CerIO](cerio.md) system installed in 2024 has 8 nodes which share 8 GPUs, allowing servers with up to 8 GPUs to be configured.  Follow the [instructions](cerio.md) to use this system.
