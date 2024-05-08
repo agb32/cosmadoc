@@ -17,7 +17,7 @@ COSMA also includes a number of other facilities including:
 - GPU systems
 - Other facilities
 
-Storage includes:
+[Storage](storage.md) includes:
 
 - /cosma5 - 2.4PB
 - /cosma6 - 2.5PB (to be retired in Autumn 2023)
