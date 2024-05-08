@@ -16,7 +16,7 @@ Movies related to COSMA and the work of the ICC
 
 [https://youtu.be/q8FYMhOE6TE](https://youtu.be/q8FYMhOE6TE) (Saturn's rings)
 
-## Publicity and case studies
+## Publicity, publications and case studies
 
 [https://spectralogic.com/resources/case-studies/durham-university/](https://spectralogic.com/resources/case-studies/durham-university/) (2019)
 
@@ -42,7 +42,7 @@ Movies related to COSMA and the work of the ICC
 
 [https://insidehpc.com/2024/05/durham-university-cosmologists-dirac-and-dell-improve-hpc-energy-efficiency-without-sacrificing-performance](https://insidehpc.com/2024/05/durham-university-cosmologists-dirac-and-dell-improve-hpc-energy-efficiency-without-sacrificing-performance) (2024)
 
-
+[DiRAC Facilities utilization and energy report https://zenodo.org/records/11148246](https://zenodo.org/records/11148246) (2024)
 
 ## News
 
