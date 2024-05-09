@@ -1,6 +1,6 @@
 # COSMA News
 
-1/5/24: cosma8-cerio nodes made available for test access
+1/5/24: cosma8-dine2 nodes made available for test access
 
 16/4/24: New AMD Bergamo nodes introduced for COSMA5, plus new login5c
 
