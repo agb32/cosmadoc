@@ -16,7 +16,7 @@ Movies related to COSMA and the work of the ICC
 
 [https://youtu.be/q8FYMhOE6TE](https://youtu.be/q8FYMhOE6TE) (Saturn's rings)
 
-[Minecraft COSMA](https://virgodb.cosma.dur.ac.uk/public/agb/cosmaMinecraft.ogv)
+[Minecraft COSMA](https://virgodb.cosma.dur.ac.uk/public/agb/videos/cosmaMinecraft.ogv)
 
 ## Publicity, publications and case studies
 
