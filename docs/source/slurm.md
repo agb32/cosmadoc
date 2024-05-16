@@ -174,6 +174,27 @@ This example requests one node where one task will run and two additional nodes 
 
 This example has the same distribution of tasks as the batch script just above. It starts a server task alone on the first node and then 16 client tasks on the other two nodes. All of the tasks will exist in the same `MPI_COMM_WORLD`.
 
+#### Another example could use:
+
+    #SBATCH -p cosma8
+    #SBATCH --ntasks=64
+    #SBATCH --tasks-per-node=16
+    #SBATCH --distribution=block:fcyclic:fcyclic,Pack
+
+    #SBATCH hetjob
+
+    #SBATCH -p cosma8
+    #SBATCH --ntasks=28
+    #SBATCH --tasks-per-node=1
+    #SBATCH --distribution=cyclic
+
+    mpirun -np 64 ./swift_mpi -v 1 --pin --threads=8 --cosmology  --self-gravity params.yml : \
+    -np 28 ./swift_mpi -v 1 --pin --threads=128 --cosmology --self-gravity params.yml
+
+Note, changes to the `--distribution` option may be required.  This example tries to fill each node with tasks before moving to the next one ("block" and "Pack"), and then hand out tasks within a node round-robin among the sockets and cores ("fcyclic").  The slurm documentation has a list of parameters that must be shared between all jobs, those that can be shared or specified individually, andthose that must be specified for each job.
+
+#### Heterogeneous jobs
+
 OpenMPI supports heterogenous jobs, but to use this the MPI installation must be linked against a process management interface (PMI) library. A clear error message seems to be produced when this is missing. Intel MPI implementations seem to work to some extent provided that the environment variable `export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so` is set, but it's not clear that heterogenous jobs are fully supported and there seems to be some limitations (such as mixing nodes with exactly 1 and >1 tasks causing a crash) in some cases. Further documentation and examples can be found at [https://slurm.schedmd.com/heterogeneous_jobs.html](https://slurm.schedmd.com/heterogeneous_jobs.html).
 
 ### Using DDT without direct compute node access
