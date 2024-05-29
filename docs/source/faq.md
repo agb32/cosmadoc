@@ -13,7 +13,12 @@ For technical problems, please email cosma-support@durham.ac.uk. If we cannot so
 
 ## Who can get an account on cosma?
 
-Any STFC theory community member, or any ICC collaborator. To request DiRAC funded time, either submit to the standard call for proposals, or submit a seedcorn application. See the [DiRAC](https://dirac.ac.uk) website for further details. For non-DiRAC time, speak to your collaborator at Durham, CC-ing cosma-support@durham.ac.uk.
+Any STFC theory community member can apply for time on the DiRAC facility through an application to the standard call for proposals or through a seedcorn application. See the [DiRAC facility website](https://www.dirac.ac.uk) for more details.
+
+Access to the Cosma5, which is part Cosma, is available to all ICC and
+CEA members [(details here)](https://durhamuniversity-my.sharepoint.com/:w:/g/personal/dph0arj_durham_ac_uk/ESQiUHr4wKNCv4Y9PgPo57cBH66i03eh7oa2BR58StmN4Q).
+ICC collaborators may be able to access non-DiRAC time on cosma7 and
+cosma8. Contact your collaborator at Durham, cc-ing cosma-support.
 
 ## What should I do to get an account?
 
