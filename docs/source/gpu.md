@@ -7,7 +7,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * login8b: 0-3x NVIDIA A100 GPUs (login node)
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gn003: NVIDIA Grace-Hopper (ARM) system
-  * gi003: Intel Ponte Vecchio GPU system 
+  * gi003: 2x Intel Ponte Vecchio GPUs
 * cosma8-shm partition
   * mad04: 0-3x NVIDIA A100 GPUs
   * mad05: 0-3x NVIDIA A100 GPUs
@@ -17,7 +17,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * ga005: 2x AMD MI200 GPUs
   * ga006: 2x AMD MI200 GPUs
 * cosma8-dine2 partition
-  *gc[001-008]: 0-8x NVIDIA A30 GPUs
+  * gc[001-008]: 0-8x NVIDIA A30 GPUs
 * Retired
   * ga003: 6x AMD MI50 GPUs
 
