@@ -1,5 +1,11 @@
 # COSMA News
 
+5/6/24: Intel Sapphire Rapids node with 2x Ponte Vecchio GPUs available for use
+
+5/6/24: NVIDIA Grace Hopper nodes available for use (2x)
+
+5/6/24: cosma8-dine2 nodes now with composable GPUs (up to 8 NVIDA A30s)
+
 1/5/24: cosma8-dine2 nodes made available for test access
 
 16/4/24: New AMD Bergamo nodes introduced for COSMA5, plus new login5c
