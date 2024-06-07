@@ -22,9 +22,15 @@ There are [two nodes](amdgpu.md) each with two AMD MI200 GPUs available.  Submit
 
 V100, A100 and H100 nodes are [available for use](nvidiagpu.md).
 
+### Intel GPU nodes
+
+A Ponte Vecchio GPU node is [available](gpu.md)
+
 ## Composable infrastructure
 
-COSMA contains a [composable](composable.md) GPU and RAM system, attached to login8b and the cosma8-shm queue.  If you need to use these resources in a different configuration, please ask cosma-support.  
+COSMA contains a [composable](composable.md) GPU and RAM system, attached to login8b and the cosma8-shm queue.  If you need to use these resources in a different configuration, please ask cosma-support.
+
+It also contains an 8-node system with 8 A30 GPUs, allowing up to 8 GPUs per node, based on a CerIO composable fabric.
 
 ## Rockport network fabric
 
