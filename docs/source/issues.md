@@ -310,3 +310,9 @@ To get Cosmos++ working well on COSMA8, the following parameters were used:
  - Try capturing memory usage as part of the job by putting a line in your job script such as ```pmrep :sar-r > sar-r.log &```
  - Make sure that MPI is aware if you are using a large number of processes, e.g. (for Intel MPI) ```export I_MPI_LARGE_SCALE_THRESHOLD=1024```
  - Check process limits are as expected by reporting the output of ```ulimit -a``` (locked memory and stack size should be unlimited).
+
+
+# Intel MPI and Lustre
+
+There are some flags that may help with performance on Lustre when using Intel MPI.  Namely `I_MPI_FILESYSTEM=yes` and `-I_MPI_FILESYSTEM_FORCE=lustre`
+
