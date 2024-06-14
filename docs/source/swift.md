@@ -66,6 +66,14 @@ and includes support for the latest language standards and innovations like
 the cross platform parts of oneAPI. So moving forward SWIFT needs to be
 capable of using these compilers as effectively as it has done using ICC.
 
+## SWIFT: Profiling with Intel tools
+
+To be able to view soruce code via Intel VTune, Intel inspector and Linaro Forge you need to compile Swift:
+
+`./configure --enable-debug CFLAGS="-parallel-source-info=2"`
+
+Note this will disable interprocedural optimization.
+
 ### Benchmarks
 
 
