@@ -8,7 +8,7 @@ Please use your COSMA login/password. If you do not know your password, please e
 
 ## Recommended access
 
-Run this command in the terminal of your local machine to set up an ssh tunnel to cosma:
+Run this command in the terminal of your local machine to set up a ssh tunnel to cosma:
 
     ssh -N -L 8443:login7b.cosma.dur.ac.uk:443 USER@login7b.cosma.dur.ac.uk
 
