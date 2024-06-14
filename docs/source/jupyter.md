@@ -16,7 +16,7 @@ or
 
     ssh -N -L 8443:login8b.cosma.dur.ac.uk:443 USER@login8b.cosma.dur.ac.uk
 
-where `USER` is the username you use for SSH access. Then point your web browser to https://localhost:8443.
+where `USER` is the username you use for SSH access. Then point your web browser to https://localhost:8443.  Note, after successfully logging in, these commands won't show anything - if you wish to have a login prompt, remove the `-N` flag.
 
 ## Launching Jupyter Lab on a compute node
 
