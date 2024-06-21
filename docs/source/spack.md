@@ -1,6 +1,6 @@
 # Spack Package Environment
 
-The `Spack <http://spack.readthedocs.io>`__ package management tool is used
+The [Spack](http://spack.readthedocs.io) package management tool is used
 to manage some of the software and libraries installed on COSMA, 
 please use it and report any issues or any feature requests.
 
