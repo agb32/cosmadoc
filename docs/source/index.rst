@@ -10,7 +10,7 @@ Check out the :doc:`account` section to get started!
 
 .. note::
 
-   Status: Good
+   Warning: COSMA5 is currently down due to data centre cooling issues.
 
 .. note::
 
