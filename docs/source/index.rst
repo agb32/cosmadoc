@@ -8,9 +8,9 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. note::
+.. warning::
 
-   Warning: COSMA5 is currently down due to data centre cooling issues.
+   Note: COSMA is undergoing maintenance from 1st July
 
 .. note::
 
