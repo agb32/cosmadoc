@@ -38,7 +38,9 @@ The old cosma5 login nodes (login.cosma.dur.ac.uk, login5a and login5b)
 are not yet available.  Please use login5c.cosma.dur.ac.uk instead.
 
 Some of the Mad nodes (cosma*-shm* partitions) are still down, but will be
-made available shortly.
+made available shortly.  The mad01 system is now batch-queue only, and not
+available as a login node (massive.cosma.dur.ac.uk).
+
 
 The bluefield1 partition is also not yet available.
 
