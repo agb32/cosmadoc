@@ -49,7 +49,7 @@ Contents
    :maxdepth: 5
    :caption: GETTING HELP
    
-   clusterugrade
+   clusterupgrade
    faq
    rockport
    virgo
