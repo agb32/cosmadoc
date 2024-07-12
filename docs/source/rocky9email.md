@@ -34,6 +34,9 @@ The old cosma Slurm partition is still down: cosma5 users should submit to
 the newer cosma5 partition for now.  We hope that the old cosma partition
 will be made available within a couple of months.
 
+The old cosma5 login nodes (login.cosma.dur.ac.uk, login5a and login5b)   
+are not yet available.  Please use login5c.cosma.dur.ac.uk instead.
+
 Some of the Mad nodes (cosma*-shm* partitions) are still down, but will be
 made available shortly.
 
@@ -48,7 +51,9 @@ normal runtimes.
 
 The dataweb node is not yet available.
 
-The AMD GPU nodes are not yet available - we are awaiting driver updates.
+The AMD GPU nodes are not yet available - we are awaiting driver
+updates (this also means that the cosma chatbot will run slower than
+usual for now).
 
 You may receive spurious email over the next few weeks while we test
 things (e.g. quota alerts, etc).
@@ -75,6 +80,9 @@ Please let us know if you find anything broken, or unexpected behaviour,
 and we will do our best to fix it.  However, for issues around code
 compilation, module versions etc, please make an initial attempt to
 resolve it.
+
+This email is available at
+https://cosma.readthedocs.io/en/latest/rocky9email.html
 
 Unfortunately, we have lost xemacs (for now).  However, standard emacs is
 still the recommended text editor of choice (though we understand vi may
