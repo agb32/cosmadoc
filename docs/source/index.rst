@@ -8,17 +8,17 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
+.. note::
 
-   Note: COSMA is undergoing maintenance from 1st July
+   Note: COSMA has recently been reinstalled. 
 
 .. note::
 
    Downtimes: COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of February, June and October (every 4 months). Current scheduled periods are:
-   - 1-14th July 2024 (end date TBC)
    - 7-11th October 2024
    - 3-7th February 2025
-
+   - 2-6th June 2025
+     
 .. note::
 
    These pages are under active development.
@@ -49,6 +49,7 @@ Contents
    :maxdepth: 5
    :caption: GETTING HELP
    
+   clusterugrade
    faq
    rockport
    virgo
