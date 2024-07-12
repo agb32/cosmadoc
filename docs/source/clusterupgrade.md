@@ -6,3 +6,8 @@ Helpful information should appear here as it becomes available.
 
 In the meantime, please see the [email text](rocky9email) for further details.
 
+## Fixes
+
+### gnome-terminal
+
+If gnome-terminal is refusing to start, please try `dbus-launch gnome-terminal` or alternatively, `xfce4-terminal`.
