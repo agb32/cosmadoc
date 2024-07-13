@@ -18,6 +18,24 @@ or
 
 where `USER` is the username you use for SSH access. Then point your web browser to https://localhost:8443.  Note, after successfully logging in, these commands won't show anything - if you wish to have a login prompt, remove the `-N` flag.
 
+## Adding a venv to Jupyter
+
+Use the following recipe to add your own venv to your Jupyter session. 
+
+```
+python -m venv jupytervenv
+source jupytervenv/bin/activate
+pip install ipykernel
+python -m ipykernel install --name myjupytervenv --display-name myjupytervenv --prefix jupytervenv/
+deactivate
+source /opt/venv/jupyter/bin/activate
+jupyter kernelspec install --user jupytervenv/share/jupyter/kernels/myjupyterenv
+```
+
+It should then appear in the Jupyter dashboard.
+
+Note, the final source must be done on a node running jupyter (login7b or login8b), or from within a terminal on the Jupyter Hub.
+
 ## Launching Jupyter Lab on a compute node
 
 This is advisable if you will be running some long calculations, which could otherwise interfere with other users on a login node. It also gives you a machine to use for yourself, so will probably allow your computations to complete in a shorter time.
