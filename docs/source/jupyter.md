@@ -23,13 +23,28 @@ where `USER` is the username you use for SSH access. Then point your web browser
 Use the following recipe to add your own venv to your Jupyter session. 
 
 ```
+# cd to your apps directory - a good place for putting code/libraries/venvs
+cd /cosma/home/apps/PROJECT/USERNAME/
+
+# Create a venv
 python -m venv jupytervenv
+
+# Activate the venv
 source jupytervenv/bin/activate
+
+# Install ipykernel in the venv
 pip install ipykernel
+
+# Do some jupyter magic
 python -m ipykernel install --name myjupytervenv --display-name myjupytervenv --prefix jupytervenv/
 deactivate
+
+# Source the venv that Jupyter Hub uses
 source /opt/venv/jupyter/bin/activate
 jupyter kernelspec install --user jupytervenv/share/jupyter/kernels/myjupyterenv
+deactivate
+
+# And now start using your venv (either by sourcing it again, or within Jupyter)
 ```
 
 It should then appear in the Jupyter dashboard.
