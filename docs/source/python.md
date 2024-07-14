@@ -12,7 +12,7 @@ The installed versions of Python generally have a limited number of libraries in
 
 To install python libraries, the following steps can be used:
 
-1. Create a virtual environment: `python -m venv /path/to/myenv`
+1. Create a virtual environment: `python -m venv /path/to/myenv`  /cosma/apps/ is a good place for this.
 2. Activate the virtual environment: `source /path/to/myenv/bin/activate`
 3. Install the packages you require: `pip install mypackage`
 4. Run Python: `python`
