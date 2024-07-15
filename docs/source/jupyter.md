@@ -22,11 +22,10 @@ where `USER` is the username you use for SSH access. Then point your web browser
 
 The simplest way is to use the makeJupyterVenv.sh script:
 
-`
+```
 module load cosma python/X.Y.Z
-
 makeJupyterVenv.sh VENVNAME
-`
+```
 
 Or if you wish to have more control, you can use the following recipe to add your own venv to your Jupyter session. 
 
