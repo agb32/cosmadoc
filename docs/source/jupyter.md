@@ -39,8 +39,9 @@ pip install ipykernel
 python -m ipykernel install --name myjupytervenv --display-name myjupytervenv --prefix jupytervenv/
 deactivate
 
-# Source the venv that Jupyter Hub uses
+# Source the venv that Jupyter Hub uses (note, this must be done on one of the Jupyter login nodes - login7b or login8b
 source /opt/venv/jupyter/bin/activate
+#This next command assumes you are in the directory from within which you created your venv (e.g. /cosma/apps/PROJECT/USER).  If not, use the full path to your venv.
 jupyter kernelspec install --user jupytervenv/share/jupyter/kernels/myjupyterenv
 deactivate
 
