@@ -24,6 +24,7 @@ The simplest way is to use the makeJupyterVenv.sh script:
 
 `
 module load cosma python/X.Y.Z
+
 makeJupyterVenv.sh VENVNAME`
 `
 
