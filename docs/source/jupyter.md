@@ -25,6 +25,7 @@ Use the following recipe to add your own venv to your Jupyter session.
 ```
 # cd to your apps directory - a good place for putting code/libraries/venvs
 cd /cosma/apps/PROJECT/USERNAME/
+# (where PROJECT is the same as used by your homespace - as seen by `realpath ~USERNAME`)
 
 # Create a venv (you may wish to module load python/X.Y.Z before this if you want a specific Python version)
 python -m venv jupytervenv
