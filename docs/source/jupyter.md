@@ -20,7 +20,14 @@ where `USER` is the username you use for SSH access. Then point your web browser
 
 ## Adding a venv to Jupyter
 
-Use the following recipe to add your own venv to your Jupyter session. 
+The simplest way is to use the makeJupyterVenv.sh script:
+
+`
+module load cosma python/X.Y.Z
+makeJupyterVenv.sh VENVNAME`
+`
+
+Or if you wish to have more control, you can use the following recipe to add your own venv to your Jupyter session. 
 
 ```
 # cd to your apps directory - a good place for putting code/libraries/venvs
@@ -52,7 +59,7 @@ deactivate
 # And now start using your venv (either by sourcing it again, or within Jupyter)
 ```
 
-It should then appear in the Jupyter dashboard.
+It should then appear in the Jupyter dashboard after you stop and restart your server (File menu -> Hub control panel -> Stop my server).
 
 Note, the final source must be done on a node running jupyter (login7b or login8b), or from within a terminal on the Jupyter Hub.
 
