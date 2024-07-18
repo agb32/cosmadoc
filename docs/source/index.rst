@@ -8,9 +8,9 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. note::
+.. warning::
 
-   Note: COSMA has recently been reinstalled. 
+   Note: COSMA7 is currently down (failed component)
 
 .. note::
 
