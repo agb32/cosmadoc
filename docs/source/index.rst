@@ -10,7 +10,7 @@ Check out the :doc:`account` section to get started!
 
 .. warning::
 
-   Note: COSMA7 is currently down (failed component)
+   Note: /cosma7 is currently running suboptimally while we fix a server
 
 .. note::
 
