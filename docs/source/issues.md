@@ -311,6 +311,17 @@ To get Cosmos++ working well on COSMA8, the following parameters were used:
  - Make sure that MPI is aware if you are using a large number of processes, e.g. (for Intel MPI) ```export I_MPI_LARGE_SCALE_THRESHOLD=1024```
  - Check process limits are as expected by reporting the output of ```ulimit -a``` (locked memory and stack size should be unlimited).
 
+### Compiling arepo on the Rocky9 system
+
+The following environment modules are known to work:
+
+```
+1) intel_comp/2024.2.0(default)   4) tbb/latest          7) hdf5/1.14.4(default)    10) Healpix/3.82(default)   13) armforge/23.1.0     16) utils/202402  
+2) mpi/latest                     5) compiler/latest     8) parmetis/4.0.3-64bit    11) cosma/2018              14) hdfview/3.1.4       17) idl/8.0       
+3) compiler-rt/latest             6) fftw/3.3.10cosma8   9) cfitsio/4.4.1(default)  12) python/3.12.4(default)  15) gadgetviewer/1.1.4  
+
+```
+
 
 # Intel MPI and Lustre
 
