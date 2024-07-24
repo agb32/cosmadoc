@@ -23,3 +23,8 @@ The screen lock can also be disabled in:
 ```
 Applications > Settings > Xfce Screensaver > Lock Screen
 ```
+
+### AMD GPU
+
+The AMD GPU nodes do not yet have ROCm installed - we are waiting for AMD to release a suitable installation package for Rocky 9.4 - currently they only support the new MI300 GPUs.
+
