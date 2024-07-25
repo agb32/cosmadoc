@@ -18,9 +18,10 @@ or
 
 where `USER` is the username you use for SSH access. Then point your web browser to https://localhost:8443.  Note, after successfully logging in, these commands won't show anything - if you wish to have a login prompt, remove the `-N` flag.
 
+
 ## Adding a venv to Jupyter
 
-The simplest way is to use the makeJupyterVenv.sh script:
+The simplest way is to use the makeJupyterVenv.sh script.  Note, this should be done on a node running Jupyter (login7b, login8b), or from within a terminal on the Jupyter Hub:
 
 ```
 # Select the module you wish to use (probably 3.12.4).
@@ -33,7 +34,7 @@ makeJupyterVenv.sh VENVNAME
 
 See below if you wish to take a more manual approach.
 
-Once you have created your venv and added to Jupyter, you can then start adding packages to it:
+Once you have created your venv and added to Jupyter, it should appear in the Jupyter dashboard after you stop and restart your server (File menu -> Hub control panel -> Stop my server).  You can then start adding packages to it, either from within Jupyter or on the commandline:
 
 ```
 source VENVNAME/bin/activate
