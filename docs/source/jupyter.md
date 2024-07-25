@@ -46,6 +46,14 @@ If you are not sure whether you are in your venv or not, `which python` will sho
 
 To exit a venv, use the `deactivate` command.
 
+You can even install a package from within a Jupyter notebook, e.g.:
+
+```
+# Install a pip package in the current Jupyter kernel
+import sys
+!{sys.executable} -m pip install numpy
+```
+
 For more information about virtual environments please see [here](python.md)
 
 ### Manually adding a venv to Jupyter
