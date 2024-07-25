@@ -31,7 +31,25 @@ cd /cosma/apps/PROJECT/USER/
 makeJupyterVenv.sh VENVNAME
 ```
 
-Or if you wish to have more control, you can use the following recipe to add your own venv to your Jupyter session. 
+See below if you wish to take a more manual approach.
+
+Once you have created your venv and added to Jupyter, you can then start adding packages to it:
+
+```
+source VENVNAME/bin/activate
+pip install numpy
+pip install whatever
+```
+
+If you are not sure whether you are in your venv or not, `which python` will show you the location of your python interpreter, which should be VENVNAME/bin/python.  You wil need to source the venv whenever you start a new connection to COSMA.  If you always want this, you could add it to your .login file.
+
+To exit a venv, use the `deactivate` command.
+
+For more information about virtual environments please see [here](python.md)
+
+### Manually adding a venv to Jupyter
+
+If you wish to have more control (rather than using the makeJupyterVenv.sh script), you can use the following recipe to add your own venv to your Jupyter session. 
 
 ```
 # cd to your apps directory - a good place for putting code/libraries/venvs
