@@ -68,6 +68,7 @@ Contents
    python
    mpi
    lustre
+   acl
    x2go
 
 .. toctree::
