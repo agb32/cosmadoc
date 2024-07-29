@@ -1,4 +1,4 @@
-# Rocky 9 Cluster welcome email
+# Rocky 9 Cluster welcome email, 12th July 2024
 
 ```
 Dear all,
