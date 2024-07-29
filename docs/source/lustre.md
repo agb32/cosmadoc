@@ -79,3 +79,7 @@ The quota of your project can be found using
 ```
 lfs quota -g GROUP -h /FILESYSTEM
 ```
+
+## Access permissions
+
+File access permissions can be managed using [access control lists][acl.md].
