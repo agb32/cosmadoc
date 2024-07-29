@@ -21,9 +21,13 @@ COSMA has a number of GPU systems, which are available for use. These are:
 * Retired
   * ga003: 6x AMD MI50 GPUs
 
-We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds) between login8b, mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each in 2 of the 3 nodes and one on the login node. These GPUs are part of a composible PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
+## Using the composable A100 GPUs
 
-You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```--constraint=gpu```.
+We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, in theory!) between login8b, mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each in 2 of the 3 nodes (mad04,05,06) and one on the login node (login8b). These GPUs are part of a composible PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
+
+You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
+
+## GPU notes
 
 For nodes not assigned to queues (login8b, gn001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
