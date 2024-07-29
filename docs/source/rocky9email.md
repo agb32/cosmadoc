@@ -1,5 +1,7 @@
 # Rocky 9 Cluster welcome email, 12th July 2024
 
+For information on the cluster upgrade please see [here](clusterupgrade.md).  Below are the emails sent to users.
+
 ```
 Dear all,
 
