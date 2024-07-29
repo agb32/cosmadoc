@@ -96,33 +96,45 @@ Alastair, Mark, Peter, Paul and Richard.
 ```
 
 
-Update from 25th July
+# Update from 25th July
 
 ```
 Dear all,
 
-In case you hadn't noticed, the COSMA queue time has been restored (for a week or so now) to the usual 3 days.
+In case you hadn't noticed, the COSMA queue time has been restored
+(for a week or so now) to the usual 3 days.
 
-The cosma queue (old COSMA5 nodes) is still not yet available.  Likewise the DINE system (bluefield1 queue).  We hope both should be back within the next
-week or so.
+The cosma queue (old COSMA5 nodes) is still not yet available.
+Likewise the DINE system (bluefield1 queue).  We hope both should be
+back within the next week or so.
 
-Please remember to acknowledge COSMA in any publications, using the official acknowlegement at:
+Please remember to acknowledge COSMA in any publications, using the
+official acknowlegement at:
 https://cosma.readthedocs.io/en/latest/acknowledgements.html
 This changes periodically, so please check each time.
 
-A number of Python users have been struggling with Jupyter and virtual environments - we are regularly updating the information to help with this at:
+A number of Python users have been struggling with Jupyter and virtual
+environments - we are regularly updating the information to help with
+this at:
 https://cosma.readthedocs.io/en/latest/jupyter.html
 
-Old Python modules are unlikely to work.  We recommend using 3.12.4 (or 3.9.19 if you need something older).
+Old Python modules are unlikely to work.  We recommend using 3.12.4
+(or 3.9.19 if you need something older).
 
-Please note that when pip installing numpy, the numpy package reached version 2.0.0 recently which has broken things for some users.  Therefore, you might
-wish to add a version restriction, e.g. pip install numpy<2.0.0
+Please note that when pip installing numpy, the numpy package reached
+version 2.0.0 recently which has broken things for some users.
+Therefore, you might wish to add a version restriction, e.g. pip
+install numpy<2.0.0
 
-Please continue to let us know if you have problems with old modules not working - we periodically remove these into the old-modules section.
+Please continue to let us know if you have problems with old modules
+not working - we periodically remove these into the old-modules
+section.
 
-Finally, we have had a reservation request which will be in place from 17th August for around 6 months using 164 nodes.  This leaves around 364 nodes spare
-- if anyone was planning on running a larger job than that during that period, please let us know.  This is to allow a large cosmology simulation (Colibre)
-to run efficiently.
+Finally, we have had a reservation request which will be in place from
+17th August for around 6 months using 164 nodes.  This leaves around
+364 nodes spare - if anyone was planning on running a larger job than
+that during that period, please let us know.  This is to allow a large
+cosmology simulation (Colibre) to run efficiently.
 
 Best wishes,
 cosma-support!
