@@ -1,5 +1,11 @@
 # COSMA News
 
+30/7/24: Homespace snapshotting enabled
+
+12/7/24: COSMA reinstalled with Rocky9 and OpenStack
+
+1/7/24: COSMA maintenance period
+
 5/6/24: Intel Sapphire Rapids node with 2x Ponte Vecchio GPUs available for use
 
 5/6/24: NVIDIA Grace Hopper nodes available for use (2x)
