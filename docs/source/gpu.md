@@ -16,7 +16,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * ga004: 1x AMD MI100 GPU
   * ga005: 2x AMD MI200 GPUs
   * ga006: 2x AMD MI200 GPUs
-* cosma8-dine2 partition
+* dine2 partition
   * gc[001-008]: 0-8x NVIDIA A30 GPUs
 * Retired
   * ga003: 6x AMD MI50 GPUs
@@ -41,7 +41,7 @@ The DINE2 GPU system is a composable system with up to 8 A30 GPUs per node.  Cur
 
 Each server has dual 32-core Sapphire Rapids CPUs and 2TB RAM.
 
-To use these nodes, submit jobs to the cosma8-dine2 partition.
+To use these nodes, submit jobs to the dine2 partition.
 
 ## Grace-Hopper
 
