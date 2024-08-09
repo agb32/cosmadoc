@@ -1,5 +1,7 @@
 # COSMA News
 
+9/8/24: The old cosma queue (COSMA5 nodes) returns to service, along with login5 (login5a, login5b)
+
 30/7/24: Homespace snapshotting enabled
 
 12/7/24: COSMA reinstalled with Rocky9 and OpenStack
