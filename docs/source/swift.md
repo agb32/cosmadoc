@@ -4,15 +4,31 @@ A detailed study of different compilers has been carried out for SWIFT and there
 
 It is possible to use gcc 9.3, 10.2 or 11.1 with openmpi/4.1.1 or mvapich_mpi/2.3.7 on cosma8.  However, gcc provides poor performace.  
 
-The current recommendation (2021) is the Intel Compiler and OpenMPI:
+The current recommendation (2024) is the Intel Compiler and either OpenMPI or Intel MPI.  It is thought that Intel MPI might be slightly better and lead to less imbalance.
 
-```module load intel_comp/2021.3.0 compiler
-module load openmpi/4.1.1
-module load ucx/1.10.1
-module load fftw/3.3.9epyc parallel_hdf5/1.12.0 parmetis/4.0.3-64bit gsl/2.5
+So, either:
+
+```
+module load intel_comp/2024.2.0 compiler-rt tbb compiler
+module load openmpi/5.0.3
+module load ucx/1.17.0
+module load parallel_hdf5/1.14.4
+module load fftw/3.3.10
+module load parmetis/4.0.3-64bit
+module load gsl/2.5
 ```
 
-You can also use the Intel MPI by using `module load mpi`, which gives similar performance.
+or
+
+```
+module load intel_comp/2024.2.0 compiler-rt tbb compiler mpi
+module load ucx/1.17.0
+module load parallel_hdf5/1.14.4
+module load fftw/3.3.10
+module load parmetis/4.0.3-64bit
+module load gsl/2.5
+```
+
 
 On COSMA8 with 4 ranks per node, the following should be used when launching an mpirun for SWIFT:
 
@@ -30,17 +46,8 @@ but note that the current module does not yet support mpirun.
 
 `MV2_ENABLE_AFFINITY=0` is required.
 
-With gcc 11.1 the dependencies for swift are also available:
+With gcc the dependencies for swift are also available:
 
-`module purge`
-
-`module load gnu_comp/11.1.0`
-
-`module load openmpi/4.1.1` # OR `module load mvapich2_mpi/2.3.6`
-
-`module load parallel_hdf5/1.12.0 parmetis/4.0.3`
-
-`module load gsl/2.4 fftw/3.3.9epyc`
 
 With openmpi the default binding of processes to cores seems to be wrong for SWIFT. The '--bind-to none' flag is required to use all of the cpus.
 
