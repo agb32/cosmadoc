@@ -98,7 +98,7 @@ As the interconnect is Mellanox Infiniband it is highly recommended to pin the p
 
 ### Gadget-3/GIZMO on COSMA8
 
-The following has been found to work with GIZMO (Romeel Dave):
+The following has been found to work with GIZMO (Romeel Dave), though is now likely out of date:
 
     module load intel_comp/2021.3.0 compiler mpi
     module load ucx/1.10.1

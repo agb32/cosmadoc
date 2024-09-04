@@ -210,27 +210,28 @@ A SLURM script such as:
 
 Where the dine_config.py file is defined as:
 
-    import os
+```
+import os
 
-    def extract_nodes(nodes):
+def extract_nodes(nodes):
     for node_entry in nodes.split(','):
     elem = node_entry.split('-')
     if len(elem) == 1:
-    yield int(elem[0])
+        yield int(elem[0])
     elif len(elem) == 2:
-    node_range = list(map(int, elem))
-    for i in range(node_range[0], node_range[1]+1):
-    yield i
+        node_range = list(map(int, elem))
+        for i in range(node_range[0], node_range[1]+1):
+            yield i
     else:
-    raise ValueError('format error in %s' % x)
+        raise ValueError('format error in %s' % x)
 
-    def print_ips(node_list):
+def print_ips(node_list):
     node_ips = []
     for node in extract_nodes(node_list):
-    basenumber = 200
-    ip_elem = node - basenumber
-    node_ips.append(f"172.18.178.{2*ip_elem-1}")
-    node_ips.append(f"172.18.101.{2*ip_elem}")
+        basenumber = 200
+        ip_elem = node - basenumber
+        node_ips.append(f"172.18.178.{2*ip_elem-1}")
+        node_ips.append(f"172.18.101.{2*ip_elem}")
     print(",".join(node_ips))
 
 
@@ -247,6 +248,7 @@ Where the dine_config.py file is defined as:
     if __name__ == "__main__":
     node_list = os.environ["SLURM_JOB_NODELIST"]
     print_ips(node_list[2:-1])
+```
 
 And the launcher script is (assuming paeno is the code to be run):
 

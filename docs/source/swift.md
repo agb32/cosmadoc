@@ -6,15 +6,15 @@ It is possible to use gcc 9.3, 10.2 or 11.1 with openmpi/4.1.1 or mvapich_mpi/2.
 
 The current recommendation (2021) is the Intel Compiler and OpenMPI:
 
-``module load intel_comp/2021.3.0 compiler``
+```module load intel_comp/2021.3.0 compiler
+module load openmpi/4.1.1
+module load ucx/1.10.1
+module load fftw/3.3.9epyc parallel_hdf5/1.12.0 parmetis/4.0.3-64bit gsl/2.5
+```
 
-`module load openmpi/4.1.1`
+You can also use the Intel MPI by using `module load mpi`, which gives similar performance.
 
-`module load ucx/1.10.1`
-
-`module load fftw/3.3.9epyc parallel_hdf5/1.12.0 parmetis/4.0.3-64bit gsl/2.5`
-
-On COSMA8 with 4 ranks per node, the following sould be used when launching an mpirun for SWIFT:
+On COSMA8 with 4 ranks per node, the following should be used when launching an mpirun for SWIFT:
 
     -np 4 --map-by socket:PE=32
 

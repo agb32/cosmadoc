@@ -32,9 +32,9 @@ The recommended MPI libraries to use are (as of June 2022):
 
 Intel 2018: `module load intel_comp/2018`
 
-Intel 2022: `module load intel_comp/2022.1.2 compiler mpi` (and you should probably also `module load ucx` as this has been demonstrated to give significantly improved performance)
+Intel 2024: `module load intel_comp/2024.2.0 compiler-rt tbb compiler mpi` (and you should probably also `module load ucx` as this has been demonstrated to give significantly improved performance)
 
-OpenMPI 4.1.1: `module load openmpi/4.1.1`
+OpenMPI 5.0.3: `module load openmpi/5.0.3`
 
 ## Multipath
 

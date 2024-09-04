@@ -89,13 +89,13 @@ Available via the llvm modules
 
 __pgi__
 
-Available via the pgi modules
+Available via the pgi modules.  This may no longer work - if you have problems, please contact us.
 
 ### MPI Modules
 
 __OpenMPI__
 
-Usually best to use the newest openmpi module. A version of this with .no-ucx (e.g. `openmpi/4.1.1.no-ucx`) may offer more stable performance in some cases.
+Usually best to use the newest openmpi module. A version of this with .no-ucx (e.g. `openmpi/4.1.1.no-ucx`) may offer more stable performance in some cases.  However, this is usually not necessary for the newest modules.
 
 Large jobs may suffer from performance issues. This can sometimes be resolved by selecting the UD protocol over the newer DC (dynamical connection) protocol by setting:
 
@@ -123,7 +123,12 @@ __Intel_mpi__
 
 2018 module is the fallback option for SWIFT.
 
-Later versions use UCX underneath, and initially suffered from stability issues. However, the newest versions are much improved.
+Later versions use UCX underneath, and initially suffered from stability issues. However, the newest versions are much improved.  These are loaded using:
+
+```
+module load intel_comp/2024.2.0
+module load compiler-rt tbb compiler mpi
+```
 
 __Mvapich__
 
@@ -151,22 +156,11 @@ login8b, mad04, mad05, mad06: Between 0-3 NVIDIA A100 GPUs (reconfigurable/movea
 
 ### SWIFT
 
-The current recommended setup (July 2021) is this:
-
-    module load intel_comp/2021.1.0 compiler
-    module load intel_mpi/2018
-    module load ucx/1.8.1
-    module load fftw/3.3.9epyc parallel_hdf5/1.10.6 parmetis/4.0.3-64bit gsl/2.5
-
-You can swap in OpenMPI 4.0.5 instead of intel-mpi and get slightly worse performance.
-
---bind-to none is required to use all the cores correctly.
-
-The intel_com/2021.1.0 mpi version is also working, if bound correctly to cores.
+The current recommended setup is given on the [swift pages](swift.md).
 
 ### Arm Forge
 
-Allinea Arm Forge and MAP (used for code profiling) is available using the allinea/ddt/20.2.1 module.
+Allinea Arm Forge and MAP (used for code profiling) is available using the allinea/ddt/23.1.0 module.
 
 Profiles collected during the commissioning period are available in the commissioning report.
 
