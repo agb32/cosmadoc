@@ -1,5 +1,9 @@
 # COSMA News
 
+4/9/24: AMD GPUs available in the cosma8-shm2 queue (MI100 and MI200)
+
+20/8/24: DINE (bluefield1) partition now partly available
+
 9/8/24: The old cosma queue (COSMA5 nodes) returns to service, along with login5 (login5a, login5b)
 
 30/7/24: Homespace snapshotting enabled
