@@ -38,7 +38,7 @@ The [Rockport network fabric](rockport.md) is 6D torus network with 100G connect
 
 ## DWAVE quantum
 
-The ExCALIBUR project funds [quantum annealing system access](quantum.md) via a DWAVE system, which is administered by COSMA staff.  Please contact cosma-support if you need access.
+The ExCALIBUR project funds [quantum annealing system access](quantum.md) via a DWAVE system, which is administered by COSMA staff.  Please contact cosma-support if you need access. 
 
 ## CPU compute lab
 
@@ -47,3 +47,7 @@ A wide variety of [processor technologies](cpucomputelab.md) are available for t
 ## Storage
 
 Our [storage laboratory](storagelab.md) includes prototype and production file systems of various types and technologies.
+
+## Solar
+
+Our [solar installation](solar.md) provides power directly usable by COSMA, allowing us to study the interplay between solar energy generation and HPC power usage.
