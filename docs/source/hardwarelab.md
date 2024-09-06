@@ -50,4 +50,8 @@ Our [storage laboratory](storagelab.md) includes prototype and production file s
 
 ## Solar
 
-Our [solar installation](solar.md) provides power directly usable by COSMA, allowing us to study the interplay between solar energy generation and HPC power usage.
+Our [solar installation](environmental.md#solar-panels) provides power directly usable by COSMA, allowing us to study the interplay between solar energy generation and HPC power usage.
+
+## Immersion cooling
+
+We have funds to install a prototype [immersion cooling](immersion.md) tank, and provide access to this facility to HPC technical support teams from across the UK, to help reduce the entry barrier to this technology.

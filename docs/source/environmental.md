@@ -11,6 +11,8 @@ We are taking some steps, within our control, to help mitigate this. You will fi
 - Working with suppliers to reduce packaging and embedded CO2.
 - Installation of ~£1m [solar panels](environmental.md#solar-panels) to offset COSMA's electricity usage.
 - Encouraging users to move to more efficient codes and workloads.
+- Investigation of [immersion cooling](immersion.md) technology.
+- Investigation of [underground heat storage and reuse](https://durham.readthedocs.io/en/latest/ichs/index.html)
 
 ## Publications
 
@@ -25,7 +27,7 @@ Here is a list of collected publications that we have discovered.
 
 ## Solar Panels
 
-In 2023, we installed approximately £1m of solar panel infrastructure on the site hosting the data centre, to provide power for COSMA, helping to offset CO2, in conjuncation with Durham University Estates and Facilities.
+In 2023, we installed approximately £1m of solar panel infrastructure on the site hosting the DiRAC data centre, to provide power for COSMA, helping to offset CO2, in conjuncation with Durham University Estates and Facilities.  This is expected to provide around 7% of COSMA's annual energy needs.
 
 Installed facilities include panels situated on:
 
@@ -33,6 +35,9 @@ Installed facilities include panels situated on:
 - Collingwood college Alnwick building
 - Collingwood college Richmond building
 
-85% of the power produced is to be used by COSMA to offset electricty costs for a 10 year period commencing April 2024.
 
-The funding for this project was received from UKRI for DiRAC Federation projects and is a trail-blazing project which could see other such schemes across the UK.
+
+80% of the power produced is to be used by COSMA to offset electricty costs for a period of more than 10 years commencing April 2024.
+
+The funding behind this scheme was aimed at reducing CO2 emissions from UK Digital Research Infrastructure, and to provide a case study for UKRI-funded solar panel installation on university estates in short time periods.  It was received from UKRI for the DiRAC Federation project, and is a trail-blazing project which could see other such schemes across the UK.
+
