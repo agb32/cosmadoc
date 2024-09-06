@@ -33,3 +33,7 @@ We have tape storage (26PB) managed by Atempo Miria.
 ## Lustre
 
 We have multiple Lustre systems with a combined capacity of around 20PB.
+
+## VAST
+
+We have a small VAST storage system which is used to provide data space to hardware lab facilities, and also operates as a home space and application data space for COSMA.
