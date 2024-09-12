@@ -8,10 +8,9 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
+.. note::
 
-   The GPU on login8b is currently down - it should reappear later
-   this week.
+   COSMA is operating normally
 
 .. note::
 
