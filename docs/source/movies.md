@@ -46,6 +46,8 @@ Movies related to COSMA and the work of the ICC
 
 [DiRAC Facilities utilization and energy report https://zenodo.org/records/11148246](https://zenodo.org/records/11148246) (2024)
 
+[Durham and VAST](files/vastCaseStudy.pdf) and [here](https://www.vastdata.com/resources/success-stories/durham-university)
+
 ## News
 
 [https://www.hpcwire.com/2022/05/24/durham-university-to-test-rockport-networks-on-cosma7-supercomputer/](https://www.hpcwire.com/2022/05/24/durham-university-to-test-rockport-networks-on-cosma7-supercomputer/)
