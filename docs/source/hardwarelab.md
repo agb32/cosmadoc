@@ -24,7 +24,7 @@ V100, A100 and H100 nodes are [available for use](nvidiagpu.md).
 
 ### Intel GPU nodes
 
-A Ponte Vecchio GPU node is [available](gpu.md)
+A Ponte Vecchio GPU node is [available](intelgpu.md)
 
 ## Composable infrastructure
 
