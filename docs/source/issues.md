@@ -277,6 +277,18 @@ If writing restart files, it is also important to get striping correct, dependin
 
 ## Rockstar
 
+Compiling the Rockstar halo finder may run into problems with some missing libraries:
+
+```
+io/io_tipsy.c:7:10: fatal error: rpc/types.h: No such file or directory
+    7 | #include <rpc/types.h>
+```
+
+To fix this, make sure you're using the latest gnu_comp or intel_comp compilers, and note that the types.h file can be found at `/usr/include/tirpc/rpc/types.h` which is part of the libtirpc-devel package, and has changed since CentOS7.  It may therefore be necessary to add `/usr/include/tirpc` to your include path.
+
+### Queue submission
+
+
 To take advantage of Rockstar parallelisation features on the shared-memory queues cosma7-shm and cosma8-shm (or on a single cosma7/cosma8
 node) in your SBATCH script set —ntasks=1 and —cpus-per-task=<# of processes=NUM_BLOCKS+NUM_WRITERS>. 
 
