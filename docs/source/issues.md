@@ -284,7 +284,11 @@ io/io_tipsy.c:7:10: fatal error: rpc/types.h: No such file or directory
     7 | #include <rpc/types.h>
 ```
 
-To fix this, make sure you're using the latest gnu_comp or intel_comp compilers, and note that the types.h file can be found at `/usr/include/tirpc/rpc/types.h` which is part of the libtirpc-devel package, and has changed since CentOS7.  It may therefore be necessary to add `/usr/include/tirpc` to your include path.
+To fix this, make sure you're using the latest gnu_comp or intel_comp compilers, and note that the types.h file can be found at `/usr/include/tirpc/rpc/types.h` which is part of the libtirpc-devel package, and has changed since CentOS7.  It may therefore be necessary to add `/usr/include/tirpc` to your include path, e.g..
+
+```
+-I/usr/include/tirpc -ltirpc
+```
 
 ### Queue submission
 
