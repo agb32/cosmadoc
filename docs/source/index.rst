@@ -21,7 +21,8 @@ Check out the :doc:`account` section to get started!
      
 .. note::
 
-   These pages are under active development.
+   These pages are under active development.  If you see any
+   out-of-date or incorrect information, please let us know!
 
 Contents
 --------
