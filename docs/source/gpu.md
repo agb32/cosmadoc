@@ -6,18 +6,19 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gn001: 10x NVIDIA V100 GPUs 
   * login8b: 0-3x NVIDIA A100 GPUs (login node)
   * gn002: NVIDIA Grace-Hopper (ARM) system
-  * gn003: NVIDIA Grace-Hopper (ARM) system
   * gi003: 2x Intel Ponte Vecchio GPUs
-* cosma8-shm partition
+* cosma8-shm Slurm partition
   * mad04: 0-3x NVIDIA A100 GPUs
   * mad05: 0-3x NVIDIA A100 GPUs
   * mad06: 0-3x NVIDIA A100 GPUs
-* cosma8-shm2 partition
+* cosma8-shm2 Slurm partition
   * ga004: 1x AMD MI100 GPU
   * ga005: 2x AMD MI200 GPUs
   * ga006: 2x AMD MI200 GPUs
-* dine2 partition
+* dine2 Slurm partition
   * gc[001-008]: 0-8x NVIDIA A30 GPUs
+* gracehopper Slurm partition
+  * gn003: NVIDIA Grace-Hopper (ARM) system
 * Retired
   * ga003: 6x AMD MI50 GPUs
 
@@ -25,9 +26,11 @@ COSMA has a number of GPU systems, which are available for use. These are:
 
 To use the GPUs, please sign up to the following project codes in SAFE:
 
-- do016: NVIDIA GPUs
+- do015: dine2 partition
+- do016: NVIDIA Grace Hopper GPUs, cosma8-shm partition
 - do017: Intel GPUs
 - do018: AMD GPUs
+- 
 
 ## Using the composable A100 GPUs
 
