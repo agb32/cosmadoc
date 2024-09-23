@@ -18,6 +18,8 @@ Movies related to COSMA and the work of the ICC
 
 [Minecraft COSMA](https://virgodb.cosma.dur.ac.uk/public/agb/videos/cosmaMinecraft.ogv)
 
+[COSMA7/ICC promotional video](https://virgodb.cosma.dur.ac.uk/public/webresources/videos/Intel_movie.mp4)
+
 ## Publicity, publications and case studies
 
 [https://spectralogic.com/resources/case-studies/durham-university/](https://spectralogic.com/resources/case-studies/durham-university/) (2019)
