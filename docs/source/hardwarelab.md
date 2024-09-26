@@ -6,6 +6,8 @@ The COSMA hardware laboratory is used for prototyping and development of new sys
 
 DINE and DINE2 are experimental test clusters for exploring new hardware and networking technologies.
 
+![DINE](images/dine.png){w=50% align=center}
+
 The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
 
 The [DINE2](dine.md) cluster is an 8 node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.
