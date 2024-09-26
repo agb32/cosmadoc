@@ -20,9 +20,9 @@ extensions = [
     'myst_parser',
 ]
 
-myst_enable_extensions=[
-    'attrs_inline'
-]
+#myst_enable_extensions=[
+#    'attrs_inline'
+#]
 
 
 intersphinx_mapping = {
