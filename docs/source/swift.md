@@ -53,7 +53,7 @@ With openmpi the default binding of processes to cores seems to be wrong for SWI
 
 With mvapich, `export MV2_ENABLE_AFFINITY=0` is required to use all of the cpus.
 
-### SWIFT with the Intel icx compiler
+## SWIFT with the Intel icx compiler
 
 Yannick has put together a report on [compiling SWIFT with the icx compiler](files/SWIFT_ICX.pdf) (instead of icc, which is deprecated).
 
