@@ -10,7 +10,8 @@ Check out the :doc:`account` section to get started!
 
 .. warning::
 
-   COSMA external network connectivity is currently down - waiting resolution.
+   COSMA external network connectivity is currently down - please use
+   the temporary route in: `ssh USER@129.234.196.23`
 
 .. note::
 
