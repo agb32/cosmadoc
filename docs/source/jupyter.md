@@ -58,7 +58,7 @@ For more information about virtual environments please see [here](python.md)
 
 ### Manually adding a venv to Jupyter
 
-If you wish to have more control (rather than using the makeJupyterVenv.sh script), you can use the following recipe to add your own venv to your Jupyter session. 
+If you wish to have more control (rather than using the makeJupyterVenv.sh script), you can use the following recipe to add your own venv to your Jupyter session.  Note that the venv name should be lower case.
 
 ```
 # cd to your apps directory - a good place for putting code/libraries/venvs
