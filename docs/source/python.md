@@ -54,3 +54,16 @@ If the library you are pip installing requires compiling, you may need to load a
 It is usually best to use the compiler that the Python interpreter you are using was compiled with.  To find that out, start the Python interpreter, and the information lines will tell you which compiler to use.
 
 Other compilers may offer improved performance, and you can experiement with these.
+
+#### h5py installation
+
+Building h5py can be done using the existing hdf5 modules.  For example:
+
+```
+module load python/3.12.4
+python3 -m venv h5py_test
+source ./h5py_test/bin/activate
+module load gnu_comp/11.1.0 hdf5/1.12.0
+pip cache purge
+pip install --no-binary=h5py h5py
+```

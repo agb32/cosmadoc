@@ -66,8 +66,8 @@ Contents
    modules
    spack
    gitlab
-   jupyter
    python
+   jupyter
    mpi
    lustre
    acl
