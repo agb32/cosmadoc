@@ -49,7 +49,8 @@ Contents
 .. toctree::
    :maxdepth: 5
    :caption: GETTING HELP
-   
+
+   contact
    clusterupgrade
    faq
    rockport

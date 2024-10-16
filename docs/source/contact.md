@@ -7,7 +7,9 @@ If you would like to give us feedback about our site or the support, or even pub
 
 ## Face to Face queries
 
-We are a distributed support system, so you will need to check the staff pages below to get our current room locations and phone numbers.
+We are available for drop-in sessions with coffee and biscuits between 10:30-11am on Tuesdays, meeting on the top floor of the Ogden Centre West building.  Please join us.
+
+Alternatively, feel free to drop in to our offices at other times. Current room locations can be found at the bottom of the [ICC staff information pages](https://icc.dur.ac.uk/index.php?content=Staff/Staff).
 
 ## COSMA support staff
 
