@@ -29,7 +29,7 @@ module load cosma python/X.Y.Z
 # cd to the directory where you want your venv.
 cd /cosma/apps/PROJECT/USER/
 # Run the script to create the venv.
-makeJupyterVenv.sh VENVNAME
+makeJupyterVenv.sh venvname
 ```
 
 See below if you wish to take a more manual approach.
@@ -37,7 +37,7 @@ See below if you wish to take a more manual approach.
 Once you have created your venv and added to Jupyter, it should appear in the Jupyter dashboard after you stop and restart your server (File menu -> Hub control panel -> Stop my server).  You can then start adding packages to it, either from within Jupyter or on the commandline:
 
 ```
-source VENVNAME/bin/activate
+source venvname/bin/activate
 pip install numpy
 pip install whatever
 ```
@@ -58,7 +58,7 @@ For more information about virtual environments please see [here](python.md)
 
 ### Manually adding a venv to Jupyter
 
-If you wish to have more control (rather than using the makeJupyterVenv.sh script), you can use the following recipe to add your own venv to your Jupyter session. 
+If you wish to have more control (rather than using the makeJupyterVenv.sh script), you can use the following recipe to add your own venv to your Jupyter session.  Note that the venv name should be lower case.
 
 ```
 # cd to your apps directory - a good place for putting code/libraries/venvs

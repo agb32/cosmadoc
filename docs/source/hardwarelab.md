@@ -6,6 +6,8 @@ The COSMA hardware laboratory is used for prototyping and development of new sys
 
 DINE and DINE2 are experimental test clusters for exploring new hardware and networking technologies.
 
+![DINE](images/dine.png)
+
 The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
 
 The [DINE2](dine.md) cluster is an 8 node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.
@@ -24,7 +26,7 @@ V100, A100 and H100 nodes are [available for use](nvidiagpu.md).
 
 ### Intel GPU nodes
 
-A Ponte Vecchio GPU node is [available](gpu.md)
+A Ponte Vecchio GPU node is [available](intelgpu.md)
 
 ## Composable infrastructure
 

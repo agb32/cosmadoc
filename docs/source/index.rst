@@ -21,7 +21,8 @@ Check out the :doc:`account` section to get started!
      
 .. note::
 
-   These pages are under active development.
+   These pages are under active development.  If you see any
+   out-of-date or incorrect information, please let us know!
 
 Contents
 --------
@@ -48,7 +49,8 @@ Contents
 .. toctree::
    :maxdepth: 5
    :caption: GETTING HELP
-   
+
+   contact
    clusterupgrade
    faq
    rockport
@@ -64,8 +66,8 @@ Contents
    modules
    spack
    gitlab
-   jupyter
    python
+   jupyter
    mpi
    lustre
    acl

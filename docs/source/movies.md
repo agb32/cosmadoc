@@ -18,6 +18,8 @@ Movies related to COSMA and the work of the ICC
 
 [Minecraft COSMA](https://virgodb.cosma.dur.ac.uk/public/agb/videos/cosmaMinecraft.ogv)
 
+[COSMA7/ICC promotional video](https://virgodb.cosma.dur.ac.uk/public/webresources/videos/Intel_movie.mp4)
+
 ## Publicity, publications and case studies
 
 [https://spectralogic.com/resources/case-studies/durham-university/](https://spectralogic.com/resources/case-studies/durham-university/) (2019)
@@ -45,6 +47,8 @@ Movies related to COSMA and the work of the ICC
 [https://insidehpc.com/2024/05/durham-university-cosmologists-dirac-and-dell-improve-hpc-energy-efficiency-without-sacrificing-performance](https://insidehpc.com/2024/05/durham-university-cosmologists-dirac-and-dell-improve-hpc-energy-efficiency-without-sacrificing-performance) (2024)
 
 [DiRAC Facilities utilization and energy report https://zenodo.org/records/11148246](https://zenodo.org/records/11148246) (2024)
+
+[Durham and VAST](files/vastCaseStudy.pdf) and [here](https://www.vastdata.com/resources/success-stories/durham-university)
 
 ## News
 

@@ -8,7 +8,7 @@ To date, it has hosted BlueField-1, Rockport and BlueField-2 technologies.
 
 # DINE2
 
-DINE2 is an 8 node cluster with dual Intel Sapphire Rapids 32-core processors and 2TB RAM.  Each node has access to up to 8 NVIDIA A30 GPUs, using a CerIO composable fabric.
+DINE2, the Durham Investigatory Node Environment, is an 8 node cluster with dual Intel Sapphire Rapids 32-core processors and 2TB RAM.  Each node has access to up to 8 NVIDIA A30 GPUs, using a CerIO composable fabric.
 
 To submit jobs to DINE2, use `#SBATCH -p dine2`.
 

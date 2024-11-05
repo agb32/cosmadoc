@@ -343,3 +343,40 @@ The following environment modules are known to work:
 
 There are some flags that may help with performance on Lustre when using Intel MPI.  Namely `I_MPI_FILESYSTEM=yes` and `-I_MPI_FILESYSTEM_FORCE=lustre`
 
+# Nbodykit
+
+To set up a virtual environment with a working nbodykit, the following can be used (thanks to Rob McGibbon):
+
+```
+#!/bin/bash
+
+set -e
+
+module purge
+module load python/3.12.4 gnu_comp/13.1.0 openmpi/4.1.4
+parallel_hdf5/1.12.0
+python -m pip cache purge
+
+# Name of the new venv to create
+venv_name="jeger_bskit"
+
+# Create an empty venv
+python -m venv "${venv_name}"
+
+# Activate the venv
+source "${venv_name}"/bin/activate
+
+# Install mpi4py and h5py using precompiled wheels
+wheel_dir="/cosma/local/python-wheels/3.12.4/openmpi-4.1.4-hdf5-12.0/"
+pip install "numpy<2"
+pip install "${wheel_dir}mpi4py-3.1.6-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}h5py-3.11.0-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}mpsort-0.1.18-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}pfft_python-0.1.22-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}pmesh-0.1.57-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}kdcount-0.3.29-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}bigfile-0.1.51-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}Corrfunc-2.5.2-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}classylss-0.2.10.dev0-cp312-cp312-linux_x86_64.whl"
+pip install "${wheel_dir}nbodykit-0.3.15-py3-none-any.whl"
+```

@@ -1,5 +1,9 @@
 # COSMA News
 
+25/10/24: COSMA Gitlab operational after upgrade
+
+8/10/24: COSMA maintenance period ends (2 days)
+
 6/9/24: cosma AI assistant is back
 
 4/9/24: AMD GPUs available in the cosma8-shm2 queue (MI100 and MI200)
