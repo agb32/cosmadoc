@@ -15,6 +15,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * ga004: 1x AMD MI100 GPU
   * ga005: 2x AMD MI200 GPUs
   * ga006: 2x AMD MI200 GPUs
+  * ga007: 8x AMD MI300 GPUs
 * dine2 Slurm partition
   * gc[001-008]: 0-8x NVIDIA A30 GPUs
 * gracehopper Slurm partition
@@ -40,9 +41,9 @@ You can use the ```--include``` or ```--exclude``` SLURM parameters within your 
 
 ## GPU notes
 
-For nodes not assigned to queues (login8b, gn001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
+For nodes not assigned to queues (login8b, gn001, ga007), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
-To use some of these GPUs, you will need to be in the "video" group (use the ```id``` command to check which groups you are in).  If you are not in it, but need to be, please ask.
+To use some of these GPUs, you will need to be in the "video" or "render" groups (use the ```id``` command to check which groups you are in).  If you are not in it, but need to be, please ask.
 
 To check that you have the correct permissions to submit to a partition, you can use the ```scontrol show partition=PARTITION_NAME``` command to see which groups are allow to submit to that partition.
 
@@ -56,9 +57,12 @@ To use these nodes, submit jobs to the dine2 partition.
 
 ## Grace-Hopper
 
-The Grace-Hopper nodes are currently available for direct ssh from a login node (gn002, gn003).  Eventually, one will be made into a Slurm queue.
+The Grace-Hopper nodes are currently available for direct ssh from a login node (gn002).  ga003 is available in a Slurm queue, gracehopper.
 
 ## Ponte Vecchio
 
 The Intel Ponte Vecchio node (donated by Intel) is available for direct ssh from a login node (gi001).
 
+## MI300X
+
+The MI300X node has 8x GPUs, and is available for direct ssh from a login node (ga007).  It will eventually be put into a slurm queue.
