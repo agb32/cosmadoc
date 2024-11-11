@@ -2,7 +2,7 @@
 
 ExCALIBUR is the UK Exascale preparation scheme, providing hardware and software effort in order to prepare the UK HPC community for forthcoming Exascale services.
 
-COSMA hosts several enabling hardware prototype systems:
+COSMA hosts several enabling hardware prototype systems funded by ExCALIBUR, which are hosted as part of the [HPC Hardware Laboratory](hardwarelab.html):
 
 1. [DINE](facilities.md#dine) - a BlueField-2 (previously BlueField-1) enabled HPC cluster
 
