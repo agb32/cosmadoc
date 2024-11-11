@@ -66,3 +66,9 @@ The Intel Ponte Vecchio node (donated by Intel) is available for direct ssh from
 ## MI300X
 
 The MI300X node has 8x GPUs, and is available for direct ssh from a login node (ga007).  It will eventually be put into a slurm queue.
+
+The AMD ROCm software stack is installed.
+
+Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
+
+There will be a DiRAC hackathon in April 2025 focussed on AMD GPUs, which will be very relevant to any users of this system.
