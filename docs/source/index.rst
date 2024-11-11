@@ -8,16 +8,16 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
+.. note::
 
-   login8b is currently undergoing maintenance
+   No current known (serious) issues with COSMA
 
 .. note::
 
    Downtimes: COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of February, June and October (every 4 months). Current scheduled periods are:
-   - 7-11th October 2024
    - 3-7th February 2025
    - 2-6th June 2025
+   - 6-10th October 2024
      
 .. note::
 
