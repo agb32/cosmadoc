@@ -1,5 +1,7 @@
 # COSMA News
 
+22/11/24: dataweb with Globus available for general use
+
 8/11/24: AMD MI300X system available for general use
 
 25/10/24: COSMA Gitlab operational after upgrade
