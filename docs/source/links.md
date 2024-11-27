@@ -39,3 +39,8 @@ Permanent links hosting COSMA data or outputs include:
 ## NUBG Repository
 
 [NUBG Repository](https://virgodb.cosma.dur.ac.uk/public/dc-elbe1/nubg_repository/)
+
+## Flamingo HDF5 streaming service
+
+https://dataweb.cosma.dur.ac.uk:8443/hdfstream/
+
