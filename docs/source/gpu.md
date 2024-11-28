@@ -59,9 +59,13 @@ To use these nodes, submit jobs to the dine2 partition.
 
 The Grace-Hopper nodes are currently available for direct ssh from a login node (gn002).  ga003 is available in a Slurm queue, gracehopper.
 
+Note, the Grace CPU has an ARM architecture, and therefore X86 binaries will not run.  The NVIDIA and GCC compilers are available.
+
 ## Ponte Vecchio
 
 The Intel Ponte Vecchio node (donated by Intel) is available for direct ssh from a login node (gi001).
+
+OneAPI is available using the intel_comp modules, e.g. `module load intel_comp` (or `module load oneAPI`).
 
 ## MI300X
 
