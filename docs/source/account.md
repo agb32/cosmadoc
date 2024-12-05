@@ -5,10 +5,11 @@ system](https://safe.epcc.ed.ac.uk/dirac/)
 
 When creating your account, it is essential that you upload an ssh
 key. You should also select the project to which you will belong. This
-will either be a DiRAC project, or if you are a local Durham user (for
-COSMA5), please select project hpcicc. Once this form has been
-submitted, you will then have to wait for COSMA staff to create your
-account. You will be notified by email.
+will either be a DiRAC project, a [HPC Hardware Lab testbed project](project.md) or if you are a local Durham user (for COSMA5), please select project hpcicc.
+
+Once this form has been submitted and authorised by the project PI,
+you will then have to wait for COSMA staff to create your account. You
+will be notified by email.
 
 Detailed instructions are available below.
 
