@@ -2,20 +2,20 @@
 
 COSMA has a number of GPU systems, which are available for use. These are:
 
-* Direct login
+* Direct login (from a login node)
   * gn001: 10x NVIDIA V100 GPUs 
   * login8b: 0-3x NVIDIA A100 GPUs (login node)
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gi003: 2x Intel Ponte Vecchio GPUs
+  * ga007: 8x AMD MI300 GPUs
 * cosma8-shm Slurm partition
-  * mad04: 0-3x NVIDIA A100 GPUs
-  * mad05: 0-3x NVIDIA A100 GPUs
-  * mad06: 0-3x NVIDIA A100 GPUs
+  * mad04: 0-3x NVIDIA A100 GPUs (4TB RAM)
+  * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM)
+  * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
 * cosma8-shm2 Slurm partition
   * ga004: 1x AMD MI100 GPU
   * ga005: 2x AMD MI200 GPUs
   * ga006: 2x AMD MI200 GPUs
-  * ga007: 8x AMD MI300 GPUs
 * dine2 Slurm partition
   * gc[001-008]: 0-8x NVIDIA A30 GPUs
 * gracehopper Slurm partition
