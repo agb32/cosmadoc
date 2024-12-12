@@ -1,6 +1,6 @@
-# Hardware lab
+# HPC Hardware Lab @Durham
 
-The COSMA hardware laboratory is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.
+The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.
 
 ## DINE and DINE2
 
