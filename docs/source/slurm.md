@@ -13,6 +13,7 @@ Common commands:
 * ```salloc```: starts a new environment which can be used to launch mpi jobs
 * ```showq [-q cosma7] [-f] [-h]```: displays additional information about queues
 * ```sshare```: show the share/priorities of the queue
+* ```slurmnodeprop```: summarise the properties of nodes or queues (use -h for more details)
 
 Example submission script examples can be found in the ```/cosma/home/sample-user``` directory.
 
