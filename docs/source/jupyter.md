@@ -1,6 +1,6 @@
 # Jupyter Hub
 
-A Jupyter Hub is available on the `login7b` and `login8b` login nodes.
+A Jupyter Hub is available on the `login5c`, `login7b` and `login8b` login nodes.
 
 ## Logging in to Jupyter Hub
 
