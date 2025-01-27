@@ -57,3 +57,7 @@ Our [solar installation](environmental.md#solar-panels) provides power directly 
 ## Immersion cooling
 
 We have funds to install a prototype [immersion cooling](immersion.md) tank, and provide access to this facility to HPC technical support teams from across the UK, to help reduce the entry barrier to this technology.
+
+## Heat storage
+
+We are investigating the [inter-seasonal storage of waste data centre heat](https://durham.readthedocs.io/en/latest/ichs/index.html) using abandoned flooded coal mines beneath the data centre site, to allow this heat to be used for building heating during the colder winter months.

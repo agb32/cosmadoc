@@ -4,6 +4,8 @@
 
 Welcome to the COSmology MAchine (COSMA)! Here, you will find some information about the COSMA5, COSMA7 and COSMA8 HPC facilities.
 
+COSMA is also known as the Compute Optimised System for Memory-intensive Algorithms.
+
 COSMA has been in existence since July 2001 and is now in its 8th generation.
 
 COSMA5 is a Durham system for ICC users and collaborators.
