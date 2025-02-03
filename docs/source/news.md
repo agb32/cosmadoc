@@ -1,5 +1,7 @@
 # COSMA News
 
+3/2/25: COSMA maintenance period
+
 9/1/25: A new slurmnodeprop command is available to summarise the nodes and partitions available
 
 22/11/24: dataweb with Globus available for general use
