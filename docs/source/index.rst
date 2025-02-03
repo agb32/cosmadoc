@@ -8,9 +8,9 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. note::
+.. warning::
 
-   No current known (serious) issues with COSMA
+   COSMA is currently in a maintenance period
 
 .. note::
 
