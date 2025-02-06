@@ -10,7 +10,7 @@ Check out the :doc:`account` section to get started!
 
 .. warning::
 
-   COSMA is currently in a maintenance period
+   COSMA is currently at-risk.  Login nodes are unstable.
 
 .. note::
 
