@@ -1,5 +1,9 @@
 # COSMA News
 
+5/2/25: Partially open after maintenance (cosma8 partition in use for tests)
+
+5/2/25: Network fabric blocking ratio tests ongoing
+
 3/2/25: COSMA maintenance period
 
 9/1/25: A new slurmnodeprop command is available to summarise the nodes and partitions available
