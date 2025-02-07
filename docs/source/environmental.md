@@ -5,6 +5,7 @@ COSMA is a large consumer of electricity. The UK national grid has not yet been 
 We are taking some steps, within our control, to help mitigate this. You will find some of this information here.
 
 - Quarterly energy reporting to users and project PIs: an email every quarter providing information about energy consumption by each user's jobs.
+- Low Power Utilisation Efficiency (PUE) data centre (<1.2) using free-air cooling most of the year
 - Partaking in UKRI Net Zero panels and discussions.
   - [UKRI Net Zero Digital Research Infrastructure Scoping Project](https://net-zero-dri.ceda.ac.uk/overview/)
   - HPCJeep
