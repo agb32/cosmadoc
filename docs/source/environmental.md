@@ -6,6 +6,10 @@ We are taking some steps, within our control, to help mitigate this. You will fi
 
 - Quarterly energy reporting to users and project PIs: an email every quarter providing information about energy consumption by each user's jobs.
 - Partaking in UKRI Net Zero panels and discussions.
+  - [UKRI Net Zero Digital Research Infrastructure Scoping Project](https://net-zero-dri.ceda.ac.uk/overview/)
+  - HPCJeep
+  - IRISCAST
+  - NetDrive
 - Using SLURM to power off unwanted compute nodes: currently DINE and COSMA5. Other systems see close to 100% use, so would have minimal benefit.
 - BIOS configurations to reduce node idle power while not affecting job runtimes.
 - Working with suppliers to reduce packaging and embedded CO2.
@@ -13,6 +17,7 @@ We are taking some steps, within our control, to help mitigate this. You will fi
 - Encouraging users to move to more efficient codes and workloads.
 - Investigation of [immersion cooling](immersion.md) technology.
 - Investigation of [underground heat storage and reuse](https://durham.readthedocs.io/en/latest/ichs/index.html)
+- System lifetime extension to minimise impact of embodied CO2
 
 ## Publications
 
