@@ -8,9 +8,9 @@ We are taking some steps, within our control, to help mitigate this. You will fi
 - Low Power Utilisation Efficiency (PUE) data centre (<1.2) using free-air cooling most of the year
 - Partaking in UKRI Net Zero panels and discussions.
   - [UKRI Net Zero Digital Research Infrastructure Scoping Project](https://net-zero-dri.ceda.ac.uk/overview/)
-  - HPCJeep
-  - IRISCAST
-  - NetDrive
+  - [HPCJeep](https://net-zero-dri.ceda.ac.uk/hpc-jeep)
+  - [IRISCAST](https://net-zero-dri.ceda.ac.uk/iriscast)
+  - [NetDrive](https://eng.ox.ac.uk/netdrive/about-netdrive)
 - Using SLURM to power off unwanted compute nodes: currently DINE and COSMA5. Other systems see close to 100% use, so would have minimal benefit.
 - BIOS configurations to reduce node idle power while not affecting job runtimes.
 - Working with suppliers to reduce packaging and embedded CO2.
