@@ -17,7 +17,7 @@ We are taking some steps, within our control, to help mitigate this. You will fi
 - Installation of ~£1m [solar panels](environmental.md#solar-panels) to offset COSMA's electricity usage.
 - Encouraging users to move to more efficient codes and workloads.
 - Investigation of [immersion cooling](immersion.md) technology.
-- Investigation of [underground heat storage and reuse](https://durham.readthedocs.io/en/latest/ichs/index.html)
+- Investigation of [underground flooded minewater heat storage and reuse](https://durham.readthedocs.io/en/latest/ichs/index.html)
 - System lifetime extension to minimise impact of embodied CO2
 
 ## Publications
