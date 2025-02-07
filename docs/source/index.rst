@@ -8,9 +8,9 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
+.. note::
 
-   COSMA is currently at-risk.  Login nodes are unstable.
+   COSMA is operating normally.
 
 .. note::
 
