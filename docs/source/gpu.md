@@ -6,8 +6,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gn001: 10x NVIDIA V100 GPUs 
   * login8b: 0-3x NVIDIA A100 GPUs (login node)
   * gn002: NVIDIA Grace-Hopper (ARM) system
-  * gi003: 2x Intel Ponte Vecchio GPUs
-  * ga007: 8x AMD MI300 GPUs
+  * gi001: 2x Intel Ponte Vecchio GPUs
 * cosma8-shm Slurm partition
   * mad04: 0-3x NVIDIA A100 GPUs (4TB RAM)
   * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM)
@@ -20,6 +19,8 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gc[001-008]: 0-8x NVIDIA A30 GPUs
 * gracehopper Slurm partition
   * gn003: NVIDIA Grace-Hopper (ARM) system
+* AMD MI300X system
+  * ga007: 8x AMD MI300 GPUs
 * Retired
   * ga003: 6x AMD MI50 GPUs
 
@@ -31,7 +32,7 @@ To use the GPUs, please sign up to the following project codes in SAFE:
 - do016: NVIDIA Grace Hopper GPUs, cosma8-shm partition
 - do017: Intel GPUs
 - do018: AMD GPUs
-- 
+ 
 
 ## Using the composable A100 GPUs
 
@@ -69,10 +70,12 @@ OneAPI is available using the intel_comp modules, e.g. `module load intel_comp` 
 
 ## MI300X
 
-The MI300X node has 8x GPUs, and is available for direct ssh from a login node (ga007).  It will eventually be put into a slurm queue.
+The MI300X node has 8x GPUs, and is available in the mi300x slurm partition.
 
 The AMD ROCm software stack is installed.
 
 Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
+
+To get interactive access you could use `srun -p mi300x -A do018 -t 10 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.
 
 There will be a DiRAC hackathon in April 2025 focussed on AMD GPUs, which will be very relevant to any users of this system.
