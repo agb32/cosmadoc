@@ -20,7 +20,7 @@ or
 
     ssh -L localhost:8443:login5c:443 USER@login5c.cosma.dur.ac.uk
 
-where `USER` is the username you use for SSH access. Then point your web browser to [https://localhost:8443](https://localhost:8443).  You may also wish to use the -N flag to send the prompt to the background, aod/or the -i flag if you need to specify the location of your ssh key.
+where `USER` is the username you use for SSH access. Then point your web browser to [https://localhost:8443](https://localhost:8443).  You may also wish to use the -N flag to send the prompt to the background, and/or the -i flag if you need to specify the location of your ssh key.
 
 ## Adding a venv to Jupyter
 
