@@ -55,6 +55,10 @@ It should be noted that your project will be charged for the entire reservation,
 
 Once you have been given a reservation, you can use the `scontrol show reservation` command to view the reservation, and submit jobs to it using the `#SBATCH --reservation=RESERVATION NAME` flag in your submission script.
 
+## HDF5 profiling
+
+The [SLURM HDF5 profiling plugin](https://slurm.schedmd.com/hdf5_profile_user_guide.html) is enabled, allowing profiling information from a given job to be catured in a HDF5 file.  Results are stored within `/cosma/apps/slurm/profile_data/USERNAME`.  To enable this, you should specify the `#SBATCH --profile=<all|none|energy|task|filesystem|network>` options within your batch script.  The node-step files are merged into one HDF5 file per job.
+
 ## Example scripts
 
 ### Large job over many nodes
