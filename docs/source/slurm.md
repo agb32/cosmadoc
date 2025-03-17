@@ -59,6 +59,8 @@ Once you have been given a reservation, you can use the `scontrol show reservati
 
 The [SLURM HDF5 profiling plugin](https://slurm.schedmd.com/hdf5_profile_user_guide.html) is enabled, allowing profiling information from a given job to be catured in a HDF5 file.  Results are stored within `/cosma/apps/slurm/profile_data/USERNAME`.  To enable this, you should specify the `#SBATCH --profile=<all|none|energy|task|filesystem|network>` options within your batch script.  The node-step files are merged into one HDF5 file per job.
 
+After the job has finished, you can run `sh5util -j JOBID` to concatenate all the files created by the job (one per node) into a single file in the current directory.  You can then use the `h5ls` command (part of the hdf5 module) to view the contents of the file on the commandline.
+
 ## Example scripts
 
 ### Large job over many nodes
