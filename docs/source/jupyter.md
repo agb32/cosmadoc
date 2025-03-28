@@ -1,6 +1,6 @@
 # Jupyter Hub
 
-A Jupyter Hub is available on the `login5c`, `login7b` and `login8b` login nodes.
+A Jupyter Hub is available on the `login5c`, `login7b` and `login8b` login nodes.  There is also a Jupyter Hub for GPU development on mad06 (A100 GPU).
 
 ## Logging in to Jupyter Hub
 
@@ -8,20 +8,19 @@ Please use your COSMA login/password. If you do not know your password, please e
 
 ## Recommended access
 
-Run this command in the terminal of your local machine to set up a ssh tunnel to cosma:
+Run this command in the terminal of your local machine to set up a ssh tunnel to cosma, e.g.:
 
-    ssh -N -L 8443:login7b.cosma.dur.ac.uk:443 USER@login7b.cosma.dur.ac.uk
-
-or
-
-    ssh -N -L 8443:login8b.cosma.dur.ac.uk:443 USER@login8b.cosma.dur.ac.uk
+    ssh -L localhost:8443:login7b:443 USER@login7b.cosma.dur.ac.uk
 
 or
 
-    ssh -N -L 8443:login5c.cosma.dur.ac.uk:443 USER@login5c.cosma.dur.ac.uk
+    ssh -L localhost:8443:login8b:443 USER@login8b.cosma.dur.ac.uk
 
-where `USER` is the username you use for SSH access. Then point your web browser to https://localhost:8443.  Note, after successfully logging in, these commands won't show anything - if you wish to have a login prompt, remove the `-N` flag.
+or
 
+    ssh -L localhost:8443:login5c:443 USER@login5c.cosma.dur.ac.uk
+
+where `USER` is the username you use for SSH access. Then point your web browser to [https://localhost:8443](https://localhost:8443).  You may also wish to use the -N flag to send the prompt to the background, and/or the -i flag if you need to specify the location of your ssh key.
 
 ## Adding a venv to Jupyter
 
