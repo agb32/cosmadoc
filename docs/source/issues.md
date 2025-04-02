@@ -1,4 +1,4 @@
-# Code-specific information
+# Code-specific information and issues
 
 See the below for known hints and issues related to certain codes. These may give compilation hints, execution hints, etc.
 
@@ -336,6 +336,21 @@ The following environment modules are known to work:
 2) mpi/latest                     5) compiler/latest     8) parmetis/4.0.3-64bit    11) cosma/2018              14) hdfview/3.1.4       17) idl/8.0       
 3) compiler-rt/latest             6) fftw/3.3.10cosma8   9) cfitsio/4.4.1(default)  12) python/3.12.4(default)  15) gadgetviewer/1.1.4  
 
+```
+
+### Other Rocky9 solutions
+
+If you are seeing ib_md.c UXC ERROR messages, the following is known to work in March 2025:
+
+```
+module load gnu_comp/13.1.0 openmpi/4.1.5
+module load gsl hdf5/1.12.2 hwloc fftw
+
+export UCX_TLS=self,sm,ud,rc,dc
+export UCX_MM_RX_MAX_BUFS=65536
+export UCX_IB_RX_MAX_BUFS=65536
+export UCX_IB_TX_MAX_BUFS=65536
+export UCX_UD_MLX5_RX_QUEUE_LEN=16384
 ```
 
 
