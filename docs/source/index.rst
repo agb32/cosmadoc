@@ -8,9 +8,10 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. note::
+.. warning::
 
-   COSMA is operating normally.
+   COSMA is not currently delivering emails.  The virgo database is
+   also inaccessible.
 
 .. note::
 
