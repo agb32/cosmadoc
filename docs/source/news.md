@@ -1,5 +1,7 @@
 # COSMA News
 
+21/3/25: 400G Ethernet fabric available on some DINE2 nodes, for testing and benchmarking
+
 7/2/25: Lustre bug captured with reversion to previous release, full operation resumed
 
 5/2/25: Partially open after maintenance (cosma8 partition in use for tests)
