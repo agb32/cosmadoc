@@ -10,7 +10,7 @@ Check out the :doc:`account` section to get started!
 
 .. warning::
 
-   The COSMA tape archive is currently operating suboptimally
+   COSMA has suffered a cooling fault, and is being brought back into service.
 
 .. note::
 
