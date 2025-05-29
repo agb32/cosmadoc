@@ -8,17 +8,17 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
+.. note::
 
-   COSMA is currently down for routine maintenance - please bear with us, should be back before the end of the week!
+   COSMA is operating normally.
 
 .. note::
 
    Downtimes: COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of February, June and October (every 4 months). Current scheduled periods are:
-   - 27-30th May 2025
    - 6-10th October 2025
-   - 2-6th February 2025
-     
+   - 2-6th February 2026
+   - 1-5th June 2026
+   
 .. note::
 
    These pages are under active development.  If you see any
