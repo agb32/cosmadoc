@@ -7,6 +7,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gi001: 2x Intel Ponte Vecchio GPUs
   * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
+  * ga008: AMD MI300A (4 GPUs, 500GB RAM)
 * cosma8-shm Slurm partition
   * mad04: 0-3x NVIDIA A100 GPUs (4TB RAM)
   * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM)
@@ -77,4 +78,14 @@ Any codes currently using CUDA will need to be HIP-ified by running the hipify s
 
 To get interactive access you could use `srun -p mi300x -A do018 -t 10 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.
 
-There will be a DiRAC hackathon in April 2025 focussed on AMD GPUs, which will be very relevant to any users of this system.
+There was a DiRAC hackathon in April 2025 focussed on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
+
+## MI300A
+
+The MI300A system has 4x GPUs, and is available for direct ssh (to ga008) from a login node.
+
+The AMD ROCm software stack is installed.
+
+Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
+
+The MI300A is an APU: The GPU and CPU are part of the same silicon, and share the same physical RAM.  Therefore, memory copies between CPU and GPU are not necessary, which can significantly improve performance for many applications, and make it highly appropriate for some codes which cannot easily be ported to more traditional GPU architectures.
