@@ -2,6 +2,8 @@
 
 26/5/25: AMD MI300A node available for general use (4x MI300A GPUs)
 
+26/5/25: StorJ on-premise object storage made available for general use
+
 21/3/25: 400G Ethernet fabric available on some DINE2 nodes, for testing and benchmarking
 
 7/2/25: Lustre bug captured with reversion to previous release, full operation resumed
