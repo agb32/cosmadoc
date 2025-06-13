@@ -123,6 +123,8 @@ cosma7
 
 in the queue parameters.
 
+There is an example Slurm submission script in /cosma/home/sample-user/slurm_ddt_example.sh
+
 ## Python issues
 
 ### Matplotlib

@@ -210,6 +210,8 @@ To use DDT with slurm, the following instructions can be followed:
 
 [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma)
 
+There is also an example Slurm submission script in /cosma/home/sample-user/slurm_ddt_example.sh
+
 ### SLURM hints and tips
 
 To use fewer than all cores in a node, with a multiple node job, use something like:
