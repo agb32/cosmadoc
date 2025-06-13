@@ -210,7 +210,7 @@ To use DDT with slurm, the following instructions can be followed:
 
 [https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma](https://gitlab.cosma.dur.ac.uk/swift/swiftsim/wikis/DDT-debugger-on-Cosma)
 
-There is also an example Slurm submission script in /cosma/home/sample-user/slurm_ddt_example.sh
+There is also an example Slurm submission script in /cosma/home/sample-user/slurm_ddt_example.qtf which [DDT uses to generate a batch script](issues.md#ddt).  
 
 ### SLURM hints and tips
 

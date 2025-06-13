@@ -110,7 +110,9 @@ The following has been found to work with GIZMO (Romeel Dave), though is now lik
 
 When using the allinea/ddt/18.2.1 module, for reference, users need to specify the file:
 
-    /cosma/local/arm/ddt/18.2.1/templates/slurm.qtf
+    /cosma/home/sample-user/slurm_ddt_example.qtf
+
+(previously  /cosma/local/arm/ddt/18.2.1/templates/slurm.qtf )
 
 in the "template file" field of the job submission settings. They also need to set the submission
 command to
@@ -122,8 +124,6 @@ and then
 cosma7
 
 in the queue parameters.
-
-There is an example Slurm submission script in /cosma/home/sample-user/slurm_ddt_example.sh
 
 ## Python issues
 
