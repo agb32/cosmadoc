@@ -1,5 +1,7 @@
 # COSMA News
 
+13/6/25: COSMA8 node count reduction
+
 26/5/25: AMD MI300A node available for general use (4x MI300A GPUs)
 
 26/5/25: StorJ on-premise object storage made available for general use
