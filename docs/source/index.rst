@@ -57,6 +57,7 @@ Contents
    virgo
    issues
    presentations
+   storage
    archive 
    
 .. toctree::

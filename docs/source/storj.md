@@ -20,7 +20,7 @@ Select the S3 or StorJ backend (option 5 or 41 respectively at the time of writi
 
 You will then be presented with options specific for the back end.
 
-For a S3 backend:
+#### For a S3 backend:
 
 ```
 For the provider, select StorJ (option 20)
@@ -33,7 +33,7 @@ Edit advanced config? Select n.
 Yes this is OK> y
 ```
 
-For the StorJ backend:
+#### For the StorJ backend:
 
 ```
 2> Create a new access grant  (select the API Key option within the web interface)
@@ -46,6 +46,8 @@ Enter the API key when prompted.
 We recommend you choose a pass phrase.
 
 And "y" to save the config.
+
+#### Using rclone
 
 You can then use commands such as:
 
