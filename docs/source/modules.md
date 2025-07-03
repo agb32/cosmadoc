@@ -29,3 +29,5 @@ If you are unsure what a good combination of modules is for a specific
 software tool, please ask cosma-support, or view the code pages.
 
 The `module save` and `restore` commands are good ways of quickly swapping between favourite module environments.
+
+Old (retired) modules can be accessed by first using `module load old-modules`.  However please note that these may or may not work.

@@ -12,3 +12,4 @@ There is a thorough, step-by-step to git and all other GitLab features [here](ht
 
 To use GitLab, you will need an SSH keypair (like the one you geenrated during [SSH setup](ssh.md)).
 
+Please do not store large binary files in the COSMA gitlab, as it is not backed by a large storage volume.

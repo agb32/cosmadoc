@@ -42,7 +42,7 @@ Please see [here](facilities.md).
 
 ## Why is there a cosma5, 7 and 8, but no cosma6?
 
-COSMA6 was retired in April 2023, having reached a veritable age of 11 years, and to make space for the COSMA8 phase-2 expansion.  COSMA5 is still in operation because it is in a different data centre, and no longer a DiRAC system.
+COSMA6 was retired in April 2023, having reached a veritable age of 11 years, and to make space for the COSMA8 phase-2 expansion.  COSMA5 is still in operation because it is in a different data centre (using a different power input), and no longer a DiRAC system.
 
 ## How do I decide which COSMA to use?
 
@@ -60,7 +60,11 @@ For intermediate sized files, you can always use scp or rsync.
 
 ## Where is my home directory?
 
-/cosma/home/PROJECT/USERNAME (where PROJECT will be durham or a DiRAC project identifier)
+/cosma/home/PROJECT/USERNAME (where PROJECT will be durham or a DiRAC project identifier).  This is usually backed up nightly (retained for 60 days), and also snapshotted hourly (retailed for about 1 week).
+
+You also have
+
+/cosma/apps/PROJECT/USERNAME which is ideal for software installation, Python virtual environments, etc, and which has hourly snapshots.
 
 You will also have data storage space, typically in one of:
 
@@ -68,21 +72,23 @@ You will also have data storage space, typically in one of:
     /cosma7/data/PROJECT/USERNAME
     /cosma8/data/PROJECT/USERNAME
 
+This is not backed up.
+
 ## Are there disk usage quotas?
 
 Yes, these should be set. You have a quota both on total storage capacity (typically 10TB for data and 10GB for homespace), and total number of files used.
 How do I check my quota?
 
-On a login node, use the "quota" command. This should report all your quotas on the different file systems (/cosma5, /cosma6, /cosma7 and homespace). This is part of the cosma module, so you may need to "module load cosma" first.
+On a login node, use the "quota" command. This should report all your quotas on the different file systems (/cosma5, /cosma7, /cosma8 and homespace). This is part of the cosma module, so you may need to "module load cosma" first.
 
-Alternatively, on the appropriate login node, use the c5quota (which no longer works), c6quota, or c7quota commands. You will need the cosma module loaded. To see your homespace quota, use the "quota" command.
+Alternatively, on the appropriate login node, use the c5quota (which no longer works), c7quota, or c8quota commands. You will need the cosma module loaded. To see your homespace quota, use the "quota" command.
 Is anything backed-up?
 
-Homespace is backed up every few days. Data space can be archived to tape media upon request.
+Homespace is usually backed up every day. Data space can be archived to tape media upon request.
 
 ## Can I print from cosma?
 
-This is not currently possible, though if you are in Durham, you can email a PDF to the CIS printers using the "mail" command.
+This is not currently possible, though if you have a Durham email, you can email a PDF to the CIS printers using the "mail" command.
 
 ## What are these “modules”?
 
@@ -94,7 +100,7 @@ Use the "modules available" command to see available modules. These are the same
 
 ## What are the recommended modules for running Gadget? Arepo?
 
-Please see the codes section of the site for specific code [details](issues.md)
+Please see the codes section of the site for specific code [details](issues.md).  If you would like a specific selection adding, please ask us (or add it yourself).
 
 ## How do I adapt the Makefile to be consistent with these modules?
 
@@ -146,7 +152,7 @@ Each storage location is optimally connected to that system. e.g. if you store d
 
 ## Do I need to worry about where the initial conditions are stored?
 
-Yes. These should be stored on the data storage connected to the compute nodes you are using. e.g. for cosma6, use /cosma6/data/
+Yes. These should be stored on the data storage connected to the compute nodes you are using. e.g. for cosma6, use /cosma8/data/
 
 If initial conditions are small and only used by a small number of nodes at a time, they may be better stored in your home space.
 

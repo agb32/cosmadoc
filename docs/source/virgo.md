@@ -32,7 +32,7 @@ The list of current projects of this kind and the name of the person that I woul
 
 - APOSTLE (Azi Fattahi)
 
-- AURIGA(Francesca Fagkoudi)
+- AURIGA (Francesca Fagkoudi)
 
 - BAHAMAS (Ian McCarthy)
 
@@ -60,10 +60,10 @@ The list of current projects of this kind and the name of the person that I woul
 
 * includes Millennium run, Millennium-II, Millgas and MXXl
 
-2.1 The person responsible should ensure that all the relevant files are re-owned to these projects before SEPTEMBER 15th, by contacting the relevant people and asking cosma-support to change the ownership. For example, they could ask sysadmin to execute the following command: mv /cosma7/data/dp004/petert/somedir /cosma7/data/dp004/flares/ ; chown -R flares /cosma7/data/dp004/flares/somedir
+2.1 The person responsible should ensure that all the relevant files are re-owned to these projects before SEPTEMBER 15th 2022, by contacting the relevant people and asking cosma-support to change the ownership. For example, they could ask sysadmin to execute the following command: mv /cosma7/data/dp004/petert/somedir /cosma7/data/dp004/flares/ ; chown -R flares /cosma7/data/dp004/flares/somedir
 
 All files associated with a project should be in the same location, as in this example. If you own a legacy file you should tell the person responsible immediately. If this person does not react reasonably swiftly, feel free to contact sysadmin and request the transfer to tape and then delete the file.
 
 2.2 The person responsible should store on tape files that have not been used recently (by requesting this to cosma-support; make sure you keep a log of the files that have been stored on tape). The deadline is also SEPTEMBER 15th 2022.
 
-2.3 As soon as the data are transferred to tape, the person responsible should delete the files from disk. Note that cosma-support keep two copies of all files on tape, one as backup in case of tape failure. However, this does not prevent data loss if two tapes fail.
+2.3 As soon as the data are transferred to tape, the person responsible should delete the files from disk. Note that cosma-support keep two copies of all files on tape, one as backup in case of tape failure, or erasure code the data, ensuring that it can be retrieved in the event of a single tape failure.  However, this does not prevent data loss if two tapes fail.

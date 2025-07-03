@@ -2,7 +2,7 @@
 
 COSMA has 7 login servers:
 
-* COSMA5: login5a, login5b
+* COSMA5: login5a, login5b, login5c
 * COSMA7: login7a, login7b, login7c
 * COSMA8: login8a, login8b
 
@@ -45,10 +45,10 @@ different login node: `login5.cosma.dur.ac.uk` for COSMA5
 - etc.
 
 The generic loginX given here will then randomly (round-robin) select
-a specific login node (e.g. login7 will put you on one of login7a,
-login7b or login7c).
+a specific login node (e.g. login8 will put you on one of login8a,
+login8b).
 
-The login systems are also the developing nodes: so they know about
+The login systems are also the development nodes: so they know about
 the compilers, have access to modules, and the batch system. Unless
 otherwise specified, all of your interactive work should be done on
 the login nodes. For instructions on how to submit jobs to the batch
@@ -64,9 +64,10 @@ key and upload it to [SAFE](https://safe.epcc.ed.ac.uk/dirac).
 
 If you forget your COSMA password, you can request a reset on
 [SAFE](https://safe.epcc.ed.ac.uk/dirac). In this case, when you log
-in, you will need to enter the new password twice (once to log in,
+in, you will need to enter the new password *TWICE* (once to log in,
 once to begin the password reset process), followed by a new password
-of your choice (twice).
+of your choice (also twice).  The new password should be at least 10
+characters long, containing at least two different character classes.
 
 To request a password reset on SAFE, select "Login accounts" -> "USER@cosma" and then click the "Request Password Reset" button. A new ssh key can also be uploaded on this page.
 
@@ -89,10 +90,12 @@ For other reasons, please contact cosma-support.
 
 ## Running programmes with graphical interface
 
-If you wish to open a graphical programme on a login node (i.e. to
-view a plot in `python`, open a PDF in an `evince` viewer or a
-picture in `eog`, view an HDF5 file in `hdfviewer`, etc.), you need to add
--X flag to forward the X server:
+The preferred method to get a graphical interface is to use [x2go](x2go.md). 
+
+However if you wish to open a graphical programme from your terminal
+on a login node (i.e. to view a plot in `python`, open a PDF in an
+`evince` viewer or a picture in `eog`, view an HDF5 file in
+`hdfviewer`, etc.), you need to add -X flag to forward the X server:
 
 `ssh -X USER@login.cosma.dur.ac.uk`
 
@@ -146,7 +149,9 @@ ControlPersist yes
 
 to your .ssh/config file, and create the .ssh/controlmasters directory.
 
-Any new connection will then use the first conneciton.
+Any new connection will then use the first conneciton.  Should the
+connection freeze, you can `killall ssh` to allow you to restart it.
+It will time out eventually.
 
 ## Disk Usage
 
@@ -157,6 +162,10 @@ datasets that are not easily recoverable.
 All generated/large datasets should be stored in a separate space,
 located in `/cosma[5678]/data/project_name/USER`. Your quota there is
 more generous and is currently set by default to 10 TB.
+
+You also have 100GB at /cosma/apps/ which can be used for software
+installation, Python virtual environments, etc.  This is not backed
+up, but has hourly snapshots, which are kept for around a week.
 
 ## COSMA8 / COSMA7 / COSMA5 Differences
 

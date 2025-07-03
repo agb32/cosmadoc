@@ -20,5 +20,6 @@ The focus of the CoE is on:
 
 - Evaluation of new network technologies
 - Lab and production-scale network testbeds
+- Evaluation of composable clusters
 
 As part of this CoE we have deployed a production 6D Torus network on COSMA7, and a composable infrastructure system.

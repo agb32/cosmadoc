@@ -6,9 +6,7 @@ It is an experimental file system, only accessible on the DINE system.
 
 # DAOS USER instructions
 
-DAOS access: Currently you will not be able to access the DAOS file system from any of the normal login nodes.
-
-DAOS is only available on the bluefield nodes b101-b114, and b116. To use daos consider b116 as a login node, so ssh to b116 then you should be able to access your DAOS filesystem, and its associated data before and after you run your jobs.
+The DAOS file system is currently being rebuilt.  Once complete, it should be accessible from most login and compute nodes.
 
 ## A note about caching
 
@@ -30,7 +28,7 @@ If you append to a file (e.g. `echo test >> file.txt`) then our current understa
 
 ## Setup instructions
 
-1. Before you use the DAOS system: Access to the DAOS filesystem is via a DAOS pool. Pools can only be created or amended by a sysadmin. Currently the only pool that exists is called DAOS8 and is 47TP in size, and is accessible for anyone who is part of the durham group. If you are part of that group then please have a go, otherwise contact the sysadmin team and we can add you to the DAOS8 pool.
+1. Before you use the DAOS system: Access to the DAOS filesystem is via a DAOS pool. Pools can only be created or amended by a cosma-support. Currently the only pool that exists is called DAOS8 and is 47TB in size, and is accessible for anyone who is part of the durham group. If you are part of that group then please have a go, otherwise contact the cosma-support and we can add you to the DAOS8 pool.
 
 2. Create a container for your data: Think about this as a directory that you can place (mount) at different places in the file system. In this example I will mount my container in my home directory.
 So we are going to create a container called “PiData”, and this container will be created in the pool named DAOS8. I am trying to give my container a name that I and anyone else who looks at in the DAOS8 pool will understand what is inside this container. The container will have a POSIX file system type, and we want to create this container with some redundancy, so I will add rf:1. This means there will always be an additional data copy erasure code (i.e. 1 disk failure).  You might wish to use rf:2 to allow for simultaneous failure of two disks.
@@ -41,7 +39,7 @@ You will be informed that the container was created.
 
 If you have errors doing this, it may be due to environment modules that you have loaded.  Try a `module purge`, or (in the case of some Intel modules which don't unload cleanly), remove them from your `.bashrc` (or wherever), log in again, and retry.
 
-3. Confirm container creation:If you would like to confirm this, then you can list all the containers that exist in the DAOS8 pool.
+3. Confirm container creation: If you would like to confirm this, then you can list all the containers that exist in the DAOS8 pool.
 
 ```
 daos cont list DAOS8
@@ -60,7 +58,7 @@ mkdir PiData
 dfuse -m ./PiData --pool DAOS8 --cont PiData [--disable-caching] [--disable-wb-cache]
 ```
 
-In this case I named the container and the directory the same, but you can call them different names.
+In this case the container and the directory have the same name, however, this is not necessary.
 
 If you ‘ls’ to see what is inside the container it should be empty as we have not used it before.
 
