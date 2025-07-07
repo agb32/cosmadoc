@@ -39,7 +39,7 @@ Yes this is OK> y
 2> Create a new access grant  (select the API Key option within the web interface)
 ```
 
-For the `satellite address>` option, copy this from the web interface, but replace `api.storj.cosma.dur.ac.uk:7777` with `storj01:7777`.
+For the `satellite address>` option, copy this from the web interface, but replace `api.storj.cosma.dur.ac.uk:7777` with `172.17.185.195:7777`.
 
 Enter the API key when prompted.
 
