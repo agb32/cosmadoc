@@ -10,7 +10,7 @@ COSMA7 and COSMA8 both contain a NVMe-based fast parallel Lustre file system dev
 
 ## StorJ
 
-A on-premise StorJ cloud storage system backed by 300TB storage has been developed.  This system is also federated with components at Edinburgh meaning that files stored here can be split between the sites.
+A on-premise [StorJ](storj.md) cloud storage system backed by over 300TB storage has been developed.  This system is also federated with components at Edinburgh and Leicester meaning that files stored here can be split between the sites.
 
 This provides a web interface and an object store to facilitate data sharing.
 
