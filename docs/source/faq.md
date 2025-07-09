@@ -54,17 +54,24 @@ If you are not part of a DiRAC project, you should use COSMA5. You will need to 
 
 Please see [here](data.md)
 
-We have a [Globus Online](https://www.globus.org) endpoint, cosma#data. Please create an account, and use this. 
+We have a [Globus Online](https://www.globus.org) endpoint, cosma#data. Please create an account, and use this.
 
 For intermediate sized files, you can always use scp or rsync.
 
 ## Where is my home directory?
 
-/cosma/home/PROJECT/USERNAME (where PROJECT will be durham or a DiRAC project identifier).  This is usually backed up nightly (retained for 60 days), and also snapshotted hourly (retailed for about 1 week).
+    /cosma/home/PROJECT/USERNAME
+
+Where PROJECT will be durham or a DiRAC project identifier.  This is usually
+backed up nightly (retained for 60 days), and also snapshotted hourly
+(retained for about 1 week). Just ```cd``` into the hidden directory
+```.snapshot``` to view these (all directories in the home space have these).
 
 You also have
 
-/cosma/apps/PROJECT/USERNAME which is ideal for software installation, Python virtual environments, etc, and which has hourly snapshots.
+    /cosma/apps/PROJECT/USERNAME
+
+which is ideal for software installation, Python virtual environments, etc, and which has hourly snapshots.
 
 You will also have data storage space, typically in one of:
 
@@ -85,6 +92,8 @@ Alternatively, on the appropriate login node, use the c5quota (which no longer w
 Is anything backed-up?
 
 Homespace is usually backed up every day. Data space can be archived to tape media upon request.
+
+Detailed usage for the data file systems can be found on [usage](usage.md} website.
 
 ## Can I print from cosma?
 
@@ -163,6 +172,8 @@ Investigate using SLURM arrays or use the parallel_tasks code make a copy from `
 ## Can I log-on to a compute node? Should I?
 
 You can either use the ```srun``` command (which will give you an empty compute node), the ```salloc``` command (which will cause mpirun jobs to be launched on the nodes in question), or ask to be added to the developers group.
+You can monitor CPU and memory use of a node running your job using PCP
+(Performance Co-Pilot) see [here](system.md#performance-co-pilot).
 
 ## How do I find how busy the system is?
 
@@ -189,6 +200,9 @@ The mad04 system has 4TB RAM.
 The mad05 system has 4TB RAM.
 
 The mad06 system has 1TB RAM.
+
+The command ```slurmnodeprop``` followed by the partition name will show the
+numbers of available CPU cores as well as memory.
 
 ## I want to visualise my data: what can I use?
 
