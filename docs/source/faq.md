@@ -93,7 +93,7 @@ Is anything backed-up?
 
 Homespace is usually backed up every day. Data space can be archived to tape media upon request.
 
-Detailed usage for the data file systems can be found on [usage](usage.md} website.
+Detailed usage for the data file systems can be found on [usage](system.md) website.
 
 ## Can I print from cosma?
 
