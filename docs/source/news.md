@@ -1,6 +1,10 @@
 # COSMA News
 
-13/6/25: COSMA8 node count reduction
+15/7/25: Immersion tank installation
+
+11/7/25: Old COSMA5 nodes removed from queues
+
+13/6/25: First COSMA8 node count reduction due to node failure (later repaired)
 
 26/5/25: AMD MI300A node available for general use (4x MI300A GPUs)
 
