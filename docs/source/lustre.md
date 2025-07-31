@@ -1,12 +1,11 @@
 # The Lustre file system
 
-/cosma7, /cosma8 and /snap7, /snap8 are LUSTRE file systems. These are parallel file systems which can write different parts of a file to different physical hard drives, thereby speeding up read and write access.
+/cosma5, /cosma7, /cosma8 and /snap7, /snap8 are LUSTRE file systems. These are parallel file systems which can write different parts of a file to different physical hard drives, thereby speeding up read and write access.
 
-By default, Lustre is configured to write files to a single logical hard drive. However, for large files (typically >100MB), improved performance can be achieved if the file is striped across multiple disks. This must be performed when the file is first created: It is not possible to re-stripe a Lustre file (though the file can be migrated).
+By default, Lustre is configured to write files to a single logical hard drive. However, for large files (typically >100MB), improved performance can be achieved if the file is striped across multiple disks. This must be performed when the file is first created: It is not possible to re-stripe a Lustre file (though the file can be migrated).  Alternatively, striping can be set on a directory, meaning that all new files within that directory will be striped.
 
-/cosma7 uses a progressive file layout by default (which you can change): The first GB is written to a single stripe, up to 16GB are then written to 8 logical disk units, and the remainder of files larger than this are written to 16 disk units.
+It is possible to set up a "progressive file layout", automatically increasing the number of stripes as file size grows.
 
-/cosma8 similarly uses a progressive file layout by default, similar to /cosma8.
 
 Lustre files inherit their striping from the directory in which they are written. Therefore if you have a data directory containing only large files, the simplest method to stripe these files is to simply stripe the directory when it is created (i.e. before any files are written to it).
 

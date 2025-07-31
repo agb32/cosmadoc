@@ -18,3 +18,5 @@ setfacl --modify=USER:--- /path/to/file
 ```
 
 The `getfacl` command can be used to see current permissions.
+
+Note, if using ACLs, you will need to remember they are present, as these do not show up using standard `ls` commands.

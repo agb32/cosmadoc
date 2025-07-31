@@ -4,11 +4,11 @@ COSMA has two composable systems to allow experimentation with composability, i.
 
 ## Liqid system
 
-A Liqid system installed in 2021 has 4 nodes (including a login node) to which both GPU and RAM can be composed upon demand (i.e. a request to cosma-support).
+A Liqid system installed in 2021 has 3 nodes (including a direct access node) to which both GPU and RAM can be composed upon demand (i.e. a request to cosma-support).
 
-The GPUs are NVIDIA A100-40GB.  There are 3 GPUs which can be configured between the nodes.  To select a node containing a GPU, please add `#SBATCH --constraint=gpu` to your batch script.  See the [GPU page](gpu.md) for more details.
+The GPUs are NVIDIA A100-40GB.  There are 3 GPUs which can be configured between the nodes.  To select a node containing a GPU, please add `#SBATCH --constraint=gpu` to your batch script.  See the [GPU page](gpu.md) for more details.  Typically, we compose one GPU per node.
 
-To make use of the composed RAM, prefix your commands with `mm`.  For example, `free -h` will show you there is 2TB RAM on the login8b node, while `mm free -h` gives access to the additional composed RAM, and so (depending on configuration) will usually show you that there is 4.5TB RAM available.
+The composed RAM is also usually shared between the nodes and presented as swap space.
 
 ## CerIO system
 
