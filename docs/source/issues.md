@@ -205,9 +205,9 @@ available in any of the OpenMPI modules previously available for COSMA7.
 
 The UCL Pandemic modelling tool used for modelling COVID-19. This is available from [https://github.com/mrc-ide/covid-sim/](https://github.com/mrc-ide/covid-sim/)
 
-Installation: you will need a compiler module, the cmake module and python3.
+Installation: you will need a compiler module, python3, and (prior to July 2024) the cmake module.
 
-So, e.g. `module load gnu_comp/9.3.0 python/3.6.5 cmake`
+So, e.g. `module load gnu_comp/9.3.0 python/3.6.5`
 
 This is a cmake build process:
 
@@ -248,7 +248,7 @@ Batch script:
     module purge#load the modules used to build your program.
     module load intel_comp
     module load python/3.6.5
-    module load cmake
+    module load cmake # not required after July 2024
     cd data
     python3 run_sample.py --covidsim=../build/CovidSim --datadir=./ --paramdir=param_files/ --outputdir=outputdir United_Kingdom
 
