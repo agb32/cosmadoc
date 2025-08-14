@@ -53,5 +53,6 @@ You can then use commands such as:
 
 - `rclone lsf mybucket:` to list a bucket
 - `rclone mkdir mybucket:mydir` to make a directory
+- `rclone copy myfile mybucket:mydir/` to copy a file to it
 - etc
 
