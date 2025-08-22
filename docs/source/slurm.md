@@ -240,7 +240,7 @@ The `showq` command can be used to obtain useful information about the queues (i
 
 The `c7jobload` command will give the load (i.e. CPU demand) of a job. Use -h to see options.
 
-`sinfo -s` will give a suscinct overview of the partitions.
+`sinfo -s` will give a succinct overview of the partitions.
 
 The `sstat` (for running jobs) and `sacct` (for completed jobs) provide information about the jobs. For example, at the end of your batch script, if you use:
 
