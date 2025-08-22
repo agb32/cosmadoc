@@ -14,6 +14,7 @@ Common commands:
 * ```showq [-q cosma7] [-f] [-h]```: displays additional information about queues
 * ```sshare```: show the share/priorities of the queue
 * ```slurmnodeprop```: summarise the properties of nodes or queues (use -h for more details)
+* ```sreport```: report on usage
 
 Example submission script examples can be found in the ```/cosma/home/sample-user``` directory.
 
@@ -61,7 +62,7 @@ The [SLURM HDF5 profiling plugin](https://slurm.schedmd.com/hdf5_profile_user_gu
 
 After the job has finished, you can run `sh5util -j JOBID` to concatenate all the files created by the job (one per node) into a single file in the current directory.  You can then use the `h5ls` command (part of the hdf5 module) to view the contents of the file on the commandline.
 
-## Example scripts
+## Example scripts and command usage
 
 ### Large job over many nodes
 
@@ -249,3 +250,11 @@ The sstat (for running jobs) and sacct (for completed jobs) provide information 
 sstat --jobs=${SLURM_JOBID}.batch --format=jobid,maxrss,ntasks
 
 it will print information about memory used.
+
+### Reporting using sreport
+
+e.g.
+
+```
+sreport cluster AccountUtilizationByUser start=mmdd end=mmdd Account=dpXXX
+```
