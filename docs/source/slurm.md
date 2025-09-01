@@ -241,7 +241,11 @@ The showq command can be used to obtain useful information about the queues (in 
 
 showq -q cosma7 -l -f -o
 
-The c7jobload command will give the load (i.e. CPU demand) of a job. Use -h to see options.
+The c7jobload command will give the load (i.e. CPU demand) of a job. Use -h to see options.  Likewise c8jobload, etc.  For example:
+
+```
+c8jobload -l JOBID
+```
 
 sinfo -s will give a suscinct overview of the partitions.
 
