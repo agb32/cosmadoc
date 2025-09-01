@@ -237,21 +237,22 @@ scontrol update job JOBNUMBER nice=100 (which will lower its priority)
 
 #### Queue information
 
-The showq command can be used to obtain useful information about the queues (in addition to squeue and sinfo). For example:
+The `showq` command can be used to obtain useful information about the queues (in addition to squeue and sinfo). For example:
 
-showq -q cosma7 -l -f -o
+```showq -q cosma7 -l -f -o```
 
-The c7jobload command will give the load (i.e. CPU demand) of a job. Use -h to see options.  Likewise c8jobload, etc.  For example:
+The `c7jobload` command will give the load (i.e. CPU demand) of a job. Use -h to see options.  Likewise `c8jobload`, etc.  For example:
 
 ```
 c8jobload -l JOBID
 ```
 
-sinfo -s will give a suscinct overview of the partitions.
 
-The sstat (for running jobs) and sacct (for completed jobs) provide information about the jobs. For example, at the end of your batch script, if you use:
+`sinfo -s` will give a succinct overview of the partitions.
 
-sstat --jobs=${SLURM_JOBID}.batch --format=jobid,maxrss,ntasks
+The `sstat` (for running jobs) and `sacct` (for completed jobs) provide information about the jobs. For example, at the end of your batch script, if you use:
+
+```sstat --jobs=${SLURM_JOBID}.batch --format=jobid,maxrss,ntasks```
 
 it will print information about memory used.
 
