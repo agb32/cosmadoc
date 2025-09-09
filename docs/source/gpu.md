@@ -13,8 +13,8 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM)
 * cosma8-shm2 Slurm partition
   * ga004: 1x AMD MI100 GPU
-  * ga005: 2x AMD MI200 GPUs
-  * ga006: 2x AMD MI200 GPUs
+  * ga005: 2x AMD MI210 GPUs
+  * ga006: 2x AMD MI210 GPUs
 * dine2 Slurm partition
   * gc[001-008]: 0-8x NVIDIA A30 GPUs
 * gracehopper Slurm partition
@@ -33,6 +33,22 @@ To use the GPUs, please sign up to the following project codes in SAFE:
 - do017: Intel GPUs
 - do018: AMD GPUs
  
+## GPU stats
+
+| GPU | FP64 TFLOPS | RAM/GB | Memory bandwidth/GB/s |
+| --- | ----------- | --- | ---------------- |
+| V100 | 7 | 32 | 900 |
+| A100 |9.7 | 40 | 1555 |
+| A30 | 5.2 | 24 | 933 |
+| H100 PCIe | 26 | 80 | 2000 |
+| H100 SMX | 34 | 80 | 3350 |
+| MI50 | 6.6 | 16 | 1000 |
+| MI100 | 11.5 | 32 | 1200 |
+| MI210 | 22.6 | 64 | 1600 |
+| MI300X | 81.7 | 192 | 5300 |
+| MI300A | 61.3 | 128 | 5300 |
+| PVC | 52.4 | 128 | 3280 |
+
 
 ## Using the composable A100 GPUs
 
