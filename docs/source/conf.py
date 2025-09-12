@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'cosma'
-copyright = '2023, COSMA'
+copyright = '2025, COSMA'
 author = 'cosma-support'
 
 release = '0.1'
@@ -17,6 +17,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    "sphinx.ext.githubpages",
+    "sphinx_rtd_theme",
     'myst_parser',
 ]
 
@@ -44,3 +46,11 @@ html_theme_options = {
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+html_context = {
+    'display_github': True,
+    'github_user': 'agb32',
+    'github_repo': 'durham',
+    'github_version': 'main/docs/',
+#    'conf_py_path': '/source/', 
+}
