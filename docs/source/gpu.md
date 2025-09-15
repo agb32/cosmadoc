@@ -5,6 +5,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
 * Direct login (from a login node)
   * gn001: 10x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
+  * gn004: NVIDIA H100 GPU on X86 platform
   * gi001: 2x Intel Ponte Vecchio GPUs
   * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
   * ga008: AMD MI300A (4 GPUs, 500GB RAM)
@@ -29,7 +30,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
 To use the GPUs, please sign up to the following project codes in SAFE:
 
 - do015: dine2 partition
-- do016: NVIDIA Grace Hopper GPUs, cosma8-shm partition
+- do016: NVIDIA Grace Hopper GPUs, H100, cosma8-shm partition
 - do017: Intel GPUs
 - do018: AMD GPUs
  
@@ -105,3 +106,7 @@ The AMD ROCm software stack is installed.
 Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
 
 The MI300A is an APU: The GPU and CPU are part of the same silicon, and share the same physical RAM.  Therefore, memory copies between CPU and GPU are not necessary, which can significantly improve performance for many applications, and make it highly appropriate for some codes which cannot easily be ported to more traditional GPU architectures.
+
+## H100
+
+There is a single PCIe-based NVIDIA H100 GPU with an X86 (Intel) host, which is available for direct ssh.
