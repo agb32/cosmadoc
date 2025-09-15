@@ -1,5 +1,9 @@
 # COSMA News
 
+15/9/25: COSMA5 expanded to 2048 nodes with some immersion cooled.
+
+12/9/25: New NVIDIA H100 node available
+
 15/7/25: Immersion tank installation
 
 11/7/25: Old COSMA5 nodes removed from queues
