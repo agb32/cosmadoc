@@ -66,7 +66,7 @@ If you forget your COSMA password, you can request a reset on
 [SAFE](https://safe.epcc.ed.ac.uk/dirac). In this case, when you log
 in, you will need to enter the new password *TWICE* (once to log in,
 once to begin the password reset process), followed by a new password
-of your choice (also twice).  The new password should be at least 10
+of your choice (also twice).  The new password should be at least 16
 characters long, containing at least two different character classes.
 
 To request a password reset on SAFE, select "Login accounts" -> "USER@cosma" and then click the "Request Password Reset" button. A new ssh key can also be uploaded on this page.
