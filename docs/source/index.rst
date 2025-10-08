@@ -15,9 +15,9 @@ Check out the :doc:`account` section to get started!
 .. note::
 
    Downtimes: COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of February, June and October (every 4 months). Current scheduled periods are:
-   - 6-10th October 2025
    - 2-6th February 2026
    - 1-5th June 2026
+   - 5-9th October 2026
    
 .. note::
 
