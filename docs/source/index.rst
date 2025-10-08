@@ -8,9 +8,9 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
+.. note::
 
-   COSMA is currently in downtime - back later this week.
+   COSMA is operating normally!
 
 .. note::
 
