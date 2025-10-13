@@ -105,23 +105,28 @@ Eventually, we will have a webpage and Jupyter Lab interface to do this. But for
 
 ### Interactively using srun
 
-    srun -A DIRAC_PROJECT -p cosma[7,8] -t TIME --pty /bin/bash
-
-    (e.g. srun -A dp004 -p cosma7 -t 1:00:00 --pty /bin/bash)
+```
+srun -A DIRAC_PROJECT -p PARTITION -t TIME --pty /bin/bash
+```
+    (e.g. `srun -A dp004 -p cosma7 -t 1:00:00 --pty /bin/bash`)
 
 Once you get a compute node, do:
 
+```
     export XDG_RUNTIME_DIR=""
 
-    module load python/3.6.5 #(you may need to module purge, or module unload python first)
+    source /path/to/your/venv/bin/activate
 
     jupyter lab --no-browser --ip=`ifconfig | awk '/172.17/ {print $2}'`
 
-    (note, be careful with backticks and single quotes when copying the above command)
+    #(note, be careful with backticks and single quotes when copying the above command)
+```
 
 Then, on your desktop/laptop, set up a ssh tunnel, e.g.:
 
+```
     ssh -N -L localhost:8888:NODE:8888 USER@login7.cosma.dur.ac.uk
+```
 
 where NODE is the IP address of the node (which you can get using `ifconfig | grep 172.17` when on the node)
 
@@ -140,14 +145,13 @@ Create an sbatch script with some of the following information, e.g.:
     #SBATCH -J jupyter
     #SBATCH -o slurmjupyter%J.out
     #SBATCH -e slurmjupyter%J.err
-    #SBATCH -p cosma        #for example, could be cosma6, cosma7 etc
+    #SBATCH -p cosma        #for example, could be cosma8, cosma7 etc
     #SBATCH -A durham       #for example, could be dp004, or other projects
-    #SBATCH --exclusive
     #SBATCH -t 01:00:00     #1 hour - use more if you need it
     #SBATCH --mail-type=END # notifications
     #SBATCH --mail-user=YOUR_EMAIL_ADDRESS
     module purge
-    module load python/3.6.5
+    source /path/to/your/venv/bin/activate
     export XDG_RUNTIME_DIR=""
     #Run Jupyter
     jupyter lab --no-browser --ip=`ifconfig | awk '/172.17/ {print $2}'`
