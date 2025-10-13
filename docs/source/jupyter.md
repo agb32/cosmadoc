@@ -115,6 +115,7 @@ Once you get a compute node, do:
 ```
     export XDG_RUNTIME_DIR=""
 
+    # Import your environment - you'll previousy have done pip install jupyterlab here.
     source /path/to/your/venv/bin/activate
 
     jupyter lab --no-browser --ip=`ifconfig | awk '/172.17/ {print $2}'`
