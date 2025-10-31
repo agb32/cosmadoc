@@ -7,9 +7,7 @@ If you would like to give us feedback about our site or the support, or even pub
 
 ## Face to Face queries
 
-We are available for drop-in sessions with coffee and biscuits between 10:30-11am on Tuesdays, meeting on the top floor of the Ogden Centre West building.  Please join us.
-
-Alternatively, feel free to drop in to our offices at other times. Current room locations can be found at the bottom of the [ICC staff information pages](https://icc.dur.ac.uk/index.php?content=Staff/Staff).
+Feel free to drop in to our offices at other times. Current room locations can be found at the bottom of the [ICC staff information pages](https://icc.dur.ac.uk/index.php?content=Staff/Staff).
 
 ## COSMA support staff
 
@@ -20,5 +18,5 @@ Team members are:
 - [Dr. Alastair Basden](https://www.durham.ac.uk/staff/a-g-basden/), HPC Technical Manager, OCW220, 0191 334 2229, 07771 335593
 - [Dr. Peter Draper](https://www.durham.ac.uk/staff/p-w-draper/), Senior Computer Programmer, R319, 0191 334 3198
 - [Mr. Richard Regan](https://www.durham.ac.uk/staff/richard-regan/), DiRAC Manager, OCW220, 0191 334 3632
-- [Mr. Paul Walker](https://www.durham.ac.uk/staff/paul-a-walker/), Technical Manager, R317
+- [Dr. Paul Walker](https://www.durham.ac.uk/staff/paul-a-walker/), Technical Manager, PH-321
 - [Dr. Mark Lovell](https://www.durham.ac.uk/staff/m-r-lovell/), Technical Manager, PH-321
