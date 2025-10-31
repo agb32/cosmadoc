@@ -42,5 +42,5 @@ Permanent links hosting COSMA data or outputs include:
 
 ## Flamingo HDF5 streaming service
 
-https://dataweb.cosma.dur.ac.uk:8443/hdfstream/
+[Flamingo HDF5 stream](https://dataweb.cosma.dur.ac.uk:8443/hdfstream/)
 

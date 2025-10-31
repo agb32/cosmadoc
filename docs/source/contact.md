@@ -7,7 +7,7 @@ If you would like to give us feedback about our site or the support, or even pub
 
 ## Face to Face queries
 
-Feel free to drop in to our offices at other times. Current room locations can be found at the bottom of the [ICC staff information pages](https://icc.dur.ac.uk/index.php?content=Staff/Staff).
+Feel free to drop in to our offices or request a call. Current room locations can be found at the bottom of the [ICC staff information pages](https://icc.dur.ac.uk/index.php?content=Staff/Staff).
 
 ## COSMA support staff
 
