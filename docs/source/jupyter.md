@@ -153,9 +153,11 @@ Create an sbatch script with some of the following information, e.g.:
     #SBATCH --mail-user=YOUR_EMAIL_ADDRESS
     module purge
     source /path/to/your/venv/bin/activate
+    #Your venv will need jupyter installed (pip install jupyterlab)
     export XDG_RUNTIME_DIR=""
     #Run Jupyter
     jupyter lab --no-browser --ip=`ifconfig | awk '/172.17/ {print $2}'`
+
 
 Submit this script (sbatch SCRIPTNAME)
 
