@@ -11,9 +11,11 @@ To access these pages you'll need your COSMA username and password (or a self-ge
 
 To analyse usage of a node running a current job, you can use Performance Co-Pilot or the c8jobload command.
 
-## c8jobload
+## cjobload
 
-Running: `c8jobload -n 2 -l JOBID` will show the CPU load and RAM for the job given, every 2 seconds, for each node used by the job.
+Running: `cjobload -n 2 JOBID` will show the CPU load and RAM for the job given, every 2 seconds, for each node used by the job.
+There are also `c8jobload`, `c7jobload`, `c7rpjobload` and `c5jobload` variants that show value for all the currently running jobs
+on these partitions. See the `--help` of `cjobload` for additional options.
 
 
 ## Performance Co-Pilot 
