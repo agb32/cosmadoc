@@ -105,6 +105,7 @@ Contents
    :caption: ADDITIONAL RESOURCES
 
    news
+   technotes
    projectdata
    environmental
    links
