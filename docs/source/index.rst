@@ -59,7 +59,8 @@ Contents
    presentations
    storage
    archive 
-   
+   policies
+	     
 .. toctree::
    :maxdepth: 3
    :caption: SOFTWARE
