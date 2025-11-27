@@ -6,7 +6,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gn001: 10x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gn004: NVIDIA H100 GPU on X86 platform
-  * gi001: 2x Intel Ponte Vecchio GPUs
+  * gi001: 2x Intel Ponte Vecchio GPUs (currently dead)
   * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
   * ga008: AMD MI300A (4 GPUs, 500GB RAM)
 * cosma8-shm Slurm partition
@@ -31,7 +31,7 @@ To use the GPUs, please sign up to the following project codes in SAFE:
 
 - do015: dine2 partition
 - do016: NVIDIA Grace Hopper GPUs, H100, cosma8-shm partition
-- do017: Intel GPUs
+- do017: Intel GPUs (currently dead)
 - do018: AMD GPUs
  
 ## GPU stats
@@ -65,6 +65,8 @@ To use some of these GPUs, you may need to be in the "video" or "render" groups 
 
 To check that you have the correct permissions to submit to a partition, you can use the ```scontrol show partition=PARTITION_NAME``` command to see which groups are allow to submit to that partition.
 
+The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch this space - we may be able to ressurect them.
+
 ## DINE2
 
 The DINE2 GPU system is a composable system with up to 8 A30 GPUs per node.  Currently these are static (i.e. if you require a specific GPU configuration, please ask), but eventually we hope to make it dynamic (i.e. to be able to ask Slurm to compose a system).  In total, there are 8 GPUs, and these can be composed in any configuration to the 8 servers.
@@ -80,6 +82,8 @@ One Grace-Hopper node is currently available for direct ssh from a login node (g
 Note, the Grace CPU has an ARM architecture, and therefore X86 binaries will not run.  The NVIDIA and GCC compilers are available.
 
 ## Ponte Vecchio
+
+This node is currently dead.
 
 The Intel Ponte Vecchio node (donated by Intel) is available for direct ssh from a login node (gi001).
 
