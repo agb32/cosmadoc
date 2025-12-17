@@ -20,27 +20,26 @@ COSMA also includes a number of other facilities including:
 [Storage](storage.md) includes:
 
 - /cosma5 - 2.4PB
-- /cosma6 - 2.5PB (to be retired in Autumn 2023)
+- /cosma6 - 2.0PB (repurposed from the original COSMA6 storage)
 - /cosma7 - 3.1PB
 - /cosma8 - 16PB
 - /snap7 - 440TB for fast temporary storage (e.g. checkpointing)
 - /snap8 - 1.2PB for fast temporary storage (e.g. checkpointing)
-- /cosma/home - 37TB for user homespace (10GB quota)
-- /cosma/local - 37TB for program/module storage
+- /cosma/home - 300TB for user homespace (10GB quota)
+- /cosma/local - 300TB for program/module storage
+- /cosma/apps - 300TB for user application storage (100GB quota)
 
-Users have access to /cosma/home/PROJECT/USERNAME, and one or more of /cosmaN/data/PROJECT/USERNAME.
+Users have access to /cosma/home/PROJECT/USERNAME, /cosma/apps/PROJECT/USERNAME, and one or more of /cosmaN/data/PROJECT/USERNAME.
 
 ## COSMA5
 
-COSMA5 is comprised of two generations of server:
- - The original COSMA5 system dating from 2012 has approximately 160 compute nodes remaining, each with 128GB RAM and 16 cores (2x Intel Xeon CPU E5-2670 0 @ 2.60GHz). These have a Sandy Bridge architecture.
-   - Please submit to the `cosma` queue to use these nodes.
- - The new COSMA5 system dating from 2024 has 3 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD Bergamo processors).  These have a Zen-4 (Genoa) architechture.
+COSMA5 is was refurbished in 2025, with the old (2012) nodes being replaced by 2048 cores of new AMD Bergamo CPUs:
+ - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD Bergamo processors).  These have a Zen-4 (Genoa) architechture.
    - Please submit to the `cosma5` queue to use these nodes.
 
-The nodes are connected via Mellanox FDR10 Infiniband switches in a 2:1 blocking configuration. Access is enabled through three login/development servers, two for the old system each with 512GB of memory (login5a, login5b), and one for the new system with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
+The nodes are connected via Mellanox EDR 100G Infiniband switches in a 2:1 blocking configuration. Access is enabled through a login/development server, with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
 
-The new COSMA5 nodes were funded by a Durham University carbon reduction fund, and a donation from Dell and AMD, replacing 48 old nodes in 2024.
+The new COSMA5 nodes were funded by a Durham University carbon reduction fund, and a donation from Dell and AMD, replacing 48 old nodes in 2024, followed by an immersion-cooled component (5 more nodes) in 2025, funded by UKRI.
 
 The new COSMA5 nodes are not exclusive: Codes share the nodes with other jobs running simultaneously, unless explicitly requesting the number of cores contained by each node (256).  
 
@@ -93,25 +92,16 @@ The list of people who helped assemble COSMA8 can be found [here](facilities.md#
 
 The following people helped build COSMA8:
 
-Yannick Bahe
-
-Alastair Basden
-
-Elijah Basden
-
-Miriam Basden
-
-Peter Draper
-
-Aqeeb Hussain
-
-Yuankang Liu
-
-Fawada Qaiser
-
-Richard Regan
-
-Paul Walker
+- Yannick Bahe
+- Alastair Basden
+- Elijah Basden
+- Miriam Basden
+- Peter Draper
+- Aqeeb Hussain
+- Yuankang Liu
+- Fawada Qaiser
+- Richard Regan
+- Paul Walker
 
 (if you are not on this list but should be, please let us know, apologies!)
 

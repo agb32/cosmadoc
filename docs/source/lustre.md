@@ -61,6 +61,16 @@ If you are using the /snap file systems for restart/checkpoint files, please ens
 
 If you are rsync-ing data from elsewhere onto the Lustre file system, and have files >1GB in size, the rsyncLustre module should be used. This is a patched version of rsync which will automatically stripe all files >1GB in size.
 
+## Directory sizes
+
+To find the size of everything within a directory, you can use the standard `du` command.  e.g. `du -s -h /cosma8/data/PROJECT/USER`.  However, for directories with many files, this can take a long time.  Note, this returns the size of the files on disk, after compression.  To return the sum of actual file size (i.e. if you were to transfer to another system without compression), you can add the `--apparent-size` option.
+
+A faster way, which only touches the Lustre metadata servers, not the object storage servers, is to use `lfs find`.  For example:
+
+```
+lfs find /cosma8/data/PROJECT/USER --lazy --printf "%s\n" | awk '{sum+=$1;n+=1}END{print "Total: "sum" bytes, "sum/1024/1024/1024" GB, "n" files"}'
+```
+
 # Quotas
 
 Quotas on the Lustre file system can be found using
