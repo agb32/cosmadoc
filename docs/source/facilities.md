@@ -105,6 +105,28 @@ The following people helped build COSMA8:
 
 (if you are not on this list but should be, please let us know, apologies!)
 
+## DINE-2
+
+Installed in 2024, DINE-2 is a composable cluster with 8 nodes, 8 GPUs that can be composed to them, and is based on a CerIO composable fabric.
+
+To submit to the DINE-2 system, use the dine2 SLURM partition
+
+## The Cosmological Database
+
+The Cosmological Database is a collection of database-stored cosmological information, accessible through different mediums.
+
+This includes [the Virgo Database](https://virgodb.dur.ac.uk)
+
+
+## Rockport cluster
+
+The Rockport cluster uses half of COSMA7, replacing the InfiniBand network with a switchless Rockport Ethernet network, based on a 6D torus topology.
+
+Each node has 28 cores and 512GB RAM, and has the /cosma7 storage (3.1PB attached)
+
+For usage information please see [here](rockport.md).
+
+
 ## DINE
 
 The Durham Interconnected Novel Environment (DINE) supercomputer is a small 24-node development cluster equipped with NVIDIA BlueField-2 Data Processing Units (DPUs) using a non-blocking HDR200 fabric. These DPUs enable direct access to remote memory to improve the performance of massively parallel codes, in preparation for future exascale systems, and will provide researchers with a test-bed facility development of new and novel computing paradigms.
@@ -357,29 +379,6 @@ Let us know if you want to be added.
 
 This work has used Durham University's DINE cluster. DINE has been purchased through Durham University’s Research Capital Equipment Fund 19_20 Allocation, led by the Department of Computer Science. It is installed in collaboration and as addendum to DiRAC@Durham facility managed by the Institute for Computational Cosmology on behalf of the STFC DiRAC HPC Facility ([www.dirac.ac.uk](www.dirac.ac.uk)). DiRAC equipment was funded by BEIS capital funding via STFC capital grants ST/P002293/1, ST/R002371/1 and ST/S002502/1, Durham University and STFC operations grant ST/R000832/1. DiRAC is part of the National e-Infrastructure.
 
-## DINE-2
-
-Installed in 2024, DINE-2 is a composable cluster with 8 nodes, 8 GPUs that can be composed to them, and is based on a CerIO composable fabric.
-
-To submit to the DINE-2 system, use the dine2 SLURM partition
-
-## The Cosmological Database
-
-The Cosmological Database is a collection of database-stored cosmological information, accessible through different mediums.
-
-This includes:
-
-[the Virgo Database](https://virgodb.dur.ac.uk)
-
-There will also shortly be a SciServer instance available for testing
-
-## Rockport cluster
-
-The Rockport cluster uses half of COSMA7, replacing the InfiniBand network with a switchless Rockport Ethernet network, based on a 6D torus topology.
-
-Each node has 28 cores and 512GB RAM, and has the /cosma7 storage (3.1PB attached)
-
-For usage information please see [here](rockport.md).
 
 ## Other facilities
 
