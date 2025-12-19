@@ -139,4 +139,4 @@ date if you want to know this minute.
 
 ## Access permissions
 
-File access permissions can be managed using [access control lists][acl.md].
+File access permissions can be managed using [access control lists](acl.md).
