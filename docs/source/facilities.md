@@ -22,7 +22,7 @@ COSMA also includes a number of other facilities including:
 - /cosma5 - 2.4PB
 - /cosma6 - 2.0PB (repurposed from the original COSMA6 storage)
 - /cosma7 - 3.1PB
-- /cosma8 - 16PB
+- /cosma8 - 18PB
 - /snap7 - 440TB for fast temporary storage (e.g. checkpointing)
 - /snap8 - 1.2PB for fast temporary storage (e.g. checkpointing)
 - /cosma/home - 300TB for user homespace (10GB quota)
