@@ -140,24 +140,6 @@ For COSMA5 (16 cores per node):
 
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-### Using the cordelia queue to submit single core jobs without taking up a whole node
-
-Use:
-
-    #SBATCH -n 1
-
-    #SBATCH -p cordelia
-
-    #SBATCH --cpu-per-task=1
-
-    #SBATCH --mem-per-cpu=4096
-
-    (and other standard options)
-
-Cordelia is a shared queue, so multiple users run jobs simultaneously on these nodes.
-
-The cosma7-shm queue can also be used for large memory requirements. These are single nodes, though not exclusive (i.e. multiple user jobs can run simultaneously).
-
 ### Using non-uniform resources per node in a single job (heterogenous jobs)
 
 Slurm allows requesting multiple node configurations in one batch submission:
