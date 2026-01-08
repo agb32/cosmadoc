@@ -28,16 +28,16 @@ There are multiple scratch spaces, ideal for simulation checkpoinging data.  Typ
 
 Not all login and compute nodes mount all filesystems. The following table summarizes which filesystems can be read/written from which nodes:
 
-| Filesystem | login5* | m5*** | login7* | m7*** | login8* | m8*** | ????? |
-| :--------: | :-----: | :---: | :-----: | :---: | :-----: | :---: | :---: |
-| /cosma/home|   rw    |   rw  |   rw    |   rw  |    rw   |   rw  |       |
-| /cosma/apps|   rw    |   rw  |   rw    |   rw  |    rw   |   rw  |       |
-| /cosma5    |   rw    |   rw  |   rw    |       |    rw   |       |       |
-| /cosma7    |   rw    |       |   rw    |       |    rw   |       |       |
-| /snap7     |         |       |   rw    |   rw  |         |       |       |
-| /cosma8    |         |       |   rw    |   rw  |    rw   |       |       |
-| /snap8     |         |       |         |       |    rw   |   rw  |       |
-| ???        |         |       |         |       |         |       |       |
+| Filesystem | login5* | m5*** | login7* | m7*** | login8* | m8*** |
+| :--------: | :-----: | :---: | :-----: | :---: | :-----: | :---: |
+| /cosma/home|   rw    |   rw  |   rw    |   rw  |    rw   |   rw  |
+| /cosma/apps|   rw    |   rw  |   rw    |   rw  |    rw   |   rw  |
+| /cosma5    |   rw    |   rw  |   rw    |       |    rw   |       |
+| /cosma7    |   rw    |   r   |   rw    |   rw  |    rw   |   r   |
+| /snap7     |         |       |   rw    |   rw  |         |       |
+| /cosma8    |   rw    |       |   rw    |       |    rw   |   rw  |
+| /snap8     |         |       |         |       |    rw   |   rw  |
+| /cosma6    |   rw    |       |   rw    |       |    rw   |       |
 
 # Archive space
 
