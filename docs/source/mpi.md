@@ -61,7 +61,6 @@ This is not regularly tested.
     module load gsl/2.4
 ```
 
-
 Note, the fftw build is optimised for avx512 / cosma7.
 
 # Compiling openMPI with ROCm
