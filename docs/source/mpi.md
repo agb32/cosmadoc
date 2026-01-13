@@ -6,7 +6,7 @@ Standard module combinations are:
 
 `intel_comp/2018 and intel_mpi/2018`
 
-`intel_comp/2024.2.0` and then (following the instructions printed out) `compiler-rt tbb compiler mpi`. 
+`intel_comp/2025.3.0` (or other latest version) and then (following the instructions printed out) `compiler-rt tbb umf compiler mpi`. 
 
 Note, when using the newer intel_comp modules, you first load these, which put some more modules on the search path, allowin you to then "module load compiler mpi" to load the compiler and mpi (compiler-rt and tbb may also be needed, depending on version). 
 
@@ -61,6 +61,21 @@ This is not regularly tested.
     module load gsl/2.4
 ```
 
-
 Note, the fftw build is optimised for avx512 / cosma7.
+
+# Compiling openMPI with ROCm
+
+Some success has been achieved using the following instructions on a node with ROCm installed (one of the AMD GPU nodes):
+
+- Compiling UCX
+
+`../configure --prefix=/cosma/apps/PROJECT/USER/ucx-1.19.0 --with-rocm=/opt/rocm --without-knem --without-cuda --enable-mt`
+
+- Compiling UCC
+
+`../configure --prefix=/cosma/apps/PROJECT/USER/ucc-1.6.0 --with-rocm=/opt/rocm --with-ucx=/cosma/apps/PROJECT/USER/ucx-1.19.0`
+
+- Compiling OpenMPI
+
+`../configure --prefix=/cosma/apps/PROJECT/USER/openmpi-5.0.9 --with-rocm=/opt/rocm --with-ucx=/cosma/apps/PROJECT/USER/ucx-1.19.0 --with-ucc=/cosma/apps/PROJECT/USER/ucc-1.6.0 --without-cuda`
 

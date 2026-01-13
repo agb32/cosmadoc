@@ -4,7 +4,7 @@ Data transfer off-site can be done from one of the login nodes (10GBit/s connect
 
 ## GLOBUS Online
 
-To use GLOBUS, you first need to visit [globus.org](globus.org) and sign in. Here, don't select the organisation, but use a Globus ID. If you don't have an account, create one. Then, select cosma#dataweb as an end point. From there, you will be able to transfer your files. If you do not know your COSMA password, please email cosma-support@durham,ac.uk, to have it reset.
+To use GLOBUS, you first need to visit [globus.org](https://globus.org) and sign in. Here, don't select the organisation, but use a Globus ID. If you don't have an account, create one. Then, select cosma#dataweb as an end point. From there, you will be able to transfer your files. If you do not know your COSMA password, please email cosma-support@durham.ac.uk, to have it reset.
 
 To transfer files, it is necessary to explicitly allow access to your directory of interest. Please contact cosma-support@durham.ac.uk to allow this.
 
