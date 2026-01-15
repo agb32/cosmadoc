@@ -2,7 +2,7 @@
 
 ![COSMA photo](images/cosmaZoom.png)
 
-Welcome to the COSmology MAchine (COSMA)! Here, you will find some information about the COSMA5, COSMA7 and COSMA8 HPC facilities.
+Welcome to the Compute Optimised System for Modelling and Analysis (COSMA), components of which are also known as the COSmology MAchine (COSMA)! Here, you will find some information about the COSMA5, COSMA7 and COSMA8 HPC facilities, and the HPC Hardware Lab.
 
 COSMA is also known as the Compute Optimised System for Memory-intensive Algorithms.
 
@@ -19,9 +19,8 @@ DiRAC is the UK's integrated supercomputing facility for theoretical modelling a
 The COSMA systems run security hardened DiRAC Linux.
 
 The login details are:
-- cosma5: login.cosma.dur.ac.uk or login5.cosma.dur.ac.uk (round-robin to login5a and login5b)
+- cosma5: login.cosma.dur.ac.uk or login5.cosma.dur.ac.uk
 - cosma7: login7.cosma.dur.ac.uk (round-robin to login7a, login7b and login7c)
-
 - cosma8: login8.cosma.dur.ac.uk (round-robin to login8a, login8b)
 
 All systems use a global slurm batch system. Submission to any queue (cosma, cosma7, cosma8, etc) can be done from any login node.

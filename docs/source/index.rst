@@ -1,8 +1,14 @@
 Welcome to the COSMA support documentation!
 ===========================================
 
-Welcome to the **The COSmology MAchine** (COSMA) support pages
-
+The Compute Optimised System for Modelling and Analysis (COSMA)
+includes:
+- The DiRAC Memory Intensive Service
+  - Two generations of the COSmology MAchine (COSMA7 and COSMA8)
+- The Institute for Computational Cosmology internal HPC service
+  - COSMA5
+- The HPC Hardware Lab national facility
+  
 For generic information about COSMA please see :doc:`cosma` section
 which provides an *overview* of the COSMA HPC system.
 
