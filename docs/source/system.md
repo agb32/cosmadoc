@@ -1,15 +1,38 @@
 # System Usage
-Each night the usage of the batch queues and filesystems is processed to produce a number of summary web pages
-that you will find useful or illuminating if you need or want to know about this. This is where you can find out if your 
-project has gone over budget for the current quarter. If your project has run out of allocation for the current quarter, 
-you will find that your jobs are demoted to the pauper queue when run. These pages also show who is using all the disk space etc. 
-These pages are at:
+
+## Nightly batch and disk use.
+
+Each night the batch queues and filesystems are processed to produce summary
+information about the usage of the various SLURM clusters and main storage
+file systems up to that time.
+
+All this can be viewed in the usage web pages found at:
 
 * [https://virgodb.cosma.dur.ac.uk/usage/index.php](https://virgodb.cosma.dur.ac.uk/usage/index.php)
 
-To access these pages you'll need your COSMA username and password (or a self-generated token).
+This is where you can find out if your DiRAC project has gone over budget for
+the current quarter (when this happens your submissions will be automatically
+demoted to the pauper queue) or how your usage is progressing, as well as who
+is using the project storage (you can only view your own quotas and those of
+groups you belong to using the command-line tools). To access this you will
+need your COSMA username and password.
 
-To analyse usage of a node running a current job, you can use Performance Co-Pilot or the c8jobload command.
+For simplicity some of this information can be viewed from the command line
+once logged in using the commands:
+
+    # diracusage
+
+and
+
+    # diskusage
+
+note you will need the cosma module loaded (this happens by default, unless
+you have changed this in your login scripts). They have many options, use the
+`--help` flag to see these.
+
+## Seeing the resources used by a running job.
+
+To analyse usage of a node running a current job, you can use Performance Co-Pilot or the cjobload command.
 
 ## cjobload
 
@@ -18,7 +41,7 @@ There are also `c8jobload`, `c7jobload`, `c7rpjobload` and `c5jobload` variants 
 on these partitions. See the `--help` of `cjobload` for additional options.
 
 
-## Performance Co-Pilot 
+## Performance Co-Pilot
 
 Performance Co-Pilot (PCP) is a system for monitoring the status of computers,
 and is installed on the compute nodes of COSMA. Some of the information that
@@ -42,9 +65,9 @@ node `m8001` is running your job you can do:
     # pcpslurmnode m8001
     #-  Node: m8001, Cpus: 256, Tasks: 3326 total, 129 running, 51 sleeping
     #-  Memory: 1006.92 total, 360.25 free,  Load averages: 128.67,128.58,128.49
-    # JobID              CPUs   NodeCPU%        Mem   NodeMem% 
-    # -----              ----   --------        ---   -------- 
-      9175206          128.32      50.13     625.37      62.11 
+    # JobID              CPUs   NodeCPU%        Mem   NodeMem%
+    # -----              ----   --------        ---   --------
+      9175206          128.32      50.13     625.37      62.11
 
 Interesting numbers here, othan the obvious use of CPUs and memory are the
 number of processes and the 1, 5 and 15 minute load averages, these are all
@@ -56,38 +79,38 @@ nodes for a job use:
 
     # pcpslurmjobs 9175206
     # Node usage by jobs (for detailed usage use pcpslurmnode):
-    # Node       JobID            CPUs        MEM 
-    # ----       -----            ----        --- 
-      m8146      9175206        127.40    625.123 
-      m8075      9175206        127.31    625.477 
-      m8266      9175206        127.38    623.506 
-      m8152      9175206        127.27    625.148 
-      m8145      9175206        127.37    625.218 
-      m8156      9175206        127.38    623.514 
-      m8279      9175206        127.35    625.228 
-      m8330      9175206        127.37    623.851 
-      m8252      9175206        127.38    623.873 
-      m8001      9175206        127.36    625.381 
-      m8086      9175206        127.44    625.404 
-      m8155      9175206        127.32    624.141 
-      m8288      9175206        127.37    624.376 
-      m8044      9175206        127.40    625.231 
-      m8267      9175206        127.40    624.737 
-      m8278      9175206        127.33    624.779 
-      m8251      9175206        127.36    622.996 
-      m8167      9175206        127.33    623.896 
-      m8277      9175206        127.43    624.720 
-      m8265      9175206        127.38    623.966 
-      m8111      9175206        127.40    625.391 
-      m8280      9175206        127.42    623.801 
-      m8161      9175206        127.35    623.892 
-      m8154      9175206        127.37    624.156 
-      m8169      9175206        127.40    624.374 
- 
+    # Node       JobID            CPUs        MEM
+    # ----       -----            ----        ---
+      m8146      9175206        127.40    625.123
+      m8075      9175206        127.31    625.477
+      m8266      9175206        127.38    623.506
+      m8152      9175206        127.27    625.148
+      m8145      9175206        127.37    625.218
+      m8156      9175206        127.38    623.514
+      m8279      9175206        127.35    625.228
+      m8330      9175206        127.37    623.851
+      m8252      9175206        127.38    623.873
+      m8001      9175206        127.36    625.381
+      m8086      9175206        127.44    625.404
+      m8155      9175206        127.32    624.141
+      m8288      9175206        127.37    624.376
+      m8044      9175206        127.40    625.231
+      m8267      9175206        127.40    624.737
+      m8278      9175206        127.33    624.779
+      m8251      9175206        127.36    622.996
+      m8167      9175206        127.33    623.896
+      m8277      9175206        127.43    624.720
+      m8265      9175206        127.38    623.966
+      m8111      9175206        127.40    625.391
+      m8280      9175206        127.42    623.801
+      m8161      9175206        127.35    623.892
+      m8154      9175206        127.37    624.156
+      m8169      9175206        127.40    624.374
+
     # Summary of job usage:
-    # JobID            CPUs   CPUsNode  CPUsEffic     MemTotal     MemNode   MemEffic   NumNodes 
-    # -----            ----   --------  ---------     --------     -------   --------   -------- 
-      9175206       3184.26     127.37      99.51     15612.18      624.49      62.08         25 
+    # JobID            CPUs   CPUsNode  CPUsEffic     MemTotal     MemNode   MemEffic   NumNodes
+    # -----            ----   --------  ---------     --------     -------   --------   --------
+      9175206       3184.26     127.37      99.51     15612.18      624.49      62.08         25
 
 So you can see this job is probably using an MPI rank per core and has a high
 memory use.
@@ -95,7 +118,7 @@ memory use.
 The following descriptions offer a somewhat arbitrary number of other,
 hopefully, useful commands.
 
-### Machine Overview 
+### Machine Overview
 
 To get a more detailed overview of memory and cpu usage on a compute node, use
 the command pmstat with the -h option to query:
@@ -143,7 +166,7 @@ You can get the 1min, 5min and 15min loads using the pcp dstat sub-commands:
 
     # pcp -h m7001 dstat -l
     ---load-avg---
-    1m   5m  15m 
+    1m   5m  15m
     27.9 27.8 27.7
     27.9 27.8 27.7
     27.9 27.8 27.7
