@@ -28,6 +28,10 @@ V100, A100 and H100 nodes are [available for use](nvidiagpu.md).
 
 A Ponte Vecchio GPU node is [available](intelgpu.md)
 
+### Tenstorrent Blackhole node
+
+A Tenstorrent Blackhole server is [available](tenstorrent.md)
+
 ## Composable infrastructure
 
 COSMA contains a [composable](composable.md) GPU and RAM system, attached to login8b and the cosma8-shm queue.  If you need to use these resources in a different configuration, please ask cosma-support.
