@@ -61,6 +61,30 @@ An interesting setup with each server connected to two JBODs, allowing failure o
 
 Care must be taken with multipath labelling when replacing disks in this system.
 
+### /snap7
+
+An ultra-fast NVMe-based file system with:
+
+- 1 MDS
+  - 1 MDT
+- 20 OSS
+  - 8 OSTs each (single 3.2TB NVMe disks)
+
+This file system has no redundancy in the OSTs (if a disk fails, that OST will be lost.  Achieving read/write speeds of around 200GByte/s, this is believed to have been the fastest file system in Europe at the time of installation.
+
+### /snap8
+
+A similar design to /snap7, with:
+
+- 1 MDS
+  - 4 MDTs (each a RAID1 pair of NVMe drives)
+- 24 OSSs
+  - 8 OSTs each ( single 6.4TB NVMe disks)
+
+Read and write speeds up to around 400GByte/s have been measured.
+
+The /snap file systems are designed with a capacity equal to approximately twice the cluster RAM, to enable two memory snapshots (simulation checkpoints) to be stored simultaneously.
+
 ## Monitoring
 
 We use a Lustre node exporter and grafana to monitor the Lustre file systems.
