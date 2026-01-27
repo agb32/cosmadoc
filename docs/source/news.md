@@ -1,5 +1,7 @@
 # COSMA News
 
+26/1/26: Tenstorrent RISC-V system installed and available
+
 15/9/25: COSMA5 expanded to 2048 nodes with some immersion cooled.
 
 12/9/25: New NVIDIA H100 node available
