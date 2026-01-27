@@ -19,3 +19,11 @@ To install an updated software stack as a user, you may be able to follow the in
 
 Please give any feedback.
 
+## Tutorials
+
+There are a number of tutorial, podcasts and lectures on [github](https://github.com/RISCVtestbed/tt-tutorial)
+
+## Usergroup
+
+If you would like to join a UK Tenstorrent research mailing list, please let us know.  Primarily for discussion between users.
+
