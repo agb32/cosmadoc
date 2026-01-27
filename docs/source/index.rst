@@ -15,9 +15,10 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. note::
+.. warning::
 
-   COSMA is operating normally!
+   The COSMA8 file system is experiencing problems - please avoid
+   using if possible.
 
 .. note::
 
