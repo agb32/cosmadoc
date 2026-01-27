@@ -32,7 +32,7 @@ We have tape storage (26PB) managed by Atempo Miria.
 
 ## Lustre
 
-We have multiple Lustre systems with a combined capacity of around 20PB.
+We have multiple [Lustre systems](lustrelab.md) with a combined capacity of around 20PB.  
 
 ## VAST
 
