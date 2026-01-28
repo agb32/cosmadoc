@@ -24,6 +24,7 @@ Comprised of:
   - 7 object storage targets (OSTs) per OSS
     - Up to 14 during failover
   - ZFS
+
 ### /cosma7
 
 - 2 MDS
@@ -51,8 +52,10 @@ Repurposed hardware from the old /cosma6 storage
 
 - 1 MDS
   - And one cold spare
+  - ldiskfs
 - 3 OSSs
   - And one cold spare
+  - ZFS
 - 3 ME484 JBODs
 - 1 SSD RAID controller for MDTs
   - A single point of failure
@@ -66,9 +69,9 @@ Care must be taken with multipath labelling when replacing disks in this system.
 An ultra-fast NVMe-based file system with:
 
 - 1 MDS
-  - 1 MDT
+  - 1 MDT (ldiskfs)
 - 20 OSS
-  - 8 OSTs each (single 3.2TB NVMe disks)
+  - 8 OSTs each (single 3.2TB NVMe disks, ldiskfs)
 
 This file system has no redundancy in the OSTs (if a disk fails, that OST will be lost.  Achieving read/write speeds of around 200GByte/s, this is believed to have been the fastest file system in Europe at the time of installation.
 
@@ -77,9 +80,9 @@ This file system has no redundancy in the OSTs (if a disk fails, that OST will b
 A similar design to /snap7, with:
 
 - 1 MDS
-  - 4 MDTs (each a RAID1 pair of NVMe drives)
+  - 4 MDTs (each a RAID1 pair of NVMe drives, ldiskfs)
 - 24 OSSs
-  - 8 OSTs each ( single 6.4TB NVMe disks)
+  - 8 OSTs each ( single 6.4TB NVMe disks, ldiskfs)
 
 Read and write speeds up to around 400GByte/s have been measured.
 
