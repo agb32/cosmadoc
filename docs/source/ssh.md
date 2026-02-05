@@ -76,6 +76,7 @@ To request a password reset on SAFE, select "Login accounts" -> "USER@cosma" and
 If you are receiving permission denied when trying to access COSMA, it
 could be:
 
+0. It is the first time you have logged in and you are asked to change your password, but are not following the instructions carefully.  You will need to enter your existing password twice: once to log in, and then once again to start the reset process.  You should then enter a new password with at least 12 characters and 3 character classes.
 1. You need to specify your ssh key, e.g. `ssh -i /path/to/ssh/key user@login*.cosma.dur.ac.uk`
 2. You need to update your ssh key on [SAFE](https://safe.epcc.ed.ac.uk/dirac) (and then wait for cosma-support to accept the new key)
 3. You have forgotten your sshkey passphrase or your COSMA password.
