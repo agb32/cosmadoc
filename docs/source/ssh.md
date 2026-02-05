@@ -84,6 +84,7 @@ could be:
 5. You have forgotten your COSMA password (different from your ssh passphrase).  You can reset this on [SAFE](https://safe.epcc.ed.ac.uk/dirac) (and then wait for cosma-support to accept the password reset request)
 6. You are using a banned key type upload a new one to [SAFE](https://safe.epcc.ed.ac.uk/dirac)
 7. You have entered your password wrongly too many times and have been temporarily banned (typically 15 minutes)
+8. You have had many failed attempts and have been more permanently banned.  Please contact cosma-support to unban you.
 
 If you need to generate a new ssh key, there is some info [here](sshkey.md).
 
