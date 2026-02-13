@@ -6,10 +6,11 @@ The Hardware Lab includes multiple Lustre file systems, mostly in production in 
 
 ### /cosma8
 
-Comprised of:
+A 2.12.6 system comprised of:
 
 - 4 metadata servers (MDSs)
   - Operating in HA pairs (manual failover)
+  - Dell PowerEdge servers
   - Each with 4x 6.4TB NVMe drives (internal)
     - Two RAID1 pairs
     - Synced to a corresponding pair using DRBD
@@ -19,41 +20,52 @@ Comprised of:
   
 - 20 object storage servers (OSSs)
   - Operating in HA pairs (manual failover)
+  - Dell PowerEdge servers
   - Each with 168x 16TB drives attached
-    - Two ME484 JBODs, accessed by each server in the pair
+    - Two Dell ME484 JBODs, accessed by each server in the pair
   - 7 object storage targets (OSTs) per OSS
     - Up to 14 during failover
   - ZFS
 
 ### /cosma7
 
+A 2.12.6 system comprised of:
+
 - 2 MDS
-  - Shared Powerstore RAID controller
+  - Dell PowerEdge servers
+  - Shared Dell Powerstore RAID controller
     - Providing one MDT per server
   - ldiskfs
 - 4 OSS
+  - Dell PowerEdge servers
   - Pair together for manual HA
-  - Each pair accessing a pair of ME5084 RAID controllers
+  - Each pair accessing a pair of Dell ME5084 RAID controllers
     - 84x 16TB drives in each controller
     - Providing 2 OSTs per server
   - ldiskfs
   
 ### /cosma5
 
+A 2.12.6 system comprised of:
+
 - 1 MDS/OSS
 - 1 OSS
+- Dell PowerEdge servers
 - 168 drives shared between them, 12TB
 - ZFS for OSTs and MDTs
   - MDTs are RAID1 with no HA
 
 ### /cosma6
 
-Repurposed hardware from the old /cosma6 storage
+A 2.16.1 system comprised of repurposed hardware from the old /cosma6
+storage
 
 - 1 MDS
+  - Dell PowerEdge servers
   - And one cold spare
   - ldiskfs
 - 3 OSSs
+  - Dell PowerEdge servers
   - And one cold spare
   - ZFS
 - 3 ME484 JBODs
@@ -66,22 +78,26 @@ Care must be taken with multipath labelling when replacing disks in this system.
 
 ### /snap7
 
-An ultra-fast NVMe-based file system with:
+An ultra-fast NVMe-based file system with 2.12.6 and:
 
 - 1 MDS
+  - Dell PowerEdge servers
   - 1 MDT (ldiskfs)
 - 20 OSS
+  - Dell PowerEdge servers
   - 8 OSTs each (single 3.2TB NVMe disks, ldiskfs)
 
 This file system has no redundancy in the OSTs (if a disk fails, that OST will be lost.  Achieving read/write speeds of around 200GByte/s, this is believed to have been the fastest file system in Europe at the time of installation.
 
 ### /snap8
 
-A similar design to /snap7, with:
+A similar design to /snap7, again 2.12.6, with:
 
 - 1 MDS
+  - Dell PowerEdge servers
   - 4 MDTs (each a RAID1 pair of NVMe drives, ldiskfs)
 - 24 OSSs
+  - Dell PowerEdge servers
   - 8 OSTs each ( single 6.4TB NVMe disks, ldiskfs)
 
 Read and write speeds up to around 400GByte/s have been measured.
