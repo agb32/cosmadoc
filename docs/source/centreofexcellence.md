@@ -14,7 +14,7 @@ The focus of the CoE is on:
 
 ## CerIO
 
-In 2022, COSMA became a CoE for Rockport (now CerIO) focussing on advanced network fabrics.
+In 2022, COSMA became a CoE for Rockport (now CerIO) focusing on advanced network fabrics.
 
 The focus of the CoE is on:
 

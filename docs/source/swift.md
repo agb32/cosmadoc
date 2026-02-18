@@ -75,11 +75,11 @@ capable of using these compilers as effectively as it has done using ICC.
 
 ## SWIFT: Profiling with Intel tools
 
-To be able to view soruce code via Intel VTune, Intel inspector and Linaro Forge you need to compile Swift:
+To be able to view source code via Intel VTune, Intel inspector and Linaro Forge you need to compile Swift:
 
 `./configure --enable-debug CFLAGS="-parallel-source-info=2"`
 
-Note this will disable interprocedural optimization.
+Note this will disable inter-procedural optimization.
 
 ### Benchmarks
 
@@ -132,21 +132,21 @@ these compilers as a long way from the ICC performance, usually worse by a
 factor of 2, but by applying flags to make sure that auto-vectorization hints
 and inlining was used, as well as making use of fast optimized maths the gap
 was closed and eventually exceeded in one case. For both LLVM compilers, ICX
-and AOCC, it turned out that Interprocedural optimization (IPO) can play a
+and AOCC, it turned out that inter-procedural optimization (IPO) can play a
 much larger role than previously seen with ICC.
 
 To get AVX512 instructions operating some additional flags need to be
 carefully selected, as the Intel ICC compiler tends to output code with
 generic instructions on non-Intel CPUs (see the initial Genoa report). So for
 ICC and ICX we use the skylake-avx512 architecture type, along with
-CORE-AVX512. The znver4 architecture does the same for AOCC (and LLVM/clangss
+CORE-AVX512. The znver4 architecture does the same for AOCC (and LLVM/clangs
 and GCCs). To get full width AVX512 vectors additional flags are also needed,
 otherwise the compilers will use 256bit vector instructions and only switch to
 512bit when various heuristics for the estimated costs are triggered.
 
 It is important to use OpenMP enabling flags as although SWIFT is not an
 OpenMP code, those act with OpenMP pragmas as hints and can be used to guide
-the autovectorization of critical loops. This is true for all three compilers
+the auto-vectorization of critical loops. This is true for all three compilers
 (this is not true of GCC).
 
 The flags eventually used are broken down into three different groups,

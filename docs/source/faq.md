@@ -320,7 +320,7 @@ LANG environment variable (```echo $LANG```).  If this is not set, you can do
 ```export LANG=en_GB.UTF-8``` and try again.
 
 Compilers do not always handle locales very well. If this works remember to do
-this everytime you login, or add it to your ```.bash_profile```.
+this every-time you login, or add it to your ```.bash_profile```.
 
 
 ## Does mounting cosma via sshfs on your local machine hog any Cosma resources?
@@ -352,7 +352,7 @@ be used within batch scripts if you wish to write your data as a particular
 group.  I cannot write to my data space in
 /cosma*/data/PROJECT/USERNAME. Please help...
 
-First, check that you have write premission on this directory:
+First, check that you have write permission on this directory:
 
 ls -ld /path/to/directory
 
@@ -412,7 +412,7 @@ striping of the parent directory to 1 (lfs setstripe -c 1
 /path/to/dir) and then all files written here will be written to a
 single file.
 
-If you want to optimse further, you can specify each file to be written to
+If you want to optimise further, you can specify each file to be written to
 a specific OST in advance (lfs setstripe -c 1 -i INDEX /path/to/file)
 where INDEX is the
 index of that specific file.  This effectively "touches" the file (creates

@@ -53,7 +53,7 @@ To use the GPUs, please sign up to the following project codes in SAFE:
 
 ## Using the composable A100 GPUs
 
-We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, in theory!) between mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each (mad04,05,06). These GPUs are part of a composible PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
+We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, in theory!) between mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each (mad04,05,06). These GPUs are part of a composable PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
 
 You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
 
@@ -65,7 +65,7 @@ To use some of these GPUs, you may need to be in the "video" or "render" groups 
 
 To check that you have the correct permissions to submit to a partition, you can use the ```scontrol show partition=PARTITION_NAME``` command to see which groups are allow to submit to that partition.
 
-The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch this space - we may be able to ressurect them.
+The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch this space - we may be able to resurrect them.
 
 ## DINE2
 
@@ -99,7 +99,7 @@ Any codes currently using CUDA will need to be HIP-ified by running the hipify s
 
 To get interactive access you could use `srun -p mi300x -A do018 -t 10 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.
 
-There was a DiRAC hackathon in April 2025 focussed on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
+There was a DiRAC hackathon in April 2025 focused on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
 
 ## MI300A
 

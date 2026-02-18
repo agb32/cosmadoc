@@ -49,6 +49,6 @@ Other useful arguments are
 
 Performance tuning:
 - `-w 64k` Set the window size.  With simple testing, 64k seemed to give the best value.  5.5 gbit/s.  Default is 128k.
-- `-s 8` Set the number of streams used.  32 seems to be a good number.  Detault is 4.
+- `-s 8` Set the number of streams used.  32 seems to be a good number.  Default is 4.
 - `-B 64m` Sets the buffer size.  Default is the window size.  Doesn't appear to make much difference, though large sizes may help, e.g. 64m.  6.7gbit/s.
 

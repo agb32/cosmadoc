@@ -20,7 +20,7 @@ If many nodes are writing to a file, it is best to disable caching.  This is not
 
 Of key consideration here are the slurm logs which capture the print statements from the codes.  These may not have all information if caching is not disabled.
 
-If you are using DAOS to store code, then you should note that if you do not disable caching, other nodes will not see any updates to code, recompilations etc, unless the file system is unmounted and remounted.
+If you are using DAOS to store code, then you should note that if you do not disable caching, other nodes will not see any updates to code, re-compilations etc, unless the file system is unmounted and remounted.
 
 ## Object file operations
 
@@ -87,7 +87,7 @@ fusermount3 -u ${mountPoint}
 ```
 #!/bin/bash -l
 
-#1 node, runing 1 core.
+#1 node, running 1 core.
 
 #SBATCH --ntasks 1        # The number of cores you need...
 #SBATCH -J Daos-PiData_01 #Give it something meaningful.
