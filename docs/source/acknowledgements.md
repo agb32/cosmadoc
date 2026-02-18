@@ -2,7 +2,7 @@
 
 Please include the appropriate standard wording below, as appropriate, in the acknowledgements of all papers that make use of the Durham DiRAC facility.
 
-Papers without an acknowledgment will not be counted as DiRAC papers. It is becoming increasingly important that we can demonstrate how productive the DiRAC facilities are when applying for future HPC systems, so we need every paper to count.
+Papers without an acknowledgement will not be counted as DiRAC papers. It is becoming increasingly important that we can demonstrate how productive the DiRAC facilities are when applying for future HPC systems, so we need every paper to count.
 
 ## New Wording (2018 onwards)
 
@@ -34,9 +34,9 @@ This work used the DiRAC@Durham facility managed by the Institute for Computatio
 
 -----------------------------------------------------------------
 
-Variations on the text are acceptable with good reason - such as when there are severe space limits, or because more than one DiRAC facility was used. Please make sure the acknowledgment has 'DiRAC', 'Durham' and the grant numbers as a minimum so the paper can be found easily by a text search on ADS.
+Variations on the text are acceptable with good reason - such as when there are severe space limits, or because more than one DiRAC facility was used. Please make sure the acknowledgement has 'DiRAC', 'Durham' and the grant numbers as a minimum so the paper can be found easily by a text search on ADS.
 
-For info, the acknowledgments of all of the DiRAC facilities can be found [here](https://dirac.ac.uk/community/#Acknowledgements).
+For info, the acknowledgements of all of the DiRAC facilities can be found [here](https://dirac.ac.uk/community/#Acknowledgements).
 
 ## Prior to 2018
 

@@ -4,7 +4,7 @@ Half of COSMA7 now has a [Rockport](https://www.cerio.io) Ethernet network fabri
 
 This is available for anyone with an active DiRAC project on COSMA7 to use. Please ask if you are unsure (or just try to use it).
 
-Please note, COSMA7 nodes have 28 cores and 512GB RAM each. Both the cosma7 and cosma7-rp (Rkcport) partitions have 224 nodes.
+Please note, COSMA7 nodes have 28 cores and 512GB RAM each. Both the cosma7 and cosma7-rp (Rockport) partitions have 224 nodes.
 
 This is exploratory and will allow us to benchmark and explore this technology for use in future DiRAC procurements.
 
@@ -38,7 +38,7 @@ OpenMPI 5.0.3: `module load openmpi/5.0.3`
 
 ## Multipath
 
-To enable multipath on a per-job basis, add to the mpirun commandline (when using UCX), for OpenMPI:
+To enable multipath on a per-job basis, add to the mpirun command-line (when using UCX), for OpenMPI:
 
     -x UCX_IB_TRAFFIC_CLASS=160
 

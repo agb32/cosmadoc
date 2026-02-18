@@ -34,7 +34,7 @@ Users have access to /cosma/home/PROJECT/USERNAME, /cosma/apps/PROJECT/USERNAME,
 ## COSMA5
 
 COSMA5 is was refurbished in 2025, with the old (2012) nodes being replaced by 2048 cores of new AMD Bergamo CPUs:
- - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD Bergamo processors).  These have a Zen-4 (Genoa) architechture.
+ - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD Bergamo processors).  These have a Zen-4 (Genoa) architecture.
    - Please submit to the `cosma5` queue to use these nodes.
 
 The nodes are connected via Mellanox EDR 100G Infiniband switches in a 2:1 blocking configuration. Access is enabled through a login/development server, with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
@@ -262,7 +262,7 @@ def print_ips(node_list):
     print_ips(node_list[2:-1])
 ```
 
-And the launcher script is (assuming paeno is the code to be run):
+And the launcher script is (assuming peano is the code to be run):
 
     #!/bin/bash -l
 

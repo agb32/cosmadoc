@@ -16,7 +16,7 @@ facilities exist at these sites:
 
 
 In 2009, the Science and Technology Facilities Council (STFC) received
-£12.32 milllion, from the Government's Large Facilities Capital Fund
+£12.32 million, from the Government's Large Facilities Capital Fund
 to invest in new hardware to provide UK particle physics and
 astronomers with upgraded HPC technology to address some of the most
 challenging scientific problems. In 2011, DiRAC received an additional
@@ -49,7 +49,7 @@ large scale cross-discipline science projects, the technical support
 needed to run and develop a distributed HPC service, and potential
 knowledge transfer and industrial partnership projects. The continued
 pooling of complementary expertise will ensure that the UK remains one
-of the world-leaders of theoretical modeling in particle physics,
+of the world-leaders of theoretical modelling in particle physics,
 astronomy and cosmology.
 
 ## Training

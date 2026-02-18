@@ -52,7 +52,7 @@ The login systems are also the development nodes: so they know about
 the compilers, have access to modules, and the batch system. Unless
 otherwise specified, all of your interactive work should be done on
 the login nodes. For instructions on how to submit jobs to the batch
-quees, see [slurm](/slurm.md). You can submit jobs to any batch queue
+queues, see [slurm](/slurm.md). You can submit jobs to any batch queue
 from any login node, and access all the storage from any login node.
 
 You will then be asked to enter your ssh key passphrase (if you run a
@@ -151,7 +151,7 @@ ControlPersist yes
 
 to your .ssh/config file, and create the .ssh/controlmasters directory.
 
-Any new connection will then use the first conneciton.  Should the
+Any new connection will then use the first connection.  Should the
 connection freeze, you can `killall ssh` to allow you to restart it.
 It will time out eventually.
 

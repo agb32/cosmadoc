@@ -8,7 +8,7 @@ to make best use of our Facility. This is a basic IT skills test, and
 upon successful completion the user will be awarded a certificate of
 competency.
 
-The first round of Driving Tests occured September and December 2013
+The first round of Driving Tests occurred September and December 2013
 and Postdoctoral Research Assistants and final year PhD students were
 required to take the Driving Test at this time. The Essentials Level
 Test replaces this, and is taken by Postdoctoral Research Assistants

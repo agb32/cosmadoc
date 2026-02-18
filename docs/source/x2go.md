@@ -26,7 +26,7 @@ Session type: Select Xfce. You may need to untick the "Try auto login" box, but 
 
 Save these settings. Then, click on this entry, and eventually, you will be given a graphical desktop environment on COSMA. You may need to enter your ssh key, then your password, and finally your ssh key again.
 
-Also note, if you have an error in your .bashrc file (for example, trying to load a non-existant module), then the x2go login may fail. To solve this, remove the offending lines from your .bashrc file.
+Also note, if you have an error in your .bashrc file (for example, trying to load a non-existent module), then the x2go login may fail. To solve this, remove the offending lines from your .bashrc file.
 
 ## VNC
 

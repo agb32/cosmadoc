@@ -49,11 +49,11 @@ pip install /cosma/local/python-wheels/3.12.4/openmpi-5.0.3-hdf5-1.12.3/h5py-3.1
 
 #### Compiled modules
 
-If the library you are pip installing requires compiling, you may need to load a C compiler module, and possibly various othe libraries (e.g. MPI, FFTW, HDF5, etc).
+If the library you are pip installing requires compiling, you may need to load a C compiler module, and possibly various other libraries (e.g. MPI, FFTW, HDF5, etc).
 
 It is usually best to use the compiler that the Python interpreter you are using was compiled with.  To find that out, start the Python interpreter, and the information lines will tell you which compiler to use.
 
-Other compilers may offer improved performance, and you can experiement with these.
+Other compilers may offer improved performance, and you can experiment with these.
 
 #### h5py installation
 

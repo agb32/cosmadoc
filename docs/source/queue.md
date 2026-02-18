@@ -1,3 +1,4 @@
+
 # COSMA job queues
 
 A list of available queues can be found using the `sinfo -a` command.
@@ -28,7 +29,7 @@ cosma8-shm2 contains:
 * ga005: 64 cores, 1TB RAM, 2x AMD MI200 GPU
 * ga006: 64 cores, 1TB RAM, 2x AMD MI200 GPU
 
-Should you wish to submit to a particular node, or exclude a partiular node (e.g. to ensure that you have access to a particular type of GPU), you can use the ```bash #SBATCH --exclude=ga004``` directive within your batch script (which in this case would exclude ga004, thus ensuring you have access to a node with 2x AMD MI200 GPUs. Or #SBATCH --nodelist=ga004 (which in this case would submit to only the ga004 node).
+Should you wish to submit to a particular node, or exclude a particular node (e.g. to ensure that you have access to a particular type of GPU), you can use the ```bash #SBATCH --exclude=ga004``` directive within your batch script (which in this case would exclude ga004, thus ensuring you have access to a node with 2x AMD MI200 GPUs. Or #SBATCH --nodelist=ga004 (which in this case would submit to only the ga004 node).
 
 ## COSMA7 queues: cosma7, cosma7-rp, -pauper and -prince
 
@@ -71,7 +72,8 @@ The cosma5-test queue is for testing purposes only.
 
 Higher priority jobs will run first, though lower priority jobs with shorter runtimes may run as back-fill jobs, making use of available nodes before a larger job is due to start.  Setting a run-time limit for your job may get it completed more quickly. See the [FAQ](faq) descriptions for how to make use of back-filling.
 
-The quarterly allocation can can be found out in the [COSMA usage pages](https://virgodb.cosma.dur.ac.uk/usage/login.php), you'll need your COSMA username, and password or token (generated using the cusagetoken command) to see these.  However, COSMA5 is no longer listed here as no DiRAC allocations are awarded on it.
+The quarterly allocation can can be found out in the [COSMA usage pages](https://virgodb.cosma.dur.ac.uk/usage/login.php), you'll need your
+COSMA username and password to see these.  However, COSMA5 is no longer listed here as no DiRAC allocations are awarded on it.
 
 Jobs within the same queue are scheduled using a fairshare arrangement so each user initially has the same priority. This is then weighted using a resources used formula.
 

@@ -33,7 +33,7 @@ Here is a list of collected publications that we have discovered.
 
 ## Solar Panels
 
-In 2023, we installed approximately £1m of solar panel infrastructure on the site hosting the DiRAC data centre, to provide power for COSMA, helping to offset CO2, in conjuncation with Durham University Estates and Facilities.  This is expected to provide around 7% of COSMA's annual energy needs.
+In 2023, we installed approximately £1m of solar panel infrastructure on the site hosting the DiRAC data centre, to provide power for COSMA, helping to offset CO2, in conjunction with Durham University Estates and Facilities.  This is expected to provide around 7% of COSMA's annual energy needs.
 
 Installed facilities include panels situated on:
 
@@ -43,7 +43,7 @@ Installed facilities include panels situated on:
 
 
 
-80% of the power produced is to be used by COSMA to offset electricty costs for a period of more than 10 years commencing April 2024.
+80% of the power produced is to be used by COSMA to offset electricity costs for a period of more than 10 years commencing April 2024.
 
 The funding behind this scheme was aimed at reducing CO2 emissions from UK Digital Research Infrastructure, and to provide a case study for UKRI-funded solar panel installation on university estates in short time periods.  It was received from UKRI for the DiRAC Federation project, and is a trail-blazing project which could see other such schemes across the UK.
 

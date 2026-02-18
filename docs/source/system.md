@@ -69,7 +69,7 @@ node `m8001` is running your job you can do:
     # -----              ----   --------        ---   --------
       9175206          128.32      50.13     625.37      62.11
 
-Interesting numbers here, othan the obvious use of CPUs and memory are the
+Interesting numbers here, other the obvious use of CPUs and memory are the
 number of processes and the 1, 5 and 15 minute load averages, these are all
 suggesting that the correct numbers are being used, i.e. 128. Higher loads
 usually indicate that too many processes or threads are being used.
