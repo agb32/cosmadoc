@@ -22,7 +22,7 @@ There are multiple data spaces - typically named e.g. /cosma8.  Users typically 
 
 ## Scratch space
 
-There are multiple scratch spaces, ideal for simulation checkpoinging data.  Typically at /snap*.  These file systems have no redundancy and are not backed up.  Therefore they should only be used for data that can be recreated.  These file systems have no user quota, and are cleaned out every 4 months.
+There are multiple scratch spaces, ideal for simulation checkpointing data.  Typically at /snap*.  These file systems have no redundancy and are not backed up.  Therefore they should only be used for data that can be recreated.  These file systems have no user quota, and are cleaned out every 4 months.
 
 ## Mounted filesystems
 

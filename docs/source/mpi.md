@@ -8,7 +8,7 @@ Standard module combinations are:
 
 `intel_comp/2025.3.0` (or other latest version) and then (following the instructions printed out) `compiler-rt tbb umf compiler mpi`. 
 
-Note, when using the newer intel_comp modules, you first load these, which put some more modules on the search path, allowin you to then "module load compiler mpi" to load the compiler and mpi (compiler-rt and tbb may also be needed, depending on version). 
+Note, when using the newer intel_comp modules, you first load these, which put some more modules on the search path, allowing you to then "module load compiler mpi" to load the compiler and mpi (compiler-rt and tbb may also be needed, depending on version). 
 
 `oneAPI/* ` (which is an alias for intel_comp)
 

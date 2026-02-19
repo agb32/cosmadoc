@@ -37,7 +37,7 @@ makeJupyterVenv.sh venvname
 
 See below if you wish to take a more manual approach.
 
-Once you have created your venv and added to Jupyter, it should appear in the Jupyter dashboard after you stop and restart your server (File menu -> Hub control panel -> Stop my server).  You can then start adding packages to it, either from within Jupyter or on the commandline:
+Once you have created your venv and added to Jupyter, it should appear in the Jupyter dashboard after you stop and restart your server (File menu -> Hub control panel -> Stop my server).  You can then start adding packages to it, either from within Jupyter or on the command-line:
 
 ```
 source venvname/bin/activate
@@ -45,7 +45,7 @@ pip install numpy
 pip install whatever
 ```
 
-If you are not sure whether you are in your venv or not, `which python` will show you the location of your python interpreter, which should be VENVNAME/bin/python.  You wil need to source the venv whenever you start a new connection to COSMA.  If you always want this, you could add it to your .login file.
+If you are not sure whether you are in your venv or not, `which python` will show you the location of your python interpreter, which should be VENVNAME/bin/python.  You will need to source the venv whenever you start a new connection to COSMA.  If you always want this, you could add it to your .login file.
 
 To exit a venv, use the `deactivate` command.
 
@@ -115,12 +115,12 @@ Once you get a compute node, do:
 ```
     export XDG_RUNTIME_DIR=""
 
-    # Import your environment - you'll previousy have done pip install jupyterlab here.
+    # Import your environment - you'll previously have done pip install jupyterlab here.
     source /path/to/your/venv/bin/activate
 
     jupyter lab --no-browser --ip=`ifconfig | awk '/172.17/ {print $2}'`
 
-    #(note, be careful with backticks and single quotes when copying the above command)
+    #(note, be careful with back-ticks and single quotes when copying the above command)
 ```
 
 Then, on your desktop/laptop, set up a ssh tunnel, e.g.:
@@ -201,7 +201,7 @@ For X11 forwarding, run this command in the terminal of your local machine:
 
     ssh -X USER@login7b.cosma.dur.ac.uk firefox https://localhost:443
 
-This will launch a web browser on the login node, and so will require a fast Internet connection to be useable.
+This will launch a web browser on the login node, and so will require a fast Internet connection to be usable.
 
 ### Forward COSMA traffic through a local proxy
 

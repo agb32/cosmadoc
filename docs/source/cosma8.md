@@ -57,7 +57,7 @@ EOF
 
 __Permanent fix__
 
-Rather than remembering to set LD_PRLOAD everytime you run your application, add this to your program using:
+Rather than remembering to set LD_PRELOAD everytime you run your application, add this to your program using:
 
     patchelf --add-needed libamdmkl.so yourbinary
 

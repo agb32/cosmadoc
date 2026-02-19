@@ -20,7 +20,7 @@ Example submission script examples can be found in the ```/cosma/home/sample-use
 
 Read more:
 
-* ```man slrum```, ```man sbatch```, etc. [online version](https://slurm.schedmd.com/man_index.html).
+* ```man srun```, ```man sbatch```, etc. [online version](https://slurm.schedmd.com/man_index.html).
 * [cheatsheet](https://slurm.schedmd.com/pdfs/summary.pdf)
 * [Rosetta stone of batch systems](https://slurm.schedmd.com/rosetta.pdf) (for users coming from other systems, such as LSF)
 
@@ -58,9 +58,9 @@ Once you have been given a reservation, you can use the `scontrol show reservati
 
 ## HDF5 profiling
 
-The [SLURM HDF5 profiling plugin](https://slurm.schedmd.com/hdf5_profile_user_guide.html) is enabled, allowing profiling information from a given job to be catured in a HDF5 file.  Results are stored within `/cosma/apps/slurm/profile_data/USERNAME`.  To enable this, you should specify the `#SBATCH --profile=<all|none|energy|task|filesystem|network>` options within your batch script.  The node-step files are merged into one HDF5 file per job.
+The [SLURM HDF5 profiling plugin](https://slurm.schedmd.com/hdf5_profile_user_guide.html) is enabled, allowing profiling information from a given job to be captured in a HDF5 file.  Results are stored within `/cosma/apps/slurm/profile_data/USERNAME`.  To enable this, you should specify the `#SBATCH --profile=<all|none|energy|task|filesystem|network>` options within your batch script.  The node-step files are merged into one HDF5 file per job.
 
-After the job has finished, you can run `sh5util -j JOBID` to concatenate all the files created by the job (one per node) into a single file in the current directory.  You can then use the `h5ls` command (part of the hdf5 module) to view the contents of the file on the commandline.
+After the job has finished, you can run `sh5util -j JOBID` to concatenate all the files created by the job (one per node) into a single file in the current directory.  You can then use the `h5ls` command (part of the hdf5 module) to view the contents of the file on the command-line.
 
 ## Example scripts and command usage
 
@@ -140,7 +140,7 @@ For COSMA5 (16 cores per node):
 
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-### Using non-uniform resources per node in a single job (heterogenous jobs)
+### Using non-uniform resources per node in a single job (heterogeneous jobs)
 
 Slurm allows requesting multiple node configurations in one batch submission:
 
@@ -157,7 +157,7 @@ Slurm allows requesting multiple node configurations in one batch submission:
     #SBATCH --nodes=2
     #SBATCH --tasks-per-node=8
 
-This example requests one node where one task will run and two additional nodes where a total of 16 tasks will run. Using `sbatch` is often impractical for a heterogenous job, however, because `mpirun` does not understand this kind of resource allocation. MPI jobs can instead be started with `srun`, for example:
+This example requests one node where one task will run and two additional nodes where a total of 16 tasks will run. Using `sbatch` is often impractical for a heterogeneous job, however, because `mpirun` does not understand this kind of resource allocation. MPI jobs can instead be started with `srun`, for example:
 
     salloc -A project --time=72:00:00 -p cosma8 --nodes=3
     srun --nodes=1 --tasks-per-node=1 ./server : --nodes=2 --tasks-per-node=8 ./client
@@ -181,11 +181,11 @@ This example has the same distribution of tasks as the batch script just above. 
     mpirun -np 64 ./swift_mpi -v 1 --pin --threads=8 --cosmology  --self-gravity params.yml : \
     -np 28 ./swift_mpi -v 1 --pin --threads=128 --cosmology --self-gravity params.yml
 
-Note, changes to the `--distribution` option may be required.  This example tries to fill each node with tasks before moving to the next one ("block" and "Pack"), and then hand out tasks within a node round-robin among the sockets and cores ("fcyclic").  The slurm documentation has a list of parameters that must be shared between all jobs, those that can be shared or specified individually, andthose that must be specified for each job.
+Note, changes to the `--distribution` option may be required.  This example tries to fill each node with tasks before moving to the next one ("block" and "Pack"), and then hand out tasks within a node round-robin among the sockets and cores ("fcyclic").  The slurm documentation has a list of parameters that must be shared between all jobs, those that can be shared or specified individually, and those that must be specified for each job.
 
 #### Heterogeneous jobs
 
-OpenMPI supports heterogenous jobs, but to use this the MPI installation must be linked against a process management interface (PMI) library. A clear error message seems to be produced when this is missing. Intel MPI implementations seem to work to some extent provided that the environment variable `export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so` is set, but it's not clear that heterogenous jobs are fully supported and there seems to be some limitations (such as mixing nodes with exactly 1 and >1 tasks causing a crash) in some cases. Further documentation and examples can be found at [https://slurm.schedmd.com/heterogeneous_jobs.html](https://slurm.schedmd.com/heterogeneous_jobs.html).
+OpenMPI supports heterogeneous jobs, but to use this the MPI installation must be linked against a process management interface (PMI) library. A clear error message seems to be produced when this is missing. Intel MPI implementations seem to work to some extent provided that the environment variable `export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so` is set, but it's not clear that heterogeneous jobs are fully supported and there seems to be some limitations (such as mixing nodes with exactly 1 and >1 tasks causing a crash) in some cases. Further documentation and examples can be found at [https://slurm.schedmd.com/heterogeneous_jobs.html](https://slurm.schedmd.com/heterogeneous_jobs.html).
 
 ### Using DDT without direct compute node access
 
