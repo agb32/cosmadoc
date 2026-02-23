@@ -1,6 +1,6 @@
 # HPC Hardware Lab @Durham
 
-The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.
+The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.  A [summary is available](hardwarelabsummary.md). 
 
 ## DINE and DINE2
 
@@ -65,3 +65,7 @@ We have funds to install a prototype [immersion cooling](immersion.md) tank, and
 ## Heat storage
 
 We are investigating the [inter-seasonal storage of waste data centre heat](https://durham.readthedocs.io/en/latest/ichs/index.html) using abandoned flooded coal mines beneath the data centre site, to allow this heat to be used for building heating during the colder winter months.
+
+
+
+
