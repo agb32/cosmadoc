@@ -6,3 +6,10 @@ There are also two Grace Hopper nodes.
 
 More information is given on the [GPU pages](gpu.md)
 
+## nvhpc
+
+There are nvhpc modules available (`module avail nvhpc`).  It may be necessary to specify a toolchain to use with these, e.g.
+
+```
+nvc++ --std=c++20 --gcc-toolchain=/cosma/local/gcc/14.1.0 mycode.cpp
+```
