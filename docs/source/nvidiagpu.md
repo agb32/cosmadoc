@@ -15,3 +15,9 @@ nvc++ --std=c++20 --gcc-toolchain=/cosma/local/gcc/14.1.0 mycode.cpp
 ```
 
 On grace-hopper nodes (gn002, gn003), alternative toolchains can be found in `/opt/rh/
+
+
+The combination of the gcc-15 toolchain with nvc++ 25.1 can cause a compile-time issue with some std:format-related code.  In this case, you can try using gcc-toolset-14, likely nvc++ will complain about a missing gfortran, if this is required.  In this case, make a copy of the gcc-toolset-14 in your apps/ directory, and then copy gfortran/f951 from the gcc-toolet-15 into this.
+
+
+
