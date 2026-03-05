@@ -13,3 +13,5 @@ There are nvhpc modules available (`module avail nvhpc`).  It may be necessary t
 ```
 nvc++ --std=c++20 --gcc-toolchain=/cosma/local/gcc/14.1.0 mycode.cpp
 ```
+
+On grace-hopper nodes (gn002, gn003), alternative toolchains can be found in `/opt/rh/
