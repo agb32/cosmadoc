@@ -43,9 +43,11 @@ For the `satellite address>` option, copy this from the web interface, but repla
 
 Enter the API key when prompted.
 
-We recommend you choose a pass phrase.
+We recommend you choose a passphrase.
 
 And "y" to save the config.
+
+Once you have chosen a phassphrase, you will also need to use this in the [web interface](https://satellite.storj.cosma.dur.ac.uk/login) (if you use this).  Here, select "Project" (top of the side bar) -> "Manage passphrase" -> "Switch active passphrase".
 
 #### Using rclone
 

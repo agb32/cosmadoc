@@ -106,6 +106,15 @@ The following has been found to work with GIZMO (Romeel Dave), though is now lik
     module load gsl
     module load hdf5/1.12.0export HDF5_DISABLE_VERSION_CHECK=1
 
+### GIZMO on COSMA7
+
+Simulations were freezing on COSMA7, which turned out to be due to the Intel opeAPI compiler/MPI library.  Switching to the gnu compiler and openMPI library seems to have got it working (Alex Richings, March 2026).
+
+Modules to use are:
+
+    module load gnu_comp/14.1.0 openmpi/5.0.3 fftw hdf5
+
+
 ## DDT
 
 When using the allinea/ddt/18.2.1 module, for reference, users need to specify the file:
