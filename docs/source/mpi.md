@@ -79,3 +79,38 @@ Some success has been achieved using the following instructions on a node with R
 
 `../configure --prefix=/cosma/apps/PROJECT/USER/openmpi-5.0.9 --with-rocm=/opt/rocm --with-ucx=/cosma/apps/PROJECT/USER/ucx-1.19.0 --with-ucc=/cosma/apps/PROJECT/USER/ucc-1.6.0 --without-cuda`
 
+# Pinning when running hybrid MPI/OpenMP jobs
+
+Performance improvements can often be achieved by specifying the mapping of MPI tasks to cores.
+
+For both OpenMPI and Intel MPI, it is helpful to set:
+
+```
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OMP_PLACES=cores
+export OMP_PROC_BIND=true
+```
+
+## OpenMPI
+
+For example, performance improvements have been achieved using:
+
+```
+mpiexec --map-by ppr:${SLURM_NTASKS_PER_NODE}:node:pe=${SLURM_CPUS_PER_TASK} --bind-to-core <executable> <options>
+```
+
+with 32 MPI ranks and 4 threads per rank.
+
+The binding can be reported using --report-bindings.
+
+## Intel MPI
+
+For Intel MPI, similarly:
+
+```
+export I_MPI_PIN_DOMAIN=omp:compact
+export I_MPI_PIN_CELL=core # ignore SMT threads
+```
+
+The bindings can be reported by setting `export I_MPI_DEBUG=4`
+
