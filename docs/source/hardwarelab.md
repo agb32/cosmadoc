@@ -14,15 +14,23 @@ The [DINE2](dine.md) cluster is an 8 node cluster equipped with a CerIO composab
 
 ## GPU compute
 
-We maintain multiple generations of GPU architecture from multiple vendors.
+We maintain [multiple generations of GPU architecture](gpu.md) from multiple vendors.
 
 ### AMD GPU nodes
 
+We have multiple generations of AMD MI GPU:
+- MI100
+- MI210
+- MI300A
+- MI300X
+
 There are [two nodes](amdgpu.md) each with two AMD MI200 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
+
+For the MI300 GPUs, either submit to the mi300x queue, or ssh directly from a login node to the ga008 node (MI300X).
 
 ### NVIDIA GPU nodes
 
-V100, A100 and H100 nodes are [available for use](nvidiagpu.md).
+V100, A100 and H100 nodes are [available for use](nvidiagpu.md), including Intel-Hopper (X86 CPU) and Grace-Hopper (ARM CPU).
 
 ### Intel GPU nodes
 
@@ -34,9 +42,9 @@ A Tenstorrent Blackhole server is [available](tenstorrent.md)
 
 ## Composable infrastructure
 
-COSMA contains a [composable](composable.md) GPU and RAM system, attached to login8b and the cosma8-shm queue.  If you need to use these resources in a different configuration, please ask cosma-support.
+COSMA contains a [composable](composable.md) GPU and RAM system, attached to the cosma8-shm queue.  If you need to use these resources in a different configuration, please ask cosma-support.
 
-It also contains an 8-node system with 8 A30 GPUs, allowing up to 8 GPUs per node, based on a CerIO composable fabric.
+COSMA also hosts an 8-node system with 8x A30 GPUs, allowing up to 8 GPUs per node, based on a CerIO composable fabric.
 
 ## Rockport network fabric
 
@@ -44,7 +52,7 @@ The [Rockport network fabric](rockport.md) is 6D torus network with 100G connect
 
 ## DWAVE quantum
 
-The ExCALIBUR project funds [quantum annealing system access](quantum.md) via a DWAVE system, which is administered by COSMA staff.  Please contact cosma-support if you need access. 
+The ExCALIBUR project funded [quantum annealing system access](quantum.md) via a DWAVE system, which was administered by COSMA staff.  This has now expired, but if you are interested in access, please contact cosma-support.
 
 ## CPU compute lab
 
@@ -60,7 +68,7 @@ Our [solar installation](environmental.md#solar-panels) provides power directly 
 
 ## Immersion cooling
 
-We have funds to install a prototype [immersion cooling](immersion.md) tank, and provide access to this facility to HPC technical support teams from across the UK, to help reduce the entry barrier to this technology.
+We have a prototype [immersion cooling](immersion.md) tank, and provide access to this facility to HPC technical support teams from across the UK, to help reduce the entry barrier to this technology, and to develop experience using it.
 
 ## Heat storage
 
