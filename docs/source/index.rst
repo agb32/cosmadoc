@@ -17,7 +17,7 @@ Check out the :doc:`account` section to get started!
 
 .. warning::
 
-   COSMA is in an at-risk period.
+   COSMA is in an [at-risk](draperperiod.md) period.
 
 .. note::
 
