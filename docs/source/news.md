@@ -1,5 +1,7 @@
 # COSMA News
 
+1/4/26: COSMA team achieve [960Tbit/s data transfer speeds](aprilDataTransfer.md) moving test data between Physics and Computer Science departments in Durham
+
 26/1/26: Tenstorrent RISC-V system installed and available
 
 15/9/25: COSMA5 expanded to 2048 nodes with some immersion cooled.
