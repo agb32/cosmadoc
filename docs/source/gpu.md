@@ -6,18 +6,26 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gn001: 10x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gn004: NVIDIA H100 GPU on X86 platform
+  * gn005: NVIDIA RTX6000 PRO GPU on X86 platform
   * gi001: 2x Intel Ponte Vecchio GPUs (currently dead)
   * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
   * ga008: AMD MI300A (4 GPUs, 500GB RAM)
-* cosma8-shm Slurm partition
-  * mad04: 0-3x NVIDIA A100 GPUs (4TB RAM)
-  * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM)
+* cosma8-shm Slurm partition (non-DiRAC allocations)
+  * mad04: 0-3x NVIDIA A100 GPUs (4TB RAM) - composed on request
+  * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM) - composed on request
+* cosma8-highram Slurm partition (DiRAC allocations)
+  * mad04: 0-3x NVIDIA A100 GPUs (4TB RAM) - composed on request
+  * mad05: 0-3x NVIDIA A100 GPUs (4TB RAM) - composed on request
+* cosma8-draper Slurm partition (DiRAC allocations for MI300X system)
+  * ga007: 8x AMD MI300 GPUs
+* cosma8-dine2 Slurm partition (DiRAC allocations for the cosma8-dine2 cluster with A30 GPUs - composable)
+  * gc[001-008]: 0-8x NVIDIA A30 GPUs, 0-4x NVIDIA V100 GPUs
 * cosma8-shm2 Slurm partition
   * ga004: 1x AMD MI100 GPU
   * ga005: 2x AMD MI210 GPUs
   * ga006: 2x AMD MI210 GPUs
 * dine2 Slurm partition
-  * gc[001-008]: 0-8x NVIDIA A30 GPUs
+  * gc[001-008]: 0-8x NVIDIA A30 GPUs, 0-4x NVIDIA V100 GPUs
 * gracehopper Slurm partition
   * gn003: NVIDIA Grace-Hopper (ARM) system
 * mi300x, mi300x-prince partition: AMD MI300X system
@@ -27,13 +35,16 @@ COSMA has a number of GPU systems, which are available for use. These are:
 
 ## Project codes
 
-To use the GPUs, please sign up to the following project codes in SAFE:
+To use the GPUs, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
 
 - do015: dine2 partition
 - do016: NVIDIA Grace Hopper GPUs, H100, cosma8-shm partition
 - do017: Intel GPUs (currently dead)
 - do018: AMD GPUs
- 
+
+DiRAC allocated projects will have higher priority.
+
+
 ## GPU stats
 
 | GPU | FP64 TFLOPS | RAM/GB | Memory bandwidth/GB/s |
@@ -57,9 +68,17 @@ We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, 
 
 You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
 
+## Using the composable A30 and V100 GPUs
+
+The DINE2 cluster has 8 nodes, 8x A30 GPUs and 4x V100 GPUs.  The GPUs can be allowed to the nodes as required, depending on user workloads.
+
+You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
+
+
+
 ## GPU notes
 
-For nodes not assigned to queues (mad06, gn001, gn002, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
+For nodes not assigned to queues (mad06, gn001, gn002, gn004, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
 To use some of these GPUs, you may need to be in the "video" or "render" groups (use the ```id``` command to check which groups you are in).  If you are not in it, but need to be, please ask.
 
@@ -91,15 +110,15 @@ OneAPI is available using the intel_comp modules, e.g. `module load intel_comp` 
 
 ## MI300X
 
-The MI300X node has 8x GPUs, and is available in the mi300x slurm partition.
+The MI300X node has 8x GPUs, and is available in the mi300x slurm partition, or the cosma8-draper partition for DiRAC allocated resources (higher priority).
 
 The AMD ROCm software stack is installed.
 
 Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
 
-To get interactive access you could use `srun -p mi300x -A do018 -t 10 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.
+To get interactive access you could use `srun -p mi300x -A do018 -t 10 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.  Or `srun -p cosma8-draper -A DIRACPROJECT -t 10 --pty bash`.
 
-There was a DiRAC hackathon in April 2025 focused on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
+There have been multiple DiRAC hackathons focused on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
 
 ## MI300A
 

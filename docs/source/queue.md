@@ -1,10 +1,11 @@
 
 # COSMA job queues
 
-A list of available queues can be found using the `sinfo -a` command.
+A list of available queues can be found using the `sinfo -a -s` command.
 
-COSMA8 queues: cosma8, cosma8-prince, cosma8-pauper, cosma8-serial, cosma8-shm, cosma8-shm2, cosma8-milan, cosma8-rome
-
+COSMA8 queues: cosma8, cosma8-prince, cosma8-pauper, cosma8-serial, cosma8-shm, cosma8-shm2, cosma8-shm3, cosma8-draper, cosma8-dine2, cosma8-milan, cosma8-rome
+ (and a few others)
+ 
 Access to the DiRAC COSMA8 system is only for DiRAC projects with a time allocation on this system. Each COSMA8 compute node has 128 cores and 1TB RAM. If you request fewer than 128 cores for a job using the cosma8-serial queue, you will not be granted exclusive access to a node, and therefore may share a node with other jobs. Unless you specify a memory in your SLURM script (e.g. ```bash #SBATCH --mem=1T```), then you will be given a fraction of 1TB equal to the number of cores you request/128. If you do not wish to share a node, use the "#SBATCH --exclusive" flag. The cosma8-shm queue provides access to two large 4TB nodes, each with 128 cores.
 
 The cosma8-prince queue requires special access permission, will give an elevated priority and allow jobs to run for 30 days.
