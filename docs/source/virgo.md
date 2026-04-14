@@ -32,17 +32,19 @@ The list of current projects of this kind and the name of the person that I woul
 
 - APOSTLE (Azi Fattahi)
 
-- AURIGA (Francesca Fagkoudi)
+- AURIGA (Francesca Fragkoudi)
 
 - BAHAMAS (Ian McCarthy)
 
 - COCO (Sownak Bose)
 
+- COLIBRE (Matthieu Schaller)
+
 - DOVE (Till Sawala)
 
 - EAGLE (Matthieu Schaller)
 
-- EAGLE-XL (Matthieu Schaller)
+- FLAMINGO (Matthieu Schaller)
 
 - FLARES (Chris Lovell)
 
