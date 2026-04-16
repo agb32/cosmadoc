@@ -30,7 +30,7 @@ First, you need a SAFE account,
   - Select COSMA (not COSMOS)
   - Wait...
 
-![Creating an Account](images/account1.png)
+![Creating an Account](images/DiRACSAFEscreen.png)
 
 ![Creating an Account](images/account2.png)
 
