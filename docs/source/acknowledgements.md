@@ -4,7 +4,7 @@ Please include the appropriate standard wording below, as appropriate, in the ac
 
 Papers without an acknowledgement will not be counted as DiRAC papers. It is becoming increasingly important that we can demonstrate how productive the DiRAC facilities are when applying for future HPC systems, so we need every paper to count.
 
-## New Wording (2018 onwards)
+## Current wording (2018 onwards)
 
 The new wording applies for any publication that has used DiRAC (even partially) from 1st May 2018.
 
@@ -52,3 +52,8 @@ For everyone else:
 Thank you for your cooperation.
 
 
+## IRIS users
+
+If you used any of the IRIS-funded facilities (primarily the Azimuth cloud system), please use:
+
+This work used IRIS computing resources funded by the Science and Technology Facilities Council
