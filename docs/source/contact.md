@@ -16,7 +16,7 @@ The COSMA system is managed by a small team of support staff, led by Dr. Alastai
 Team members are: 
 
 - [Dr. Alastair Basden](https://www.durham.ac.uk/staff/a-g-basden/), HPC Technical Manager, OCW220, 0191 334 2229, 07771 335593
-- [Dr. Peter Draper](https://www.durham.ac.uk/staff/p-w-draper/), Senior Computer Programmer, R319, 0191 334 3198
 - [Mr. Richard Regan](https://www.durham.ac.uk/staff/richard-regan/), DiRAC Manager, OCW220, 0191 334 3632
 - [Dr. Paul Walker](https://www.durham.ac.uk/staff/paul-a-walker/), Technical Manager, PH-321
 - [Dr. Mark Lovell](https://www.durham.ac.uk/staff/m-r-lovell/), Technical Manager, PH-321
+- [Mr. Billy Carlyle](https://www.durham.ac.uk/staff/billy-carlyle/), Technical Manager, OCW220
