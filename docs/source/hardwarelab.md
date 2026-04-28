@@ -1,6 +1,21 @@
 # HPC Hardware Lab @Durham
 
-The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.  A [summary is available](hardwarelabsummary.md). 
+The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.  Details of available nodes and GPUs can be found [here](hardwarelabsummary.md).
+
+The Hardware Lab features the following systems and technologies:  
+[DINE and DINE2](#dine-and-dine2)  
+[GPU compute nodes](#gpu-compute)  
+[Composable Infrastructure](#composable-infrastructure)  
+[Rockport Network Fabric](#rockport-network-fabric)  
+[Quantum Annealing (DWAVE)](#dwave-quantum)  
+[CPU Compute Lab](#cpu-compute-lab)  
+[Storage Lab](#storage)  
+[Solar Power](#solar)  
+[Immersion Cooling](#immersion-cooling)  
+[Heat Storage](#heat-storage)  
+
+
+To request access to any of the systems within the hardware lab, please [create an account](account.md)
 
 ## DINE and DINE2
 
@@ -8,9 +23,9 @@ DINE and DINE2 are experimental test clusters for exploring new hardware and net
 
 ![DINE](images/dine.png)
 
-The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
+The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes, each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility, submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
 
-The [DINE2](dine.md) cluster is an 8 node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.
+The [DINE2](dine.md) cluster is an 8-node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.
 
 ## GPU compute
 
@@ -24,7 +39,7 @@ We have multiple generations of AMD MI GPU:
 - MI300A
 - MI300X
 
-There are [two nodes](amdgpu.md) each with two AMD MI200 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
+There are [two nodes](amdgpu.md), each with two AMD MI200 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
 
 For the MI300 GPUs, either submit to the mi300x queue, or ssh directly from a login node to the ga008 node (MI300X).
 
