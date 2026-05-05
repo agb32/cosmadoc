@@ -2,6 +2,8 @@
 
 The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.  Details of available nodes and GPUs can be found [here](hardwarelabsummary.md).
 
+To request access to any of the systems within the hardware lab, please [create an account](account.md) and request to join the corresponding [project code](gpu.md#project-codes).
+
 The Hardware Lab features the following systems and technologies:  
 [DINE and DINE2](#dine-and-dine2)  
 [GPU compute nodes](#gpu-compute)  
@@ -9,13 +11,12 @@ The Hardware Lab features the following systems and technologies:
 [Rockport Network Fabric](#rockport-network-fabric)  
 [Quantum Annealing (DWAVE)](#dwave-quantum)  
 [CPU Compute Lab](#cpu-compute-lab)  
-[Storage Lab](#storage)  
+[Storage Lab](#storage-lab)  
 [Solar Power](#solar)  
 [Immersion Cooling](#immersion-cooling)  
 [Heat Storage](#heat-storage)  
 
 
-To request access to any of the systems within the hardware lab, please [create an account](account.md)
 
 ## DINE and DINE2
 
@@ -25,7 +26,7 @@ DINE and DINE2 are experimental test clusters for exploring new hardware and net
 
 The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes, each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility, submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
 
-The [DINE2](dine.md) cluster is an 8-node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.
+The [DINE2](dine.md) cluster is an 8-node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.  To use the DINE2 cluster as a Hardware Lab user, apply to join the do015 project.
 
 ## GPU compute
 
@@ -49,11 +50,13 @@ V100, A100 and H100 nodes are [available for use](nvidiagpu.md), including Intel
 
 ### Intel GPU nodes
 
-A Ponte Vecchio GPU node is [available](intelgpu.md)
+A [Ponte Vecchio GPU](intelgpu.md) node was once available but is currently offline.
 
-### Tenstorrent Blackhole node
+### Tenstorrent Blackhole node (RISC-V)
 
-A Tenstorrent Blackhole server is [available](tenstorrent.md)
+A [Tenstorrent Blackhole](tenstorrent.md) server is available for interactive use, containing 4x Blackhole cards.  
+
+Tenstorrent cards are designed specifically for AI and machine-learning workloads, unlike GPUs which have been adapted over time from their original graphics rendering workloads.  Currently PyTorch, ONNX, and TensorFlow can be easily ported to Tenstorrent architecture, but software support is otherwise in the early stages of development.
 
 ## Composable infrastructure
 
@@ -73,7 +76,7 @@ The ExCALIBUR project funded [quantum annealing system access](quantum.md) via a
 
 A wide variety of [processor technologies](cpucomputelab.md) are available for testing and benchmarking and we try to maintain cutting-edge components.
 
-## Storage
+## Storage lab
 
 Our [storage laboratory](storagelab.md) includes prototype and production file systems of various types and technologies.
 
