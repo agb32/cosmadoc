@@ -371,7 +371,11 @@ There are some flags that may help with performance on Lustre when using Intel M
 
 # Nbodykit
 
-To set up a virtual environment with a working nbodykit, the following can be used (thanks to Rob McGibbon):
+There are two ways of installing nbodykit on cosma, with pip or with conda.
+Using conda is the simplest and is recommended by the nbodykit developers, but pip may be more familiar and offer more flexibility.
+
+## pip
+To set up a virtual environment with a working nbodykit using pip, the following can be used (thanks to Rob McGibbon):
 
 ```
 #!/bin/bash
@@ -405,4 +409,25 @@ pip install "${wheel_dir}bigfile-0.1.51-cp312-cp312-linux_x86_64.whl"
 pip install "${wheel_dir}Corrfunc-2.5.2-cp312-cp312-linux_x86_64.whl"
 pip install "${wheel_dir}classylss-0.2.10.dev0-cp312-cp312-linux_x86_64.whl"
 pip install "${wheel_dir}nbodykit-0.3.15-py3-none-any.whl"
+```
+
+## conda
+To set up a virtual environment with anaconda called "nbodykit", use:
+
+```
+#!/bin/bash
+
+module purge
+module load python/conda3-2023.09
+
+conda create --name nbodykit -c bccp nbodykit -v
+```
+
+This installs nbodykit and its dependencies into a virtual environment in `~/.conda/envs/nbodykit`.  You can activate the environment using:
+```
+source activate nbodykit
+```
+And deactivate with:
+```
+conda deactivate
 ```
