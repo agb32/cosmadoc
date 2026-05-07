@@ -15,10 +15,6 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
-
-   COSMA is recovering from a cooling failure
-
 .. note::
 
    COSMA is in an :doc:`draperperiod`.
