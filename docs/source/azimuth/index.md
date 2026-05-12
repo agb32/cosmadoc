@@ -77,7 +77,7 @@ Example:
 kubectl config use-context ml-intro-admin@ml-intro
 ```
 
-## Working with Multiple Kubernetes Clusters
+## Multiple Kubernetes Clusters
 
 Users may have access to more than one Kubernetes cluster, for example a GPU cluster,ML cluster etc. Kubernetes uses a file called a `kubeconfig` to store cluster connection details, users, namespaces, and contexts.
 
