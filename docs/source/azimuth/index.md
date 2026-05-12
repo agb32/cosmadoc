@@ -44,6 +44,13 @@ ml-intro-ml-intro-69ngd-ckrhh         Ready    worker          v1.34.6   x.x.x.x
 
 ---
 
+## Using K9s
+
+`k9s` is a terminal user interface for Kubernetes. It is can be useful for checking pods, logs, deployments, services, config maps, and secrets.
+
+```bash
+k9s
+```
 ## Checking the Current Context
 
 Kubernetes commands are run against the current context in your kubeconfig.
@@ -70,11 +77,12 @@ Example:
 kubectl config use-context ml-intro-admin@ml-intro
 ```
 
+## Working with Multiple Kubernetes Clusters
 
-## Using K9s
+Users may have access to more than one Kubernetes cluster, for example a GPU cluster,ML cluster etc. Kubernetes uses a file called a `kubeconfig` to store cluster connection details, users, namespaces, and contexts.
 
-`k9s` is a terminal user interface for Kubernetes. It is can be useful for checking pods, logs, deployments, services, config maps, and secrets.
+Kubernetes can merge multiple kubeconfig files using the KUBECONFIG environment variable:
 
 ```bash
-k9s
+export KUBECONFIG=$HOME/.kube/config:$HOME/ml-intro.yaml:$HOME//test-cluster.yaml
 ```
