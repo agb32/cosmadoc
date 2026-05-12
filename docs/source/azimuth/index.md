@@ -44,3 +44,37 @@ ml-intro-ml-intro-69ngd-ckrhh         Ready    worker          v1.34.6   x.x.x.x
 
 ---
 
+## Checking the Current Context
+
+Kubernetes commands are run against the current context in your kubeconfig.
+
+```bash
+kubectl config current-context
+```
+
+List all available contexts:
+
+```bash
+kubectl config get-contexts
+```
+
+Switch context:
+
+```bash
+kubectl config use-context <context-name>
+```
+
+Example:
+
+```bash
+kubectl config use-context ml-intro-admin@ml-intro
+```
+
+
+## Using K9s
+
+`k9s` is a terminal user interface for Kubernetes. It is can be useful for checking pods, logs, deployments, services, config maps, and secrets.
+
+```bash
+k9s
+```
