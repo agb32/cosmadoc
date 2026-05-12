@@ -12,7 +12,7 @@ To access a Kubernetes cluster you need access to the [Azimuth portal](https://p
 If you want to have more details about Kubernetes cluster, a Kubernetes configuration file, usually called `kubeconfig`
 should be download to your local machine. To be able to use this cluster `kubectl` installed on your local machine. Optional but also recommended: `k9s`
 
-You could check if all installation is good so far by:
+You can check if all installation is good so far by:
 
 ```bash
 kubectl version --client
@@ -24,4 +24,23 @@ To interact with a cluster, you sould point your terminal to the downloaded conf
 
 ```bash
 export KUBECONFIG=~/.kube/ml-intro.yaml
+
+You can check that access works:
+
+```bash
+kubectl cluster-info
+kubectl get nodes
+```
+
+Example output:
+
+```text
+NAME                                  STATUS   ROLES           VERSION   INTERNAL-IP
+ml-intro-control-plane-65mpf          Ready    control-plane   v1.34.6   x.x.x.x
+ml-intro-control-plane-l4rv2          Ready    control-plane   v1.34.6   x.x.x.x
+ml-intro-control-plane-ntm9r          Ready    control-plane   v1.34.6   x.x.x.x
+ml-intro-ml-intro-69ngd-ckrhh         Ready    worker          v1.34.6   x.x.x.x
+```
+
+---
 
