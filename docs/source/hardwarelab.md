@@ -1,8 +1,10 @@
 # HPC Hardware Lab @Durham
 
-The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.  Details of available nodes and GPUs can be found [here](hardwarelabsummary.md).
+The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.
+It is hosted within, yet independent of the [COSMA HPC facility](https://cosma.readthedocs.io) and receives funding from Durham University, industry partners, UKRI (e.g. through [ExCALIBUR](https://excalibur.ac.uk/)) and [DiRAC](https://dirac.ac.uk/).
+Many of the systems tested are readily available for benchmarking.  Details of available nodes and GPUs can be found [here](hardwarelabsummary.md).
 
-To request access to any of the systems within the hardware lab, please [create an account](account.md) and request to join the corresponding [project code](gpu.md#project-codes).
+To request access to any of the systems within the hardware lab, please [create an account](account.md) and request to join the corresponding [project code](gpu.md#project-codes).  Please also contact Alastair Basden (a.g.basden@durham.ac.uk) or Tobias Weinzierl (tobias.weinzierl@durham.ac.uk) before you request an account, as we will have to review your request.
 
 The Hardware Lab features the following systems and technologies:  
 [DINE and DINE2](#dine-and-dine2)  
@@ -16,6 +18,7 @@ The Hardware Lab features the following systems and technologies:
 [Immersion Cooling](#immersion-cooling)  
 [Heat Storage](#heat-storage)  
 
+There are a number of other hardware lab facilities around the UK.  If you are looking for specific hardware which is not on this list, a good starting point to search for available facilities is the [collection maintained by the SHAREing project](https://shareing-dri.github.io/resources/).
 
 
 ## DINE and DINE2
