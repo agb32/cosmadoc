@@ -1,5 +1,7 @@
 # COSMA News
 
+1/5/26: RTX 6000 PRO GPU node made avaialble
+
 1/4/26: COSMA team achieve [960Tbit/s data transfer speeds](aprilDataTransfer.md) moving test data between Physics and Computer Science departments in Durham
 
 26/1/26: Tenstorrent RISC-V system installed and available

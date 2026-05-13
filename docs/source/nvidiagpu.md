@@ -1,6 +1,6 @@
 # NVIDIA GPU testbeds
 
-COSMA contains multiple NVIDIA GPU systems, including H100, A100, V100 and A30 GPUs, to allow code development, porting and performance benchmarking.
+COSMA contains multiple NVIDIA GPU systems, including RTX PRO 6000, H100, A100, V100 and A30 GPUs, to allow code development, porting and performance benchmarking.
 
 There are two Grace-Hopper nodes.
 

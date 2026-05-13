@@ -106,7 +106,13 @@ Contents
    composable
    quantum
    storagelab
-   
+
+.. toctree::
+   :maxdepth: 4
+   :caption: AZIMUTH CLOUD PORTAL
+	  
+   azimuth/index
+
 .. toctree::
    :maxdepth: 6
    :caption: ADDITIONAL RESOURCES
