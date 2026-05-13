@@ -6,7 +6,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gn001: 10x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gn004: NVIDIA H100 GPU on X86 platform
-  * gn005: NVIDIA RTX6000 PRO GPU on X86 platform
+  * gn005: NVIDIA RTX PRO 6000 GPU on X86 platform
   * gi001: 2x Intel Ponte Vecchio GPUs (currently dead)
   * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
   * ga008: AMD MI300A (4 GPUs, 500GB RAM)
@@ -35,7 +35,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
 
 ## Project codes
 
-To use the GPUs, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
+To use the GPUs which are in a Slurm, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
 
 - do015: dine2 partition
 - do016: NVIDIA Grace Hopper GPUs, H100, cosma8-shm partition
@@ -44,6 +44,7 @@ To use the GPUs, you must either be part of a DiRAC project with a current alloc
 
 DiRAC allocated projects will have higher priority.
 
+To use a GPU available for direct login, just ssh to the node name given above.
 
 ## GPU stats
 
@@ -54,6 +55,7 @@ DiRAC allocated projects will have higher priority.
 | A30 | 5.2 | 24 | 933 |
 | H100 PCIe | 26 | 80 | 2000 |
 | H100 SMX | 34 | 80 | 3350 |
+| RTX PRO 6000  | 2 (126 for FP32) | 96 | 1790
 | MI50 | 6.6 | 16 | 1000 |
 | MI100 | 11.5 | 32 | 1200 |
 | MI210 | 22.6 | 64 | 1600 |
@@ -78,7 +80,7 @@ You can use the ```--include``` or ```--exclude``` SLURM parameters within your 
 
 ## GPU notes
 
-For nodes not assigned to queues (mad06, gn001, gn002, gn004, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
+For nodes not assigned to queues (mad06, gn001, gn002, gn004, gn005, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
 To use some of these GPUs, you may need to be in the "video" or "render" groups (use the ```id``` command to check which groups you are in).  If you are not in it, but need to be, please ask.
 
@@ -133,3 +135,8 @@ The MI300A is an APU: The GPU and CPU are part of the same silicon, and share th
 ## H100
 
 There is a single PCIe-based NVIDIA H100 GPU with an X86 (Intel) host, which is available for direct ssh.
+
+## RTX PRO 6000
+
+This is single PCIe-based NVIDIA RTX PRO 6000 GPU with an AMD Turin host, 256 cores, available by direct ssh.
+
