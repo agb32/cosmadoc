@@ -6,6 +6,12 @@ It is now in the second generation.
 
 To date, it has hosted BlueField-1, Rockport and BlueField-2 technologies.
 
+To request a Bluefield-2 DPU node, use `#SBATCH -p bluefield1`
+
+The Bluefield nodes are powered down when not in use, so when you submit your job you may see the status as `CF` (configuring) while your allocated nodes are booting.
+
+To see the status of the Bluefield-2 nodes, run `sinfo -p bluefield1`.
+
 # DINE2
 
 DINE2, the Durham Investigatory Node Environment (or Durham Integrated Next-gen Environment), is an 8 node cluster with dual Intel Sapphire Rapids 32-core processors and 2TB RAM.  Each node has access to up to 8 NVIDIA A30 GPUs, using a CerIO composable fabric.
