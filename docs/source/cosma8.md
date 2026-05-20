@@ -4,13 +4,9 @@
 
 COSMA8 has 2 login nodes, accessed via login8.cosma.dur.ac.uk
 
-COSMA8 has 528 compute nodes, each of which have 1TB RAM and 128 cores (360 are 2x AMD 7H12 processors and 168 are 2x AMD 7763 processors)
+[See here](facilities.md#cosma8) for detailed information on the COSMA8 hardware and benchmarks.
 
-There are 2 high RAM (4TB) fat nodes, which should be accessed via the cosma8-shm queue.
-
-There are a number of GPU-enabled servers (see below), a 1TB AMD Milan test node and a 1TB Milan-X test node.
-
-There are 4 relevant SLURM queues:
+There are 4 relevant SLURM queues which provide access to different sets of hardware or job types:
 
 __cosma8__: provides exclusive access to nodes, shared with cosma8-serial
 
