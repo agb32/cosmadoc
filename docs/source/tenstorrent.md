@@ -8,7 +8,7 @@ It is a highly capable system for AI inferencing.
 
 ## Accessing the Tenstorrent system
 
-To access this system you need to join the do023 project, and then `ssh tenstorrent`.
+To access this system you need to join the do023 project, and then `ssh tenstorrent` from a login node.
 
 ## Usage of the Tenstorrent system
 
