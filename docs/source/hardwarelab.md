@@ -27,9 +27,11 @@ DINE and DINE2 are experimental test clusters for exploring new hardware and net
 
 ![DINE](images/dine.png)
 
-The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes, each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility, submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
+[DINE](dine.md), is equipped with 24 nodes, each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  
+It was previously equipped with BlueField1 and Rockport network cards.
+To use this facility, join the do009 project and submit jobs to the `bluefield1` Slurm partition.  
 
-The [DINE2](dine.md) cluster is an 8-node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.  To use the DINE2 cluster as a Hardware Lab user, apply to join the do015 project.
+The [DINE2](dine2.md) cluster is an 8-node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.  To use the DINE2 cluster as a Hardware Lab user, apply to join the do015 project.
 
 ## GPU compute
 
