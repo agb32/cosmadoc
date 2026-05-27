@@ -4,6 +4,8 @@ DINE2, the Durham Investigatory Node Environment (or Durham Integrated Next-gen 
 
 With dual Intel Sapphire Rapids 32-core processors and 2TB RAM.  Each node has access to up to 8 NVIDIA A30 GPUs, using a CerIO composable fabric.
 
+DINE2 was installed in 2024.
+
 ## Specifications
 
 | Nodes | RAM per node | CPU(s) | Network Technology | GPU | GPU Count |
@@ -36,6 +38,3 @@ CUDA is available as a module, using `module load nvhpc/25.11`.
 
 Dine2 nodes mount /dine, not /cosma5.  Copy any necessary files into /dine/data/\<project\>/\<username\>/
 
-## History
-
-DINE2 was installed in 2024.
