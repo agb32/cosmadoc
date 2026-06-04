@@ -38,11 +38,22 @@ the app.
 
 ## SSH on Windows
 
+SSH on Windows can be problematic, as there are various different ways of doing it, and not all of them seem to work reliably - with key formats differing between them.
+
+The best option is to use WSL: Windows Subsystem for Linux.
+
+### SSH using WSL
+
+First, you need to install WSL: Open a cmd prompt (start menu, type "cmd").  Here, enter `wsl --install`.  This will download some stuff, do some installation, and eventually ask you to reboot.
+
+After a reboot, you should then see a wsl ubuntu option in the start menu - use this - it will start ubuntu, ask you to create a user (give it whatever username you like).  From here, you then have a Unix-style command line, and can follow the [instructions above](sshkey.md#unix-systems) for Unix systems.
+
+### SSH using other Windows options
+
 Windows 10 and 11 include the ssh-keygen utility, so keys can be
-generated as [here](files/COSMAWindows10sshDocumentation.pdf).
-However, if not using Windows Subsystem for Linux (WSL), a tool such
-as Putty will be required.
+generated as [described here](files/COSMAWindows10sshDocumentation.pdf).
 
 
+Alternatively a tool such Putty and Putty-gen will be required, as shown in the image below:
 
 ![SSH Windows](images/sshwin.png)
