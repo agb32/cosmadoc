@@ -91,4 +91,38 @@ export KUBECONFIG=$HOME/.kube/config:$HOME/ml-intro.yaml:$HOME//test-cluster.yam
 
 Jupyter notebooks runs as a Kubernetes pod inside the JupyterHub namespaces.  In those namespaces, diffrent reproducible deployments can be created via Helm charts. To maintaine and extend user resoruces, it could build unlike Docker images such as, GPU-enabled notebook, CPU-based notebook, C/C++ notebook etc. For more details please check [here](https://z2jh.jupyter.org/en/stable/resources/reference.html)
 
+When you want to debug which image is running on which notebook helm chart, you could use below useful commands.
 
+Checking which image is running: 
+
+```bash 
+POD=$(kubectl -n jupyterhub get pods -o name | grep jupyter- | sed 's|pod/||')
+
+kubectl -n jupyterhub get pod "$POD" \
+  -o jsonpath='{.spec.containers[?(@.name=="notebook")].image}{"\n"}'
+```
+
+Verifying image digest:
+
+```bash
+kubectl -n jupyterhub get pod "$POD" \
+  -o jsonpath='{.status.containerStatuses[?(@.name=="notebook")].imageID}'
+```
+
+To check where single-user pod mounted:
+
+```bash
+kubectl -n jupyterhub get pod "$POD" \
+  -o jsonpath='{range .spec.containers[?(@.name=="notebook")].volumeMounts[*]}{.name}{" -> "}{.mountPath}{"\n"}{end}'
+```
+
+**Please note that if the storage mounted as a Persistent Volume Claim you have to move your Jupyter server config to somewhere else from the directory you put in. Because the configs will be hidden by mounted volume. So, it would not work what you apply into the helm chart values**
+
+When you update a helm chart you would check and reconcile by following commands if changes applied succesfully:
+
+```bash
+flux get helmreleases -A
+flux reconcile source git flux-system -n flux-system
+flux reconcile kustomization apps -n jupyterhub --with-source
+flux reconcile helmrelease jupyterhub -n jupyterhub --force
+```
