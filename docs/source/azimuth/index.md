@@ -86,3 +86,9 @@ Kubernetes can merge multiple kubeconfig files using the KUBECONFIG environment 
 ```bash
 export KUBECONFIG=$HOME/.kube/config:$HOME/ml-intro.yaml:$HOME//test-cluster.yaml
 ```
+
+## JupyterHub Configurations
+
+Jupyter notebooks runs as a Kubernetes pod inside the JupyterHub namespaces.  In those namespaces, diffrent reproducible deployments can be created via Helm charts. To maintaine and extend user resoruces, it could build unlike Docker images such as, GPU-enabled notebook, CPU-based notebook, C/C++ notebook etc. For more details please check [here](https://z2jh.jupyter.org/en/stable/resources/reference.html)
+
+
