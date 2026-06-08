@@ -1,6 +1,25 @@
 # HPC Hardware Lab @Durham
 
-The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.  Many of the systems tested are readily available for benchmarking.  A [summary is available](hardwarelabsummary.md). 
+The [HPC Hardware Laboratory @Durham](https://durham.readthedocs.io/en/latest/hardwarelab) is used for prototyping and development of new systems and technologies.
+It is hosted within, yet independent of the [COSMA HPC facility](https://cosma.readthedocs.io) and receives funding from Durham University, industry partners, UKRI (e.g. through [ExCALIBUR](https://excalibur.ac.uk/)) and [DiRAC](https://dirac.ac.uk/).
+Many of the systems tested are readily available for benchmarking.  Details of available nodes and GPUs can be found [here](hardwarelabsummary.md).
+
+To request access to any of the systems within the hardware lab, please [create an account](account.md) and request to join the corresponding [project code](project.md#hpc-hardware-lab-access).  Please contact cosma-support@durham.ac.uk when you request an account so that it can be set up correctly.
+
+The Hardware Lab features the following systems and technologies:  
+[DINE and DINE2](#dine-and-dine2)  
+[GPU compute nodes](#gpu-compute)  
+[Composable Infrastructure](#composable-infrastructure)  
+[Rockport Network Fabric](#rockport-network-fabric)  
+[Quantum Annealing (DWAVE)](#dwave-quantum)  
+[CPU Compute Lab](#cpu-compute-lab)  
+[Storage Lab](#storage-lab)  
+[Solar Power](#solar)  
+[Immersion Cooling](#immersion-cooling)  
+[Heat Storage](#heat-storage)  
+
+There are a number of other hardware lab facilities around the UK.  If you are looking for specific hardware which is not on this list, a good starting point to search for available facilities is the [collection maintained by the SHAREing project](https://shareing-dri.github.io/resources/).
+
 
 ## DINE and DINE2
 
@@ -8,9 +27,11 @@ DINE and DINE2 are experimental test clusters for exploring new hardware and net
 
 ![DINE](images/dine.png)
 
-The [BlueField DPU cluster](bluefield.md), [DINE](dine.md), is equipped with 24 nodes each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  To use this facility submit jobs to the bluefield1 Slurm partition.  It was previously equipped with BlueField1 and Rockport network cards.
+[DINE](dine.md), is equipped with 24 nodes, each containing a NVIDIA BlueField-2 Data Processing Unit, with HDR200 InfiniBand connectivity.  
+It was previously equipped with BlueField1 and Rockport network cards.
+To use this facility, join the do009 project and submit jobs to the `bluefield1` Slurm partition.  
 
-The [DINE2](dine.md) cluster is an 8 node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.
+The [DINE2](dine2.md) cluster is an 8-node cluster equipped with a CerIO composability fabric, allowing GPUs to be added to servers upon demand.  To use the DINE2 cluster as a Hardware Lab user, apply to join the do015 project.
 
 ## GPU compute
 
@@ -18,13 +39,13 @@ We maintain [multiple generations of GPU architecture](gpu.md) from multiple ven
 
 ### AMD GPU nodes
 
-We have multiple generations of AMD MI GPU:
+We have multiple generations of [AMD MI GPU](amdgpu.md):
 - MI100
 - MI210
 - MI300A
 - MI300X
 
-There are [two nodes](amdgpu.md) each with two AMD MI200 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
+There are two nodes, each with two AMD MI200 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
 
 For the MI300 GPUs, either submit to the mi300x queue, or ssh directly from a login node to the ga008 node (MI300X).
 
@@ -34,11 +55,13 @@ V100, A100 and H100 nodes are [available for use](nvidiagpu.md), including Intel
 
 ### Intel GPU nodes
 
-A Ponte Vecchio GPU node is [available](intelgpu.md)
+A [Ponte Vecchio GPU](intelgpu.md) node was once available but is currently offline.
 
-### Tenstorrent Blackhole node
+### Tenstorrent Blackhole node (RISC-V)
 
-A Tenstorrent Blackhole server is [available](tenstorrent.md)
+A [Tenstorrent Blackhole](tenstorrent.md) server is available for interactive use, containing 4x Blackhole cards.  
+
+Tenstorrent cards are designed specifically for AI and machine-learning workloads, unlike GPUs which have been adapted over time from their original graphics rendering workloads.  Currently PyTorch, ONNX, and TensorFlow can be easily ported to Tenstorrent architecture, but software support is otherwise in the early stages of development.
 
 ## Composable infrastructure
 
@@ -58,7 +81,7 @@ The ExCALIBUR project funded [quantum annealing system access](quantum.md) via a
 
 A wide variety of [processor technologies](cpucomputelab.md) are available for testing and benchmarking and we try to maintain cutting-edge components.
 
-## Storage
+## Storage lab
 
 Our [storage laboratory](storagelab.md) includes prototype and production file systems of various types and technologies.
 

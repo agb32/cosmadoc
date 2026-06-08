@@ -98,8 +98,8 @@ Contents
 
    hardwarelab  
    rockportlab
-   bluefield
    dine
+   dine2
    cpucomputelab
    amdgpu
    nvidiagpu

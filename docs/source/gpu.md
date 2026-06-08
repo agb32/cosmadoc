@@ -64,6 +64,7 @@ To use a GPU available for direct login, just ssh to the node name given above.
 | PVC | 52.4 | 128 | 3280 |
 
 
+
 ## Using the composable A100 GPUs
 
 We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, in theory!) between mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each (mad04,05,06). These GPUs are part of a composable PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
