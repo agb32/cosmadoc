@@ -62,9 +62,15 @@ If you do not already have an account on COSMA, please follow the instructions [
 - MI300X node is accessible through the `mi300x` queue.
 - MI300A node is accessible through direct ssh.  From a login node, use `ssh ga008`.
 
-## Known issues / notes
+## Notes
 
-The AMD ROCm software stack is installed.  ROCm 6.3.0 is available at /opt/rocm-6.3.0/bin/hipcc
+The AMD ROCm software stack is installed.  ROCm 6.3.0 is available at /opt/rocm-6.3.0/bin/hipcc (2024)
+
+ROCm 7.2.0 is also available (May 2026).
+
+The latest version installed can be found under /opt/ - please check here.
+
+ROCm is installed on the login8a login node, though this does not contain a GPU.  This should facilitate compilation of codes where Internet access is requried.
 
 CUDA code must be converted to HIP using the `hipify` script provided with ROCm.
 

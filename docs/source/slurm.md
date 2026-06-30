@@ -15,6 +15,7 @@ Common commands:
 * ```sshare```: show the share/priorities of the queue
 * ```slurmnodeprop```: summarise the properties of nodes or queues (use -h for more details)
 * ```sreport```: report on usage
+* ```sprio```: Show priority calculations
 
 Example submission script examples can be found in the ```/cosma/home/sample-user``` directory.
 

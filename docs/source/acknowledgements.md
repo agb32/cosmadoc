@@ -6,7 +6,7 @@ Papers without an acknowledgement will not be counted as DiRAC papers. It is bec
 
 ## Current wording (2018 onwards)
 
-The new wording applies for any publication that has used DiRAC (even partially) from 1st May 2018.
+The new wording applies for any publication that has used DiRAC (even partially) from 1st May 2018.  In addition, if you use the [HPC Hardware Lab](hardwarelab.md), some [additional working below](#hardware-lab) can be added.
 
 For Durham we have two versions:
 
@@ -14,9 +14,11 @@ For Durham we have two versions:
 
 (2) specifically for local Durham users (hpcicc) and Virgo (dp004) users - the acknowledgement includes an additional grant code
 
-The wording is reproduced below between the pairs of dashed lines.
+(3) HPC Hardware Lab users
 
-Please be careful to use the correct one.
+(4) IRIS users
+
+The wording is reproduced below.  Please be careful to use the correct one.
 
 __(1) DiRAC@Durham (Memory Intensive service) for all RAC projects *EXCEPT* dp004, dp203 (Virgo) and hpcicc(Durham COSMA5 users)__
 
@@ -33,6 +35,21 @@ __(2) DiRAC@Durham (Memory Intensive service) for Virgo (dp004, dp203) and Durha
 This work used the DiRAC@Durham facility managed by the Institute for Computational Cosmology on behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk). The equipment was funded by BEIS capital funding via STFC capital grants ST/K00042X/1, ST/P002293/1, ST/R002371/1 and ST/S002502/1, Durham University and STFC operations grant ST/R000832/1. DiRAC is part of the National e-Infrastructure.
 
 -----------------------------------------------------------------
+
+__(3) HPC Hardware Lab users (testbeds, experimental kit, etc)
+
+*Typically these will be for projects starting with do (e.g. do018).*
+
+This work used the HPC Hardware Lab which is part of the COSMA facility which includes the DiRAC@Durham facility managed by the Institute for Computational Cosmology on behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk). The equipment was funded by BEIS capital funding via STFC capital grants ST/K00042X/1, ST/P002293/1, ST/R002371/1 and ST/S002502/1, Durham University and STFC operations grant ST/R000832/1. DiRAC is part of the National e-Infrastructure.  The HPC Hardware Lab is funded from various sources including the UK ExCALIBUR programme.
+
+-----------------------------------------------------------------
+
+__(4) IRIS users: If you used any of the IRIS-funded facilities (primarily the Azimuth cloud system), please use:
+
+This work used IRIS computing resources funded by the Science and Technology Facilities Council hosted by the COSMA facility (including DiRAC@Durham) managed by the Instutute for Computational Cosmology at Durham University.
+
+-----------------------------------------------------------------
+
 
 Variations on the text are acceptable with good reason - such as when there are severe space limits, or because more than one DiRAC facility was used. Please make sure the acknowledgement has 'DiRAC', 'Durham' and the grant numbers as a minimum so the paper can be found easily by a text search on ADS.
 
@@ -52,8 +69,3 @@ For everyone else:
 Thank you for your cooperation.
 
 
-## IRIS users
-
-If you used any of the IRIS-funded facilities (primarily the Azimuth cloud system), please use:
-
-This work used IRIS computing resources funded by the Science and Technology Facilities Council
