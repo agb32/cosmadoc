@@ -115,11 +115,13 @@ OneAPI is available using the intel_comp modules, e.g. `module load intel_comp` 
 
 The MI300X node has 8x GPUs, and is available in the mi300x slurm partition, or the cosma8-draper partition for DiRAC allocated resources (higher priority).
 
+To use the GPUs, you will need to specify the number of GPUs required in your Slurm parameters, e.g. `#sbatch --gpu=8`.  By default you will get zero.
+
 The AMD ROCm software stack is installed.
 
 Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
 
-To get interactive access you could use `srun -p mi300x -A do018 -t 10 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.  Or `srun -p cosma8-draper -A DIRACPROJECT -t 10 --pty bash`.
+To get interactive access you could use `srun -p mi300x -A do018 -t 10 --gpus=8 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.  Or `srun -p cosma8-draper -A DIRACPROJECT -t 10 --gpus=8 --pty bash`.
 
 There have been multiple DiRAC hackathons focused on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
 

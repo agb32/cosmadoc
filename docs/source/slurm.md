@@ -15,6 +15,7 @@ Common commands:
 * ```sshare```: show the share/priorities of the queue
 * ```slurmnodeprop```: summarise the properties of nodes or queues (use -h for more details)
 * ```sreport```: report on usage
+* ```sprio```: Show priority calculations
 
 Example submission script examples can be found in the ```/cosma/home/sample-user``` directory.
 
@@ -238,6 +239,10 @@ The `sstat` (for running jobs) and `sacct` (for completed jobs) provide informat
 
 it will print information about memory used.
 
+#### Accessing GPUs as trackable resources
+
+Some of the partitions have GPUs that are chargeable by the accounting system (e.g. the cosma8-draper and cosma8-mi300x queues).  In these cases, to be allocated GPUs, you will need to add `--gpus=N` (where N is the number of GPUs) to your Slurm batch script or command line.
+
 ### Reporting using sreport
 
 e.g.
@@ -245,3 +250,4 @@ e.g.
 ```
 sreport cluster AccountUtilizationByUser start=mmdd end=mmdd Account=dpXXX
 ```
+
