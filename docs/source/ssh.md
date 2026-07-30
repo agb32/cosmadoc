@@ -165,6 +165,17 @@ Any new connection will then use the first connection.  Should the
 connection freeze, you can `killall ssh` to allow you to restart it.
 It will time out eventually.
 
+## Storing your ssh passphrase in RAM
+
+To avoid having to enter your ssh key passphrase too many times, you can use a key manager to store it in RAM, while your current session exists (i.e. between reboots).  Depending on your OS, this may be automatic, or there may be other ways to do it.  However, the following usually works:
+
+1. Check that you have keychain installed (type `keychain` in your terminal).  If not, install it.
+2. Add the following line to your local (on laptop) .bashrc file: `eval $(keychain --eval /path/to/your/ssh/private/key 2> /dev/null)` where you obviously need to put in the correct path for your private key.
+3. Reload your terminal (quit and restart, or just type `bash`).  From this point, once you've entered your ssh passphrase once per reboot, it should be remembered.
+
+
+
+
 ## Disk Usage
 
 Your home quota is usually 10 GB. The contents of your `$HOME` are
