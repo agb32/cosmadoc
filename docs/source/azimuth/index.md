@@ -150,4 +150,8 @@ flux reconcile kustomization apps -n jupyterhub --with-source
 flux reconcile helmrelease jupyterhub -n jupyterhub --force
 ```
 
-The new profile becomes available to users when they launch JupyterHub from Moodle. 
+The new profile becomes available to users when they launch JupyterHub from Moodle.
+
+# Limitations
+
+The system of Azimuth cloud still under the development phase - meaning that some issues/bugs in JupyterHub may be present. Please do let us know if you come across anything odd deploying your course on Azimuth cloud.
