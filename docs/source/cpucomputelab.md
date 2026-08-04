@@ -27,18 +27,29 @@ Current systems include
 
 ## More on Sapphire Rapids
 
+We have two systems with Intel Sapphire Rapids CPUs.
+- A single node, gi001, also containing Ponte Vecchio GPUs
+  - CPU name:       Intel(R) Xeon(R) Platinum 8480+
+  - Sockets:                2
+  - Cores per socket:       56
+  - Threads per core:       2
+  - RAM:	      		  512 GB
+  - Network: HDR200 InfiniBand
+- The DINE2 system with 8 nodes
+  - CPU model: Intel(R) Xeon(R) Gold 6430
+  - Sockets: 2
+  - Cores per socket: 32
+  - Threads per core: 2
+  - RAM: 2TB
+  - Network: HDR200 InfiniBand
+  
 ### Node access
 
-Our Sapphire Rapids are configured to hold Ponte Vecchio GPUs (PVCs). Therefore, they are accessible as part of our Intel GPU nodes.
+Our single node Sapphire Rapids system contins Ponte Vecchio GPUs (PVCs). Therefore, they are accessible as part of our Intel GPU nodes.
 
 (*) The nodes are given out FCFS, i.e. please check prior to any benchmarking that nobody else is currently using the node.
 
-### Specification
-
-- CPU name:       Intel(R) Xeon(R) Platinum 8480+
-- Sockets:                2
-- Cores per socket:       56
-- Threads per core:       2
+The DINE2 system can be accessed via the dine2 Slurm partition.
 
 ### Environment
 
