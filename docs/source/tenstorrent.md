@@ -17,6 +17,14 @@ Most tenstorrent commands start with tt.  To access many of these, you will need
 To install an updated software stack as a user, you may be able to follow the instructions here (though this may require root access):
 [https://docs.tenstorrent.com/getting-started/README.html](https://docs.tenstorrent.com/getting-started/README.html)
 
+### Resource sharing
+
+From our testing so far, tenstorrent cards appear to prefer jobs to be run serially.
+If a card is running an inference server, for example, it cannot also be used to run a tt-metalium
+program.
+
+We have not yet tested running multiple tt-metalium programs in parallel.
+
 ### tt-metalalium
 
 The tt-metalium library for c++ is installed on the machine, this is the low-level SDK for tenstorrent devices.
