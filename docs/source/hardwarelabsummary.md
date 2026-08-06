@@ -1,7 +1,7 @@
 # COSMA GPU Nodes
 Last updated: 21/01/2026
 
-## Summary of Available Nodes
+## Summary of Available GPU Nodes
 
 | GPU | Count | Node(s) | Access | Partition | Account | Interconnect | Status |
 |-----|-------|---------|--------|-----------|---------|--------------|--------|

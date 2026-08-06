@@ -1,10 +1,10 @@
 # Tenstorrent QuietBox RISC-V Blackhole node
 
-We have a single Tenstorrent QuietBox node with 4x Blackhole cards.
+We have a single [Tenstorrent QuietBox](https://tenstorrent.com/hardware/tt-quietbox) node with 4x [p150 Blackhole cards](https://tenstorrent.com/en/hardware/cards).
 
 The host system is a single AMD 8124P 16-core processor with 512GB RAM.
 
-It is a highly capable system for AI inferencing.
+It is a highly capable system for AI inferencing, with further information available [here](https://docs.tenstorrent.com/systems/quietbox/quietbox-wh/index.html).
 
 ## Accessing the Tenstorrent system
 

@@ -17,6 +17,7 @@ If you wish to access the HPC Hardware Lab @ Durham, you can use one of the foll
 - do016: NVIDIA GPUs, including Grace Hopper, Hopper, Blackwell, cosma8-shm partition (A100)
 - do017: Intel GPUs
 - do018: AMD GPUs (MI100, MI210, MI300A, MI300X)
+- do023: Tenstorrent RISC-V system
 - dr004: DiRAC training
 
 ## Internal Durham (and collaborator) access
