@@ -48,12 +48,23 @@ First, you need to install WSL: Open a cmd prompt (start menu, type "cmd").  Her
 
 After a reboot, you should then see a wsl ubuntu option in the start menu - use this - it will start ubuntu, ask you to create a user (give it whatever username you like).  From here, you then have a Unix-style command line, and can follow the [instructions above](sshkey.md#unix-systems) for Unix systems.
 
-### SSH using other Windows options
+### SSH using cmd
 
 Windows 10 and 11 include the ssh-keygen utility, so keys can be
 generated as [described here](files/COSMAWindows10sshDocumentation.pdf).
 
+In summary:
 
-Alternatively a tool such Putty and Putty-gen will be required, as shown in the image below:
+1. Hit the windows key, and type "cmd"
+2. In the cmd window type `ssh-keygen -t ed25519 -C "cosmakey"`
+3. Hit return for the default options (key filename, etc), and enter a passphrase (twice) when requested.
+4. The key will be in a .ssh folder.  You need to upload this to [SAFE](https://safe.epcc.ed.ac.uk/dirac), select login accounts -> COSMA, and then the "Add credential" button.  Upload the public part (.pub), which will probably try to identify itself as a Microsoft Publisher file (it isn't).
+5. Once you have a welcome email from cosma, try: ssh USERNAME@login.cosma.dur.ac.uk
+6. It should ask for you key passphrase.  It will then ask for your COSMA password, which will be in the welcome email.  You will need to enter this twice: once to login and then once to start the password change.
+7. Enter a new password twice.
+
+### SSH using other Windows options
+
+Alternatively a tool such Putty and Putty-gen will be required, as shown in the image below.  However, we often fail to get putty working, so you are much better using WSL or the [cmd utility](#ssh-using-cmd).  Basically, don't use this method.
 
 ![SSH Windows](images/sshwin.png)

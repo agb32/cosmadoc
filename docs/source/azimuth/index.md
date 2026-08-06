@@ -118,7 +118,30 @@ kubectl -n jupyterhub get pod "$POD" \
 
 **Please note that if the storage mounted as a Persistent Volume Claim you have to move your Jupyter server config to somewhere else from the directory you put in. Because the configs will be hidden by mounted volume. So, it would not work what you apply into the helm chart values**
 
-When you update a helm chart you would check and reconcile by following commands if changes applied succesfully:
+__NOTE__: Jupyterhub configurations should generally be provided as explicit assignments rather than by setting existing configuration values (e.g. `getattr(..., "tornado_settings")`). Please avoid relying on existing runtime values inside `jupyter_server_config.py`; instead assign complete configuration objects directly (e.g. `c.ServerApp.tornado_settings = {...}`).
+
+
+### Creating Profiles for Courses
+
+If you are developing a new course, you have to build kernels on your local machine to deploy on Azimuth. To do that you have to create a directory having Dockerfile to pass your kernels along side requirtments and course materials. 
+
+```bash
+docker build -t quay.io/<username>/<image>:<tag> .
+docker push quay.io/<username>/<image>:<tag>
+```
+
+_Note:_ If you are using MacOs ARM procceses you have to use `buildx` to create cross platform working images. 
+
+After building and pushing the image to a container registry (e.g. Quay), then reference the image should be in `apps/jupyterhub/values.yaml`. 
+You have to access that repo to be able to commit your deployment.
+
+```bash
+git add .
+git commit - m "Image added with <tag>"
+git push origin
+```
+
+Once the configuration is committed and you need to deploy via FluxCD:
 
 ```bash
 flux get helmreleases -A
@@ -126,3 +149,9 @@ flux reconcile source git flux-system -n flux-system
 flux reconcile kustomization apps -n jupyterhub --with-source
 flux reconcile helmrelease jupyterhub -n jupyterhub --force
 ```
+
+The new profile becomes available to users when they launch JupyterHub from Moodle.
+
+# Limitations
+
+The system of Azimuth cloud still under the development phase - meaning that some issues/bugs in JupyterHub may be present. Please do let us know if you come across anything odd deploying your course on Azimuth cloud.
