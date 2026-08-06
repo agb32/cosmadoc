@@ -11,6 +11,7 @@ DINE2 was installed in 2024.
 | Nodes | RAM per node | CPU(s) | Network Technology | GPU | GPU Count |
 | --- | --- | --- | --- | --- | --- |
 | 8 | 2TB | 2x Intel Sapphire Rapids 32-core | Infiniband | Nvidia A30 24GB | 8 Total (configurable) |
+|   |     |                                  |            | Nvidia V100 32GB | 4 Total (configurable) |
 
 By default, each node has a single GPU attached, but can be configured to use up to the 8 available.  
 To request a specific configuration, please contact `cosma-support@durham.ac.uk`.

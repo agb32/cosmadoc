@@ -73,11 +73,9 @@ You can use the ```--include``` or ```--exclude``` SLURM parameters within your 
 
 ## Using the composable A30 and V100 GPUs
 
-The DINE2 cluster has 8 nodes, 8x A30 GPUs and 4x V100 GPUs.  The GPUs can be allowed to the nodes as required, depending on user workloads.
+The DINE2 cluster has 8 nodes, 8x A30 GPUs and 4x V100 GPUs.  The GPUs can be allocated to the nodes as required, depending on user workloads.
 
-You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
-
-
+Further information on the DINE2 cluster can be found [here](dine2.md).
 
 ## GPU notes
 
@@ -88,14 +86,6 @@ To use some of these GPUs, you may need to be in the "video" or "render" groups 
 To check that you have the correct permissions to submit to a partition, you can use the ```scontrol show partition=PARTITION_NAME``` command to see which groups are allow to submit to that partition.
 
 The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch this space - we may be able to resurrect them.
-
-## DINE2
-
-The DINE2 GPU system is a composable system with up to 8 A30 GPUs per node.  Currently these are static (i.e. if you require a specific GPU configuration, please ask), but eventually we hope to make it dynamic (i.e. to be able to ask Slurm to compose a system).  In total, there are 8 GPUs, and these can be composed in any configuration to the 8 servers.
-
-Each server has dual 32-core Sapphire Rapids CPUs (64 cores per node) and 2TB RAM.
-
-To use these nodes, submit jobs to the dine2 partition.
 
 ## Grace-Hopper
 
