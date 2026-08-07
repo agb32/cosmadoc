@@ -96,11 +96,11 @@ First, log into [SAFE](https://safe.epcc.ed.ac.uk/dirac).  If you are having pro
 
 Use the "Login accounts" menu to select COSMA.  Then at the bottom of the screen you will see a row of buttons.
 
-Click "Request Password Reset" to ask for a password reset:
+Click "Request Password Reset" to ask for a password reset.  This is a complicated process so please read carefully:
  - This will eventually be emailed to you.
  - Once you receive the email from cosma-support containing the password, you should be able to log in.
    - (though if you have been temporarily banned by entering the wrong password too many times, wait 15 mins or so and try again - or try another login node).
- - You will need to enter this password twice: One to log in, and then once to start the password reset process (it will ask you for your current password).
+ - You will need to enter this password *twice*: One to log in, and then once to start the password reset process (it will ask you for your *current* password - i.e. the one which has just been emailed).
  - You will then be asked for a new password twice.  This should be at least 10 characters and two character classes.
  - After that, you should be able to log in with your new password.
 
