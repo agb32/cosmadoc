@@ -1,5 +1,7 @@
 # COSMA News
 
+10/8/26: Three new high core nodes announced: mad11,mad12,mad13
+
 2/6/26: Downtime completed
 
 1/5/26: RTX 6000 PRO GPU node made avaialble
