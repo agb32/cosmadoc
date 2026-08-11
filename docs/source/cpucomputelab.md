@@ -8,7 +8,7 @@ Current systems include
 - AMD Turin
    - Direct ssh to the mad12 node
 - [Intel Sapphire Rapids (2024)](#more-on-sapphire-rapids)
-  - Direct ssh to the gi001 node
+  - Direct ssh to the gi001 node (apply to join do017)
   - Via the dine2 Slurm partition (apply to join do015)
 - AMD Bergamo (2023)
   - Via the cosma5 Slurm partition (apply to join hpcicc)
