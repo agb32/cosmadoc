@@ -16,8 +16,8 @@ To request access to any of the systems within the hardware lab, please [create 
 
 The Hardware Lab features the following systems and technologies:  
 [DINE and DINE2](#dine-and-dine2)  
-[GPU compute nodes](#gpu-compute) (AMD, NVIDIA, Intel)
-[Tenstorrent RISC-V system](#tenstorrent-blackhole-node-risc-v)
+[GPU compute nodes](#gpu-compute) (AMD, NVIDIA, Intel) 
+[Tenstorrent RISC-V system](#tenstorrent-blackhole-node-risc-v) 
 [Composable Infrastructure](#composable-infrastructure)  
 [Rockport Network Fabric](#rockport-network-fabric)  
 [Quantum Annealing (DWAVE)](#dwave-quantum)  
