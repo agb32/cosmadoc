@@ -58,21 +58,6 @@ Contents
    account
    ssh
    citizenship
-
-.. toctree::
-   :maxdepth: 5
-   :caption: GETTING HELP
-
-   contact
-   clusterupgrade
-   faq
-   rockport
-   virgo
-   issues
-   presentations
-   storage
-   archive 
-   policies
 	     
 .. toctree::
    :maxdepth: 3
@@ -118,6 +103,21 @@ Contents
    :caption: AZIMUTH CLOUD PORTAL
 	  
    azimuth/index
+
+.. toctree::
+   :maxdepth: 5
+   :caption: GETTING HELP
+
+   contact
+   clusterupgrade
+   faq
+   rockport
+   virgo
+   issues
+   presentations
+   storage
+   archive 
+   policies
 
 .. toctree::
    :maxdepth: 6
