@@ -2,8 +2,85 @@
 
 COSMA contains multiple NVIDIA GPU systems, including RTX PRO 6000, H100, A100, V100 and A30 GPUs, to allow code development, porting and performance benchmarking.
 
-There are two Grace-Hopper nodes.
+## Specifications
 
+### V100 \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-v100/)\)
+
+A total of 10 V100 GPUs are available for use, split between two systems.
+Firstly, 6 V100 GPUs are connected to a single node (gn001), available for direct SSH:
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 1 | NVIDIA V100 32GB | 6 per node | 768GB | 2x Intel Xeon Gold 5218 |
+
+And alternatively, 4 V100 GPUs are available as part of the [DINE2](dine2.md) cluster, which makes use of a CerIO composability fabric.  The GPUs can be moved between compute nodes on-demand by contacting cosma-support.
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 8 | NVIDIA V100 | 4 total (configurable) | 2TB | 2x Intel Xeon Gold 6430 |
+
+Benchmarks:
+- Memory bandwidth (BabelStream): 823 GB/s
+- array\_size: 134217728
+- iterations: 100
+- precision: FP64
+
+### A100 \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-a100/)\)
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 2 | NVIDIA A100 40GB | 1 per node | 4TB | 2x AMD EPYC 7702 64-Core |
+| 1 | NVIDIA A100 40GB | 1 per node | 1TB | 2x AMD EPYC 7773X 64-Core |
+
+The GPUs are connected using a composable PCIe fabric from [Liqid](https://www.liqid.com) and can be moved between 3 compute nodes: mad04, mad05, mad06.  
+
+### A30 \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-a30/)\)
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 8 | NVIDIA A30 | 8 total (configurable) | 2TB | 2x Intel Xeon Gold 6430 |
+
+The A30 GPUs are part of the [DINE2](dine2.md) cluster, which makes use of a CerIO Composability fabric.  The GPUs can be moved between compute nodes on-demand by contacting cosma-support.
+
+Benchmarks:
+- Memory bandwidth (BabelStream): 822 GB/s
+- array\_size: 134217728
+- iterations: 100
+- precision: FP64
+
+### H100 NVL \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-h100/)\)
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 1 | NVIDIA H100 NVL | 1 per node | 510GB | 2x Intel Xeon Gold 6530 |
+
+Benchmarks:
+- Memory bandwidth (BabelStream): 3387 GB/s
+- array\_size: 134217728
+- iterations: 100
+- precision: FP64
+
+### GH200 \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-gh200/)\)
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 2 | NVIDIA GH200 | 1 per node | 480GB (unified) | 72-core ARM Grace |
+
+Benchmarks:
+- Memory bandwidth (BabelStream): 3500 GB/s
+- array\_size: 134217728
+- iterations: 100
+- precision: FP64
+
+There are two Grace-Hopper nodes, one which allows direct ssh, and one which is part of the Slurm partition `gracehopper`.
+
+The GH200 has a unified memory model, combining an H100 GPU and a Grace CPU using NVLINK-C2C.  This is conceptually similar to the AMD MI300A, but allows the CPU and GPU to share memory across separate dies, rather than being phsically part of the same chip.
+
+The Grace CPU is ARM-based, and therefore cannot run X86 binaries.  It is best to compile your code on the direct-ssh node.
+
+## Usage
+
+## Known issues / notes
 More information is given on the [GPU pages](gpu.md)
 
 ## nvhpc
