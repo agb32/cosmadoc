@@ -89,7 +89,7 @@ The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch
 
 ## Grace-Hopper
 
-One Grace-Hopper node is currently available for direct ssh from a login node (gn002).  ga003 is available in a Slurm queue, gracehopper.
+One Grace-Hopper node is currently available for direct ssh from a login node (gn002).  gn003 is available in a Slurm queue, gracehopper.
 
 Note, the Grace CPU has an ARM architecture, and therefore X86 binaries will not run.  The NVIDIA and GCC compilers are available.
 
