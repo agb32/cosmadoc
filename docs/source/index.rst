@@ -64,6 +64,7 @@ Contents
    :caption: SOFTWARE
 
    modules
+   data
    spack
    gitlab
    python
@@ -80,14 +81,13 @@ Contents
    slurm
    queue
    system
-   gpu
-   data
 
 .. toctree::
    :maxdepth: 4
    :caption: HARDWARE LAB
 
    hardwarelab  
+   gpu
    rockportlab
    dine
    dine2
