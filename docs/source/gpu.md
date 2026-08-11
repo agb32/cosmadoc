@@ -3,7 +3,7 @@
 COSMA has a number of GPU systems, which are available for use. These are:
 
 * Direct login (from a login node)
-  * gn001: 10x NVIDIA V100 GPUs 
+  * gn001: 6x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gn004: NVIDIA H100 GPU on X86 platform
   * gn005: NVIDIA RTX PRO 6000 GPU on X86 platform
