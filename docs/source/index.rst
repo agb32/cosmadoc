@@ -58,27 +58,13 @@ Contents
    account
    ssh
    citizenship
-
-.. toctree::
-   :maxdepth: 5
-   :caption: GETTING HELP
-
-   contact
-   clusterupgrade
-   faq
-   rockport
-   virgo
-   issues
-   presentations
-   storage
-   archive 
-   policies
 	     
 .. toctree::
    :maxdepth: 3
    :caption: SOFTWARE
 
    modules
+   data
    spack
    gitlab
    python
@@ -95,14 +81,13 @@ Contents
    slurm
    queue
    system
-   gpu
-   data
 
 .. toctree::
    :maxdepth: 4
    :caption: HARDWARE LAB
 
    hardwarelab  
+   gpu
    rockportlab
    dine
    dine2
@@ -118,6 +103,20 @@ Contents
    :caption: AZIMUTH CLOUD PORTAL
 	  
    azimuth/index
+
+.. toctree::
+   :maxdepth: 5
+   :caption: GETTING HELP
+
+   clusterupgrade
+   faq
+   rockport
+   virgo
+   issues
+   presentations
+   storage
+   archive 
+   policies
 
 .. toctree::
    :maxdepth: 6

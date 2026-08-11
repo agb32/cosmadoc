@@ -3,7 +3,7 @@
 COSMA has a number of GPU systems, which are available for use. These are:
 
 * Direct login (from a login node)
-  * gn001: 10x NVIDIA V100 GPUs 
+  * gn001: 6x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
   * gn004: NVIDIA H100 GPU on X86 platform
   * gn005: NVIDIA RTX PRO 6000 GPU on X86 platform
@@ -89,7 +89,7 @@ The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch
 
 ## Grace-Hopper
 
-One Grace-Hopper node is currently available for direct ssh from a login node (gn002).  ga003 is available in a Slurm queue, gracehopper.
+One Grace-Hopper node is currently available for direct ssh from a login node (gn002).  gn003 is available in a Slurm queue, gracehopper.
 
 Note, the Grace CPU has an ARM architecture, and therefore X86 binaries will not run.  The NVIDIA and GCC compilers are available.
 
