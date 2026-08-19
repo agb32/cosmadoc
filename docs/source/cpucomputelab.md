@@ -4,26 +4,27 @@ The CPU Compute Lab provides access to latest generation CPU technologies, to en
 
 Current systems include
 - Intel Sierra Forest
-  - Direct ssh to the mad11 node
+  - Direct ssh to the mad11 node (apply to join do025)
 - AMD Turin
-   - Direct ssh to the mad12 node
+   - Direct ssh to the mad12 node (apply to join do025)
 - [Intel Sapphire Rapids (2024)](#more-on-sapphire-rapids)
   - Direct ssh to the gi001 node (apply to join do017)
   - Via the dine2 Slurm partition (apply to join do015)
 - AMD Bergamo (2023)
-  - Via the cosma5 Slurm partition (apply to join hpcicc)
+  - Via the cpulab Slurm partition (apply to join do025)
 - AMD Genoa (2023)
-  - Via the cosma8-shm3 Slurm partition (apply to join do009)
+  - Via the cosma8-shm3 Slurm partition (apply to join do025)
+  - Direct ssh to the mad13 node (apply to join do025)
 - Intel IceLake (2022)
-  - Via the cosma8-ska Slurm partition (apply to join do011)
+  - Via the cpulab Slurm partition (apply to join do025)
 - AMD Milan (2021)
-  - Via the cosma8-milan Slurm partition
+  - Via the cosma8-milan Slurm partition (DiRAC RAC users)
 - AMD Milan-X (2022, high L3 cache variant)
-  - Direct ssh to the mad06 node
+  - Direct ssh to the mad06 node (apply to join do025)
 - AMD Rome (2019)
-  - Via the cosma8-rome Slurm partition
+  - Via the cosma8-rome Slurm partition (DiRAC RAC users)
 - Intel CascadeLake (2019)
-  - Via the cosma7-shm2 Slurm partition
+  - Via the cosma7-shm2 Slurm partition (apply to join do025)
 
 ## More on Sapphire Rapids
 
