@@ -371,46 +371,41 @@ There are some flags that may help with performance on Lustre when using Intel M
 
 ## Nbodykit
 
-There are two ways of installing nbodykit on cosma, with pip or with conda.
-Using conda is the simplest and is recommended by the nbodykit developers, but pip may be more familiar and offer more flexibility.
+There are two ways of installing nbodykit on cosma:
+  * Using conda is the simplest and is recommended by the nbodykit developers. In this case nbodykit will use MPI installed by conda.
+  * Pip can build nbodykit using an existing MPI installation. This might be helpful if you want to use one of the COSMA MPI modules instead of conda's MPI, for example.
+
+In either case, all python modules which use MPI (e.g. mpi4py, nbodykit, parallel enabled h5py) must use the same MPI installation.
 
 ### pip
 
-To set up a virtual environment with a working nbodykit using pip, the following can be used (thanks to Rob McGibbon):
-
+To set up a virtual environment with a working nbodykit using pip:
 ```
-#!/bin/bash
-
-set -e
-
+# Select python version to use and create the environment
 module purge
-module load python/3.12.4 gnu_comp/13.1.0 openmpi/4.1.4
-parallel_hdf5/1.12.0
-python -m pip cache purge
+module load python/3.12.4
+python3 -m venv nbodykit
 
-# Name of the new venv to create
-venv_name="jeger_bskit"
+# Activate the environment
+. ./nbodykit/bin/activate
 
-# Create an empty venv
-python -m venv "${venv_name}"
+# Select an MPI implementation to use
+module load gnu_comp/14.1.0 openmpi/5.0.3
 
-# Activate the venv
-source "${venv_name}"/bin/activate
+# Install mpi4py using this MPI implementation
+pip cache purge
+pip install --no-binary=mpi4py mpi4py
 
-# Install mpi4py and h5py using precompiled wheels
-wheel_dir="/cosma/local/python-wheels/3.12.4/openmpi-4.1.4-hdf5-12.0/"
-pip install "numpy<2"
-pip install "${wheel_dir}mpi4py-3.1.6-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}h5py-3.11.0-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}mpsort-0.1.18-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}pfft_python-0.1.22-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}pmesh-0.1.57-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}kdcount-0.3.29-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}bigfile-0.1.51-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}Corrfunc-2.5.2-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}classylss-0.2.10.dev0-cp312-cp312-linux_x86_64.whl"
-pip install "${wheel_dir}nbodykit-0.3.15-py3-none-any.whl"
+# Install nbodykit
+pip install nbodykit
 ```
+The last step will take some time as various dependencies are built from
+source.
+
+We previously suggested installing nbodykit from pre-compiled wheels
+stored in `/cosma/local/`. This is no longer necessary because
+nbodykit has been updated so that it builds successfully with the
+current compilers on COSMA.
 
 ### conda
 To set up a virtual environment with anaconda called "nbodykit", use:
