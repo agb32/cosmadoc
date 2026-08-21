@@ -365,16 +365,17 @@ export UCX_UD_MLX5_RX_QUEUE_LEN=16384
 ```
 
 
-# Intel MPI and Lustre
+## Intel MPI and Lustre
 
 There are some flags that may help with performance on Lustre when using Intel MPI.  Namely `I_MPI_FILESYSTEM=yes` and `-I_MPI_FILESYSTEM_FORCE=lustre`
 
-# Nbodykit
+## Nbodykit
 
 There are two ways of installing nbodykit on cosma, with pip or with conda.
 Using conda is the simplest and is recommended by the nbodykit developers, but pip may be more familiar and offer more flexibility.
 
-## pip
+### pip
+
 To set up a virtual environment with a working nbodykit using pip, the following can be used (thanks to Rob McGibbon):
 
 ```
@@ -411,7 +412,7 @@ pip install "${wheel_dir}classylss-0.2.10.dev0-cp312-cp312-linux_x86_64.whl"
 pip install "${wheel_dir}nbodykit-0.3.15-py3-none-any.whl"
 ```
 
-## conda
+### conda
 To set up a virtual environment with anaconda called "nbodykit", use:
 
 ```
