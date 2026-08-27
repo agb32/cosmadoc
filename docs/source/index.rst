@@ -15,10 +15,10 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning:
+.. note::
 
-   COSMA login nodes are currently blocked due to a potential security
-   vulnerability
+   COSMA maintenance window scheduled for Wednesday 2nd September
+   starting 3pm.
    
 
 .. note::
