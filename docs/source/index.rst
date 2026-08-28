@@ -108,6 +108,7 @@ Contents
    :maxdepth: 5
    :caption: GETTING HELP
 
+   codeperformance
    clusterupgrade
    faq
    rockport
