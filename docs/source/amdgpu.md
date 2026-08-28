@@ -62,6 +62,14 @@ If you do not already have an account on COSMA, please follow the instructions [
 - MI300X node is accessible through the `mi300x` queue.
 - MI300A node is accessible through direct ssh.  From a login node, use `ssh ga008`.
 
+### Compiler modules
+
+The hipcc family of modules include the ROCm software stack.  You probably want to use the latest one (use `module available hipcc` to see options).
+
+After loading this module, you may also want to load a standard compiler module, e.g. `module load gnu_comp` to provide a standard compiler (which may or may not offer better performance than the hipcc compiler for host CPU code).
+
+Due to the way module dependencies are calculated, the order in which you load these modules is important.  The last one loaded wil be the one that determines which versions of libraries you can then load (e.g. FFTW, HDF5, etc).
+
 ## Notes
 
 The AMD ROCm software stack is installed.  ROCm 6.3.0 is available at /opt/rocm-6.3.0/bin/hipcc (2024)
