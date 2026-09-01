@@ -88,11 +88,13 @@ for many years. Most projects have been able to use their allocations
 successfully. Occasional complaints typically stem from misunderstandings
 about how the system operates, rather than from systemic issues.
 
-A key underlying assumption is that projects with large allocations also have
-a large number of active users. This ensures that resources are consistently
-in use -- either through many users submitting jobs or through the regular
-submission of large jobs. Until recently, this assumption has generally held
-true.
+A key underlying assumption is that projects with large allocations
+also have a large number of active users. This ensures that resources
+are consistently in use -- either through many users submitting jobs
+or through the regular submission of large jobs. Until recently, this
+assumption has generally held true.  In cases where there is a large
+project with only a small number of users, we can on occasion increase
+the priority of those users.
 
 Another important factor is the presence of some idle capacity in the
 system. A certain level of unused resources is necessary to maintain

@@ -1,6 +1,8 @@
 Welcome to the COSMA support documentation!
 ===========================================
 
+.. image:: images/logocosma.jpg
+
 The Compute Optimised System for Modelling and Analysis (COSMA)
 includes:
 
