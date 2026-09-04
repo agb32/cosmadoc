@@ -1,5 +1,7 @@
 # COSMA News
 
+3/9/26: Critical slurm update patched
+
 10/8/26: Three new high core nodes announced: mad11,mad12,mad13
 
 2/6/26: Downtime completed
