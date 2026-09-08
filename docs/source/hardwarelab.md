@@ -54,7 +54,7 @@ We have multiple generations of [AMD MI GPU](amdgpu.md):
 - MI300A
 - MI300X
 
-There are two nodes, each with two AMD MI200 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
+There are two nodes, each with two AMD MI210 GPUs available.  Submit jobs to the cosma8-shm2 partition.  This partition also contains a node with one AMD MI100 GPU.  To specify a particular GPU to submit to, use --exclude or --include.
 
 For the MI300 GPUs, either submit to the mi300x queue, or ssh directly from a login node to the ga008 node (MI300X).
 
