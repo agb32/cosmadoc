@@ -1,5 +1,7 @@
 # Useful Links
 
+Various HPC-related links, which may still be in date.
+
 A curated [list](https://github.com/trevor-vincent/awesome-high-performance-computing) of high performance computing resources.
 
 A similar list for [UK HPC facilities](https://www.ccpahc.ac.uk/resources/sites/).

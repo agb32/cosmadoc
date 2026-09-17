@@ -1,5 +1,7 @@
 # COSMA presentations
 
+A list of presentations given about COSMA, when audiences have requested tht they be made available.
+
 ## Theory lunch talks
 
 [Theory Lunch talk: COSMA Introduction (20th May 2019)](presentations/CosmaIntro.pdf)

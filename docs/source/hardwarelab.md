@@ -17,7 +17,8 @@ To request access to any of the systems within the hardware lab, please [create 
 The Hardware Lab features the following systems and technologies:  
 [DINE and DINE2](#dine-and-dine2)  
 [GPU compute nodes](#gpu-compute) (AMD, NVIDIA, Intel) 
-[Tenstorrent RISC-V system](#tenstorrent-blackhole-node-risc-v) 
+[Tenstorrent RISC-V system](#tenstorrent-blackhole-node-risc-v)
+[Monaka ARM system](#monaka-arm-system)
 [Composable Infrastructure](#composable-infrastructure)  
 [Rockport Network Fabric](#rockport-network-fabric)  
 [Quantum Annealing (DWAVE)](#dwave-quantum)  
@@ -71,6 +72,10 @@ A [Ponte Vecchio GPU](intelgpu.md) node was once available but is currently offl
 A [Tenstorrent Blackhole](tenstorrent.md) server is available for interactive use, containing 4x Blackhole cards.  
 
 Tenstorrent cards are designed specifically for AI and machine-learning workloads, unlike GPUs which have been adapted over time from their original graphics rendering workloads.  Currently PyTorch, ONNX, and TensorFlow can be easily ported to Tenstorrent architecture, but software support is otherwise in the early stages of development.
+
+### Monaka ARM system
+
+A [Monaka](monaka.md) CPU system will shortly become available.
 
 ## Composable infrastructure
 
