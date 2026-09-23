@@ -58,3 +58,11 @@ You can then use commands such as:
 - `rclone copy myfile mybucket:mydir/` to copy a file to it
 - etc
 
+
+# DiRAC StorJ Terms of service
+
+To be added.
+
+# DiRAC StorJ Privacy Policy
+
+To be added.

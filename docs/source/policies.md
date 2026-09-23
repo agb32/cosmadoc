@@ -9,4 +9,4 @@ There are a number of policies that COSMA users should be aware of, including:
 - Security
 - Securty Incident Management
 - Business continuity and disaster recovery plan
-
+- Responsible AI usage
