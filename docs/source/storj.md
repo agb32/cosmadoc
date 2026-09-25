@@ -129,7 +129,7 @@ Filtering
 
 Projections
 
-`metaclient search sj://demo --match  '{"project":"cosma"} --projection '{ds: dataset, r:run}'
+`metaclient search sj://demo --match  '{"project":"cosma"} --projection '{ds: dataset, r:run}`
 
 Getting metadata with uplink
 
@@ -147,6 +147,24 @@ uplink access use dirac
 uplink access remove demo
 ```
 
+# Scope
+
+1. Temporary offloading data from DiRAC services
+2. Transfering, sharing, collaborating, within DiRAC, between DiRAC and internationally
+
+Storage beyond the end of a DiRAC project is not supported.  
+
+
+
+# Storage allocation
+
+Apply during annual RAC calls, with an initial call in October 2026.
+
+# Encryption
+
+Data are encrypted, and only you and collaborators have the encryption key.  If you lose your key, we cannot help!
+
+
 
 
 # DiRAC StorJ Terms of service
@@ -156,3 +174,6 @@ To be added.
 # DiRAC StorJ Privacy Policy
 
 To be added.
+
+
+
