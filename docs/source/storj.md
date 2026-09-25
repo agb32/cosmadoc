@@ -61,7 +61,7 @@ You can then use commands such as:
 
 ## The uplink command
 
-The uplink command (available to download from StorJ) can be used instead of S3 tools.
+The uplink command ([available to download from StorJ](https://storj.dev/dcs/api/uplink-cli/installation), or in the storj module on COSMA)  can be used instead of S3 tools.
 
 `uplink access setup --use`
 
@@ -142,11 +142,11 @@ Deleting (removing) buckets
 
 Accessing multiple buckets
 
-```
+`
 uplink access list
 uplink access use dirac
 uplink access remove demo
-```
+`
 
 # Scope
 
