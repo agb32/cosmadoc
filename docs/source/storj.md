@@ -110,7 +110,7 @@ Get metadata on a file:
 
 Set some metadata:
 
-`metaclient set sj://demo/file.txt -d '{"project":"cosma","dataset":"halo-catalogue","run":1,"tags":["dm","sim"]}'
+`metaclient set sj://demo/file.txt -d '{"project":"cosma", "dataset":"halo-catalogue", "run":1, "tags":["dm","sim"]}'
 `
 
 `metaclient get sj://demo/file.txt`
@@ -125,7 +125,7 @@ As an array:
 
 Filtering
 
-`metaclient search sj://demo --match '{"project":"cosma"}' --filter 'run > \`1\`'`
+``metaclient search sj://demo --match '{"project":"cosma"}' --filter 'run > `1`' ``
 
 Projections
 
