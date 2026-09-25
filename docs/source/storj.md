@@ -125,7 +125,7 @@ As an array:
 
 Filtering
 
-`metaclient search sj://demo --match '{"project":"cosma"}' --filter 'run > `1`'`
+`metaclient search sj://demo --match '{"project":"cosma"}' --filter 'run > \`1\`'`
 
 Projections
 
