@@ -61,7 +61,7 @@ You can then use commands such as:
 
 ## The uplink command
 
-The uplink command can be used instead of S3 tools.
+The uplink command (available to download from StorJ) can be used instead of S3 tools.
 
 `uplink access setup --use`
 
