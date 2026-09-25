@@ -59,6 +59,96 @@ You can then use commands such as:
 - etc
 
 
+## The uplink command
+
+The uplink command can be used instead of S3 tools.
+
+`uplink access setup --use`
+
+1. Give a name for your setup.
+2. Enter the Access grant that you obain from the web interface.
+3. N to not use S3 backwards-compatible gateway credentials.
+
+`uplink access list`
+
+Shows the current keys.
+
+`uplink ls`
+
+Shows files within this storage.
+
+`uplinke mb sj://demo`
+
+Make bucket (mb) of type sj, name demo.
+
+`uplink ls`
+
+Will now show the bucket (a bit loke a directory).
+
+`echo "My file contents" | uplink cp --progress=false - sj://demo/file.txt`
+
+To create a file.
+
+`uplink ls sj://demo`
+
+Then shows the contents of the demo bucket.
+
+## Using the metadata client
+
+`metaclient`
+
+Available commands are get, set, rm and search.
+
+```
+export STORJ_METASEARCH_SERVER=httpsL//etasearch,storj.cosma.dur.ac.uk
+export STORJ_METASEARCH_ACCESS="$(jq -r '/Accesses[.Default]' ~/.config/storj/uplink/access.json)"
+```
+
+Get metadata on a file:
+
+`metaclient get sj://demo/file.txt`
+
+Set some metadata:
+
+`metaclient set sj://demo/file.txt -d '{"project":"cosma","dataset":"halo-catalogue","run":1,"tags":["dm","sim"]}'
+`
+
+`metaclient get sj://demo/file.txt`
+
+Search for metadata
+
+`metaclient search sj://demo --match '{"dataset":"halo-catalogue"}'`
+
+As an array:
+
+`metaclient search sj://demo --match '{"tags":["obs"]}'`
+
+Filtering
+
+`metaclient search sj://demo --match '{"project":"cosma"}' --filter 'run > `1`'`
+
+Projections
+
+`metaclient search sj://demo --match  '{"project":"cosma"} --projection '{ds: dataset, r:run}'
+
+Getting metadata with uplink
+
+`uplink meta get sj://demo/file.txt`
+
+
+Deleting (removing) buckets
+
+`uplink rb --force sj://demo`
+
+Accessing multiple buckets
+
+```uplink access list
+uplink access use dirac
+uplink access remove demo
+```
+
+
+
 # DiRAC StorJ Terms of service
 
 To be added.
