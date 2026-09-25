@@ -143,8 +143,8 @@ Deleting (removing) buckets
 Accessing multiple buckets
 
 
-`uplink access list`
-`uplink access use dirac`
+`uplink access list;`
+`uplink access use dirac;`
 `uplink access remove demo`
 
 
