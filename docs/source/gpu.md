@@ -5,7 +5,6 @@ COSMA has a number of GPU systems, which are available for use. These are:
 * Direct login (from a login node)
   * gn001: 6x NVIDIA V100 GPUs 
   * gn002: NVIDIA Grace-Hopper (ARM) system
-  * gn004: NVIDIA H100 GPU on X86 platform
   * gn005: NVIDIA RTX PRO 6000 GPU on X86 platform
   * gi001: 2x Intel Ponte Vecchio GPUs (currently dead)
   * mad06: 0-3x NVIDIA A100 GPUs (1TB RAM)
@@ -28,6 +27,8 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gc[001-008]: 0-8x NVIDIA A30 GPUs, 0-4x NVIDIA V100 GPUs
 * gracehopper Slurm partition
   * gn003: NVIDIA Grace-Hopper (ARM) system
+* intelhopper Slurm partition
+  * gn004: NVIDIA H100 GPU on X86 platform
 * mi300x, mi300x-prince partition: AMD MI300X system
   * ga007: 8x AMD MI300 GPUs
 * Retired
@@ -79,7 +80,7 @@ Further information on the DINE2 cluster can be found [here](dine2.md).
 
 ## GPU notes
 
-For nodes not assigned to queues (mad06, gn001, gn002, gn004, gn005, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
+For nodes not assigned to queues (mad06, gn001, gn002, gn005, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
 To use some of these GPUs, you may need to be in the "video" or "render" groups (use the ```id``` command to check which groups you are in).  If you are not in it, but need to be, please ask.
 
