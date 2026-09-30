@@ -17,6 +17,11 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
+.. warning::
+
+   The COSMA8 storage has been having issues from 29th Sept - we think
+   it is now fixed.
+
 .. note::
 
    COSMA is in an :doc:`draperperiod`.
