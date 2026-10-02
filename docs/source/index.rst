@@ -19,8 +19,7 @@ Check out the :doc:`account` section to get started!
 
 .. warning::
 
-   The COSMA8 storage has been having issues from 29th Sept - we think
-   it is now fixed.
+   COSMA is in a downtime period from 5th October for a few days.
 
 .. note::
 
