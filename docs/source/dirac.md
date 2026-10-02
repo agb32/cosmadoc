@@ -55,3 +55,5 @@ astronomy and cosmology.
 ## Training
 
 DiRAC offer plenty of [training](https://dirac.ac.uk/training/) opportunities, including [basic skills training](https://dirac.ac.uk/hpc-skills-training/).
+
+![DiRAC logo](images/logoDiRAC280.png)
