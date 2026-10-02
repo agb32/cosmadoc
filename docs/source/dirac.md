@@ -57,3 +57,28 @@ astronomy and cosmology.
 DiRAC offer plenty of [training](https://dirac.ac.uk/training/) opportunities, including [basic skills training](https://training-academy.dirac.ac.uk/course/view.php?id=25).
 
 ![DiRAC logo](images/logoDiRAC280.png)
+
+To access these online materials and courses please sign up to [DiRAC Training Academy](https://training-academy.dirac.ac.uk/login/signup.php). Please note that these courses open to all researchers, not only DiRAC users. 
+
+Some of DiRAC Traning Academy courses listed below.
+
+| Category | Course |
+|----------|--------|
+| Foundation HPC Skills | [Foundation in BASH](https://training-academy.dirac.ac.uk/course/view.php?id=25) |
+| Foundation HPC Skills | [Foundation in Git](https://training-academy.dirac.ac.uk/course/view.php?id=26) |
+| Foundation HPC Skills | [Foundation in Software Engineering](https://training-academy.dirac.ac.uk/course/view.php?id=27) |
+| Foundation HPC Skills | [Foundation in Testing](https://training-academy.dirac.ac.uk/course/view.php?id=28) |
+| Foundation HPC Skills | [Foundation in Scalability](https://training-academy.dirac.ac.uk/course/view.php?id=29) |
+| HPC Developer | [Running Jobs on HPC Systems](https://training-academy.dirac.ac.uk/course/view.php?id=13) |
+| HPC Developer | [High-Performance Computing Concepts](https://training-academy.dirac.ac.uk/course/view.php?id=11) |
+| HPC Developer | [Directive Programming for HPC](https://training-academy.dirac.ac.uk/course/view.php?id=15) |
+| HPC Developer | [Programming for Distributed Systems](https://training-academy.dirac.ac.uk/course/view.php?id=14) |
+| GPU Developer | [1st Step in GPU Programming](https://training-academy.dirac.ac.uk/course/view.php?id=4) |
+| GPU Developer | [MI300 Architecture](https://training-academy.dirac.ac.uk/course/view.php?id=30) |
+| GPU Developer | [Directive-Based Programming for GPUs](https://training-academy.dirac.ac.uk/course/view.php?id=10) |
+| GPU Developer | [Language-Extension Programming for GPUs](https://training-academy.dirac.ac.uk/course/view.php?id=24) |
+| AI/ML Developer | [MACE](https://training-academy.dirac.ac.uk/course/view.php?id=7) |
+| DiRAC Presents | [Performance Analysis Workshop Series 2024](https://training-academy.dirac.ac.uk/course/view.php?id=33) |
+| DiRAC Presents | [Debugging, Testing & Correctness Workshop - Durham 2023](https://training-academy.dirac.ac.uk/course/view.php?id=32) |
+| DiRAC Presents | [Optimising Applications for AMD MI300 GPUs](https://training-academy.dirac.ac.uk/course/view.php?id=16) |
+| DiRAC Presents | [Introduction to Intel oneAPI and SYCL for GPU Programming](https://training-academy.dirac.ac.uk/course/view.php?id=17) |
