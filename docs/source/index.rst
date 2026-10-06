@@ -17,10 +17,6 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
-
-   COSMA is in a downtime period from 5th October for a few days.
-
 .. note::
 
    COSMA is in an :doc:`draperperiod`.
@@ -28,9 +24,9 @@ Check out the :doc:`account` section to get started!
 .. note::
 
    Downtimes: COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of February, June and October (every 4 months). Current scheduled periods are:
-   - 5-9th October 2026
    - 1-5th February 2027
    - 7-11th June 2027
+   - 4-8th October 2027
    
 .. note::
 
