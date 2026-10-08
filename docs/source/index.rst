@@ -69,7 +69,8 @@ Contents
    lustre
    acl
    x2go
-
+   vscode
+   
 .. toctree::
    :maxdepth: 4
    :caption: RUNNING JOBS
