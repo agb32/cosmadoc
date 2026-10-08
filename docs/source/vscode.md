@@ -172,7 +172,7 @@ Be particularly careful if you have opened a high-level directory such as:
 
 If these contain many projects, datasets, or millions of files, don't open the whole directory in VS Code. Instead, open the specific project:
 
-````
+```
 /cosma/home/PROJECT/your_username/project_a
 ```
 
