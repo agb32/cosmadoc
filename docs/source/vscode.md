@@ -12,7 +12,9 @@ You’ll also want the Remote - SSH extension from Microsoft. It allows VS Code 
 
 First, test the HPC connection from a normal terminal:
 
+```
 ssh -i /path/to/ssh/key username@loginX.cosma.dur.ac.uk
+```
 
 Replace the hostname and username with those relevant for you.
 
@@ -156,6 +158,7 @@ For example, add the following to your VS Code settings.json:
         "**/snap7/**": true,
     }
 }
+```
 
 You can also add your own directories, for example if you have a large data directory, you can exclude that.
 
