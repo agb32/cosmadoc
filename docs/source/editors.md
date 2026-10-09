@@ -7,6 +7,7 @@ There is no particular editor you should use.  However, here are a few notable o
 - [Nano](nano.md)
 - [VS Code](vscode.md)
 - [Ed](ed.md)
+- [tmux](tmux.md)
 
 
 
