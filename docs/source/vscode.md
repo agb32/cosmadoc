@@ -243,7 +243,30 @@ In this case, edit the files locally in a non-remote VS Code window and use rsyn
 
 # File system and quota awareness
 
-The Remote-SSH extension installs a server into ~/.vscode-server on first connection to each login node.
+The Remote-SSH extension installs a server into ~/.vscode-server on first connection to each login node. This can be troublesome, mostly because the home directory is usually reserved for code, may have a limited storage quota, and the remote server can take up a lot of space.
+
+## Selecting vscode-server installation path
+
+COSMA already provides a specific storage space more appropriate for this kinds of applications in the Apps space. To achieve this, you can change the default installation path of the vscode-server to a more appropriate location.
+
+For this one needs to change the local VS Code setting `remote.SSH.serverInstallPath` to decide where the server is installed. To open the **local user** settings:
+
+- Open the Command Palette (CTRL + Shift + P on Windows/Linux or CMD + Shift + P on Mac)
+- Type *">open settings"* (you must include the '>' at the beginning)
+- Open User Settings (JSON)
+
+In the VS Code user settings (`settings.json`), you can add the following configuration:
+
+```
+"remote.SSH.serverInstallPath": {
+    "remote_host_name": "/desired/location",
+}
+```
+
+- Replace `remote_host_name` with the name of the remote host you are connecting to (as defined in your SSH config file).
+- Replace `/desired/location` with the path where you want the vscode-server to be installed, in this case the path to your Apps space provided by COSMA.
+
+This should reduce the footprint of the vscode-server installation in your home directory and make better use of the available storage space on the remote server. Once you have made this change, the next time you connect to the remote server, VS Code will install the vscode-server in the specified location instead of the default home directory and you can safely remove the previous installation from your home directory if needed.
 
 ## AI assistants
 
