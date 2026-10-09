@@ -69,7 +69,7 @@ Contents
    lustre
    acl
    x2go
-   vscode
+   editors
    
 .. toctree::
    :maxdepth: 4
