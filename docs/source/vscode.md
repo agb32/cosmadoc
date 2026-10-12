@@ -6,7 +6,7 @@ Although we would recommend Emacs, many users prefer VS Code.  The following gui
 
 Install Visual Studio Code on your local computer.
 
-You’ll also want the Remote-SSH extension (ms-vscode-remote-ssh) from Microsoft. It allows VS Code to connect directly to the HPC login node over SSH.  Avoid the "Remote Tunnels" feature.
+You’ll also want the Remote-SSH extension from Microsoft. It allows VS Code to connect directly to the HPC login node over SSH.  Avoid the "Remote Tunnels" feature.
 
 ## Make sure SSH works
 
@@ -22,7 +22,7 @@ Replace the hostname and username with those relevant for you.  It would also be
 
 In VS Code:
 
-- Install Remote - SSH.
+- Install Remote-SSH.
 - Open the Command Palette with Ctrl+Shift+P (Cmd+Shift+P on macOS).
 - Select Remote-SSH: Connect to Host...
 - Enter the COSMA login node and your ssh key
