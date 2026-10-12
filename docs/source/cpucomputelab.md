@@ -4,23 +4,28 @@ The CPU Compute Lab provides access to latest generation CPU technologies, to en
 
 Current systems include
 - Intel Sierra Forest
-  - Direct ssh to the mad11 node (apply to join do025)
+  - Day time: Direct ssh to the mad11 node (apply to join do025)
+  - Night time: Submit jobs to the hardwarelab-cpu partition
 - AMD Turin
-   - Direct ssh to the mad12 node (apply to join do025)
+  - Day time: Direct ssh to the mad12 node (apply to join do025)
+  - Night time: Submit jobs to the hardwarelab-cpu partition
 - [Intel Sapphire Rapids (2024)](#more-on-sapphire-rapids)
-  - Direct ssh to the gi001 node (apply to join do017)
-  - Via the dine2 Slurm partition (apply to join do015)
+  - Via the dine2 Slurm partition for 64-core nodes (apply to join do015)
+  - For the 112-core gi001 node:
+    - Day time: Direct ssh to the gi001 node (apply to join do017)
+    - Night time: Submit jobs to the hardwarelab-cpu partition
 - AMD Bergamo (2023)
-  - Via the cpulab Slurm partition (apply to join do025)
+  - Via the cosma5 Slurm partition (ICC collaborators only: apply to join hpcicc)
 - AMD Genoa (2023)
-  - Via the cosma8-shm3 Slurm partition (apply to join do025)
-  - Direct ssh to the mad13 node (apply to join do025)
+  - Via the cosma8-shm3 Slurm partition (mad08,09 nodes, apply to join do009)
+  - Now retired: Direct ssh to the mad13 node (apply to join do025)
 - Intel IceLake (2022)
-  - Via the cpulab Slurm partition (apply to join do025)
+  - Via the cosma8-ska Slurm partition (SKA only: apply to join do011)
 - AMD Milan (2021)
   - Via the cosma8-milan Slurm partition (DiRAC RAC users)
 - AMD Milan-X (2022, high L3 cache variant)
-  - Direct ssh to the mad06 node (apply to join do025)
+  - Day time: Direct ssh to the mad06 node (apply to join do016)
+  - Night time: Submit to the hardwarelab-cpu Slurm partition
 - AMD Rome (2019)
   - Via the cosma8-rome Slurm partition (DiRAC RAC users)
 - Intel CascadeLake (2019)
@@ -46,9 +51,7 @@ We have two systems with Intel Sapphire Rapids CPUs.
   
 ### Node access
 
-Our single node Sapphire Rapids system contins Ponte Vecchio GPUs (PVCs). Therefore, they are accessible as part of our Intel GPU nodes.
-
-(*) The nodes are given out FCFS, i.e. please check prior to any benchmarking that nobody else is currently using the node.
+Our single node Sapphire Rapids system contins Ponte Vecchio GPUs (PVCs), though these are currently broken. Therefore, this node is currently available for direct ssh during the day (to gi001), and as part of the hardwarelab-cpu Slurm queue at night, for benchmarking and profiling jobs.
 
 The DINE2 system can be accessed via the dine2 Slurm partition.
 
@@ -62,6 +65,8 @@ module load compiler-rt tbb compiler mpi
 ```
 
 The module oneAPI should work as well.
+
+This can be done during the day via direct SSH to the node.
 
 ### Performance
 
