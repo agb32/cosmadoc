@@ -15,18 +15,18 @@ If you are a vendor, integrator or hardware developer, and would like to have yo
 To request access to any of the systems within the hardware lab, please [create an account](account.md) and request to join the corresponding [project code](project.md#hpc-hardware-lab-access).  Please contact cosma-support@durham.ac.uk when you request an account so that it can be set up correctly.
 
 The Hardware Lab features the following systems and technologies:  
-[DINE and DINE2](#dine-and-dine2)  
-[GPU compute nodes](#gpu-compute) (AMD, NVIDIA, Intel) 
-[Tenstorrent RISC-V system](#tenstorrent-blackhole-node-risc-v)
-[Monaka ARM system](#monaka-arm-system)
-[Composable Infrastructure](#composable-infrastructure)  
-[Rockport Network Fabric](#rockport-network-fabric)  
-[Quantum Annealing (DWAVE)](#dwave-quantum)  
-[CPU Compute Lab](#cpu-compute-lab)  
-[Storage Lab](#storage-lab)  
-[Solar Power](#solar)  
-[Immersion Cooling](#immersion-cooling)  
-[Heat Storage](#heat-storage)  
+- [DINE and DINE2](#dine-and-dine2)  
+- [GPU compute nodes](#gpu-compute) (AMD, NVIDIA, Intel)
+- [CPU Compute Lab](#cpu-compute-lab)  
+  - [Tenstorrent RISC-V system](#tenstorrent-blackhole-node-risc-v)
+  - [Advanced ARM systems](#monaka-arm-system)
+- [Composable Infrastructure](#composable-infrastructure)  
+- [Rockport Network Fabric](#rockport-network-fabric)  
+- [Quantum Annealing (DWAVE)](#dwave-quantum)  
+- [Storage Lab](#storage-lab)  
+  [Solar Power](#solar)  
+- [Immersion Cooling](#immersion-cooling)  
+- [Heat Storage](#heat-storage)  
 
 There are a number of other hardware lab facilities around the UK.  If you are looking for specific hardware which is not on this list, a good starting point to search for available facilities is the [collection maintained by the SHAREing project](https://shareing-dri.github.io/resources/).
 
@@ -75,7 +75,7 @@ Tenstorrent cards are designed specifically for AI and machine-learning workload
 
 ### Monaka ARM system
 
-A [Monaka](monaka.md) CPU system will shortly become available.
+We are hoping that a [Monaka](monaka.md) CPU system will shortly become available.
 
 ## Composable infrastructure
 
