@@ -1,3 +1,3 @@
 # The Monaka ARM system testbed
 
-A Monaka ARM system will shortly become available.  Details to follow.
+We hare hoping to add a Monaka ARM testbed to the HPC Hardware Lab.
