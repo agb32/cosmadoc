@@ -95,6 +95,15 @@ Contents
    quantum
    storagelab
 
+   
+.. toctree::
+   :maxdepth: 4
+   :caption: DATA CURATION
+	  
+   datacuration
+   data
+   projectdata
+
 .. toctree::
    :maxdepth: 4
    :caption: AZIMUTH CLOUD PORTAL
