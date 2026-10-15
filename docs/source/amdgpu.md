@@ -10,6 +10,8 @@ COSMA contains multiple AMD GPU systems to allow code development, porting and p
 | ----- | --- | --------- | ------------ | ------ |
 | 1 | AMD MI100 | 1 per node | 1TB | 2x AMD EPYC 7713 64-Core |
 
+[Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi100.html)
+
 Benchmarks:
 - Memory bandwidth (BabelStream): 947 GB/s
 - array\_size: 134217728
@@ -21,6 +23,8 @@ Benchmarks:
 | Nodes | GPU | GPU Count | RAM per node | CPU(s) |
 | ----- | --- | --------- | ------------ | ------ |
 | 2 | AMD MI210 | 2 per node | 1TB | 2x AMD EPYC 7513 32-Core |
+
+[Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi200/mi210.html)
 
 Benchmarks:
 - Memory bandwidth (BabelStream): 1250 GB/s
@@ -34,6 +38,8 @@ Benchmarks:
 | ----- | --- | --------- | ------------ | ------ |
 | 1 | AMD MI300X | 8 per node | 512GB | 2x Intel Xeon Platinum 8468 48-Core
  |
+
+ [Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html)
 
  Benchmarks:
  - Memory bandwidth (BabelStream): 4036 GB/s
@@ -94,6 +100,8 @@ Benchmarks:
 | Nodes | APU | RAM per node |
 | ----- | --- | ------------ |
 | 1 | 4x AMD MI300A (24 CPU cores) | 512GB |
+
+[Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300a.html)
 
 Benchmarks:
 - Memory bandwidth (BabelStream): 3648 GB/s
