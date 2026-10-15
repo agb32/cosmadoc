@@ -160,12 +160,15 @@ To avoid entering passwords too many times, you can multiplex your ssh connectio
 To do this, you need to add something like:
 
 ```
-ControlPath ~/.ssh/controlmasters/%r@%h:%p
-ControlMaster auto
-ControlPersist yes
+Host cosma
+     ControlPath ~/.ssh/controlmasters/%r@%h:%p
+     ControlMaster auto
+     ControlPersist 8h
+     IdentitiesOnly yes
+     IdentityFile ~/.ssh/YOUR_SSH_PRIVATE_KEY
 ```
 
-to your .ssh/config file, and create the .ssh/controlmasters directory.
+to your .ssh/config file, and create (mkdir) the .ssh/controlmasters directory.
 
 Any new connection will then use the first connection.  Should the
 connection freeze, you can `killall ssh` to allow you to restart it.

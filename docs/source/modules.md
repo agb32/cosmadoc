@@ -21,9 +21,13 @@ Common module commands include:
 *    ```module save NAME```: saves the current module state to a name of your choice
 *    ```module restore NAME```: restores a module state previously saved (using files in ~/.module)
 
+## Dependencies
+
 While loading some modules, their dependencies must be loaded as well. For instance, loading fftw module requires at least one compiler module (such as gnu_comp or intel_comp) to be loaded.
 
-For more information, type man module or go to the [project website](http://modules.sourceforge.net).
+If you do not have the right dependencies loaded, you will be warned, and the module will refuse to load.
+
+For more information, type `man module` or go to the [project website](http://modules.sourceforge.net).
 
 If you are unsure what a good combination of modules is for a specific
 software tool, please ask cosma-support, or view the code pages.

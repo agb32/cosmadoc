@@ -1,4 +1,4 @@
-# The Azimuth cloud portal
+# The Durham Azimuth Cloud Facility (DACF)
 
 Azimuth is a cloud system hosted within COSMA.
 

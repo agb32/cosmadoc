@@ -1,6 +1,8 @@
 Welcome to the COSMA support documentation!
 ===========================================
 
+.. image:: images/logocosma.jpg
+
 The Compute Optimised System for Modelling and Analysis (COSMA)
 includes:
 
@@ -15,12 +17,6 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning:
-
-   COSMA login nodes are currently blocked due to a potential security
-   vulnerability
-   
-
 .. note::
 
    COSMA is in an :doc:`draperperiod`.
@@ -28,9 +24,9 @@ Check out the :doc:`account` section to get started!
 .. note::
 
    Downtimes: COSMA has 3 periods of scheduled downtime per year, lasting up to a week, though typically the affected period is shorter. These are during the first full weeks of February, June and October (every 4 months). Current scheduled periods are:
-   - 1-5th June 2026
-   - 5-9th October 2026
    - 1-5th February 2027
+   - 31st May - 4th June 2027
+   - 4-8th October 2027
    
 .. note::
 
@@ -73,7 +69,8 @@ Contents
    lustre
    acl
    x2go
-
+   editors
+   
 .. toctree::
    :maxdepth: 4
    :caption: RUNNING JOBS
@@ -98,6 +95,15 @@ Contents
    quantum
    storagelab
 
+   
+.. toctree::
+   :maxdepth: 4
+   :caption: DATA CURATION
+	  
+   datacuration
+   data
+   projectdata
+
 .. toctree::
    :maxdepth: 4
    :caption: AZIMUTH CLOUD PORTAL
@@ -108,6 +114,7 @@ Contents
    :maxdepth: 5
    :caption: GETTING HELP
 
+   codeperformance
    clusterupgrade
    faq
    rockport
