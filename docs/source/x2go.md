@@ -29,10 +29,15 @@ Save these settings. Then, click on this entry, and eventually, you will be give
 Also note, if you have an error in your .bashrc file (for example, trying to load a non-existent module), then the x2go login may fail. To solve this, remove the offending lines from your .bashrc file.
 
 If you find your x2go session is behaving odd graphically (e.g. the windows aren't getting redrawn when moved), you can try disabling compositing:
-1. Run `xfwm4-tweaks-settings`
+1. Run `xfwm4-tweaks-settings` (or use the Applications menu -> Settings -> Window Manager Tweaks)
 2. Select the Compositor tab, and untick the compositing option.
 
 The display should then be fixed.
+
+The screen lock can also be disabled in
+```
+Applications > Settings > Xfce Screensaver > Lock Screen
+```
 
 ## VNC
 

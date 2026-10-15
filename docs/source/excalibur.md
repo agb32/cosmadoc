@@ -1,6 +1,6 @@
 # ExCALIBUR
 
-ExCALIBUR is the UK Exascale preparation scheme, providing hardware and software effort in order to prepare the UK HPC community for forthcoming Exascale services.
+ExCALIBUR was the UK Exascale preparation scheme (2019-2024), providing hardware and software effort in order to prepare the UK HPC community for forthcoming Exascale services.
 
 COSMA hosts several enabling hardware prototype systems funded by ExCALIBUR, which are hosted as part of the [HPC Hardware Laboratory](hardwarelab.html):
 
@@ -20,25 +20,23 @@ To use these systems, please contact cosma support.
 
 COSMA has a MI100 GPU in server ga004.
 
-THere are also six AMD MI50 GPUs hosted in the ga003 server. These are interlinked with a 4x and 2x InfinityFabric link between the GPUs, to enable direct data transfer. However, unless you specifically need this, please use the newer MI100 system instead.
+THere were also six AMD MI50 GPUs hosted in the ga003 server, now decommissioned. These were interlinked with a 4x and 2x InfinityFabric link between the GPUs, to enable direct data transfer. Newer MI GPUs are available instead.
 
-Relevant software is in /opt/rocm* and the AMD AOCC compiler is available as a module (module load aocc)
+Relevant GPU programming software (ROCm) is available as the hipcc module (`module available hipcc`).  The AMD AOCC compiler is available as a module (module load aocc)
 
-The rocm_smi.py command will provide information about the GPUs.
+The amd_smi command will provide information about the GPUs.
 
 These systems are available for general use. If you use them, feedback would be welcome, in particular around performance, and the software environment.
 
 ## DWAVE quantum annealing credits
 
-From 1st June 2023 for a 24 month period, we have arranged access to DWAVE quantum annealing systems.
+From 1st June 2023 for a 24 month period, we arranged access to DWAVE quantum annealing systems.
 
-Please contact cosma-support if you wish to access this.
-
-This is available to any of the UK community.
+This was available to any of the UK community.
 
 ## ExCALIBUR software projects at Durham
 
-There are several ExCALIBUR software projects (finished and ongoing) at Durham, investigating Exascale software techniques to allow codes to run effectively on Exascale systems. These are:
+There were several ExCALIBUR software projects (now finished) at Durham, investigating Exascale software techniques to allow codes to run effectively on Exascale systems. These are:
 
 1. [Clawpack enabled Exahype for heterogeneous hardware](https://tobiasweinzierl.webspace.durham.ac.uk/software/peano/projects/exaclaw-clawpack-enabled-exahype-for-heterogeneous-hardware/)
 

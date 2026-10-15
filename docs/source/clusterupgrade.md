@@ -24,3 +24,4 @@ The screen lock can also be disabled in:
 Applications > Settings > Xfce Screensaver > Lock Screen
 ```
 
+Further information about [x2go is here](x2go.md)

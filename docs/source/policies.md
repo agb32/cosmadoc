@@ -8,5 +8,6 @@ There are a number of policies that COSMA users should be aware of, including:
 - Fair usage
 - Security
 - Securty Incident Management
+- Emergency shutdown policy
 - Business continuity and disaster recovery plan
-
+- Responsible AI usage

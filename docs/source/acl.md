@@ -4,6 +4,8 @@ The Lustre file systems on COSMA have extended attribute support such that acces
 
 By default, POSIX file system control is defined by user, group and world permissions, which can be read, write or execute.
 
+However, more fine-grained control is also possible, though please note that it is easy to forget that this is in place, i.e. an `ls` will not show it, and you will need to use the `getfacl` command instead.  
+
 To give a specific user read access to a file, you can use:
 
 ```
