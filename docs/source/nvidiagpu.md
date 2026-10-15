@@ -88,6 +88,12 @@ The GH200 has a unified memory model, combining an H100 GPU and a Grace CPU usin
 
 The Grace CPU is ARM-based, and therefore cannot run X86 binaries.  It is best to compile your code on the direct-ssh node.
 
+### RTX PRO 6000 
+
+| Nodes | GPU | GPU Count | RAM per node | CPU(s) |
+| ----- | --- | --------- | ------------ | ------ |
+| 1 | NVIDIA RTX PRO 6000 | 1 per node | 2.2TB | 256-core AMD EPYC 9745 (Turin) |
+
 ## Usage
 
 If you do not already have an account on COSMA, please follow the instructions [here](account.md), then request to join the project(s): do016 for the NVidia testbed, or do015 for DINE2.
@@ -103,6 +109,7 @@ If you do not already have an account on COSMA, please follow the instructions [
 - There are two ways to access the GH200 nodes:
     - By direct ssh.  From a login node, use `ssh gn002`.
     - Through the `gracehopper` slurm queue.
+- RTX 6000 GPU is available via direct ssh. From a login node, use `ssh gn005`.
 
 ## Notes
 

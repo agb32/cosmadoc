@@ -116,7 +116,3 @@ The MI300A is an APU: The GPU and CPU are part of the same silicon, and share th
 
 There is a single PCIe-based NVIDIA H100 GPU with an X86 (Intel) host, which is available for direct ssh.
 
-## RTX PRO 6000
-
-This is single PCIe-based NVIDIA RTX PRO 6000 GPU with an AMD Turin host, 256 cores, available by direct ssh.
-
