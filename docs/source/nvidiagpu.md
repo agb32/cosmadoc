@@ -110,6 +110,8 @@ If you do not already have an account on COSMA, please follow the instructions [
 
 To request a specific configuration of GPUs on any of the composable nodes, please email cosma-support@durham.ac.uk.
 
+When using a composable partition, you can use `#SBATCH --constraint=gpu` to ensure your job is given a node with a GPU, or if you need a particular node (after allocating more GPUs to it, for example) you can use the `--include` or `--exclude` paramaters to select the desired node.
+
 ### nvhpc
 
 There are nvhpc modules available (`module avail nvhpc`), which include the NVidia compilers, CUDA, and other build tools.  It may be necessary to specify a toolchain to use with these, e.g.
@@ -122,6 +124,5 @@ On grace-hopper nodes (gn002, gn003), alternative toolchains can be found in `/o
 
 
 The combination of the gcc-15 toolchain with nvc++ 25.1 can cause a compile-time issue with some std:format-related code.  In this case, you can try using gcc-toolset-14, likely nvc++ will complain about a missing gfortran, if this is required.  In this case, make a copy of the gcc-toolset-14 in your apps/ directory, and then copy gfortran/f951 from the gcc-toolet-15 into this.
-
 
 

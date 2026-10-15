@@ -64,19 +64,6 @@ To use a GPU available for direct login, just ssh to the node name given above.
 | PVC | 52.4 | 128 | 3280 |
 
 
-
-## Using the composable A100 GPUs
-
-We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, in theory!) between mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each (mad04,05,06). These GPUs are part of a composable PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
-
-You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
-
-## Using the composable A30 and V100 GPUs
-
-The DINE2 cluster has 8 nodes, 8x A30 GPUs and 4x V100 GPUs.  The GPUs can be allocated to the nodes as required, depending on user workloads.
-
-Further information on the DINE2 cluster can be found [here](dine2.md).
-
 ## GPU notes
 
 For nodes not assigned to queues (mad06, gn001, gn002, gn004, gn005, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
