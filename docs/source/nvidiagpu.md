@@ -19,6 +19,8 @@ And alternatively, 4 V100 GPUs are available as part of the [DINE2](dine2.md) cl
 | ----- | --- | --------- | ------------ | ------ |
 | 8 | NVIDIA V100 | 4 total (configurable) | 2TB | 2x Intel Xeon Gold 6430 |
 
+[Manufacturer website](https://www.nvidia.com/en-gb/data-center/tesla-v100/)
+
 Benchmarks:
 - Memory bandwidth (BabelStream): 823 GB/s
 - array\_size: 134217728
@@ -32,6 +34,8 @@ Benchmarks:
 | 2 | NVIDIA A100 40GB | 1 per node | 4TB | 2x AMD EPYC 7702 64-Core |
 | 1 | NVIDIA A100 40GB | 1 per node | 1TB | 2x AMD EPYC 7773X 64-Core |
 
+[Manufacturer website](https://www.nvidia.com/en-gb/data-center/a100/)
+
 The GPUs are connected using a composable PCIe fabric from [Liqid](https://www.liqid.com) and can be moved between 3 compute nodes: mad04, mad05, mad06.  
 
 ### A30 \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-a30/)\)
@@ -39,6 +43,8 @@ The GPUs are connected using a composable PCIe fabric from [Liqid](https://www.l
 | Nodes | GPU | GPU Count | RAM per node | CPU(s) |
 | ----- | --- | --------- | ------------ | ------ |
 | 8 | NVIDIA A30 | 8 total (configurable) | 2TB | 2x Intel Xeon Gold 6430 |
+
+[Manufacturer website](https://www.nvidia.com/en-gb/data-center/products/a30-gpu/)
 
 The A30 GPUs are part of the [DINE2](dine2.md) cluster, which makes use of a CerIO Composability fabric.  The GPUs can be moved between compute nodes on-demand by contacting cosma-support.
 
@@ -54,6 +60,8 @@ Benchmarks:
 | ----- | --- | --------- | ------------ | ------ |
 | 1 | NVIDIA H100 NVL | 1 per node | 510GB | 2x Intel Xeon Gold 6530 |
 
+[Manufacturer website](https://www.nvidia.com/en-gb/data-center/h100/)
+
 Benchmarks:
 - Memory bandwidth (BabelStream): 3387 GB/s
 - array\_size: 134217728
@@ -65,6 +73,8 @@ Benchmarks:
 | Nodes | GPU | GPU Count | RAM per node | CPU(s) |
 | ----- | --- | --------- | ------------ | ------ |
 | 2 | NVIDIA GH200 | 1 per node | 480GB (unified) | 72-core ARM Grace |
+
+[Manufacturer website](https://www.nvidia.com/en-gb/data-center/grace-hopper-superchip/)
 
 Benchmarks:
 - Memory bandwidth (BabelStream): 3500 GB/s
