@@ -90,7 +90,7 @@ You also have
     /cosma/apps/PROJECT/USERNAME
 
 which is ideal for software installation, Python virtual environments, etc,
-and which has hourly snapshots.
+and which has daily snapshots.
 
 You will also have data storage space, typically in one of:
 
