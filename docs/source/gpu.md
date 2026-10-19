@@ -36,7 +36,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
 
 ## Project codes
 
-To use the GPUs which are in a Slurm, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
+To use the GPUs which are in a Slurm partition, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
 
 - do015: dine2 partition
 - do016: NVIDIA Grace Hopper GPUs, H100, cosma8-shm partition
@@ -46,6 +46,8 @@ To use the GPUs which are in a Slurm, you must either be part of a DiRAC project
 DiRAC allocated projects will have higher priority.
 
 To use a GPU available for direct login, just ssh to the node name given above.
+
+**Note:** Some GPU nodes are in a hybrid mode to allow for testing during office hours and production workloads during the night.  Further information is available in the motd of relevant nodes.
 
 ## GPU stats
 
