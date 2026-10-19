@@ -36,7 +36,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
 
 ## Project codes
 
-To use the GPUs which are in a Slurm, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
+To use the GPUs which are in a Slurm partition, you must either be part of a DiRAC project with a current allocation on the system, or sign up to the following project codes in [SAFE](https://safe.epcc.ed.ac.uk/dirac) as part of the hardware lab:
 
 - do015: dine2 partition
 - do016: NVIDIA Grace Hopper GPUs, H100, cosma8-shm partition
@@ -46,6 +46,8 @@ To use the GPUs which are in a Slurm, you must either be part of a DiRAC project
 DiRAC allocated projects will have higher priority.
 
 To use a GPU available for direct login, just ssh to the node name given above.
+
+**Note:** Some GPU nodes are in a hybrid mode to allow for testing during office hours and production workloads during the night.  Further information is available in the motd of relevant nodes.
 
 ## GPU stats
 
@@ -64,21 +66,13 @@ To use a GPU available for direct login, just ssh to the node name given above.
 | MI300A | 61.3 | 128 | 5300 |
 | PVC | 52.4 | 128 | 3280 |
 
+For detailed notes on GPU specifications and usage, see the following pages:
 
+## [AMD GPUs](amdgpu.md)
 
-## Using the composable A100 GPUs
+## [NVIDIA GPUs](nvidiagpu.md)
 
-We have 3 NVIDIA A100 (40GB) GPUs, which can be moved (by software, in seconds, in theory!) between mad04, mad05 and mad06, hence the variable number above. If you have a particular requirement, please contact cosma-support. The default configuration is one GPU each (mad04,05,06). These GPUs are part of a composable PCIe fabric using a [Liqid](https://www.liqid.com) infrastructure funded as part of [ExCALIBUR](https://excalibur.ac.uk).  It is a good idea to add the ```nvidia-smi``` command to your batch script so that you can check that the GPUs are present.
-
-You can use the ```--include``` or ```--exclude``` SLURM parameters within your batch script to specify particular nodes.  Or alternatively, to be given a node with a GPU (within the composable partition), you can use ```#SBATCH --constraint=gpu```.
-
-## Using the composable A30 and V100 GPUs
-
-The DINE2 cluster has 8 nodes, 8x A30 GPUs and 4x V100 GPUs.  The GPUs can be allocated to the nodes as required, depending on user workloads.
-
-Further information on the DINE2 cluster can be found [here](dine2.md).
-
-## GPU notes
+## Further notes on GPUs
 
 For nodes not assigned to queues (mad06, gn001, gn002, gn005, ga008, gi001), please be aware that these are shared resources and that other people may be using (or may wish to use) them.
 
@@ -87,50 +81,4 @@ To use some of these GPUs, you may need to be in the "video" or "render" groups 
 To check that you have the correct permissions to submit to a partition, you can use the ```scontrol show partition=PARTITION_NAME``` command to see which groups are allow to submit to that partition.
 
 The Intel PVC GPUs on gi001 are currently dead - sometime in Autumn 2025.  Watch this space - we may be able to resurrect them.
-
-## Grace-Hopper
-
-One Grace-Hopper node is currently available for direct ssh from a login node (gn002).  gn003 is available in a Slurm queue, gracehopper.
-
-Note, the Grace CPU has an ARM architecture, and therefore X86 binaries will not run.  The NVIDIA and GCC compilers are available.
-
-## Ponte Vecchio
-
-This node is currently dead.
-
-The Intel Ponte Vecchio node (donated by Intel) is available for direct ssh from a login node (gi001).
-
-OneAPI is available using the intel_comp modules, e.g. `module load intel_comp` (or `module load oneAPI`).
-
-## MI300X
-
-The MI300X node has 8x GPUs, and is available in the mi300x slurm partition, or the cosma8-draper partition for DiRAC allocated resources (higher priority).
-
-To use the GPUs, you will need to specify the number of GPUs required in your Slurm parameters, e.g. `#sbatch --gpu=8`.  By default you will get zero.
-
-The AMD ROCm software stack is installed.
-
-Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
-
-To get interactive access you could use `srun -p mi300x -A do018 -t 10 --gpus=8 --pty /bin/bash`, and if you want exclusive access to the GPUs (e.g. for benchmarking), use the `--exclusive` flag.  Or `srun -p cosma8-draper -A DIRACPROJECT -t 10 --gpus=8 --pty bash`.
-
-There have been multiple DiRAC hackathons focused on AMD GPUs, which was very relevant to any users of this system.  There will be future hackathons - watch out for them!
-
-## MI300A
-
-The MI300A system has 4x GPUs, and is available for direct ssh (to ga008) from a login node.
-
-The AMD ROCm software stack is installed.
-
-Any codes currently using CUDA will need to be HIP-ified by running the hipify script provided as part of ROCm.  Fine tuning may be necessary to optimise performance.
-
-The MI300A is an APU: The GPU and CPU are part of the same silicon, and share the same physical RAM.  Therefore, memory copies between CPU and GPU are not necessary, which can significantly improve performance for many applications, and make it highly appropriate for some codes which cannot easily be ported to more traditional GPU architectures.
-
-## H100
-
-There is a single PCIe-based NVIDIA H100 GPU with an X86 (Intel) host, which is available for direct ssh.
-
-## RTX PRO 6000
-
-This is single PCIe-based NVIDIA RTX PRO 6000 GPU with an AMD Turin host, 256 cores, available by direct ssh.
 

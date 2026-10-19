@@ -10,6 +10,8 @@ COSMA contains multiple AMD GPU systems to allow code development, porting and p
 | ----- | --- | --------- | ------------ | ------ |
 | 1 | AMD MI100 | 1 per node | 1TB | 2x AMD EPYC 7713 64-Core |
 
+[Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi100.html)
+
 Benchmarks:
 - Memory bandwidth (BabelStream): 947 GB/s
 - array\_size: 134217728
@@ -21,6 +23,8 @@ Benchmarks:
 | Nodes | GPU | GPU Count | RAM per node | CPU(s) |
 | ----- | --- | --------- | ------------ | ------ |
 | 2 | AMD MI210 | 2 per node | 1TB | 2x AMD EPYC 7513 32-Core |
+
+[Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi200/mi210.html)
 
 Benchmarks:
 - Memory bandwidth (BabelStream): 1250 GB/s
@@ -35,17 +39,69 @@ Benchmarks:
 | 1 | AMD MI300X | 8 per node | 512GB | 2x Intel Xeon Platinum 8468 48-Core
  |
 
+ [Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html)
+
  Benchmarks:
  - Memory bandwidth (BabelStream): 4036 GB/s
  - array\_size: 134217728
  - iterations: 100
  - precision: FP64
 
+ Cache topology:
+ ```txt
+|--------------|     |--------------|
+|              |     |              |
+|    HBM3      |     |    HBM3      |   (8 stacks of 24GB = 192GB total HBM3)
+|    24GB      |     |    24GB      |
+|--------------|     |--------------|
+       |                    |
+|-----------------------------------|
+|       AMD INFINITY CACHE          |   (Global buffer for all XCDs)
+|              256 MB               |
+|-----------------------------------|
+  |                               |
+  |    --------        -------    |
+  |    |      |        |     |    |
+|---------|----|     |----|---------|
+|   XCD   | L2 |     | L2 |   XCD   |
+|         |    |     |    |         |   (4MB L2 per XCD)
+|         |4MB |     |4MB |         |
+|---------|----|     |----|---------|
+      |
+      |
+ Detailed view
+      |
+      |
+      V
+|-----------------------------------|
+|              L2 4MB               |
+|-----------------------------------|
+|               XCD      |          |
+|      |-------------------------|  |
+|      | Compute Unit            |  |
+|      ||---------------------|  |  |
+|      || L1 instruction 64KB |  |  |
+| 38 x ||---------------------|  |  |   (38 CUs per XCD.  L1 instruction cache
+|      || L1 Constant 16KB    |  |  |   shared between pairs of CUs)
+|      ||---------------------|  |  |
+|      || L1 Data 32KB        |  |  |
+|      ||---------------------|  |  |
+|      || L1 Scalar 16KB      |  |  |
+|      ||---------------------|  |  |
+|      || LDS 64KB            |  |  |
+|      ||---------------------|  |  |
+|      |-------------------------|  |
+|                                   |
+|-----------------------------------|
+```
+
 ### MI300A \([SHAREing](https://shareing-dri.github.io/hpc-testbeds/systems/cosma-mi300a/)\)
 
 | Nodes | APU | RAM per node |
 | ----- | --- | ------------ |
 | 1 | 4x AMD MI300A (24 CPU cores) | 512GB |
+
+[Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300a.html)
 
 Benchmarks:
 - Memory bandwidth (BabelStream): 3648 GB/s
