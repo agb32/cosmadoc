@@ -4,13 +4,17 @@ This page gathers together various hints for using MPI on COSMA. See also the [C
 
 Standard module combinations are:
 
-`intel_comp/2018 and intel_mpi/2018`
-
 `intel_comp/2025.3.0` (or other latest version) and then (following the instructions printed out) `compiler-rt tbb umf compiler mpi`. 
+
+Alternatively the 2018 Intel compiler/MPI used a different backend, and have worked well for years:
+
+`intel_comp/2018 and intel_mpi/2018`
 
 Note, when using the newer intel_comp modules, you first load these, which put some more modules on the search path, allowing you to then "module load compiler mpi" to load the compiler and mpi (compiler-rt and tbb may also be needed, depending on version). 
 
 `oneAPI/* ` (which is an alias for intel_comp)
+
+The gcc collection is available via the gnu_comp module.  Generally best stability will be achieved using the latest openmpi version, and the corresponding latest compiler (i.e. try `module load openmpi/VERSION` and it will tell you which compiler modules need to be loaded first.
 
 `gnu_comp` and `openmpi` (various versions)
 
