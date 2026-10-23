@@ -16,7 +16,7 @@ The initial version of this table was AI generated, and we are tidying up as tim
 | AMD Instinct MI300X | CDNA 3 | 81.7 TFLOPS | 163.4 TFLOPS | 163.4 TFLOPS | Not separately specified | 1,307 TFLOPS | 2,615 TFLOPS | 192 GB HBM3 | 5.3 TB/s | 750 W | PCIe 5 + Infinity Fabric |
 | AMD Instinct MI250X | CDNA 2 | ~47.9 TFLOPS | Matrix accelerated | ~47.9 TFLOPS | Not separately specified | ~383 TFLOPS | — | 128 GB HBM2e | ~3.2 TB/s | ~560 W | Infinity Fabric |
 | Intel Data Center GPU Max 1550 | Xe-HPC | ~52.4 TFLOPS | XMX accelerated | ~52.4 TFLOPS | ~52.4 TFLOPS | ~839 TFLOPS XMX | — | 128 GB HBM2e | ~3.28 TB/s | 600 W | PCIe 5 + Xe Link |
-| Intel Crescent Island / GPU D-Series | Xe3P | 20 TFLOPS | XMX accelerated | 10 TFLOPS | Supported; peak TBD | XMX accelerated; peak TBD | 1132 TFLOPS | 160 GB LPDDR5X reference | TBD | 350 W | PCIe |
+| Intel Crescent Island / GPU D-Series | Xe3P | 10 TFLOPS | XMX accelerated | 20 TFLOPS | 41 TFLOPS | XMX accelerated; peak TBD | 1300 TFLOPS | 160 GB LPDDR5X reference | 1.5 TB/s | 350 W | PCIe |
 
 ### Notes
 - All performance figures are theoretical peak values and should not be interpreted as application benchmark results.
