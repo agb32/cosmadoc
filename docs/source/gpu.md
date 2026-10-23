@@ -66,7 +66,7 @@ To use a GPU available for direct login, just ssh to the node name given above.
 | MI300A | 61.3 | 128 | 5300 |
 | PVC | 52.4 | 128 | 3280 |
 
-For detailed notes on GPU specifications and usage, see the following pages:
+There is a more [detailed GPU comparison table](gpuspecs.md) and for more information on specifications and usage, see the following pages:
 
 ## [AMD GPUs](amdgpu.md)
 
