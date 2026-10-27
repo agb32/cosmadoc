@@ -36,7 +36,7 @@ Benchmarks:
 
 | Nodes | GPU | GPU Count | RAM per node | CPU(s) |
 | ----- | --- | --------- | ------------ | ------ |
-| 1 | AMD MI300X | 8 per node | 512GB | 2x Intel Xeon Platinum 8468 48-Core
+| 1 | AMD MI300X | 8 per node | 2TB | 2x Intel Xeon Platinum 8468 48-Core
  |
 
  [Manufacturer website](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html)
