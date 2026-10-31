@@ -182,8 +182,9 @@ Nodes on the cosma7 and cosma8 queues are exclusive - you will not share nodes
 with other users. However, this does mean you should make good use of all the
 available cores.
 
-The cosma5 queue is not exclusive: your job will share nodes with other jobs
-unless you use `#SBATCH --exclusive`.
+The cosma5 queue is not exclusive: your job will share nodes with other jobs.
+To have a node to yourself, request all 256 of its cores.  The `--exclusive`
+flag is ignored on this queue.
 
 If you are using a single core job, consider running multiple of these at the
 same time, using SLURM arrays, or a parallel MPI launch. COSMA8 has a serial
