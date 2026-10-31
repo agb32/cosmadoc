@@ -51,7 +51,7 @@ The login node and the compute nodes are different machines, so something that w
 | - | -------------------- | --------------------------- |
 | How to use it | `ssh` to `login5.cosma.dur.ac.uk` | Submit to the `cosma5` queue |
 | CPU | 1x AMD EPYC 9354P (Zen 4) | 2x AMD EPYC 9754 (Zen 4c) |
-| Cores | 32, shared with other users | 256 |
+| Cores | 32 (64 threads), shared with other users | 256 (512 threads) |
 | RAM | 768GB, shared with other users | 1.5TB |
 | Data file systems | /cosma5, /cosma7, /cosma8 | /cosma5, /cosma7 (read-only) |
 
