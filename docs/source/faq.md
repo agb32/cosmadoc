@@ -219,8 +219,8 @@ data in /cosma7/ please access it from the cosma7 queue.
 
 Not every file system is available on every compute node, even if you can see
 it on a login node. For example, /cosma8 is not available on the cosma5 or
-cosma7 compute nodes, and /cosma5 is not available on the cosma7 or cosma8
-compute nodes.
+cosma7 compute nodes, and /cosma7 is read-only on the cosma5 and cosma8 compute
+nodes. See the [table of mounted file systems](storage.md#mounted-filesystems).
 
 ## Do I need to worry about where the initial conditions are stored?
 

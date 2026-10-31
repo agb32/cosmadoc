@@ -53,9 +53,9 @@ The login node and the compute nodes are different machines, so something that w
 | CPU | 1x AMD EPYC 9354P (Zen 4) | 2x AMD EPYC 9754 (Zen 4c) |
 | Cores | 32, shared with other users | 256 |
 | RAM | 768GB, shared with other users | 1.5TB |
-| Data file systems | /cosma5, /cosma7, /cosma8 | /cosma5, /cosma7 |
+| Data file systems | /cosma5, /cosma7, /cosma8 | /cosma5, /cosma7 (read-only) |
 
-- **File systems:** /cosma8 is visible on login5c, but is not available on the compute nodes. Jobs that read or write there will fail. If you submit a job from a directory on /cosma8, it will start in /tmp instead.
+- **File systems:** /cosma8 is visible on login5c, but is not available on the compute nodes, and /cosma7 is read-only there. Jobs that read or write /cosma8, or write to /cosma7, will fail. If you submit a job from a directory on /cosma8, it will start in /tmp instead.
 - **Compiling:** both CPUs support the same instructions, so code compiled on login5c with `-march=native` will run on the compute nodes.
 - **Performance:** timings on login5c will not match the compute nodes, so benchmark in a job.
 
