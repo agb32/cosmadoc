@@ -2,7 +2,7 @@
 
 See the below for known hints and issues related to certain codes. These may give compilation hints, execution hints, etc.
 
-It should be noted that highly optimised code compiled on COSMA7 may not run on COSMA5 since these CPU architectures are older, and have a reduced instruction set, or on COSMA8, which does not support AVX512 instructions.. Therefore, if you need code to run on COSMA5, and are suffering from "illegal instructions", please try recompiling on COSMA5. Likewise, to run code on COSMA8, please compile on a COSMA8 login node.
+It should be noted that highly optimised code compiled on COSMA7 may not run on COSMA8, which does not support AVX-512 instructions. Therefore, if you need code to run on COSMA5, and are suffering from "illegal instructions", please try recompiling on COSMA5. Likewise, to run code on COSMA8, please compile on a COSMA8 login node.
 
 ## SWIFT
 

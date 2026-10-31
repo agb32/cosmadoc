@@ -27,7 +27,7 @@ COSMA has a number of GPU systems, which are available for use. These are:
   * gc[001-008]: 0-8x NVIDIA A30 GPUs, 0-4x NVIDIA V100 GPUs
 * gracehopper Slurm partition
   * gn003: NVIDIA Grace-Hopper (ARM) system
-* intelhopper Slurm partition
+* hardwarelab-gpu Slurm partition (night time; direct ssh during the day)
   * gn004: NVIDIA H100 GPU on X86 platform
 * mi300x, mi300x-prince partition: AMD MI300X system
   * ga007: 8x AMD MI300 GPUs

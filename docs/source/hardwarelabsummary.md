@@ -9,11 +9,11 @@ Last updated: 21/01/2026
 | A30 | 8x total | gc001-008 | Slurm | dine2 | do015 | CerIO (composable) | Draining |
 | A100 | 3x total | mad04-06 | Slurm / SSH | cosma8-shm | do016 | Liqid (composable) | ✓ |
 | GH200 | 2x | gn002-003 | Slurm / SSH | gracehopper | do016 | - | ✓ |
-| H100 NVL | 1x | gn004 | SSH | intelhopper (down) | do016 | - | ✓ (SSH only) |
+| H100 NVL | 1x | gn004 | SSH (day) / Slurm (night) | hardwarelab-gpu | do016 | - | ✓ |
 | MI100 | 1x | ga004 | Slurm | cosma8-shm2 | do018 | - | ✓ |
 | MI210 | 2x each | ga005-006 | Slurm | cosma8-shm2 | do018 | - | ga006 draining |
 | MI300X | 8x | ga007 | Slurm | mi300x | do018 | - | ✓ |
-| MI300A | 4x | ga008 | SSH | mi300a (down) | do018 | - | Down |
+| MI300A | 4x | ga008 | SSH (day) / Slurm (night) | mi300a, hardwarelab-gpu | do018 | - | ✓ |
 | PVC | 2x | gi001 | - | - | do017 | - | Dead |
 
 ## GPU Specifications (Theoretical)

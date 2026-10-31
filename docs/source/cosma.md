@@ -23,7 +23,7 @@ The login details are:
 - cosma7: login7.cosma.dur.ac.uk (round-robin to login7a, login7b and login7c)
 - cosma8: login8.cosma.dur.ac.uk (round-robin to login8a, login8b)
 
-All systems use a global slurm batch system. Submission to any queue (cosma, cosma7, cosma8, etc) can be done from any login node.
+All systems use a global slurm batch system. Submission to any queue (cosma5, cosma7, cosma8, etc) can be done from any login node.
 
 COSMA5 is no longer a DiRAC facility. Therefore, DiRAC users should use COSMA7 or 8 as appropriate for their project.
 

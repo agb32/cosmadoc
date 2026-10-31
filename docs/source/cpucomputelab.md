@@ -51,7 +51,7 @@ We have two systems with Intel Sapphire Rapids CPUs.
   
 ### Node access
 
-Our single node Sapphire Rapids system contins Ponte Vecchio GPUs (PVCs), though these are currently broken. Therefore, this node is currently available for direct ssh during the day (to gi001), and as part of the hardwarelab-cpu Slurm queue at night, for benchmarking and profiling jobs.
+Our single node Sapphire Rapids system contains Ponte Vecchio GPUs (PVCs), though these are currently broken. Therefore, this node is currently available for direct ssh during the day (to gi001), and as part of the hardwarelab-cpu Slurm queue at night, for benchmarking and profiling jobs.
 
 The DINE2 system can be accessed via the dine2 Slurm partition.
 
