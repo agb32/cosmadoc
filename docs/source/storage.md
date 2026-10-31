@@ -5,6 +5,7 @@ COSMA has multiple storage systems which include:
  - App space
  - Data space
  - Scratch space
+ - Temporary space
  - Archive space
  - Public space
 
@@ -23,6 +24,58 @@ There are multiple data spaces - typically named e.g. /cosma8.  Users typically 
 ## Scratch space
 
 There are multiple scratch spaces, ideal for simulation checkpointing data.  Typically at /snap*.  These file systems have no redundancy and are not backed up.  Therefore they should only be used for data that can be recreated.  These file systems have no user quota, and are cleaned out every 4 months.
+
+## Temporary space
+
+Every node has its own /tmp, which can only be seen from that node.  It works differently on login nodes and compute nodes:
+
+| Nodes | What /tmp is | Size | Can run programs from it? | Files are deleted after |
+| ----- | ------------ | ---- | ------------------------- | ----------------------- |
+| Login nodes, mad06 | Memory (tmpfs), shared by all users | 100GB | No | 3 days without changes |
+| Compute nodes, and other nodes for direct ssh | Local disk | 21GB to 1.4TB, see below | Yes | 10 days without use |
+| gn002, gn003 | Part of the system disk | 800GB, shared with the operating system | Yes | 10 days without use |
+
+Local disk sizes, measured on one node of each type in October 2026:
+
+| Size | Nodes |
+| ---- | ----- |
+| 21GB | cosma7-rp |
+| 43GB | cosma7, cosma8, bluefield1, cosma7-shm |
+| 88GB | cosma5, dine2, cosma8-shm, cosma8-shm2, cosma8-shm3, cosma8-ska, gn001, gn004, gn005 |
+| 177GB | mad11, mad12, ga008 |
+| 1.4TB | gi001 |
+
+Sizes can differ between nodes, so to see the size and free space on the node you are using, run `df -h /tmp`.
+
+There is no per-user quota on /tmp, so one user can fill it for everyone on that node.  For large temporary files, use your space on /cosma* or /snap* instead.
+
+### /tmp on login nodes
+
+Because /tmp is held in memory on login nodes, large files take memory from other users.  Programs in /tmp cannot be run, and fail with `Permission denied`.  If a tool needs to run something from its temporary directory, point it at your app space instead:
+
+```
+mkdir -p /cosma/apps/PROJECT/USERNAME/tmp
+export TMPDIR=/cosma/apps/PROJECT/USERNAME/tmp
+```
+
+### /tmp in batch jobs
+
+Slurm does not create a private temporary directory for each job, and does not set `TMPDIR`:
+
+- /tmp is shared with any other jobs on the node.
+- Files stay in /tmp when your job ends, so please delete them.
+- In a multi-node job, each node has a separate /tmp.
+
+To use a private directory that is removed when your job script exits, add this to your job script:
+
+```
+export TMPDIR=$(mktemp -d /tmp/$USER.XXXXXX)
+trap 'rm -rf "$TMPDIR"' EXIT
+```
+
+### /dev/shm
+
+/dev/shm is held in memory on every node, and is shared by all users.  In a batch job, files that you write there count towards your job's memory limit, so your job can be killed with an out of memory error if you do not request enough.  Files stay in /dev/shm when your job ends, so please delete them.
 
 ## Mounted filesystems
 
