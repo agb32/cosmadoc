@@ -39,6 +39,27 @@ Not all login and compute nodes mount all filesystems. The following table summa
 | /snap8     |         |       |         |       |    rw   |   rw  |
 | /cosma6    |   rw    |       |   rw    |       |    rw   |       |
 
+In these tables, rw means read and write, r means read-only, and a blank means that the file system is not available.  /cosma/home and /cosma/apps are available everywhere, including on the nodes below.
+
+Other nodes and queues:
+
+| Nodes                         | /cosma5 | /cosma7 | /cosma8 | /snap7 | /snap8 |
+| :---------------------------: | :-----: | :-----: | :-----: | :----: | :----: |
+| mad06, gn001, gn005, gi001    |   rw    |   rw    |   rw    |        |   rw   |
+| mad11, mad12, gn002           |   rw    |   rw    |   rw    |        |        |
+| gn004                         |   rw    |   rw    |   rw    |   rw   |   rw   |
+| ga008                         |         |   rw    |   rw    |        |        |
+| cosma8-shm, cosma8-shm2, cosma8-ska | rw |  rw    |   rw    |        |   rw   |
+| cosma7-shm                    |   rw    |   rw    |   rw    |   rw   |        |
+| dine2                         |         |   r     |   rw    |        |   rw   |
+| bluefield1, gracehopper       |   rw    |   rw    |   rw    |        |        |
+
+To check a file system on any other node, run this on that node.  It prints rw or ro, followed by other mount options, or nothing if the file system is not available:
+
+```
+findmnt -n -T /cosma7/data -o OPTIONS
+```
+
 # Archive space
 
 The tape archive is a good place for long-term storage and archival of data which is not actively required, or which you wish to back up.  To archive data to tape, please contact cosma-support.
