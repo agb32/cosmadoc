@@ -40,7 +40,7 @@ Movies related to COSMA and the work of the ICC
 
 [https://www.wired.it/article/supercomputer-origini-universo/](https://www.wired.it/article/supercomputer-origini-universo/)
 
-[https://magazine.intelligentdatacentres.com/intelligent-data-centres-issue-43/](https://magazine.intelligentdatacentres.com/intelligent-data-centres-issue-43/)
+https://magazine.intelligentdatacentres.com/intelligent-data-centres-issue-43/
 
 [https://www.theregister.com/2022/12/06/durham_uni_and_dell_cosma8/](https://www.theregister.com/2022/12/06/durham_uni_and_dell_cosma8/)
 
@@ -50,9 +50,9 @@ Movies related to COSMA and the work of the ICC
 
 [Durham and VAST](files/vastCaseStudy.pdf) and [here](https://www.vastdata.com/resources/success-stories/durham-university)
 
-[Immersion tank installation](https://vespertec.com/inside-durham-universitys-new-immersion-cooling-lab/)
+Immersion tank installation
 
-[Why immersion](https://vespertec.com/what-is-immersion-cooling-data-centre/)
+Why immersion
 
 ## News
 
