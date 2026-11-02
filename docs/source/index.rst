@@ -60,6 +60,7 @@ Contents
    :caption: SOFTWARE
 
    modules
+   modulelist
    data
    spack
    gitlab

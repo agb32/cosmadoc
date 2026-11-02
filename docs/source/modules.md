@@ -27,6 +27,20 @@ While loading some modules, their dependencies must be loaded as well. For insta
 
 If you do not have the right dependencies loaded, you will be warned, and the module will refuse to load.
 
+For example, `hdf5`, `parallel_hdf5` and `fftw` need a compiler to be loaded first, and `parmetis` also needs an MPI module:
+
+```
+module load gnu_comp/14.1.0 openmpi/5.0.3 parmetis/4.0.3
+```
+
+Some modules only appear after loading another one.  For example, `compiler`, `mpi`, `tbb` and `compiler-rt` only appear after loading `intel_comp`:
+
+```
+module load intel_comp/2025.3.0 compiler-rt tbb umf compiler mpi
+```
+
+For a list of what is installed, see the [list of modules](modulelist.md).
+
 For more information, type `man module` or go to the [project website](http://modules.sourceforge.net).
 
 If you are unsure what a good combination of modules is for a specific
