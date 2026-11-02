@@ -53,6 +53,7 @@ Contents
 
    account
    ssh
+   firstjob
    citizenship
 	     
 .. toctree::
@@ -78,6 +79,7 @@ Contents
    slurm
    queue
    system
+   jobproblems
 
 .. toctree::
    :maxdepth: 4
