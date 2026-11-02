@@ -29,9 +29,10 @@ You can have multiple virtual environments.  This allows you to install specific
 
 ### Using conda
 
-Virtual environments, as above, are usually simpler.  If you need conda, load a conda module, then set it up for your shell:
+Virtual environments, as above, are usually simpler.  If you need conda, load a conda module, then set it up for your shell.  This module cannot be loaded at the same time as a `python` module, so unload that first:
 
 ```
+module unload python
 module load python/conda3-2025.12
 eval "$(/cosma/local/anaconda3/202512/bin/conda shell.bash hook)"
 ```

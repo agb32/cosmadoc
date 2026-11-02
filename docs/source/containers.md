@@ -8,7 +8,7 @@ Apptainer is installed on the login nodes, but only on some compute nodes:
 | ----- | --------- |
 | `dine2`, `bluefield1`, `cosma8-ska` | Yes |
 | `gracehopper` | Yes, with images built for ARM |
-| `cosma5` | Yes |
+| `cosma5` | Installed, but running an image has not been tested |
 | `cosma8`, `cosma8-serial`, `cosma7`, `cosma7-rp`, `cosma7-shm` | No |
 
 This list comes from testing a sample of nodes in November 2026.  To check a node, run `command -v apptainer` in a job.  The older `apptainer` module in `old-modules` could not run images when tested.
