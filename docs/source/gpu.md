@@ -47,7 +47,7 @@ DiRAC allocated projects will have higher priority.
 
 To use a GPU available for direct login, just ssh to the node name given above.
 
-**Note:** Some GPU nodes are in a hybrid mode to allow for testing during office hours and production workloads during the night.  Further information is available in the motd of relevant nodes.
+**Note:** Some GPU nodes are in a hybrid mode to allow for testing during office hours and production workloads during the night.  Further information is available [here](hardwarelab-hybridnodes.md) and in the motd of relevant nodes.
 
 ## GPU stats
 
