@@ -14,13 +14,13 @@ groups
 
 Your project is usually one of these, for example `dp004`.  The queue depends on your project:
 
-| You are | Use this queue | Your data space |
-| ------- | -------------- | --------------- |
-| On a DiRAC project with COSMA8 time | `cosma8-serial` | /cosma8/data/PROJECT/USERNAME |
-| On a DiRAC project with COSMA7 time | `cosma7` | /cosma7/data/PROJECT/USERNAME |
-| A Durham user | `cosma5` | /cosma5/data/PROJECT/USERNAME |
+| You are | Queue (`-p`) | Project (`-A`) | Your data space |
+| ------- | ------------ | -------------- | --------------- |
+| On a DiRAC project with COSMA8 time | `cosma8-serial` | Your project, e.g. `dp004` | /cosma8/data/PROJECT/USERNAME |
+| On a DiRAC project with COSMA7 time | `cosma7` | Your project, e.g. `dp004` | /cosma7/data/PROJECT/USERNAME |
+| A Durham user | `cosma5` | `durham` | /cosma5/data/durham/USERNAME |
 
-The examples below use `cosma8-serial`, because it can run small jobs without taking a whole node.  On `cosma7`, each job takes a whole node, so also remove the `--mem` line.
+The examples below use COSMA8.  If you are using another row of the table, change the directory and the `-p` and `-A` lines to match.  On `cosma7`, each job takes a whole node, so your project is charged for all 28 CPUs, even for this small job.
 
 ## 2. Make a directory
 
@@ -31,7 +31,7 @@ mkdir -p /cosma8/data/PROJECT/$USER/firstjob
 cd /cosma8/data/PROJECT/$USER/firstjob
 ```
 
-Replace `PROJECT` with your project.
+Replace `PROJECT` with your project, in this step and the next.
 
 ## 3. Write a job script
 

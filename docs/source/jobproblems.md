@@ -20,7 +20,7 @@ The `seff` command is not installed on COSMA.
 | `FAILED` | e.g. `3:0` | The script ended with an error | Read the `.err` and `.out` files |
 | `OUT_OF_MEMORY` | `0:125` | The job used more memory than it requested | Request more with `--mem` |
 | `TIMEOUT` | `0:0` | The job reached its time limit | Request more time with `-t`, or save progress and restart |
-| `CANCELLED` | `0:0` | The job was cancelled | This also happens to jobs whose dependencies fail |
+| `CANCELLED` | `0:0` | The job was cancelled, for example with `scancel` | Check who cancelled it: `sacct` shows the user ID.  This also happens to a job with `--kill-on-invalid-dep=yes` if its dependency fails |
 | `NODE_FAIL` | | A node failed | Resubmit the job, and contact us if it keeps happening |
 
 The exit code has two parts, the exit code of the script and the number of the signal that stopped it.  Note that a batch script reports the exit code of its last command.  To stop at the first failure, put `set -e` near the top of your script.
@@ -60,6 +60,7 @@ Your job was submitted from a directory that does not exist on its compute node.
 | `You need to specify a maximum runtime (-t)` | Add a time limit with `-t` |
 | `A partition is required (-p)` | Add a queue with `-p` |
 | `You are not a member of the dpXXX group.` | Check the project name, using `groups` |
+| `Invalid account or account/partition combination specified` | Your project cannot use this queue |
 | `invalid partition specified: NAME` | Check the queue name, using `sinfo -s` |
 | `Requested time limit is invalid (missing or exceeds some limit)` | The time limit is too long for the queue, which is usually 3 days |
 | `Requested node configuration is not available` | No node on this queue can satisfy the request, for example too many CPUs or too much memory on one node |
@@ -75,6 +76,7 @@ For a pending job, `squeue --me` shows the reason in brackets at the end of the 
 | `Priority` | Other jobs have a higher priority |
 | `Resources` | Your job is next, and is waiting for nodes to become free |
 | `Dependency` | Your job is waiting for another job to finish |
+| `DependencyNeverSatisfied` | A job that yours depends on failed, so it will never start.  Cancel it with `scancel JOBID` |
 | `JobHeldUser` | Your job is on hold, so use `scontrol release JOBID` |
 | `ReqNodeNotAvail` | A node that your job needs is not available, for example because it is reserved |
 
