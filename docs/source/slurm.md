@@ -2,6 +2,8 @@
 
 COSMA has a set of integrated batch queues that are managed by Slurm Workload Manager job scheduler. Jobs are ran by the scheduler after submission to the appropriate queue. Which queue to submit your jobs to depends on the projects you are working on, if in doubt about this ask your project lead, supervisor, co-workers or email cosma-support@durham.ac.uk.  For a more indepth discussion of job priorities and how Slurm is configured, please see [here](slurmdetail.md)
 
+New to Slurm?  See [your first job](firstjob.md).  See also [sbatch options](sbatch.md) and [useful Slurm features](slurmtips.md).
+
 Common commands:
 
 * ```sbatch my_scriptc.sh```: submits my_scripts.sh to the queue. Job configuration can be done by command-line flags
