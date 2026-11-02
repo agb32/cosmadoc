@@ -60,9 +60,9 @@ Contents
    :caption: SOFTWARE
 
    modules
-   modulelist
    data
    spack
+   modulelist
    gitlab
    python
    jupyter
