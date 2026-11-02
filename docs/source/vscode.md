@@ -39,7 +39,9 @@ Host cosma8
     ControlPersist 8h
 ```
 
-Test it from a normal terminal with `ssh cosma8`.  The ControlMaster lines share [one connection](ssh.md#reusing-ssh-connections) between your terminals and VS Code, so that you only need to authenticate once per session.  They are not supported by the SSH client included with Windows, so leave them out if you are using Windows.
+Test it from a normal terminal with `ssh cosma8`.  The ControlMaster lines share [one connection](ssh.md#reusing-ssh-connections) between your terminals and VS Code, so that you only need to authenticate once per session.  They are not supported by the SSH client included with Windows, so leave them out if you are using Windows, and expect to enter your password more often.  Take care, because too many failed logins will get you banned.
+
+`login8` picks one of the two COSMA8 login nodes.  To always use the same one, use `login8a` or `login8b` for the HostName.
 
 ## Configure VS Code
 
@@ -54,7 +56,7 @@ VS Code will establish an SSH connection and install its remote components on th
 
 A new VS Code window will open. The bottom-left corner should indicate that you are connected to the remote machine.
 
-VS Code needs to ask for your passphrase and password.  If you do not see a prompt, turn on `remote.SSH.showLoginTerminal` in your local VS Code settings, so that the login appears in a terminal.
+You will need to enter your passphrase and password.  If you do not see a prompt for them, turn on `remote.SSH.showLoginTerminal` in your local VS Code settings, so that the login appears in a terminal.
 
 If you get your VS Code setup wrong, it will repeatedly try to access COSMA, fail, and you will quickly be banned after a few failed attempts.  This ban is initially temporary (10-15 minutes), but if you are repeatedly banned, you will then automatically be placed under a permanent ban.  If this is the case, fix your setup, and then contact cosma-support to get yourself unbanned.
 
