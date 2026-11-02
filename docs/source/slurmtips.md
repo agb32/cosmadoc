@@ -56,6 +56,8 @@ Slurm stops your job when it reaches its time limit.  To write a checkpoint firs
 
 ```
 #!/bin/bash -l
+#SBATCH -p cosma8-serial
+#SBATCH -A PROJECT
 #SBATCH --signal=B:USR1@300
 #SBATCH -t 12:00:00
 
@@ -128,4 +130,4 @@ Please exit as soon as you have finished.  An idle interactive job wastes resour
 
 - `seff` is not installed.  Use `sacct` instead: see [when a job goes wrong](jobproblems.md).
 - `scrontab`, for scheduled jobs, is disabled.
-- Jobs are not restarted automatically after a failure unless you use `--requeue`.
+- Jobs are not restarted after a node failure unless you use `--requeue`.

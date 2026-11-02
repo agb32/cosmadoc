@@ -124,7 +124,7 @@ File names can use these patterns:
 | `--time-min` | `--time-min=06:00:00` | Accept a shorter time limit if this means that the job starts sooner |
 | `--nice` | `--nice=100` | Lower the priority of your job, to let others go first |
 | `--signal` | `--signal=B:USR1@300` | Send a signal before the time limit: see [saving work](slurmtips.md#saving-work-before-the-time-limit) |
-| `--requeue` | | Allow the job to be restarted automatically after a failure.  This is off by default on COSMA |
+| `--requeue` | | Allow the job to restart from the beginning after a node failure.  This is off by default on COSMA, and does not apply if your program fails |
 
 ## Other useful options
 
