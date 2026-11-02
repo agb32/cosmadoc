@@ -63,13 +63,13 @@ New files use a single disk by default.  To get the best speed, set the striping
 
 Every node has its own /tmp, which can only be seen from that node.  It works differently on login nodes and compute nodes:
 
-| Nodes | What /tmp is | Size | Can run programs from it? | Files are deleted after |
-| ----- | ------------ | ---- | ------------------------- | ----------------------- |
-| Login nodes, mad06 | Memory (tmpfs), shared by all users | 100GB | No | 3 days without changes |
-| Compute nodes, and other nodes for direct ssh | Local disk | 21GB to 1.4TB, see below | Yes | 10 days without use |
-| gn002, gn003 | Part of the system disk | 800GB, shared with the operating system | Yes | 10 days without use |
+| Nodes | What /tmp is | Size | Can run programs from it? | Unused files are deleted after |
+| ----- | ------------ | ---- | ------------------------- | ------------------------------ |
+| Login nodes, mad06 | Memory (tmpfs), shared by all users | 100GB | No | 3 days |
+| Compute nodes, and other nodes for direct ssh | Local disk | 21GB to 1.4TB, see below | Yes | 10 days |
+| gn002, gn003 | Part of the system disk | 800GB, shared with the operating system | Yes | 10 days |
 
-Local disk sizes, measured on one node of each type in October 2026:
+Local disk sizes, measured on a sample of nodes in late 2026:
 
 | Size | Nodes |
 | ---- | ----- |
@@ -145,10 +145,10 @@ Other nodes and queues:
 | dine2                         |         |   r     |   rw    |        |   rw   |
 | bluefield1, gracehopper       |   rw    |   rw    |   rw    |        |        |
 
-To check a file system on any other node, run this on that node.  It prints rw or ro, followed by other mount options, or nothing if the file system is not available:
+To check a file system on any other node, run this on that node, using /cosma5, /cosma7, /cosma8, /snap7 or /snap8.  It prints rw or ro, followed by other mount options, or nothing if the file system is not available:
 
 ```
-findmnt -n -T /cosma7/data -o OPTIONS
+findmnt -n -M /cosma7 -o OPTIONS
 ```
 
 ## Archive space
