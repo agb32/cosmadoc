@@ -112,7 +112,7 @@ COSMA6 was retired in April 2023 after 11 years of service.
 
 ## COSMA5 queues: cosma5, cosma5-test
 
-Access to the Durham COSMA5 machine is provided using the cosma5 queue. This queue is comprised of the new (2024, 2025) COSMA5 nodes, a total of 8 nodes each with 256 cores and 1.5TB RAM.  This partition is non-exclusive, i.e. jobs will share a node with other jobs.  The `--exclusive` flag is ignored: to have a node to yourself, request all 256 cores.  You are therefore advised to explicitly request the amount of RAM your job will use, otherwise a default of around 6GB per core will be allocated.
+Access to the Durham COSMA5 machine is provided using the cosma5 queue. This queue is comprised of the new (2024, 2025) COSMA5 nodes, a total of 8 nodes each with 256 cores and 1.5TB RAM.  This partition is non-exclusive, i.e. jobs will share a node with other jobs.  The `--exclusive` flag is ignored: to have a node to yourself, request all 256 cores.  You are therefore advised to explicitly request the amount of RAM your job will use, otherwise a default of around 4GB per core will be allocated.
 
 These compute nodes are different from the COSMA5 login node, in both hardware and the file systems available: see [the comparison](facilities.md#the-cosma5-login-node-and-compute-nodes-are-different).
 
