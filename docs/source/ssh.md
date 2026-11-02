@@ -204,7 +204,7 @@ more generous and is currently set by default to 10 TB.
 
 You also have 100GB at /cosma/apps/ which can be used for software
 installation, Python virtual environments, etc.  This is not backed
-up, but has hourly snapshots, which are kept for around a week.
+up, but has daily snapshots, which are kept for around 10 days.
 
 ## COSMA8 / COSMA7 / COSMA5 Differences
 
