@@ -56,7 +56,7 @@ The Intel modules seem to have a bug which prevents them from unloading properly
 
 ## mvapich
 
-This is not regularly tested.
+This is not regularly tested, and the recipe below no longer works, because `mvapich2` will not load.  Please contact cosma-support if you need it.
 
 ```
     module purge

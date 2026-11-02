@@ -79,7 +79,7 @@ It is currently comprised of:
 - 1 AMD GPU node with 6 MI50 GPUs (32GB), 1TB RAM, dual 16-core AMD EPYC 7282 processors at 2.8GHz
 - 1 AMD Milan node with a MI100 GPU, 1TB RAM, dual 64-core AMD EPYC Milan 7713 processors at 2GHz
 - 2 AMD Milan nodes with 2x MI200 GPUs each, 1TB RAM, dual 64-core processors
-- 1 NVIDIA GPU node with 10 V100 GPUs (32GB), 768GB RAM, dual Intel Xeon Gold 5218 processors at 2.3GHz
+- 1 NVIDIA GPU node with 6 V100 GPUs (32GB), 768GB RAM, dual Intel Xeon Gold 5218 processors at 2.3GHz
 - 2 console nodes with a single 16-core AMD EPYC 7302 processor at 3GHz and 256GB RAM
 
 The interconnect is Mellanox HDR, 200GBit/s, with a non-blocking fat tree topology.
