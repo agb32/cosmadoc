@@ -64,6 +64,7 @@ Contents
    spack
    gitlab
    python
+   containers
    jupyter
    mpi
    lustre
