@@ -56,7 +56,7 @@ The Intel modules seem to have a bug which prevents them from unloading properly
 
 ## mvapich
 
-This is not regularly tested, and the recipe below no longer works, because `mvapich2` will not load.  Please contact cosma-support if you need it.
+This is not regularly tested, and the recipe below no longer works.  There is no `mvapich2` module, and `mvapich2_mpi/2.3.7-1` does not load with `intel_comp/2018`.  Please contact cosma-support if you need it.
 
 ```
     module purge
