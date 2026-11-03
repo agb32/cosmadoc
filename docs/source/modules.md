@@ -39,7 +39,7 @@ Some modules only appear after loading another one.  For example, `compiler`, `m
 module load intel_comp/2025.3.0 compiler-rt tbb umf compiler mpi
 ```
 
-For a list of what is installed, see the [list of modules](modulelist.md).
+For a list of what is installed, and which compiler and MPI modules each library works with, see the [list of modules](modulelist.md#what-to-load-first).
 
 For more information, type `man module` or go to the [project website](http://modules.sourceforge.net).
 
