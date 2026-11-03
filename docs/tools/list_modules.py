@@ -194,14 +194,17 @@ def describe(commands):
 def write_dependencies(deps, failed):
     print("## What to load first\n")
     print("Many libraries can only be loaded after a compiler, and some also need an MPI "
-          "module.  Choose a version below to see the combinations that work, and the "
-          "command that loads them.  Each combination was tested when this page was "
+          "module.  For each library below, find your version to see the combinations "
+          "that work, and the command that loads them.  Each combination was tested when this page was "
           "generated.\n")
     for name in sorted(deps, key=str.lower):
         versions = deps[name]
         total = sum(len(v) for v in versions.values())
-        print(f'<details id="dep-{name}"><summary><code>{html.escape(name)}</code>: '
-              f'{len(versions)} versions, {total} combinations</summary>\n')
+        plural = "s" if total != 1 else ""
+        print(f'<div class="module-deps" id="dep-{name}">\n')
+        print(f'<h3><code>{html.escape(name)}</code></h3>\n')
+        print(f"<p>{len(versions)} version{'s' if len(versions) != 1 else ''}, "
+              f"{total} combination{plural}.</p>\n")
         print('<table class="docutils"><thead><tr><th>Version</th><th>Compiler</th><th>MPI</th>'
               "<th>Command</th></tr></thead><tbody>")
         for version in sorted(versions, key=version_key, reverse=True):
@@ -217,7 +220,7 @@ def write_dependencies(deps, failed):
         if failed.get(name):
             print(f"<p>{failed[name]} older builds could not be loaded with the current "
                   "modules, so they are not shown.</p>\n")
-        print("</details>\n")
+        print("</div>\n")
 
 
 def main():
