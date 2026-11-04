@@ -30,7 +30,7 @@ An example slurm script targeting the RTX6000 might look like this:
 ```sh
 #!/bin/bash
 
-#SBATCH -J job_name
+#SBATCH -j job_name
 #SBATCH -o standard_out.%J.out
 #SBATCH -e standard_err.%J.err
 #SBATCH -p hardwarelab-gpu
