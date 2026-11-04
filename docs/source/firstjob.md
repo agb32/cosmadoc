@@ -144,7 +144,7 @@ If you see anything else, see [when a job goes wrong](jobproblems.md).
 ## What next?
 
 - [Useful Slurm features](slurmtips.md), such as running many similar jobs
-- [Example job scripts](slurm.md#example-scripts-and-command-usage), including MPI jobs
+- [Example job scripts](slurm.md#example-job-scripts), including MPI jobs
 - [GPU jobs](gpujobs.md)
 - [Storage](storage.md), to decide where your data should go
 - [Modules](modules.md), to load compilers and libraries
