@@ -64,7 +64,7 @@ To use NVIDIA GPUs inside a container, add `--nv`:
 apptainer exec --nv myimage.sif nvidia-smi
 ```
 
-For AMD GPUs, use `--rocm` instead.  The GPU must also be requested as usual: see [GPU jobs](gpujobs.md).
+For AMD GPUs, use `--rocm` instead.  The GPU must also be requested as usual: see [GPUs](gpu.md).
 
 ## ARM nodes
 
