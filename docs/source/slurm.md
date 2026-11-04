@@ -75,11 +75,12 @@ After the job has finished, you can run `sh5util -j JOBID` to concatenate all th
     #SBATCH -J job_name #Give it something meaningful.
     #SBATCH -o standard_output_file.%J.out
     #SBATCH -e standard_error_file.%J.err
-    #SBATCH -p cosma7 #or some other partition, e.g. cosma5, cosma8, etc.
+    #SBATCH -p cosma7 #or some other partition, e.g. cosma, cosma8, etc.
     #SBATCH -A project #e.g. dp004
     #SBATCH --exclusive
     #SBATCH -t 72:00:00
-    #SBATCH --mail-type=END,FAIL # notifications for job done or failed
+    #SBATCH --mail-type=END # notifications for job done &
+    fail
     #SBATCH --mail-user=<email address> #PLEASE PUT YOUR EMAIL ADDRESS HERE (without the <>)
 
     module purge
@@ -136,9 +137,9 @@ For COSMA7 (28 cores per node):
 
     #SBATCH --cpus-per-task=14
 
-For COSMA5 (256 cores per node):
+For COSMA5 (16 cores per node):
 
-    #SBATCH --cpus-per-task=128
+    #SBATCH --cpus-per-task=8
 
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
@@ -201,10 +202,9 @@ There is also an example Slurm submission script in /cosma/home/sample-user/slur
 
 To use fewer than all cores in a node, with a multiple node job, use something like:
 
-(e.g. for cosma7, which has 28 cores per node, to run 8 MPI ranks per node with 2 cores for each, on 32 nodes)
+(e.g. for cosma6, requiring 256 MPI tasks (but 512 cores), on 32 nodes, so 8 MPI ranks per node - cosma6 has 16 cores per node)
 
-> #SBATCH --nodes=32
-> #SBATCH --ntasks-per-node=8
+> #SBATCH --ntasks=256
 > #SBATCH --cpus-per-task=2
 
 
