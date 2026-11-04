@@ -78,6 +78,8 @@ Contents
    :caption: RUNNING JOBS
 
    slurm
+   sbatch
+   slurmtips
    queue
    system
    jobproblems
