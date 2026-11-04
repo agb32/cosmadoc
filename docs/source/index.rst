@@ -65,6 +65,7 @@ Contents
    modulelist
    gitlab
    python
+   containers
    jupyter
    mpi
    lustre
