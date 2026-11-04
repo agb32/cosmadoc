@@ -605,11 +605,11 @@ module avail
 
 Many of these programs no longer run, because they need system libraries that Rocky Linux 9 does not have.  Please use a current module if there is one, and test an old one before relying on it.  This table shows what was found when this page was generated:
 
-- 55 load, and no missing libraries were found.
+- 61 load, and no missing libraries were found.
 - 18 load, but their main program cannot run.
-- 20 load, but some of their programs are missing system libraries.  These may still work, if the programs you need are not affected.
-- 8 load, but their files are not installed.
-- 8 do not load.
+- 19 load, but some of their programs are missing system libraries.  These may still work, if the programs you need are not affected.
+- 9 load, but their files are not installed.
+- 2 do not load.
 - 36 combinations of modules that need a compiler load: see [what to load first](#older-modules-that-need-a-compiler).
 
 Loading a module and finding no missing libraries does not guarantee that a program works.  The check only covers programs that the module adds to your PATH.
@@ -631,11 +631,10 @@ Loading a module and finding no missing libraries does not guarantee that a prog
 | `casa` | 4.3.1 | Loads, but its files are not installed |  |
 | `cmake` | 3.11.4, 3.18.1, 3.25.1, 3.28.3 | No programs can run: all are missing system libraries, such as `libcrypto.so.10`, `libncurses.so.5`, `libssl.so.10` |  |
 | `cosma` | 2018 | 1 of 49 programs are missing system libraries, such as `libjasper.so.1` | `cosma/2024` |
-| `cuda` | 12.1, 12.3 | Loads, but its files are not installed | `cuda` |
-| `cuda` | 10.1 | 23 of 137 programs are missing system libraries, such as `libcublas.so.10`, `libglut.so.3`, `libncurses.so.5` |  |
+| `cuda` | 12.1, 12.3, latest | Loads, but its files are not installed | `cuda` |
+| `cuda` | 10.1 | 42 of 137 programs are missing system libraries, such as `libcublas.so.10`, `libcuda.so.1`, `libglut.so.3` |  |
 | `cuda` | 10.2 | 1 of 26 programs are missing system libraries, such as `libncurses.so.5` |  |
 | `cuda` | 11.2 | 1 of 32 programs are missing system libraries, such as `libncursesw.so.5`, `libtinfo.so.5` |  |
-| `cuda` | latest | 4 of 32 programs are missing system libraries, such as `libpython3.10.so.1.0`, `libpython3.11.so.1.0`, `libpython3.12.so.1.0` |  |
 | `esoreflex` | 2.11.0 | 25 of 44 programs are missing system libraries, such as `libcfitsio.so.8`, `libffi.so.6`, `libnsl.so.1` | `esoreflex` |
 | `ffmpeg` | 4.0.2, 6.0 | Loads, and no missing libraries were found | `ffmpeg` |
 | `gadgetviewer` | 1.1.2, 1.1.3 | No programs can run: all are missing system libraries, such as `libpng15.so.15` | `gadgetviewer` |
@@ -667,7 +666,7 @@ Loading a module and finding no missing libraries does not guarantee that a prog
 | `maqao` | 2.14.0, 2.14.1, 2.17.0 | Loads, and no missing libraries were found | `maqao` |
 | `mplayer` | 1.3.0 | No programs can run: all are missing system libraries, such as `libgnutls.so.28`, `libmng.so.1`, `libncurses.so.5` | `mplayer` |
 | `muse` | 2.4.1 | 22 of 35 programs are missing system libraries, such as `libnsl.so.1` | `muse` |
-| `must` | 1.7.0/gnu_7.3.0_intel_mpi_2018, 1.7.0/gnu_7.3.0_intel_mpi_2018-dyninst, 1.7.0/gnu_7.3.0_intel_mpi_2020-update2, 1.7.0/gnu_7.3.0_intel_mpi_2020-update2-dyninst, 1.7.0/gnu_10.2.0_ompi_4.0.5, 1.7.0/gnu_10.2.0_ompi_4.0.5-dyninst | Does not load | `must` |
+| `must` | 1.7.0/gnu_7.3.0_intel_mpi_2018, 1.7.0/gnu_7.3.0_intel_mpi_2018-dyninst, 1.7.0/gnu_7.3.0_intel_mpi_2020-update2, 1.7.0/gnu_7.3.0_intel_mpi_2020-update2-dyninst, 1.7.0/gnu_10.2.0_ompi_4.0.5, 1.7.0/gnu_10.2.0_ompi_4.0.5-dyninst | Loads, and no missing libraries were found | `must` |
 | `nvhpc` | 23.11 | Loads, and no missing libraries were found | `nvhpc` |
 | `nvhpc` | 20.7 | 1 of 99 programs are missing system libraries, such as `libncurses.so.5` |  |
 | `nvhpc` | 21.5 | 1 of 100 programs are missing system libraries, such as `libncursesw.so.5`, `libtinfo.so.5` |  |
