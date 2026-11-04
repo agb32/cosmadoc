@@ -62,6 +62,7 @@ Contents
    modules
    data
    spack
+   modulelist
    gitlab
    python
    jupyter

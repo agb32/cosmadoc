@@ -250,6 +250,26 @@ locally developed scripts.
 
 SLURM commands such as squeue and sview will tell you this.
 
+## How do I check my project's allocation?
+
+Use `mybalance` on a login node to see how much of the current quarter's
+allocation your DiRAC projects have used. `dirac-query-allocation` is the same
+command under a longer name. Like `quota`, it needs the cosma module.
+
+```
+mybalance                 # all of your projects, on all systems
+mybalance cosma8          # one system
+mybalance -p dpXXX cosma8 # one project
+mybalance -q cosma8       # every quarter, not just the current one
+mybalance -h              # all options
+```
+
+The system can be `cosma7`, `cosma8`, `highram`, `dine`, `cosma8dine2` or
+`cosma8mi300x`. Allocations are reported in CPU hours, except for `dine` and
+`cosma8dine2` (kWh) and `cosma8mi300x` (GPU hours).
+
+COSMA5 is not listed, because DiRAC does not award allocations on it.
+
 ## What is "backfill"? How do I exploit this?
 
 If a large (many node) job is waiting to run, it cannot start until enough
@@ -258,8 +278,87 @@ be used as "backfill" for short jobs. To use this, submit your job as usual,
 and if the system deems it appropriate, it will schedule you quickly. To make
 best use of this, specify a short time period for your job.
 
-The c[5,7,8]backfill command (e.g. c5backfill) will show available nodes for
-backfilling.
+The backfill commands show which nodes are free now, and for how long a job
+could run on them:
+
+| Queue | Command | Nodes | CPUs per node | Shows partly used nodes? |
+| ----- | ------- | ----- | ------------- | ------------------------ |
+| cosma5 | `c5backfill` | 8 | 256 | Yes |
+| cosma7 | `c7backfill` | 220 | 28 | No |
+| cosma7-rp | `c7rpbackfill` | 222 | 28 | No |
+| cosma8 | `c8backfill` | 527 | 128 | Yes |
+| dine2 | `dine2backfill` | 8 | 64 | Yes |
+| bluefield1 | `bluefield1backfill` | 18 | 32 | No |
+
+Slurm counts each physical core as one CPU on these queues, so a cosma8 node
+has 128 CPUs even though Linux tools such as `nproc` report 256.
+
+The commands report two kinds of window:
+
+- **Exclusive node windows** are nodes that are completely free. "No.
+  hosts/slots" gives the number of nodes, then the number of CPUs on them.
+- **Serial-only backfill windows** are free CPUs on nodes that are partly in
+  use. Jobs can only use these on a queue that shares nodes, such as
+  cosma8-serial, cosma5 or dine2.
+
+To use a window, set your job's time limit (`-t`) to less than the runtime
+shown.
+
+## What if my job does not need a whole node?
+
+The cosma7 and cosma8 queues give each job whole nodes, so a job that uses 1 CPU
+is still charged for the whole node.  The options depend on the system:
+
+- **COSMA8:** use the cosma8-serial queue.  It uses the same 527 nodes as cosma8,
+  but only reserves the CPUs that you request, and other jobs can run on the
+  same node.  Each CPU gets 8GB of memory unless you request a different amount
+  with `--mem`, up to a full node of 128 CPUs and 1TB.
+- **COSMA7:** there is no serial queue.  Either run several tasks inside one
+  job so that you use all 28 CPUs, or use the cosma7-shm queue described below.
+- **COSMA5:** the cosma5 queue already shares nodes.  Each CPU gets 4GB of memory
+  by default.  You can request more with `--mem`, but Slurm may add CPUs to your
+  job to match, and these count towards your usage: for example, a 1 CPU job that
+  requests 24GB gets 5 CPUs.
+
+For example, to run on 4 CPUs of a COSMA8 node with 32GB of memory:
+
+```
+#SBATCH -A dpXXX
+#SBATCH -p cosma8-serial
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+#SBATCH -t 12:00:00
+```
+
+## What are the shm queues?
+
+The shm queues are small queues of nodes with unusual hardware, mostly with far
+more memory per CPU than the main queues.  Use them when a job needs a lot of
+memory on one node, rather than many nodes.
+
+| Queue | Node | CPUs | RAM | Default RAM per CPU | Other hardware |
+| ----- | ---- | ---- | --- | ------------------- | -------------- |
+| cosma7-shm | mad01 | 56 | 3TB | 13.6GB | |
+| cosma7-shm | mad02 | 112 | 1.5TB | 13.6GB | |
+| cosma7-shm2 | mad03 | 48 | 6TB | 46GB | |
+| cosma8-shm | mad04, mad05 | 128 | 4TB | 32GB | NVIDIA A100 GPUs |
+| cosma8-shm2 | ga004 | 128 | 1TB | 8GB | AMD MI100 GPU |
+| cosma8-shm2 | ga006 | 64 | 1TB | 8GB | AMD MI210 GPUs |
+| cosma8-shm3 | mad08, mad09 | 192 | 768GB | 4GB | |
+
+These queues work differently from the main queues:
+
+- They share nodes, so other jobs can run alongside yours.  Your job only
+  reserves the CPUs and memory that it requests.
+- Please request the memory that you need with `--mem`, because the default
+  depends on the queue, as shown above.
+- The maximum run time is 3 days.
+- If your DiRAC project is over budget, jobs on these queues are not moved to a
+  -pauper queue.
+
+cosma7-shm2 is only available to the durham and do025 groups.  See the
+[list of queues](queue.md) for more about each one.
 
 ## I want to analyse a simulation, but need a lot of memory: how do I do this?
 

@@ -16,6 +16,8 @@ Common commands:
 * ```slurmnodeprop```: summarise the properties of nodes or queues (use -h for more details)
 * ```sreport```: report on usage
 * ```sprio```: Show priority calculations
+* ```mybalance```: show your projects' usage of their allocations (see the [FAQ](faq.md#how-do-i-check-my-project-s-allocation))
+* ```c8backfill```: show which nodes are free now, and for how long (see the [FAQ](faq.md#what-is-backfill-how-do-i-exploit-this) for other queues)
 
 Example submission script examples can be found in the ```/cosma/home/sample-user``` directory.
 
