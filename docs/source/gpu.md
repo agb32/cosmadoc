@@ -45,7 +45,7 @@ To use the GPUs which are in a Slurm partition, you must either be part of a DiR
 
 DiRAC allocated projects will have higher priority.
 
-To use a GPU available for direct login, just ssh to the node name given above.
+To use a GPU available for direct login, just ssh to the node name given above.  To use one in a batch job, see [GPU jobs](gpujobs.md).
 
 **Note:** Some GPU nodes are in a hybrid mode to allow for testing during office hours and production workloads during the night.  Further information is available [here](hardwarelab-hybridnodes.md) and in the motd of relevant nodes.
 

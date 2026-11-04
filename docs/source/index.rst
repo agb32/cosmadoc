@@ -90,6 +90,7 @@ Contents
 
    hardwarelab  
    gpu
+   gpujobs
    rockportlab
    dine
    dine2
