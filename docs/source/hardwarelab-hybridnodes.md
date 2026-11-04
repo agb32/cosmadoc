@@ -4,13 +4,13 @@ Some nodes that are part of the [Hardware Lab](hardwarelab.md) switch between in
 
 ## Interactive
 
-From 08:00 until 18:00 (UK time), the nodes are interactive and can be used for development or testing.  Access is available over ssh from a login node, provided you are part of an eligible [group](gpu.md#project-codes).
+From 08:00 until 19:00 (UK time), the nodes are interactive and can be used for development or testing.  Access is available over ssh from a login node, provided you are part of an eligible [group](gpu.md#project-codes).
 
 The nodes are a shared resource during this time, so please avoid large or long-running jobs that could prevent other users from making use of the resource.  Instead, run small proof-of-concept jobs and then submit larger jobs to the batch queue.
 
 ## Batch queue
 
-From 18:00 until 08:00 the following day (UK time), the nodes become part of either the hardwarelab-cpu or hardwarelab-gpu slurm queue.  There is no interactive access to the nodes during this time.
+From 19:00 until 08:00 the following day (UK time), the nodes become part of either the hardwarelab-cpu or hardwarelab-gpu slurm queue.  There is no interactive access to the nodes during this time.
 
 This provides an opportunity to run uninterrupted production workloads or benchmarks on the lab hardware.
 
