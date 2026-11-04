@@ -17,6 +17,10 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
+.. warning::
+
+   There is currently an issue with Globus
+
 .. note::
 
    COSMA is in an :doc:`draperperiod`.
