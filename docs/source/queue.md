@@ -5,7 +5,7 @@ A list of available queues can be found using the `sinfo -a -s` command.  Partit
 
 | Partition | Nodes | Node details | GPU info | Network | Comments |
 | --------- | ----- | ------------ | -------- | ------- | -------- |
-| cosma8    | 527, m8001-m8527   | 128 cores, 1TB | No | HDR 200g | Variants: -rome, -milan, -prince, -pauper, -serial |
+| cosma8    | 528, m8001-m8528   | 128 cores, 1TB | No | HDR 200g | Variants: -rome, -milan, -prince, -pauper, -serial |
 | cosma7    | 220, m7229-m7448  | 28 cores, 512GB | No | EDR 100g | Variants: -prince, -pauper |
 | cosma7-rp | 222, m7001-m7222  | 28 cores, 512GB | No | Rockport 100g | Variants: -prince, -pauper |
 | cosma8-shm | 2, mad04,05 | 128 cores, 4TB | Up to 3x A100 | HDR 200g | Composible fabric |
@@ -28,7 +28,7 @@ A list of available queues can be found using the `sinfo -a -s` command.  Partit
 | mi300x | See cosma8-draper |
 
 Nodes available for direct SSH (from a login node), for prototyping etc:
-* gn002 - Grace Hopper, cf gracehopper partition
+* gn002 - Grace Hopper, cf gracehopper parttion
 * mad06 - 128 cores, 1TB RAM, Milan-X (large cache), part of the cosma8-shm composible fabric with up to 3 A100 GPUs
 * ga008 - 96 cores, 500G, 4x AMD MI300A GPUs
 
@@ -89,7 +89,7 @@ The cosma8-highram queue uses the same nodes as the cosma8-shm queue, but is for
 
 ## COSMA7 queues: cosma7, cosma7-rp, -pauper and -prince
 
-Access to the DiRAC COSMA7 machine is provided using the two queues cosma7 and cosma7-rp (and their increased or reduced priority versions, cosma7-pauper, cosma7-prince, cosma7-rp-pauper and cosma7-rp-prince). These two queues provide access to half of COSMA7, with 220 and 222 nodes respectively.  cosma7 uses a 100Gbit/s InfiniBand fabric, while cosma7-rp uses a 100Gbit/s Rockport Ethernet fabric (6D torus topology).
+Access to the DiRAC COSMA7 machine is provided using the two queues cosma7 and cosma7-rp (and their increased or reduced priority versions, cosma7-pauper, cosma7-prince, cosma7-rp-pauper and cosma7-rp-prince). These two queues provide access to half of COSMA7, with 224 nodes in each.  cosma7 uses a 100Gbit/s InfiniBand fabric, while cosma7-rp uses a 100Gbit/s Rockport Ethernet fabric (6D torus topology).
 
 All the queues are configured so that job exclusive access to nodes is enforced. This means that no jobs share a compute node. Therefore, if you only need a single core, your project allocation will still be charged for using 28 cores.
 
@@ -110,11 +110,9 @@ The pauper and prince variations of the queues share the same resources so the o
 
 COSMA6 was retired in April 2023 after 11 years of service.
 
-## COSMA5 queues: cosma5, cosma5-test
+## COSMA5 queues: cosma5, cosma-test
 
-Access to the Durham COSMA5 machine is provided using the cosma5 queue. This queue is comprised of the new (2024, 2025) COSMA5 nodes, a total of 8 nodes each with 256 cores and 1.5TB RAM.  This partition is non-exclusive, i.e. jobs will share a node with other jobs.  The `--exclusive` flag is ignored: to have a node to yourself, request all 256 cores.  You are therefore advised to explicitly request the amount of RAM your job will use, otherwise a default of around 4GB per core will be allocated.
-
-These compute nodes are different from the COSMA5 login node, in both hardware and the file systems available: see [the comparison](facilities.md#the-cosma5-login-node-and-compute-nodes-are-different).
+Access to the Durham COSMA5 machine is provided using the cosma5 queue. This queue is comprised of the new (2024, 2025) COSMA5 nodes, a total of 8 nodes each with 256 cores and 1.5TB RAM.  This partition is non-exclusive, i.e. jobs will share a node with other jobs unless exclusive access is explicitly requested.  You are therefore advised to explicitly request the amount of RAM your job will use, otherwise a default of around 6GB per core will be allocated.
 
 The old COSMA5 nodes were retired in 2025, originally starting service in 2012 (16 cores per node, 128GB RAM).  There were originally 420 nodes, 6720 cores.
 
@@ -130,8 +128,8 @@ The cosma5-test queue is for testing purposes only.
 
 Higher priority jobs will run first, though lower priority jobs with shorter runtimes may run as back-fill jobs, making use of available nodes before a larger job is due to start.  Setting a run-time limit for your job may get it completed more quickly. See the [FAQ](faq) descriptions for how to make use of back-filling.
 
-The quarterly allocation can can be found out in the [COSMA usage pages](https://virgodb.cosma.dur.ac.uk/usage/login.php), you'll need your
-COSMA username and password to see these.  However, COSMA5 is no longer listed here as no DiRAC allocations are awarded on it.
+The quarterly allocation can be found by running `mybalance` on a login node (see the [FAQ](faq.md#how-do-i-check-my-project-s-allocation)) or in the [COSMA usage pages](https://virgodb.cosma.dur.ac.uk/usage/login.php), for which you'll need your
+COSMA username and password.  However, COSMA5 is no longer listed here as no DiRAC allocations are awarded on it.
 
 Jobs within the same queue are scheduled using a fairshare arrangement so each user initially has the same priority. This is then weighted using a resources used formula.
 
