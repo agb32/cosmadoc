@@ -11,7 +11,10 @@ includes:
 * The Institute for Computational Cosmology internal HPC service
   * COSMA5
 * The HPC Hardware Lab national facility
-  
+
+COSMA can also refer to the [Carbon Optimising System](environmental.md) for Modelling
+and Analysis.
+ 
 For generic information about COSMA please see :doc:`cosma` section
 which provides an *overview* of the COSMA HPC system.
 
