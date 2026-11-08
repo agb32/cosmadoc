@@ -1,5 +1,7 @@
 # COSMA News
 
+5/11/26: Globus operational again after a few days pause.
+
 13/10/26: mad13 retired after a successful PoC of this immersion cooled server.
 
 6/10/26: New Slurm queues: hardwarelab-cpu and hardwarelab-gpu - only accessible at night (direct ssh during the day)
