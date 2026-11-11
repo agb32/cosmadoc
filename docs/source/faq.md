@@ -415,7 +415,7 @@ To compile in parallel, use the -j NNN argument when you type make (e.g. make
 Heavily optimised code compiled on COSMA5 or COSMA7 may not run on COSMA8, which
 does not support AVX-512. It is best to compile on the login nodes associated
 with the compute cluster you intend to use. See
-[the differences between systems](ssh.md#cosma8-cosma7-cosma5-differences).
+[the differences between systems](facilities.md#compiling-for-each-system).
 
 Note that a full compilation environment is not installed on the compute
 nodes, you are expected to compile on the logins.

@@ -31,6 +31,24 @@ COSMA also includes a number of other facilities including:
 
 Users have access to /cosma/home/PROJECT/USERNAME, /cosma/apps/PROJECT/USERNAME, and one or more of /cosmaN/data/PROJECT/USERNAME.
 
+## Compiling for each system
+
+The CPUs differ between COSMA5, 7 and 8, so code compiled with strong
+optimisation (e.g. `-march=native`) for one system may stop with an illegal
+instruction error on another. Compile on the login node for the queue that
+you plan to use, or add a recompilation step to your submission script:
+
+| Queue | CPU | AVX-512 | Compile on |
+| ----- | --- | ------- | ---------- |
+| cosma5 | AMD EPYC 9754 (Zen 4c) | Yes | login5 |
+| cosma7, cosma7-rp | Intel Xeon Gold 5120 | Yes | login7 |
+| cosma8-rome | AMD EPYC 7H12 (Zen 2) | No | login8 |
+| cosma8-milan | AMD EPYC 7763 (Zen 3) | No | login8 |
+
+- Code compiled on login8 will run on both cosma8-rome and cosma8-milan.
+- Code that uses AVX-512 will not run on COSMA8.
+- COSMA5 supports newer AVX-512 instructions than COSMA7, so code compiled on login5 may not run on COSMA7.
+
 ## COSMA5
 
 COSMA5 was refurbished in 2025, with the old (2012) nodes being replaced by 2048 cores of new AMD Bergamo CPUs:
