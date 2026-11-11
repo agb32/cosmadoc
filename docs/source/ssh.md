@@ -138,48 +138,184 @@ interface. See the [x2go](/x2go.md) pages for more information. It will provide
 you with a graphical COSMA desktop. This is more responsive than X11,
 and is the recommended way of accessing COSMA graphically.
 
-## Saving SSH Configuration
+## Saving SSH configuration
 
-To save yourself from typing the full command every time, you can save
-your SSH configuration in a `~/.ssh/config` file on your local
-machine. For instance, if your configuration file looks like this:
+Rather than typing the full command every time, you can save your settings in
+`~/.ssh/config` on your own computer (not on COSMA).  Each `Host` block gives a
+short name to a login node, and `ssh NAME` then uses all the settings in that
+block.  For example, with:
 
-    Host cosma
+    Host cosma8
      User USER
-     IdentityFile ~/.ssh/id_rsa
-     HostName login.cosma.dur.ac.uk
-     ForwardX11 yes
+     HostName login8.cosma.dur.ac.uk
+     IdentityFile ~/.ssh/id_ed25519
 
 typing
 
-`ssh cosma`
+`ssh cosma8`
 
-will be equivalent to
+is the same as
 
-`ssh -X USER@login.cosma.dur.ac.uk`
+`ssh -i ~/.ssh/id_ed25519 USER@login8.cosma.dur.ac.uk`
 
-To learn about more advanced options, please refer to the manual: `man 5 ssh_config`.
+The name also works with other programs that use SSH, such as `scp`, `rsync`,
+`sftp`, `sshfs`, git and the VS Code Remote-SSH extension, so `scp file.txt
+cosma8:` copies a file to your home directory.
+
+### A complete example
+
+This example sets up every COSMA login node, with the options most people find
+useful.  Replace `USER` with your COSMA username, and `~/.ssh/id_ed25519` with
+the path to your private key.
+
+```
+# Short names for one login node on each system
+Host cosma5
+    HostName login5c.cosma.dur.ac.uk
+Host cosma7
+    HostName login7a.cosma.dur.ac.uk
+Host cosma8
+    HostName login8b.cosma.dur.ac.uk
+
+# Every login node by its own name
+Host login5c login7a login7b login7c login8a login8b
+    HostName %h.cosma.dur.ac.uk
+
+# Settings shared by all of the names above
+Host cosma5 cosma7 cosma8 login5c login7a login7b login7c login8a login8b
+    User USER
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    # Share one connection between all your sessions to each node
+    ControlMaster auto
+    ControlPath ~/.ssh/controlmasters/%r@%h:%p
+    ControlPersist 8h
+    # Stop idle connections being dropped
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+```
+
+Then create the directory for the shared connections:
+
+```
+mkdir -p ~/.ssh/controlmasters
+chmod 700 ~/.ssh ~/.ssh/controlmasters
+```
+
+and log in with, for example, `ssh login8a` or `ssh cosma8`.
+
+What each option does:
+
+| Option | What it does |
+| ------ | ------------ |
+| `Host` | The names you type after `ssh`.  One block can cover several names, and `%h` in the block stands for the name you typed. |
+| `HostName` | The real address to connect to. |
+| `User` | Your COSMA username, so you can leave out `USER@`. |
+| `IdentityFile` | The private key to use. |
+| `IdentitiesOnly yes` | Only offer that key.  Without it, SSH also tries every key in your agent, and too many failed keys can get you refused before your password is asked for. |
+| `ControlMaster`, `ControlPath`, `ControlPersist` | Reuse one connection for every session to that node.  See [Reusing SSH connections](#reusing-ssh-connections). |
+| `ServerAliveInterval 30`, `ServerAliveCountMax 3` | Check every 30 seconds that the connection is still alive, and give up after 3 missed replies.  This stops home routers and firewalls closing a connection that has been idle for a while, and makes a dead connection fail after about 90 seconds rather than freezing. |
+| `ForwardX11 yes` | The same as `ssh -X`: lets graphical programs show on your screen.  See [Running programmes with graphical interface](#running-programmes-with-graphical-interface). |
+
+SSH uses the first value it finds for each option, so put the more specific
+`Host` blocks above general ones such as `Host *`.  To see the settings SSH will
+actually use for a name, run `ssh -G cosma8`.
+
+To learn about more options, see the manual: `man 5 ssh_config`.
+
+### Pick a fixed login node
+
+The names `login5`, `login7` and `login8` pick one of several login nodes for
+you.  It is better to choose a specific node, such as `login8b`, in your
+config:
+
+- Shared connections (below) only help if you land on the same node each time.
+- Each login node has its own host key, so a name that moves between nodes
+  can give you host key warnings.
+- Programs running in `screen` or `tmux` are on one particular node, so you
+  need to get back to that node to find them.
 
 ## Reusing SSH connections
 
-To avoid entering passwords too many times, you can multiplex your ssh connection.
+Each new SSH connection to COSMA asks for your password (and second factor, if
+you are asked for one).  With connection sharing, the first connection to a
+node stays open, and every later `ssh`, `scp`, `rsync` or VS Code connection to
+that node goes through it without logging in again.  The three options in the
+example above turn this on:
 
-To do this, you need to add something like:
+- `ControlMaster auto` uses an open connection if there is one, and otherwise
+  opens a new one that later connections can share.
+- `ControlPath` is where SSH keeps the shared connection.  `%r@%h:%p` gives
+  each user, node and port its own file.  The directory must exist.  Because
+  `%h` is the real host name, `cosma8` and `login8b` in the example above share
+  one connection.
+- `ControlPersist 8h` keeps the shared connection open for 8 hours after you
+  close your last session.  `ControlPersist yes` keeps it open until it is
+  stopped, and `ControlPersist no` closes it with your first session.
+
+Useful commands:
 
 ```
-Host cosma
-     ControlPath ~/.ssh/controlmasters/%r@%h:%p
-     ControlMaster auto
-     ControlPersist 8h
-     IdentitiesOnly yes
-     IdentityFile ~/.ssh/YOUR_SSH_PRIVATE_KEY
+ssh -O check cosma8    # is there a shared connection?
+ssh -O exit cosma8     # close it
 ```
 
-to your .ssh/config file, and create (mkdir) the .ssh/controlmasters directory.
+If a shared connection freezes, for example after your laptop has been asleep
+or changed network, `ssh -O exit NAME` closes it so that the next `ssh` logs in
+again.  If that also hangs, delete the file in `~/.ssh/controlmasters`.
 
-Any new connection will then use the first connection.  Should the
-connection freeze, you can `killall ssh` to allow you to restart it.
-It will time out eventually.
+COSMA limits the number of sessions on a single connection to about 10.  If
+you have many terminals or tools open on one node, a new one may be refused
+and SSH then logs in again from scratch.  Spread your sessions over more than
+one login node if you hit this.
+
+## Reaching other nodes through a login node
+
+Most COSMA machines can only be reached from inside COSMA.  Their internal
+names end in `.pri.cosma.local` (for example `mad12.pri.cosma.local`), and only
+work from a login node.  To connect to one from your own computer in a single
+step, use `ProxyJump` to go through a login node:
+
+```
+Host mad12
+    HostName mad12.pri.cosma.local
+    User USER
+    IdentityFile ~/.ssh/id_ed25519
+    ProxyJump login8b
+```
+
+`ssh mad12` then logs in to `login8b` first (reusing its shared connection if
+there is one), and from there connects to `mad12`.  The same works on the
+command line: `ssh -J login8b mad12.pri.cosma.local`.
+
+This is for nodes you are allowed to log in to directly, such as the
+[hardware lab](hardwarelab.md) systems during their interactive hours.  The
+compute nodes in the batch queues do not accept SSH logins: use
+[Slurm](slurm.md) to run work on them.
+
+## Forwarding ports
+
+SSH can forward a port on your computer to a port on COSMA, which is how you
+reach web services such as [Jupyter](jupyter.md) running on COSMA.  On the
+command line this is `-L`, and in your config it is `LocalForward`.  For
+example, to reach the Jupyter service on `login8b` at
+[https://localhost:8443](https://localhost:8443):
+
+```
+Host cosma8-jupyter
+    HostName login8b.cosma.dur.ac.uk
+    User USER
+    IdentityFile ~/.ssh/id_ed25519
+    LocalForward 8443 localhost:443
+```
+
+`ssh -N cosma8-jupyter` opens the tunnel without starting a shell.  Keep it
+running while you use the service.
+
+If port 8443 is already in use on your computer, pick another free port, and
+change both the config and the address in your browser.  Forwarded ports are
+set up when a connection is first opened, so a `LocalForward` on a host that is
+already sharing a connection only takes effect after `ssh -O exit`.
 
 ## Storing your ssh passphrase in RAM
 
