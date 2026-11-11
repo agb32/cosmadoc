@@ -19,6 +19,7 @@ We are taking some steps, within our control, to help mitigate this, reducing an
 - Investigation of [immersion cooling](immersion.md) technology.
 - Investigation of [underground flooded minewater heat storage and reuse](https://durham.readthedocs.io/en/latest/ichs/index.html)
 - System lifetime extension to minimise impact of embodied CO2
+- Peak power reduction at times of high regional grid carbon intensity
 
 ## Publications
 
