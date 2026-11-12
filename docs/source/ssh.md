@@ -1,209 +1,340 @@
 # SSH access
 
-COSMA has 6 login servers:
+You connect to COSMA with SSH, to one of its 6 login nodes:
 
-* COSMA5: login5c (login5, login)
-* COSMA7: login7a, login7b, login7c (login7)
-* COSMA8: login8a, login8b (login8) 
+| System | Login nodes | Shared name |
+| ------ | ----------- | ----------- |
+| COSMA5 | login5c | login5 |
+| COSMA7 | login7a, login7b, login7c | login7 |
+| COSMA8 | login8a, login8b | login8 |
 
+The full name of each is `NAME.cosma.dur.ac.uk`, for example
+`login8b.cosma.dur.ac.uk`.  A shared name such as `login8` picks one of that
+system's login nodes for you.
 
-To connect to COSMA, you will need to generate a [SSH key pair](sshkey.md) (in summary, use ssh-keygen -t ed25519 and be sure to provide a strong passphrase),
-and upload the public part to SAFE. You should protect your ssh key
-with a good passphrase. In addition to this, you will also need to
-know your COSMA password, which should obviously be different from
-your sshkey passphrase. A single SSH keypair will be able to connect
-to all login nodes. Please note that each login node has a separate
-fingerprint, which will cause a warning and prompt you to accept it
-the first time you try to log in.
+The login nodes are also the development nodes: they have the compilers, the
+[modules](modules.md) and the batch system, so do your interactive work,
+compiling and job submission there.  You can submit jobs to any
+[batch queue](slurm.md) from any login node.  Login nodes are not the same as
+the compute nodes that run your jobs, though: see
+[the COSMA5 login node and compute nodes](facilities.md#the-cosma5-login-node-and-compute-nodes-are-different)
+for an example, and [mounted file systems](storage.md#mounted-filesystems) for
+which file systems each node can see.
 
-The same SSH keypair can also be used for git access (for example, see
-[this guide for
-GitHub](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)).
+## What you need
 
-If you forget your sshkey passphrase, you will need to generate a new
-key and upload it to [SAFE](https://safe.epcc.ed.ac.uk/dirac).
+- **An SSH key pair.**  See [generating an SSH key](sshkey.md).  In short, run
+  `ssh-keygen -t ed25519` on your own computer and give it a strong
+  passphrase.  Upload the public part (the `.pub` file) to
+  [SAFE](https://safe.epcc.ed.ac.uk/dirac).  One key works on every login
+  node, and you can use the same key for other services such as GitHub.
+- **Your COSMA password.**  The first one is in your welcome email.  It is
+  separate from your key passphrase, and should be different from it.
 
-If you forget your COSMA password, you can reset it on [SAFE](https://safe.epcc.ed.ac.uk/dirac).
+## Logging in
 
-## Logging in with SSH
+From a terminal on your own computer:
 
-If you have done that already, use SSH to connect:
+```
+ssh USER@login8b.cosma.dur.ac.uk
+```
 
-`ssh USER@loginXX.cosma.dur.ac.uk` (where XX is the COSMA you are logging in to)
+where `USER` is your COSMA username.  If your key is not in the default place,
+give its path with `-i`:
 
-You may need to specify your ssh key:
+```
+ssh -i ~/.ssh/my_cosma_key USER@login8b.cosma.dur.ac.uk
+```
 
-`ssh -i /path/to/ssh/key USER@loginXX.cosma.dur.ac.uk`
+SSH asks for your key passphrase, and then for your COSMA password.  To avoid
+typing these every time, see
+[storing your key passphrase](#storing-your-key-passphrase) and
+[reusing SSH connections](#reusing-ssh-connections).
 
-where `USER` is your COSMA username. This will log you in via a secure
-shell to COSMA. You can login to different COSMAs by specifying a
-different login node: `login5.cosma.dur.ac.uk` for COSMA5
+The first time you connect to each login node, SSH shows that node's
+fingerprint and asks whether to trust it.  Each login node has its own
+fingerprint, so you are asked once for each node.  If SSH later warns that a
+fingerprint has *changed*, do not log in: contact cosma-support.
 
-- `login8.cosma.dur.ac.uk` for COSMA8
-- `login7.cosma.dur.ac.uk` for COSMA7
-- `login5.cosma.dur.ac.uk` for COSMA5
-- etc.
+### Logging in for the first time
 
-The generic loginX given here will then randomly (round-robin) select
-a specific login node (e.g. login8 will put you on one of login8a,
-login8b).
+The first time you log in, or after a password reset, you must choose a new
+password:
 
-The login systems are also the development nodes: so they know about
-the compilers, have access to modules, and the batch system. Unless
-otherwise specified, all of your interactive work should be done on
-the login nodes. For instructions on how to submit jobs to the batch
-queues, see [slurm](/slurm.md). You can submit jobs to any batch queue
-from any login node, and access all the storage from any login node.
+1. Enter the password from your email to log in.
+2. Enter it again, when asked for your current password.
+3. Enter your new password twice.
 
-You will then be asked to enter your ssh key passphrase (if you run a
-key manager, you'll only have to do this once per reboot), and after
-that, enter your COSMA password.
+Use at least 16 characters, with at least three of: lower case letters, upper
+case letters, digits and symbols.  Several words strung together work well.
 
-If you forget your ssh key passphrase, you will need to generate a new
-key and upload it to [SAFE](https://safe.epcc.ed.ac.uk/dirac).
+## Saving SSH configuration
 
-If you forget your COSMA password, you can request a reset on
-[SAFE](https://safe.epcc.ed.ac.uk/dirac). In this case, when you log
-in, you will need to enter the new password *TWICE* (once to log in,
-once to begin the password reset process), followed by a new password
-of your choice (also twice).  The new password should be at least 16
-characters long, containing at least two different character classes.
+Rather than typing the full command every time, you can save your settings in
+`~/.ssh/config` on your own computer (not on COSMA).  Each `Host` block gives a
+short name to a login node, and `ssh NAME` then uses all the settings in that
+block.  For example, with:
 
-To request a password reset on SAFE, select "Login accounts" -> "USER@cosma" and then click the "Request Password Reset" button. A new ssh key can also be uploaded on this page.
-
-## Cannot get access?
-
-If you are receiving permission denied when trying to access COSMA, it
-could be:
-
-0. It is the first time you have logged in and you are asked to change your password, but are not following the instructions carefully.  You will need to enter your existing password twice: once to log in, and then once again to start the reset process.  You should then enter a new password with at least 12 characters and 3 character classes.
-1. You need to specify your ssh key, e.g. `ssh -i /path/to/ssh/key user@login*.cosma.dur.ac.uk`
-2. You need to update your ssh key on [SAFE](https://safe.epcc.ed.ac.uk/dirac) (and then wait for cosma-support to accept the new key)
-3. You have forgotten your sshkey passphrase or your COSMA password: You will need to either upload a new SSH key to SAFE, or request a password reset on SAFE.
-4. The permissions on your key, or directory containing it are wrong.
-5. You have forgotten your COSMA password (different from your ssh passphrase).  You can reset this on [SAFE](https://safe.epcc.ed.ac.uk/dirac) (and then wait for cosma-support to accept the password reset request)
-6. You are using a banned key type upload a new one to [SAFE](https://safe.epcc.ed.ac.uk/dirac)
-7. You have entered your password wrongly too many times and have been temporarily banned (typically 15 minutes)
-8. You have had many failed attempts and have been more permanently banned.  Please contact cosma-support to unban you.
-
-If you need to generate a new ssh key, there is some info [here](sshkey.md).
-
-For other reasons, please contact cosma-support.
-
-### Requesting a password reset or uploading a new SSH key
-
-First, log into [SAFE](https://safe.epcc.ed.ac.uk/dirac).  If you are having problems logging in, you will need to contact SAFE support, dirac-support@epcc.ed.ac.uk.
-
-Use the "Login accounts" menu to select COSMA.  Then at the bottom of the screen you will see a row of buttons.
-
-Click "Request Password Reset" to ask for a password reset.  This is a complicated process so please read carefully:
- - This will eventually be emailed to you.
- - Once you receive the email from cosma-support containing the password, you should be able to log in.
-   - (though if you have been temporarily banned by entering the wrong password too many times, wait 15 mins or so and try again - or try another login node).
- - You will need to enter this password *twice*: One to log in, and then once to start the password reset process (it will ask you for your *current* password - i.e. the one which has just been emailed).
- - You will then be asked for a new password twice.  This should be at least 10 characters and two character classes.
- - After that, you should be able to log in with your new password.
-
-Click "Add credential" to add a new SSH key.
-
-## Running programmes with graphical interface
-
-The preferred method to get a graphical interface is to use [x2go](x2go.md). 
-
-However if you wish to open a graphical programme from your terminal
-on a login node (i.e. to view a plot in `python`, open a PDF in an
-`evince` viewer or a picture in `eog`, view an HDF5 file in
-`hdfviewer`, etc.), you need to add -X flag to forward the X server:
-
-`ssh -X USER@login.cosma.dur.ac.uk`
-
-You should then be able to have programmes forwarded to your local X server. For instance, typing
-
-`eog PICTURE.png`
-
-on a COSMA login node will open the file.
-
-This should works out of the box on most Linux / BSD systems. If you
-are using macOS, you will need to install XQuartz on your machine.
-
-For many applications, x2go is a better way of getting a graphical
-interface. See the [x2go](/x2go.md) pages for more information. It will provide
-you with a graphical COSMA desktop. This is more responsive than X11,
-and is the recommended way of accessing COSMA graphically.
-
-## Saving SSH Configuration
-
-To save yourself from typing the full command every time, you can save
-your SSH configuration in a `~/.ssh/config` file on your local
-machine. For instance, if your configuration file looks like this:
-
-    Host cosma
+    Host cosma8
      User USER
-     IdentityFile ~/.ssh/id_rsa
-     HostName login.cosma.dur.ac.uk
-     ForwardX11 yes
+     HostName login8.cosma.dur.ac.uk
+     IdentityFile ~/.ssh/id_ed25519
 
 typing
 
-`ssh cosma`
+`ssh cosma8`
 
-will be equivalent to
+is the same as
 
-`ssh -X USER@login.cosma.dur.ac.uk`
+`ssh -i ~/.ssh/id_ed25519 USER@login8.cosma.dur.ac.uk`
 
-To learn about more advanced options, please refer to the manual: `man 5 ssh_config`.
+The name also works with other programs that use SSH, such as `scp`, `rsync`,
+`sftp`, `sshfs`, git and the VS Code Remote-SSH extension, so `scp file.txt
+cosma8:` copies a file to your home directory.
+
+### A complete example
+
+This example sets up every COSMA login node, with the options most people find
+useful.  Replace `USER` with your COSMA username, and `~/.ssh/id_ed25519` with
+the path to your private key.
+
+```
+# Short names for one login node on each system
+Host cosma5
+    HostName login5c.cosma.dur.ac.uk
+Host cosma7
+    HostName login7a.cosma.dur.ac.uk
+Host cosma8
+    HostName login8b.cosma.dur.ac.uk
+
+# Every login node by its own name
+Host login5c login7a login7b login7c login8a login8b
+    HostName %h.cosma.dur.ac.uk
+
+# Settings shared by all of the names above
+Host cosma5 cosma7 cosma8 login5c login7a login7b login7c login8a login8b
+    User USER
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    # Share one connection between all your sessions to each node
+    ControlMaster auto
+    ControlPath ~/.ssh/controlmasters/%r@%h:%p
+    ControlPersist 8h
+    # Stop idle connections being dropped
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+```
+
+Then create the directory for the shared connections:
+
+```
+mkdir -p ~/.ssh/controlmasters
+chmod 700 ~/.ssh ~/.ssh/controlmasters
+```
+
+and log in with, for example, `ssh login8a` or `ssh cosma8`.
+
+What each option does:
+
+| Option | What it does |
+| ------ | ------------ |
+| `Host` | The names you type after `ssh`.  One block can cover several names, and `%h` in the block stands for the name you typed. |
+| `HostName` | The real address to connect to. |
+| `User` | Your COSMA username, so you can leave out `USER@`. |
+| `IdentityFile` | The private key to use. |
+| `IdentitiesOnly yes` | Only offer that key.  Without it, SSH also tries every key in your agent, and too many failed keys can get you refused before your password is asked for. |
+| `ControlMaster`, `ControlPath`, `ControlPersist` | Reuse one connection for every session to that node.  See [Reusing SSH connections](#reusing-ssh-connections). |
+| `ServerAliveInterval 30`, `ServerAliveCountMax 3` | Check every 30 seconds that the connection is still alive, and give up after 3 missed replies.  This stops home routers and firewalls closing a connection that has been idle for a while, and makes a dead connection fail after about 90 seconds rather than freezing. |
+| `ForwardX11 yes` | The same as `ssh -X`: lets graphical programs show on your screen.  See [running programs with a graphical interface](#running-programs-with-a-graphical-interface). |
+
+SSH uses the first value it finds for each option, so put the more specific
+`Host` blocks above general ones such as `Host *`.  To see the settings SSH will
+actually use for a name, run `ssh -G cosma8`.
+
+To learn about more options, see the manual: `man 5 ssh_config`.
+
+### Pick a fixed login node
+
+The names `login5`, `login7` and `login8` pick one of several login nodes for
+you.  It is better to choose a specific node, such as `login8b`, in your
+config:
+
+- Shared connections (below) only help if you land on the same node each time.
+- Each login node has its own host key, so a name that moves between nodes
+  can give you host key warnings.
+- Programs running in `screen` or `tmux` are on one particular node, so you
+  need to get back to that node to find them.
 
 ## Reusing SSH connections
 
-To avoid entering passwords too many times, you can multiplex your ssh connection.
+Each new SSH connection to COSMA asks for your password (and second factor, if
+you are asked for one).  With connection sharing, the first connection to a
+node stays open, and every later `ssh`, `scp`, `rsync` or VS Code connection to
+that node goes through it without logging in again.  The three options in the
+example above turn this on:
 
-To do this, you need to add something like:
+- `ControlMaster auto` uses an open connection if there is one, and otherwise
+  opens a new one that later connections can share.
+- `ControlPath` is where SSH keeps the shared connection.  `%r@%h:%p` gives
+  each user, node and port its own file.  The directory must exist.  Because
+  `%h` is the real host name, `cosma8` and `login8b` in the example above share
+  one connection.
+- `ControlPersist 8h` keeps the shared connection open for 8 hours after you
+  close your last session.  `ControlPersist yes` keeps it open until it is
+  stopped, and `ControlPersist no` closes it with your first session.
+
+Useful commands:
 
 ```
-Host cosma
-     ControlPath ~/.ssh/controlmasters/%r@%h:%p
-     ControlMaster auto
-     ControlPersist 8h
-     IdentitiesOnly yes
-     IdentityFile ~/.ssh/YOUR_SSH_PRIVATE_KEY
+ssh -O check cosma8    # is there a shared connection?
+ssh -O exit cosma8     # close it
 ```
 
-to your .ssh/config file, and create (mkdir) the .ssh/controlmasters directory.
+If a shared connection freezes, for example after your laptop has been asleep
+or changed network, `ssh -O exit NAME` closes it so that the next `ssh` logs in
+again.  If that also hangs, delete the file in `~/.ssh/controlmasters`.
 
-Any new connection will then use the first connection.  Should the
-connection freeze, you can `killall ssh` to allow you to restart it.
-It will time out eventually.
+COSMA limits the number of sessions on a single connection to about 10.  If
+you have many terminals or tools open on one node, a new one may be refused
+and SSH then logs in again from scratch.  Spread your sessions over more than
+one login node if you hit this.
 
-## Storing your ssh passphrase in RAM
+## Reaching other nodes through a login node
 
-To avoid having to enter your ssh key passphrase too many times, you can use a key manager to store it in RAM, while your current session exists (i.e. between reboots).  Depending on your OS, this may be automatic, or there may be other ways to do it.  However, the following usually works:
+Most COSMA machines can only be reached from inside COSMA.  Their internal
+names end in `.pri.cosma.local` (for example `mad12.pri.cosma.local`), and only
+work from a login node.  To connect to one from your own computer in a single
+step, use `ProxyJump` to go through a login node:
 
-1. Check that you have keychain installed (type `keychain` in your terminal).  If not, install it.
-2. Add the following line to your local (on laptop) .bashrc file: `eval $(keychain --eval /path/to/your/ssh/private/key 2> /dev/null)` where you obviously need to put in the correct path for your private key.
-3. Reload your terminal (quit and restart, or just type `bash`).  From this point, once you've entered your ssh passphrase once per reboot, it should be remembered.
+```
+Host mad12
+    HostName mad12.pri.cosma.local
+    User USER
+    IdentityFile ~/.ssh/id_ed25519
+    ProxyJump login8b
+```
 
+`ssh mad12` then logs in to `login8b` first (reusing its shared connection if
+there is one), and from there connects to `mad12`.  The same works on the
+command line: `ssh -J login8b mad12.pri.cosma.local`.
 
+This is for nodes you are allowed to log in to directly, such as the
+[hardware lab](hardwarelab.md) systems during their interactive hours.  The
+compute nodes in the batch queues do not accept SSH logins: use
+[Slurm](slurm.md) to run work on them.
 
+## Forwarding ports
 
-## Disk Usage
+SSH can forward a port on your computer to a port on COSMA, which is how you
+reach web services such as [Jupyter](jupyter.md) running on COSMA.  On the
+command line this is `-L`, and in your config it is `LocalForward`.  For
+example, to reach the Jupyter service on `login8b` at
+[https://localhost:8443](https://localhost:8443):
 
-Your home quota is usually 10 GB. The contents of your `$HOME` are
-backed up every night, and should only be used for code and small
-datasets that are not easily recoverable.
+```
+Host cosma8-jupyter
+    HostName login8b.cosma.dur.ac.uk
+    User USER
+    IdentityFile ~/.ssh/id_ed25519
+    LocalForward 8443 localhost:443
+```
 
-All generated/large datasets should be stored in a separate space,
-located in `/cosma[5678]/data/project_name/USER`. Your quota there is
-more generous and is currently set by default to 10 TB.
+`ssh -N cosma8-jupyter` opens the tunnel without starting a shell.  Keep it
+running while you use the service.
 
-You also have 100GB at /cosma/apps/ which can be used for software
-installation, Python virtual environments, etc.  This is not backed
-up, but has hourly snapshots, which are kept for around a week.
+If port 8443 is already in use on your computer, pick another free port, and
+change both the config and the address in your browser.  Forwarded ports are
+set up when a connection is first opened, so a `LocalForward` on a host that is
+already sharing a connection only takes effect after `ssh -O exit`.
 
-## COSMA8 / COSMA7 / COSMA5 Differences
+## Storing your key passphrase
 
-Due to differences in CPU architecture between COSMA5, 7 and 8,
-code compiled with strong optimisation on the COSMA7 login nodes may
-not work on the COSMA5 or 8 compute nodes, throwing illegal
-instructions errors. Therefore, please try to use COSMA5 login
-nodes to compile code for these queues, or add a recompilation step to
-your submission script.
+An SSH agent remembers your key's passphrase after you first type it, until
+you log out of your computer.
+
+- **Linux:** most desktops start an agent for you.  Add this to your
+  `~/.ssh/config`, at the top so it applies to every host:
+
+  ```
+  Host *
+      AddKeysToAgent yes
+  ```
+
+  The first `ssh` then asks for your passphrase once and stores the key.  You
+  can also add it yourself with `ssh-add ~/.ssh/id_ed25519`, and list stored
+  keys with `ssh-add -l`.
+- **macOS:** add `UseKeychain yes` as well as `AddKeysToAgent yes`, and macOS
+  keeps the passphrase in your keychain between restarts.
+- **Windows:** start the agent once from an administrator PowerShell with
+  `Get-Service ssh-agent | Set-Service -StartupType Automatic; Start-Service ssh-agent`,
+  then run `ssh-add`.
+
+If you have no agent, `keychain` can start one for you: install it, and add
+`eval $(keychain --eval ~/.ssh/id_ed25519 2> /dev/null)` to the `~/.bashrc` on
+your own computer.
+
+## Running programs with a graphical interface
+
+For a full graphical desktop on COSMA, [x2go](x2go.md) is the recommended
+way: it is much more responsive than the method below.
+
+To show single windows, such as a plot from Python, a PDF in `evince`, a
+picture in `eog` or an HDF5 file in `hdfview`, log in with X11 forwarding:
+
+```
+ssh -X USER@login8b.cosma.dur.ac.uk
+```
+
+or add `ForwardX11 yes` to your config.  Then, for example, `eog picture.png`
+on COSMA opens the picture on your screen.  This works on most Linux systems.
+On macOS, install [XQuartz](https://www.xquartz.org) first.  On Windows 11,
+WSL shows Linux windows itself.
+
+## SSH on Windows
+
+Windows 10 and 11 include OpenSSH, so `ssh`, `scp` and `ssh-keygen` work in
+PowerShell or the command prompt (see [generating an SSH key](sshkey.md)).
+Your config file is `C:\Users\YOURNAME\.ssh\config`, and uses the same format
+as above.
+
+Windows OpenSSH does not support connection sharing (`ControlMaster`), so
+leave those three lines out there.  To use connection sharing, use SSH from
+WSL (Windows Subsystem for Linux), which works the same way as on Linux.
+
+## Forgotten passphrase or password
+
+Both are fixed on [SAFE](https://safe.epcc.ed.ac.uk/dirac).  If you cannot log
+in to SAFE itself, contact SAFE support at dirac-support@epcc.ed.ac.uk.
+
+- **Forgotten key passphrase:** a passphrase cannot be recovered.
+  [Generate a new key](sshkey.md), then on SAFE select "Login accounts", then
+  your COSMA account, and click "Add credential" to upload the new public key.
+  Wait for cosma-support to accept it.
+- **Forgotten COSMA password:** on the same SAFE page, click "Request Password
+  Reset".  A new password is emailed to you once cosma-support has processed
+  the request.  Log in with it and choose a new password, as in
+  [logging in for the first time](#logging-in-for-the-first-time).
+
+## Cannot get access?
+
+If you get `Permission denied`, check these in turn:
+
+1. **Wrong key.**  Make sure SSH is using the key you uploaded to SAFE: use
+   `ssh -i /path/to/key`, or `IdentityFile` in your config.
+   `ssh -v USER@login8b.cosma.dur.ac.uk` shows which keys are tried.
+2. **Key not yet accepted.**  A new key uploaded to SAFE has to be accepted by
+   cosma-support before it works.
+3. **Key file permissions.**  SSH ignores a private key that other users can
+   read.  Run `chmod 700 ~/.ssh` and `chmod 600 ~/.ssh/id_ed25519`.
+4. **Old key type.**  Some old key types are no longer accepted.
+   [Generate an ed25519 key](sshkey.md) and upload it to SAFE.
+5. **First login.**  Follow [logging in for the first time](#logging-in-for-the-first-time)
+   carefully: you need to enter the emailed password twice.
+6. **Forgotten passphrase or password.**  See
+   [above](#forgotten-passphrase-or-password).
+7. **Too many failed attempts.**  After several wrong passwords, your address is
+   blocked, usually for about 15 minutes.  Wait, or try another login node.
+   After many failed attempts the block can be longer: contact cosma-support
+   to have it removed.
+
+For anything else, contact cosma-support.

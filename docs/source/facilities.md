@@ -31,10 +31,28 @@ COSMA also includes a number of other facilities including:
 
 Users have access to /cosma/home/PROJECT/USERNAME, /cosma/apps/PROJECT/USERNAME, and one or more of /cosmaN/data/PROJECT/USERNAME.
 
+## Compiling for each system
+
+The CPUs differ between COSMA5, 7 and 8, so code compiled with strong
+optimisation (e.g. `-march=native`) for one system may stop with an illegal
+instruction error on another. Compile on the login node for the queue that
+you plan to use, or add a recompilation step to your submission script:
+
+| Queue | CPU | AVX-512 | Compile on |
+| ----- | --- | ------- | ---------- |
+| cosma5 | AMD EPYC 9754 (Zen 4c) | Yes | login5 |
+| cosma7, cosma7-rp | Intel Xeon Gold 5120 | Yes | login7 |
+| cosma8-rome | AMD EPYC 7H12 (Zen 2) | No | login8 |
+| cosma8-milan | AMD EPYC 7763 (Zen 3) | No | login8 |
+
+- Code compiled on login8 will run on both cosma8-rome and cosma8-milan.
+- Code that uses AVX-512 will not run on COSMA8.
+- COSMA5 supports newer AVX-512 instructions than COSMA7, so code compiled on login5 may not run on COSMA7.
+
 ## COSMA5
 
-COSMA5 is was refurbished in 2025, with the old (2012) nodes being replaced by 2048 cores of new AMD Bergamo CPUs:
- - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD Bergamo processors).  These have a Zen-4 (Genoa) architecture.
+COSMA5 was refurbished in 2025, with the old (2012) nodes being replaced by 2048 cores of new AMD Bergamo CPUs:
+ - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD EPYC 9754 Bergamo processors).  These have a Zen 4c architecture.
    - Please submit to the `cosma5` queue to use these nodes.
 
 The nodes are connected via Mellanox EDR 100G Infiniband switches in a 2:1 blocking configuration. Access is enabled through a login/development server, with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
@@ -42,6 +60,22 @@ The nodes are connected via Mellanox EDR 100G Infiniband switches in a 2:1 block
 The new COSMA5 nodes were funded by a Durham University carbon reduction fund, and a donation from Dell and AMD, replacing 48 old nodes in 2024, followed by an immersion-cooled component (5 more nodes) in 2025, funded by UKRI.
 
 The new COSMA5 nodes are not exclusive: Codes share the nodes with other jobs running simultaneously, unless explicitly requesting the number of cores contained by each node (256).  
+
+### The COSMA5 login node and compute nodes are different
+
+The login node and the compute nodes are different machines, so something that works on login5c may not work in a job:
+
+|  | Login node (login5c) | Compute nodes (m5001-m5008) |
+| - | -------------------- | --------------------------- |
+| How to use it | `ssh` to `login5.cosma.dur.ac.uk` | Submit to the `cosma5` queue |
+| CPU | 1x AMD EPYC 9354P (Zen 4) | 2x AMD EPYC 9754 (Zen 4c) |
+| Cores | 32 (64 threads), shared with other users | 256 (512 threads) |
+| RAM | 768GB, shared with other users | 1.5TB |
+| Data file systems | /cosma5, /cosma7, /cosma8 | /cosma5, /cosma7 (read-only) |
+
+- **File systems:** /cosma8 is visible on login5c, but is not available on the compute nodes, and /cosma7 is read-only there. Jobs that read or write /cosma8, or write to /cosma7, will fail. If you submit a job from a directory on /cosma8, it will start in /tmp instead.
+- **Compiling:** both CPUs support the same instructions, so code compiled on login5c with `-march=native` will run on the compute nodes.
+- **Performance:** timings on login5c will not match the compute nodes, so benchmark in a job.
 
 ## COSMA6
 
@@ -79,7 +113,7 @@ It is currently comprised of:
 - 1 AMD GPU node with 6 MI50 GPUs (32GB), 1TB RAM, dual 16-core AMD EPYC 7282 processors at 2.8GHz
 - 1 AMD Milan node with a MI100 GPU, 1TB RAM, dual 64-core AMD EPYC Milan 7713 processors at 2GHz
 - 2 AMD Milan nodes with 2x MI200 GPUs each, 1TB RAM, dual 64-core processors
-- 1 NVIDIA GPU node with 10 V100 GPUs (32GB), 768GB RAM, dual Intel Xeon Gold 5218 processors at 2.3GHz
+- 1 NVIDIA GPU node with 6 V100 GPUs (32GB), 768GB RAM, dual Intel Xeon Gold 5218 processors at 2.3GHz
 - 2 console nodes with a single 16-core AMD EPYC 7302 processor at 3GHz and 256GB RAM
 
 The interconnect is Mellanox HDR, 200GBit/s, with a non-blocking fat tree topology.
