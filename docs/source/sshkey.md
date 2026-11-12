@@ -19,7 +19,7 @@ The same command works on Linux, macOS and Windows 10 or 11 (in PowerShell or
 the command prompt):
 
 ```
-ssh-keygen -t ed25519 -C "cosma key, my laptop"
+ssh-keygen -t ed25519 -C "cosmakey-mylaptop"
 ```
 
 `-C` adds a comment to help you recognise the key later, for example on SAFE.
@@ -42,7 +42,7 @@ Use an ed25519 key if you can.  If your SSH is too old to make one, use a
 4096-bit RSA key instead:
 
 ```
-ssh-keygen -t rsa -b 4096 -C "cosma key, my laptop"
+ssh-keygen -t rsa -b 4096 -C "cosmakey-mylaptop"
 ```
 
 Older key types, such as DSA, are not recommended and may be refused.
@@ -93,15 +93,29 @@ The same key can also be used for other services, such as
 
 ## Windows
 
-The built-in OpenSSH in Windows 10 and 11, used above, is the simplest choice.
-The [Windows 10 SSH guide](files/COSMAWindows10sshDocumentation.pdf) shows the
-same steps with screenshots.
+The method most likely to work (in our experience) is to use WSL
+(Windows Subsystem for Linux), which gives you a Linux command line.
+To install it, open the command prompt and run `wsl --install`, then
+restart (once it has finished).  Open "Ubuntu" from the start menu,
+create a user, and follow the steps above as for Linux.  WSL has its
+own `~/.ssh` directory, separate from Windows: a key made in one is
+not seen by the other.
 
-You can also use WSL (Windows Subsystem for Linux), which gives you a Linux
-command line.  To install it, open the command prompt and run `wsl --install`,
-then restart.  Open "Ubuntu" from the start menu, create a user, and follow
-the steps above as for Linux.  WSL has its own `~/.ssh` directory, separate
-from Windows: a key made in one is not seen by the other.
+Alternatively, the built-in OpenSSH in Windows 10 and 11, used above,
+is the simplest choice.  The [Windows 10 SSH
+guide](files/COSMAWindows10sshDocumentation.pdf) shows the same steps
+with screenshots.
+
+In summary:
+
+1. Hit the windows key, and type "cmd"
+2. In the cmd window type `ssh-keygen -t ed25519 -C "cosmakey"`
+3. Hit return for the default options (key filename, etc), and enter a passphrase (twice) when requested.
+4. The key will be in a .ssh folder.  You need to upload this to [SAFE](https://safe.epcc.ed.ac.uk/dirac), select login accounts -> COSMA, and then the "Add credential" button.  Upload the public part (.pub), which will probably try to identify itself as a Microsoft Publisher file (it isn't).
+5. Once you have a welcome email from cosma, try: ssh USERNAME@login.cosma.dur.ac.uk
+6. It should ask for you key passphrase.  It will then ask for your COSMA password, which will be in the welcome email.  You will need to enter this twice: once to login and then once to start the password change.
+7. Enter a new password twice.
+
 
 PuTTY uses its own key format, and we often cannot get it working, so we
 recommend the built-in OpenSSH or WSL instead.  If you need PuTTY, make the key

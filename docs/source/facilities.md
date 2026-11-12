@@ -52,7 +52,7 @@ you plan to use, or add a recompilation step to your submission script:
 ## COSMA5
 
 COSMA5 was refurbished in 2025, with the old (2012) nodes being replaced by 2048 cores of new AMD Bergamo CPUs:
- - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD EPYC 9754 Bergamo processors).  These have a Zen 4c architecture.
+ - The new COSMA5 system (initially dating from 2024) has 8 compute nodes, each with 1.5TB RAM and 256 cores (2x AMD EPYC 9754 Bergamo processors).  These have a Zen 4c (EPYC Genoa) architecture.
    - Please submit to the `cosma5` queue to use these nodes.
 
 The nodes are connected via Mellanox EDR 100G Infiniband switches in a 2:1 blocking configuration. Access is enabled through a login/development server, with 768GB RAM (login5c).  Previously, there was a 2.5PB GPFS file system (DDN ExaScalar). However in early 2020, this was replaced by a 650TB Lustre system (Dell), later updated to 1.6PB, replacing 2.5 racks of equipment drawing 26kW with 1/6th of a rack drawing 1.5kW.
@@ -63,7 +63,7 @@ The new COSMA5 nodes are not exclusive: Codes share the nodes with other jobs ru
 
 ### The COSMA5 login node and compute nodes are different
 
-The login node and the compute nodes are different machines, so something that works on login5c may not work in a job:
+Although the login node is Zen-4, and compute nodes are Zen-4C, there is no architectural difference, and so code compiled on the login node will work on the compute nodes.  The L3 cache size is the main difference.
 
 |  | Login node (login5c) | Compute nodes (m5001-m5008) |
 | - | -------------------- | --------------------------- |

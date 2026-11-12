@@ -124,7 +124,7 @@ Contents
    
 .. toctree::
    :maxdepth: 4
-   :caption: STORAGE AND DATA
+   :caption: STORAGE AND DATA CURATION
 	  
    storage
    data

@@ -10,6 +10,7 @@ COSMA has several storage systems, each for a different purpose:
 | [Scratch space](#scratch-space) | /snap7 or 8/scratch/PROJECT/USERNAME | None | None | Checkpoints that can be recreated |
 | [Temporary space](#temporary-space) | /tmp | None | None | Short-lived files during a job |
 | [Archive space](#archive-space) | Tape | By request | Tape copy | Long-term storage |
+| [Shared space](#shared-space) | File system | By project | Various | Making data available |
 
 To see your usage and quotas, use the `quota` command (see the [FAQ](faq.md#are-there-disk-usage-quotas)).
 
@@ -34,7 +35,7 @@ Snapshots are named after the time that they were taken, and are read-only.
 
 ## Data space
 
-There are multiple data spaces, at /cosma5, /cosma7 and /cosma8.  Your space is at e.g. /cosma8/data/PROJECT/USERNAME.  Users typically have a 10TB quota.  These file systems are not backed up but have redundancy.
+There are multiple data spaces, at e.g. /cosma5, /cosma7 and /cosma8.  Your space is at e.g. /cosma8/data/PROJECT/USERNAME.  Users typically have a 5-10TB quota depending on file system.  These file systems are not backed up but have redundancy.
 
 ## Scratch space
 
@@ -114,6 +115,10 @@ This also removes the directory if your job reaches its time limit.
 ### /dev/shm
 
 /dev/shm is held in memory on every node, and is shared by all users.  In a batch job, files that you write there count towards your job's memory limit, so your job can be killed with an out of memory error if you do not request enough.  Files stay in /dev/shm when your job ends, so please delete them.
+
+## Shared space
+
+Projects will sometimes request a directory which all project members can write into, and/or which anyone can read from.  This will be in a location something like `/cosma*/data/PROJECT/shared`.
 
 ## Mounted filesystems
 

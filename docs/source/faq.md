@@ -184,7 +184,7 @@ available cores.
 
 The cosma5 queue is not exclusive: your job will share nodes with other jobs.
 To have a node to yourself, request all 256 of its cores.  The `--exclusive`
-flag is ignored on this queue.
+flag is ignored on this queue.  Similarly with the cosma8-serial queue.
 
 If you are using a single core job, consider running multiple of these at the
 same time, using SLURM arrays, or a parallel MPI launch. COSMA8 has a serial
@@ -192,7 +192,7 @@ queue "cosma8-serial" for smaller jobs if really needed.
 
 ## How many cores can I reasonably request?
 
-COSMA5 has about 2000 cores
+COSMA5 has 2048 cores
 
 COSMA7 has ~12,500 cores.
 

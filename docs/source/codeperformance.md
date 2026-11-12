@@ -28,6 +28,69 @@ Here is a summarized table for performance tools:
 | [Vampir](https://tu-dresden.de/zih/forschung/ressourcen/dateien/projekte/vampir/dateien/Vampir-User-Manual.pdf?lang=en) | Interactive trace-visualisation tool for exploring event traces at any level of detail. |
 | [Darshan](https://www.mcs.anl.gov/research/projects/darshan/docs/darshan3-runtime.html) | I/O characterisation tool that captures POSIX, MPI-IO and HDF5 I/O behaviours. |
 
+# Profiling and debugging tools
+
+## Advisor
+ 
+The Intel Advisor tool analyses vectorization.
+
+Details to follow
+
+## Allinea
+
+The Linaro (was Allinea, was ARM) FORGE and MAP tools. 
+
+Details to follow
+
+## Darshan
+
+Details to follow
+
+## gperftools
+
+Details to follow
+
+## Inspector
+
+Details to follow
+
+The Intel Inspector tool.
+
+## Likwid
+
+Details to follow
+
+## Must
+
+Details to follow
+
+## Oprofile
+
+Details to follow
+
+## Scorep
+
+Details to follow
+
+## Uprof
+
+Details to follow
+
+## Valgrind
+
+Details to follow
+
+## Vampir
+
+Details to follow
+
+## Vtune
+
+Details to follow
+
+The Intel Vtune tool
+
+
 ## Modules
 
 | Tool | Module | Commands |
