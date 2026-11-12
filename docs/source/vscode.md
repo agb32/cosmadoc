@@ -18,6 +18,8 @@ ssh -i /path/to/ssh/key username@loginX.cosma.dur.ac.uk
 
 Replace the hostname and username with those relevant for you.  You will be asked for your ssh key passphrase, then your COSMA password.
 
+It would also be worth setting up [SSH multiplexing](ssh.html#Reusing-SSH-connections) to ensure that you only need to authenticate once per session.
+
 ## Add COSMA to your SSH config
 
 VS Code uses your normal SSH settings, so add an entry for COSMA.  On your local computer, create the folder for shared connections:

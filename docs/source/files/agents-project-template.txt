@@ -1,0 +1,18 @@
+# This project
+- What it is: ONE OR TWO SENTENCES.
+- Code: /cosma/apps/PROJECT/USER/CODE (git repository, main branch: main).
+- Data: /cosma8/data/PROJECT/USER/DATA.  Read-only.
+- Results go in: /cosma8/data/PROJECT/USER/RESULTS.
+
+# Building and testing
+- Build: BUILD COMMAND, after "module load MODULES".
+- Test: TEST COMMAND.  Run it after every change.
+- Quick test input: SMALL INPUT FILE.
+
+# Conventions
+- Units: e.g. "lengths in comoving Mpc, masses in 1e10 Msun".
+- Style: follow the existing code; no unrelated changes.
+
+# Jobs
+- Usual queue and resources: e.g. "cosma8, 1 node, 128 ranks, 12 hours".
+- Job scripts live in: /cosma/apps/PROJECT/USER/CODE/jobs.
