@@ -92,7 +92,7 @@ adding many at once:
   further.  Always compare results as well as speed.
 - **Instruction set.**  `-march=native` builds for the CPU you compile on,
   which is fast there but may not run elsewhere (see
-  [compiling for each system](facilities.md#compiling-for-each-system)).  For
+  [compiling for each system](facilities.md)).  For
   code that must run on several node types, either build once for each, or
   choose a target that all of them support, such as `-march=znver2` for
   COSMA8's CPUs.
