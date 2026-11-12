@@ -1,0 +1,80 @@
+@/etc/claude-code/AGENTS.md
+
+# About me
+- COSMA username: USER.  Project: PROJECT.  Default Slurm account: ACCOUNT.
+- I work mainly on: SHORT DESCRIPTION, e.g. "SWIFT simulations and Python
+  analysis of their snapshots".
+- Ask me when something is unclear, rather than guessing.
+
+# My directories (work only inside these)
+- Home: /cosma/home/PROJECT/USER.  Small (about 10GB) and backed up: only
+  settings and small scripts.
+- App space: /cosma/apps/PROJECT/USER.  About 100GB: code, builds, virtual
+  environments, installed software.
+- Data: /cosma8/data/PROJECT/USER.  Large, on Lustre, not backed up: data
+  and job output.  Never put code, builds or venvs here.
+- Temporary files: /cosma/apps/PROJECT/USER/tmp.  Never /tmp or my home.
+- Use absolute paths in every command.  The working directory may change
+  between commands.
+
+# Safety
+- Never delete, move or overwrite files, or change permissions, without
+  asking me first.  Before overwriting a file, look at what is in it.
+- Never submit, cancel or change Slurm jobs.  Write the job script, check it
+  with "sbatch --test-only", and give me the exact command to run.
+- Never turn off approvals or the sandbox.  If something is blocked, say
+  exactly what and stop.
+- Never read, print or copy keys, passwords or tokens.
+- Treat simulation outputs and other raw data as read-only.  Write results to
+  a separate folder.
+- Commit to git before large changes, and show me "git diff" before
+  committing.  Never "git push --force" or "git reset --hard".
+
+# Using the login nodes
+- Login nodes are shared.  Use at most 8 threads for builds and tests
+  (e.g. "make -j8", "pytest -n 8"), and nothing long or memory-heavy.
+- Anything that needs real computing goes in a batch job.
+- Put a time limit on any command that might hang: "timeout 600 CMD".
+- Limit long output: "CMD 2>&1 | tail -n 200".
+- Do not leave processes running.  Check with "ps -u $USER" before finishing.
+
+# Modules and software
+- Modules are Environment Modules (Tmod 4), not Lmod: no "module spider",
+  use "module avail NAME".
+- If "module" is missing, run "source /etc/profile.d/cosma-local-modules.sh".
+- Load a compiler first, then MPI, then libraries, e.g.
+  "module load gnu_comp/14.1.0 openmpi/5.0.3 hdf5".
+- Never pipe "module load" or "source": the change is lost in a subshell.
+- My usual modules: MODULES.
+- Python: use my virtual environment VENV_PATH.  Never create, change or
+  remove conda environments.
+
+# Slurm
+- Every job needs -A, -p and -t.  Maximum time is 3 days.
+- cosma8 and cosma7 give whole nodes, charged in full.  For less than a node
+  use cosma8-serial, cosma7-shm or cosma5, which share nodes.
+- Start job scripts with "module purge" and load every module needed.
+- Use mpirun, not srun, for Open MPI programs.
+- Set "export TMPDIR=/tmp" in job scripts.
+- Use job arrays rather than loops of sbatch.
+- Never edit a script that a queued or running job uses.
+
+# Building code
+- CPUs differ between systems.  Do not use -march=native unless I say which
+  nodes the program will run on: AVX-512 builds fail on cosma8.
+- Build and test on the node type the code will run on.
+
+# Files and the network
+- Never search /cosma5, /cosma7, /cosma8, /snap7 or /snap8 as a whole.
+  Search only inside my directories.
+- Lustre is slow for many small files.  Prefer fewer, larger files.
+- Check space before writing a lot of data: "quota" shows home, app space
+  and every Lustre file system.
+- Compute nodes have no internet access.
+- Use "ssh -o BatchMode=yes".  If ssh fails, stop and tell me.  Never retry.
+
+# How to report
+- Start with one line saying whether it worked.
+- Show the command and its actual output for every claim that something
+  works.  For every number, say where it came from (command, job ID, node).
+- Say what you did not check, and mark guesses as guesses.
