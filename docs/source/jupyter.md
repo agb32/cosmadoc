@@ -146,7 +146,7 @@ Create an sbatch script with some of the following information, e.g.:
     #SBATCH -J jupyter
     #SBATCH -o slurmjupyter%J.out
     #SBATCH -e slurmjupyter%J.err
-    #SBATCH -p cosma5       #for example, could be cosma8, cosma7 etc
+    #SBATCH -p cosma5       #for example, could be cosma8, cosma8-serial, cosma7 etc
     #SBATCH -A durham       #for example, could be dp004, or other projects
     #SBATCH -t 01:00:00     #1 hour - use more if you need it
     #SBATCH --mail-type=END # notifications
@@ -159,7 +159,7 @@ Create an sbatch script with some of the following information, e.g.:
     jupyter lab --no-browser --ip=`ifconfig | awk '/172.17/ {print $2}'`
 
 
-Submit this script (sbatch SCRIPTNAME)
+Submit this script (sbatch SCRIPTNAME).  Please note that if you submit this to the cosma7, cosma8 and various other queues, you will be assigned a whole node (all cores), which may not be what you want.  Instead, use one of the serial queues (which you can see using the command `scontrol show partition | grep "Partition\|OverSubscribe" | grep -B 1 OverSubscribe=NO`.
 
 Once the job is running (find this using `squeue -u USERNAME`), you need to `tail -f slurmjupyterJOBID.err` until a message about how to connect appears (this will take a few seconds)
 
