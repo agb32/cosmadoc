@@ -1,8 +1,25 @@
 # The Durham Azimuth Cloud Facility (DACF)
 
-Azimuth is a cloud system hosted within COSMA.
+The Durham Azimuth Cloud Facility (DACF) is a self service web portal hosted on COSMA, giving researchers access to interactive science platforms running on Durham's on premise OpenStack cloud.  
 
-Projects with accounts on Azimuth can manage their own nodes, Slurm clusters, Kubernetes clusters, etc.
+The motivation for using Azimuth is to deliver the latest high performance cloud tools to researchers in a single web platform, maximising their science while reducing the complexity of configuring scientific computing environments.
+
+Projects with accounts on Azimuth can manage their own nodes, Slurm clusters, Kubernetes clusters, KubeFlow environments and more, providing users more flexibility to develop their own codes in a clean pre-configured cloud resource. 
+
+It can also work with Moodle web framework where reserachers can deliver their courses to community. 
+
+# Azimuth Platforms 
+
+- **Argo CD**  - offers an environment for GitOps based management of applications deployed on Kubernetes.
+- **BinderHub** – delivers a multi user Jupyter notebook environment.
+- **DaskHub** – extends the multi user Jupyter environment with Dask integration.
+- **Jupyter Notebook** – offers a web based interactive environment for exploring Jupyter notebooks from an existing GitHub, GitLab, Zenodo or Figshare repository, powered by repo2docker. 
+- **JupyterHub** – provides a multi user Jupyter notebook environment. 
+- **KubeFlow** – provides a machine learning environment on Kubernetes for building and running ML workflows.
+- **Kubernetes cluster** – deploys a Kubernetes cluster with optional addons, including monitoring and ingress.
+- **Linux Workstation** – provides secure web access to an Ubuntu 22.04 Linux workstation.
+- **R Studio Server** – runs an R Studio Server instance for easy web based access.
+- **Slurm** – provides Batch cluster running the Slurm workload manager, the Open OnDemand web interface, and custom monitoring.
 
 # Kubernetes Access
 
