@@ -20,10 +20,6 @@ which provides an *overview* of the COSMA HPC system.
 
 Check out the :doc:`account` section to get started!
 
-.. warning::
-
-   Various webserver related things are currently pending patching
-
 .. note::
 
    COSMA is in an :doc:`draperperiod`.
