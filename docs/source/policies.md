@@ -12,3 +12,4 @@ There are a number of policies that COSMA users should be aware of, including:
 - Emergency shutdown policy
 - Business continuity and disaster recovery plan
 - Responsible AI usage
+- Reservation policy
