@@ -106,13 +106,15 @@ kubectl config use-context ml-intro-admin@ml-intro
 
 ## Multiple Kubernetes Clusters
 
-Users may have access to more than one Kubernetes cluster, for example a GPU cluster,ML cluster etc. Kubernetes uses a file called a `kubeconfig` to store cluster connection details, users, namespaces, and contexts.
+You may have access to more than one Kubernetes cluster, for example a GPU cluster and an ML cluster. Kubernetes uses kubeconfig files to store cluster connection details, users, namespaces and contexts.
 
-Kubernetes can merge multiple kubeconfig files using the KUBECONFIG environment variable:
+Kubernetes can merge multiple kubeconfig files listed in the `KUBECONFIG` environment variable, separated by colons:
 
 ```bash
 export KUBECONFIG=$HOME/.kube/config:$HOME/ml-intro.yaml:$HOME//test-cluster.yaml
 ```
+
+You can then move between clusters using `kubectl config use-context`, as shown above.
 
 ## JupyterHub Configurations
 
