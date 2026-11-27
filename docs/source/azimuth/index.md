@@ -172,18 +172,23 @@ docker build -t quay.io/<username>/<image>:<tag> .
 docker push quay.io/<username>/<image>:<tag>
 ```
 
-_Note:_ If you are using MacOs ARM procceses you have to use `buildx` to create cross platform working images. 
+> **Note:** If you are on macOS with an Apple Silicon processor, use `docker buildx` to build images that will run on the cluster - typically `linux/amd64`, for example:
+>
+> ```bash
+> docker buildx build --platform linux/amd64 -t quay.io/<username>/<image>:<tag> --push .
+> ```
 
-After building and pushing the image to a container registry (e.g. Quay), then reference the image should be in `apps/jupyterhub/values.yaml`. 
-You have to access that repo to be able to commit your deployment.
+After pushing the image to a container registry, reference it in `apps/jupyterhub/values.yaml` in the Flux. You will need access to that repository to commit your changes:
 
 ```bash
 git add .
-git commit - m "Image added with <tag>"
+git commit -m "Image added with <tag>"
 git push origin
 ```
 
-Once the configuration is committed and you need to deploy via FluxCD:
+> **Tip:** Use a new, unique tag for each build rather than reusing a tag such as `latest`, so the cluster always pulls the updated image.
+
+Once the change is committed, deploy it via Flux CD:
 
 ```bash
 flux get helmreleases -A
