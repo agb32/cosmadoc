@@ -23,13 +23,19 @@ It can also work with Moodle web framework where reserachers can deliver their c
 
 # Kubernetes Access
 
-The Azimuth Cloud Portal allow us to deploy Kubernetes clusters using `kubectl` and `k9s`.
+The Azimuth Cloud Portal allow you to deploy Kubernetes clusters using `kubectl` and `k9s`.
 
-To access a Kubernetes cluster you need access to the [Azimuth portal](https://portal.azimuth.cosma.dur.ac.uk).
-If you want to have more details about Kubernetes cluster, a Kubernetes configuration file, usually called `kubeconfig`
-should be download to your local machine. To be able to use this cluster `kubectl` installed on your local machine. Optional but also recommended: `k9s`
+To access a Kubernetes cluster for debugging,logs etc. you need an account on the [Azimuth portal](https://portal.azimuth.cosma.dur.ac.uk). From Azimuth portal, click details of Kubernetes cluster to download kubeconfig to your local machine. It should looks like something like this:
 
-You can check if all installation is good so far by:
+![kubeconfig](../images/kubeconfig.png)
+
+You will also need the following tools installed locally:
+
+- `kubectl` – required to interact with the cluster.
+- `helm` – used to manage Helm charts.
+- `k9s` – optional, but recommended to see live logs and helm charts.
+
+You can check that evreything is installed correctly with:
 
 ```bash
 kubectl version --client
@@ -37,7 +43,7 @@ helm version
 k9s version
 ```
 
-To interact with a cluster, you sould point your terminal to the downloaded config file.
+To interact with a cluster, point your terminal at the downloaded kubeconfig file:
 
 ```bash
 export KUBECONFIG=~/.kube/ml-intro.yaml
@@ -64,11 +70,14 @@ ml-intro-ml-intro-69ngd-ckrhh         Ready    worker          v1.34.6   x.x.x.x
 
 ## Using K9s
 
-`k9s` is a terminal user interface for Kubernetes. It is can be useful for checking pods, logs, deployments, services, config maps, and secrets.
+`k9s` is a terminal user interface for Kubernetes. It is useful for checking pods, logs, deployments, services, config maps and secrets.
 
 ```bash
 k9s
 ```
+
+> **Tip:** Inside `k9s`, press `:n` and return or press `/` and return to see the running pods.
+
 ## Checking the Current Context
 
 Kubernetes commands are run against the current context in your kubeconfig.
@@ -97,46 +106,61 @@ kubectl config use-context ml-intro-admin@ml-intro
 
 ## Multiple Kubernetes Clusters
 
-Users may have access to more than one Kubernetes cluster, for example a GPU cluster,ML cluster etc. Kubernetes uses a file called a `kubeconfig` to store cluster connection details, users, namespaces, and contexts.
+You may have access to more than one Kubernetes cluster, for example a GPU cluster and an ML cluster. Kubernetes uses kubeconfig files to store cluster connection details, users, namespaces and contexts.
 
-Kubernetes can merge multiple kubeconfig files using the KUBECONFIG environment variable:
+Kubernetes can merge multiple kubeconfig files listed in the `KUBECONFIG` environment variable, separated by colons:
 
 ```bash
 export KUBECONFIG=$HOME/.kube/config:$HOME/ml-intro.yaml:$HOME//test-cluster.yaml
 ```
 
-## JupyterHub Configurations
+You can then move between clusters using `kubectl config use-context`, as shown above.
 
-Jupyter notebooks runs as a Kubernetes pod inside the JupyterHub namespaces.  In those namespaces, diffrent reproducible deployments can be created via Helm charts. To maintaine and extend user resoruces, it could build unlike Docker images such as, GPU-enabled notebook, CPU-based notebook, C/C++ notebook etc. For more details please check [here](https://z2jh.jupyter.org/en/stable/resources/reference.html)
+# Notes for Developers
 
-When you want to debug which image is running on which notebook helm chart, you could use below useful commands.
+This section is intended for course developers and administrators who maintain JupyterHub deployments on Azimuth. In addition to the tools listed under [Kubernetes Access](#kubernetes-access), you will need `docker` and the `flux` CLI.
 
-Checking which image is running: 
+## JupyterHub Configuration
 
-```bash 
+Each user's Jupyter notebook server runs as a Kubernetes pod in the `jupyterhub` namespace. Deployments are managed reproducibly via Helm charts, and you can extend the resources available to users by building different Docker images. For more details, see the [Zero to JupyterHub configuration reference](https://z2jh.jupyter.org/en/stable/resources/reference.html).
+
+The commands below are useful for debugging which image a notebook pod is running.
+
+First, find the notebook pod. User pods are named `jupyter-<username>`:
+
+```bash
+kubectl -n jupyterhub get pods
+POD=jupyter-<username>
+```
+Alternatively, if only one user pod is running, you can set `POD` automatically:
+
+```bash
 POD=$(kubectl -n jupyterhub get pods -o name | grep jupyter- | sed 's|pod/||')
+```
+Check which image is running:
 
+```bash
 kubectl -n jupyterhub get pod "$POD" \
   -o jsonpath='{.spec.containers[?(@.name=="notebook")].image}{"\n"}'
 ```
 
-Verifying image digest:
+Verify the image digest:
 
 ```bash
 kubectl -n jupyterhub get pod "$POD" \
-  -o jsonpath='{.status.containerStatuses[?(@.name=="notebook")].imageID}'
+  -o jsonpath='{.status.containerStatuses[?(@.name=="notebook")].imageID}{"\n"}'
 ```
 
-To check where single-user pod mounted:
+Check where volumes are mounted in the single-user pod:
 
 ```bash
 kubectl -n jupyterhub get pod "$POD" \
   -o jsonpath='{range .spec.containers[?(@.name=="notebook")].volumeMounts[*]}{.name}{" -> "}{.mountPath}{"\n"}{end}'
 ```
 
-**Please note that if the storage mounted as a Persistent Volume Claim you have to move your Jupyter server config to somewhere else from the directory you put in. Because the configs will be hidden by mounted volume. So, it would not work what you apply into the helm chart values**
+> **Important:** Please note that if the storage mounted as a Persistent Volume Claim you have to move your Jupyter server config to somewhere else from the directory you put in. Because the configs will be hidden by mounted volume. So, it would not work what you apply into the helm chart values.
 
-__NOTE__: Jupyterhub configurations should generally be provided as explicit assignments rather than by setting existing configuration values (e.g. `getattr(..., "tornado_settings")`). Please avoid relying on existing runtime values inside `jupyter_server_config.py`; instead assign complete configuration objects directly (e.g. `c.ServerApp.tornado_settings = {...}`).
+> **Note:** Jupyterhub configurations should generally be provided as explicit assignments rather than by setting existing configuration values (e.g. `getattr(..., "tornado_settings")`). Please avoid relying on existing runtime values inside `jupyter_server_config.py`; instead assign complete configuration objects directly (e.g. `c.ServerApp.tornado_settings = {...}`).
 
 
 ### Creating Profiles for Courses
@@ -148,18 +172,23 @@ docker build -t quay.io/<username>/<image>:<tag> .
 docker push quay.io/<username>/<image>:<tag>
 ```
 
-_Note:_ If you are using MacOs ARM procceses you have to use `buildx` to create cross platform working images. 
+> **Note:** If you are on macOS with an Apple Silicon processor, use `docker buildx` to build images that will run on the cluster - typically `linux/amd64`, for example:
+>
+> ```bash
+> docker buildx build --platform linux/amd64 -t quay.io/<username>/<image>:<tag> --push .
+> ```
 
-After building and pushing the image to a container registry (e.g. Quay), then reference the image should be in `apps/jupyterhub/values.yaml`. 
-You have to access that repo to be able to commit your deployment.
+After pushing the image to a container registry, reference it in `apps/jupyterhub/values.yaml` in the Flux. You will need access to that repository to commit your changes:
 
 ```bash
 git add .
-git commit - m "Image added with <tag>"
+git commit -m "Image added with <tag>"
 git push origin
 ```
 
-Once the configuration is committed and you need to deploy via FluxCD:
+> **Tip:** Use a new, unique tag for each build rather than reusing a tag such as `latest`, so the cluster always pulls the updated image.
+
+Once the change is committed, deploy it via Flux CD:
 
 ```bash
 flux get helmreleases -A
@@ -172,4 +201,4 @@ The new profile becomes available to users when they launch JupyterHub from Mood
 
 # Limitations
 
-The system of Azimuth cloud still under the development phase - meaning that some issues/bugs in JupyterHub may be present. Please do let us know if you come across anything odd deploying your course on Azimuth cloud.
+The DACF is still under active development, so you may encounter issues or bugs in JupyterHub. Please let us know if you come across anything unexpected while deploying or running your courses on the Azimuth cloud.
