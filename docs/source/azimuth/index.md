@@ -116,6 +116,10 @@ export KUBECONFIG=$HOME/.kube/config:$HOME/ml-intro.yaml:$HOME//test-cluster.yam
 
 You can then move between clusters using `kubectl config use-context`, as shown above.
 
+# Notes for Developers
+
+This section is intended for course developers and administrators who maintain JupyterHub deployments on Azimuth. In addition to the tools listed under [Kubernetes Access](#kubernetes-access), you will need `docker` and the `flux` CLI.
+
 ## JupyterHub Configurations
 
 Jupyter notebooks runs as a Kubernetes pod inside the JupyterHub namespaces.  In those namespaces, diffrent reproducible deployments can be created via Helm charts. To maintaine and extend user resoruces, it could build unlike Docker images such as, GPU-enabled notebook, CPU-based notebook, C/C++ notebook etc. For more details please check [here](https://z2jh.jupyter.org/en/stable/resources/reference.html)
