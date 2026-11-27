@@ -120,29 +120,38 @@ You can then move between clusters using `kubectl config use-context`, as shown 
 
 This section is intended for course developers and administrators who maintain JupyterHub deployments on Azimuth. In addition to the tools listed under [Kubernetes Access](#kubernetes-access), you will need `docker` and the `flux` CLI.
 
-## JupyterHub Configurations
+## JupyterHub Configuration
 
-Jupyter notebooks runs as a Kubernetes pod inside the JupyterHub namespaces.  In those namespaces, diffrent reproducible deployments can be created via Helm charts. To maintaine and extend user resoruces, it could build unlike Docker images such as, GPU-enabled notebook, CPU-based notebook, C/C++ notebook etc. For more details please check [here](https://z2jh.jupyter.org/en/stable/resources/reference.html)
+Each user's Jupyter notebook server runs as a Kubernetes pod in the `jupyterhub` namespace. Deployments are managed reproducibly via Helm charts, and you can extend the resources available to users by building different Docker images. For more details, see the [Zero to JupyterHub configuration reference](https://z2jh.jupyter.org/en/stable/resources/reference.html).
 
-When you want to debug which image is running on which notebook helm chart, you could use below useful commands.
+The commands below are useful for debugging which image a notebook pod is running.
 
-Checking which image is running: 
+First, find the notebook pod. User pods are named `jupyter-<username>`:
 
-```bash 
+```bash
+kubectl -n jupyterhub get pods
+POD=jupyter-<username>
+```
+Alternatively, if only one user pod is running, you can set `POD` automatically:
+
+```bash
 POD=$(kubectl -n jupyterhub get pods -o name | grep jupyter- | sed 's|pod/||')
+```
+Check which image is running:
 
+```bash
 kubectl -n jupyterhub get pod "$POD" \
   -o jsonpath='{.spec.containers[?(@.name=="notebook")].image}{"\n"}'
 ```
 
-Verifying image digest:
+Verify the image digest:
 
 ```bash
 kubectl -n jupyterhub get pod "$POD" \
-  -o jsonpath='{.status.containerStatuses[?(@.name=="notebook")].imageID}'
+  -o jsonpath='{.status.containerStatuses[?(@.name=="notebook")].imageID}{"\n"}'
 ```
 
-To check where single-user pod mounted:
+Check where volumes are mounted in the single-user pod:
 
 ```bash
 kubectl -n jupyterhub get pod "$POD" \
