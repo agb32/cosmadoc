@@ -23,13 +23,19 @@ It can also work with Moodle web framework where reserachers can deliver their c
 
 # Kubernetes Access
 
-The Azimuth Cloud Portal allow us to deploy Kubernetes clusters using `kubectl` and `k9s`.
+The Azimuth Cloud Portal allow you to deploy Kubernetes clusters using `kubectl` and `k9s`.
 
-To access a Kubernetes cluster you need access to the [Azimuth portal](https://portal.azimuth.cosma.dur.ac.uk).
-If you want to have more details about Kubernetes cluster, a Kubernetes configuration file, usually called `kubeconfig`
-should be download to your local machine. To be able to use this cluster `kubectl` installed on your local machine. Optional but also recommended: `k9s`
+To access a Kubernetes cluster for debugging,logs etc. you need an account on the [Azimuth portal](https://portal.azimuth.cosma.dur.ac.uk). From Azimuth portal, click details of Kubernetes cluster to download kubeconfig to your local machine. It should looks like something like this:
 
-You can check if all installation is good so far by:
+![kubeconfig](../images/kubeconfig.png)
+
+You will also need the following tools installed locally:
+
+- `kubectl` – required to interact with the cluster.
+- `helm` – used to manage Helm charts.
+- `k9s` – optional, but recommended to see live logs and helm charts.
+
+You can check that evreything is installed correctly with:
 
 ```bash
 kubectl version --client
@@ -37,7 +43,7 @@ helm version
 k9s version
 ```
 
-To interact with a cluster, you sould point your terminal to the downloaded config file.
+To interact with a cluster, point your terminal at the downloaded kubeconfig file:
 
 ```bash
 export KUBECONFIG=~/.kube/ml-intro.yaml
@@ -64,7 +70,7 @@ ml-intro-ml-intro-69ngd-ckrhh         Ready    worker          v1.34.6   x.x.x.x
 
 ## Using K9s
 
-`k9s` is a terminal user interface for Kubernetes. It is can be useful for checking pods, logs, deployments, services, config maps, and secrets.
+`k9s` is a terminal user interface for Kubernetes. It is useful for checking pods, logs, deployments, services, config maps and secrets.
 
 ```bash
 k9s
