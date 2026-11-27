@@ -201,4 +201,4 @@ The new profile becomes available to users when they launch JupyterHub from Mood
 
 # Limitations
 
-The system of Azimuth cloud still under the development phase - meaning that some issues/bugs in JupyterHub may be present. Please do let us know if you come across anything odd deploying your course on Azimuth cloud.
+The DACF is still under active development, so you may encounter issues or bugs in JupyterHub. Please let us know if you come across anything unexpected while deploying or running your courses on the Azimuth cloud.
