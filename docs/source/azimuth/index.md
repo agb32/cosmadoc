@@ -75,6 +75,9 @@ ml-intro-ml-intro-69ngd-ckrhh         Ready    worker          v1.34.6   x.x.x.x
 ```bash
 k9s
 ```
+
+> **Tip:** Inside `k9s`, press `:n` and return or press `/` and return to see the running pods.
+
 ## Checking the Current Context
 
 Kubernetes commands are run against the current context in your kubeconfig.
